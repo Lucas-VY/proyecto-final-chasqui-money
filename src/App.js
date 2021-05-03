@@ -1,6 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+// imports extras font awesome / bootrastrap css  // boostrap general
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'bootstrap'
+import 'jquery'
+import 'popper.js'
+
 function App() {
   return (
     <div className="App">
