@@ -5,6 +5,7 @@ import NoticiasRelevantes from "./views/NoticiasRelevantes";
 import Testimonios from "./views/Testimonios";
 import Contactanos from "./views/Contactanos";
 import QuienesSomos from "./views/QuienesSomos";
+import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
 
 
@@ -15,7 +16,6 @@ import "./components/header.css";
 import "./components/carruselNoticias.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import CarrouselNotice from "./components/CarrouselNotice ";
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
         <div className="container-fluid">
           <Navbar />
           <Switch>
-            <Header />
             <CarrouselNotice />
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/" component={PreguntasFrecuentes}></Route>
@@ -33,6 +32,8 @@ function App() {
             <Route exact path="/" component={Testimonios}></Route>
             <Route exact path="/" component={Contactanos}></Route>
             <Route exact path="/" component={QuienesSomos}></Route>
+            <Route exact path="/" component={NotFound}></Route>
+
             
           </Switch>
             <Footer tituloFooter="Copyright" webSite="your website 2019" />
