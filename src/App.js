@@ -42,7 +42,7 @@ function App() {
   );
 }
 
-export default injectContext;
+export default injectContext(App);
 
 
 /* function App() {
