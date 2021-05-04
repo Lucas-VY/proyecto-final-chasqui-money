@@ -1,17 +1,13 @@
 import React from "react-router-dom";
 import "./index.css";
-<<<<<<< HEAD
-import Navbar from "./componentes/Navbar";
-import Footer from "./componentes/Footer";
-import Header from "./componentes/Header";
-import CurrencyConverter from "./componentes/Conversor";
-import CarruselNoticias from "./componentes/CarruselNoticias";
-=======
+import "./components/footer.css";
+import "./components/navbar.css";
+import "./components/header.css";
+import "./components/carruselNoticias.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import CarruselNoticias from "./components/CarruselNoticias"
->>>>>>> ddc1c07649fd285da84b8f88791906bcdb1e7fdb
+import CarrouselNotice from "./components/CarrouselNotice ";
 
 function App() {
   let objectNavbar = {
@@ -32,7 +28,7 @@ function App() {
       />
       <CurrencyConverter />
 
-      <CarruselNoticias />
+      <CarrouselNotice />
       <Footer tituloFooter="Copyright" webSite="your website 2019" />
     </>
   );
