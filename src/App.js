@@ -1,9 +1,9 @@
 import React from "react-router-dom";
 import "./index.css";
-import Navbar from "./componentes/Navbar";
-import Footer from "./componentes/Footer";
-import Header from "./componentes/Header";
-import CarruselNoticias from "./componentes/CarruselNoticias";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import CarruselNoticias from "./components/CarruselNoticias"
 
 function App() {
   let objectNavbar = {
