@@ -1,8 +1,16 @@
 const CarruselNoticias = (props) => {
   return (
-    <div className="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+    <div
+      className="carousel slide"
+      id="carouselExampleIndicators"
+      data-ride="carousel"
+    >
       <ol className="carousel-indicators">
-        <li className="active" data-target="#carouselExampleIndicators" data-slide-to={0}/>
+        <li
+          className="active"
+          data-target="#carouselExampleIndicators"
+          data-slide-to={0}
+        />
         <li data-target="#carouselExampleIndicators" data-slide-to={1} />
         <li data-target="#carouselExampleIndicators" data-slide-to={2} />
       </ol>

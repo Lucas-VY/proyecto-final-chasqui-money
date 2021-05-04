@@ -2,10 +2,14 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 import NoticiasRelevantes from "./views/NoticiasRelevantes"
 import "./index.css";
+import "./components/footer.css";
+import "./components/navbar.css";
+import "./components/header.css";
+import "./components/carruselNoticias.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import CarruselNoticias from "./components/CarruselNoticias"
+import CarrouselNotice from "./components/CarrouselNotice ";
 
 function App() {
   let objectNavbar = {
