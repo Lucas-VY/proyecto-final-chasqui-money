@@ -1,25 +1,32 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React from "react-router-dom";
 import "./index.css";
-import Navbar from "./components/Navbar";
-import Home from "./views/Home";
-import NotFound from "./views/Notfound";
-import injectContext from "./store/appContext";
+import Navbar from "./componentes/Navbar";
+import Footer from "./componentes/Footer";
+import Header from "./componentes/Header";
+import CarruselNoticias from "./componentes/CarruselNoticias";
 
 function App() {
+  let objectNavbar = {
+    titulo: "Start Booststrap",
+    home: "Home",
+    about: "About",
+    services: "Services",
+    contact: "Contact",
+  };
   return (
     <>
-      <BrowserRouter>
-        <div className="container-fluid">
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-            
-            <Route component={NotFound}></Route>
-          </Switch>
-        </div>
-      </BrowserRouter>
+      <Navbar
+        titulo={objectNavbar.titulo}
+        home={objectNavbar.home}
+        about={objectNavbar.about}
+        services={objectNavbar.services}
+        contact={objectNavbar.contact}
+      />
+      <Header />
+      <CarruselNoticias />
+      <Footer tituloFooter="Copyright" webSite="your website 2019" />
     </>
   );
 }
 
-export default injectContext(App);
+export default App;
