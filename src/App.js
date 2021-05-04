@@ -1,6 +1,13 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
-import NoticiasRelevantes from "./views/NoticiasRelevantes"
+import PreguntasFrecuentes from "./views/PreguntasFrecuentes";
+import NoticiasRelevantes from "./views/NoticiasRelevantes";
+import Testimonios from "./views/Testimonios";
+import Contactanos from "./views/Contactanos";
+import QuienesSomos from "./views/QuienesSomos";
+import injectContext from "./store/appContext";
+
+
 import "./index.css";
 import "./components/footer.css";
 import "./components/navbar.css";
@@ -21,7 +28,11 @@ function App() {
             <Header />
             <CarrouselNotice />
             <Route exact path="/" component={Home}></Route>
+            <Route exact path="/" component={PreguntasFrecuentes}></Route>
             <Route exact path="/" component={NoticiasRelevantes}></Route>
+            <Route exact path="/" component={Testimonios}></Route>
+            <Route exact path="/" component={Contactanos}></Route>
+            <Route exact path="/" component={QuienesSomos}></Route>
             
           </Switch>
             <Footer tituloFooter="Copyright" webSite="your website 2019" />
@@ -31,7 +42,7 @@ function App() {
   );
 }
 
-export default App;
+export default injectContext;
 
 
 /* function App() {

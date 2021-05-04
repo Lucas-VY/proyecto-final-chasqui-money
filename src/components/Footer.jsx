@@ -1,4 +1,4 @@
-const Footer = (props) => {
+const Footer = () => {
   return (
     <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
       <footer>
