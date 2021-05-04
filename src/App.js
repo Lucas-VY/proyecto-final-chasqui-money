@@ -3,6 +3,7 @@ import "./index.css";
 import Navbar from "./componentes/Navbar";
 import Footer from "./componentes/Footer";
 import Header from "./componentes/Header";
+import CurrencyConverter from "./componentes/Conversor";
 import CarruselNoticias from "./componentes/CarruselNoticias";
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         services={objectNavbar.services}
         contact={objectNavbar.contact}
       />
-      <Header />
+      <CurrencyConverter />
+
       <CarruselNoticias />
       <Footer tituloFooter="Copyright" webSite="your website 2019" />
     </>
