@@ -3,47 +3,76 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar header-blue bg-transparent navbar-dark ">
-    <div className="row">
+      <div className="row">
         <div className="container">
-          <Link className="navbar-brand float-left link"  to="/Home">
+          <Link className="navbar-brand float-left link" to="/Home">
             <h2>Chaski Money</h2>
           </Link>
           <div className="navbar  d-flex" id="navcol-1">
-                <Link className="nav-brand active link px-2" role="button" to="/QuienSomos">
-                  Quienes Somos?
-                </Link>
-                <a className="dropdown-toggle nav-link dropdown-toggle link" data-toggle="dropdown" aria-expanded="false" href="/">
-                  Blog
-                </a>
-                <div className="dropdown-menu" role="menu">
-                  <Link className="dropdown-item link" role="button" to="/NoticiasRelevantes">
-                    Noticias
-                  </Link>
-                  <Link className="dropdown-item link" role="button" to="/PreguntasFrecuentes">
-                    Preguntas Frecuentes
-                  </Link>
-                  <Link className="dropdown-item link" role="button" to="/Testimonios">
-                    Testimonios
-                  </Link>
-                </div>
-                <Link className="nav-brand active link px-2" role="button" to="/QuienSomos">
-                  Contactanos
-                </Link>
+            <Link
+              className="nav-brand active link px-2"
+              role="button"
+              to="/QuienSomos"
+            >
+              Quiénes Somos?
+            </Link>
+            <a
+              className="dropdown-toggle nav-link dropdown-toggle link"
+              data-toggle="dropdown"
+              aria-expanded="false"
+              href="/"
+            >
+              Blog
+            </a>
+            <div className="dropdown-menu" role="menu">
+              <Link
+                className="dropdown-item link"
+                role="button"
+                to="/NoticiasRelevantes"
+              >
+                Noticias
+              </Link>
+              <Link
+                className="dropdown-item link"
+                role="button"
+                to="/PreguntasFrecuentes"
+              >
+                Preguntas Frecuentes
+              </Link>
+              <Link
+                className="dropdown-item link"
+                role="button"
+                to="/Testimonios"
+              >
+                Testimonios
+              </Link>
+            </div>
+            <Link
+              className="nav-brand active link px-2"
+              role="button"
+              to="/QuienSomos"
+            >
+              Contáctanos
+            </Link>
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-lg-4">
-        <div className="container">
-          <span className="navbar-brand navbar-text float-right">
-            <Link className="login" to="/">
-              Ingresa
-            </Link>
-            <Link className="register navbar-brand btn btn-light action-button mx-2" role="button" to="/">
-              registrate
-          </Link>
-          </span>
-        </div>
+          <div className="container">
+            <span className="navbar-brand navbar-text float-right">
+              <Link className="login" to="/">
+                Ingresa
+              </Link>
+              <Link
+                className="register navbar-brand btn btn-light action-button mx-2"
+                role="button"
+                to="/"
+              >
+                Regístrate
+              </Link>
+            </span>
+          </div>
         </div>
       </div>
     </nav>
@@ -51,8 +80,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
 
 /* <div className="header-blue">
 <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">

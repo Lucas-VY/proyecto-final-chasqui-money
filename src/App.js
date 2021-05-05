@@ -5,6 +5,8 @@ import NoticiasRelevantes from "./views/NoticiasRelevantes";
 import Testimonios from "./views/Testimonios";
 import Contactanos from "./views/Contactanos";
 import QuienesSomos from "./views/QuienesSomos";
+import Ingreso from "./views/Ingreso";
+import Registro from "./views/Registro";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
 
@@ -20,11 +22,21 @@ function App() {
         <div className="container-fluid">
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/" component={PreguntasFrecuentes}></Route>
-            <Route exact path="/" component={NoticiasRelevantes}></Route>
-            <Route exact path="/" component={Testimonios}></Route>
-            <Route exact path="/" component={Contactanos}></Route>
-            <Route exact path="/" component={QuienesSomos}></Route>
+            <Route
+              exact
+              path="/preguntas-frecuentes"
+              component={PreguntasFrecuentes}
+            ></Route>
+            <Route
+              exact
+              path="/noticias-relevantes"
+              component={NoticiasRelevantes}
+            ></Route>
+            <Route exact path="/testimonios" component={Testimonios}></Route>
+            <Route exact path="/contactanos" component={Contactanos}></Route>
+            <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
+            <Route exact path="/ingreso" component={Ingreso}></Route>
+            <Route exact path="/registro" component={Registro}></Route>
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
         </div>
