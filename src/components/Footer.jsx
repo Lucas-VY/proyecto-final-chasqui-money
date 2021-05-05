@@ -1,211 +1,223 @@
-import './footer.css';
+import "./footer.css";
 const Footer = () => {
   return (
-
-<div className="container-fluid justify-content-center text-light fixed-bottom">   
-  <footer className="footer ">
-  <div className="container">
-    <div className="row">
-      <div className="col-md-12 col-lg-4">
-        <div className="footer-box-info pr-9">
-          <a href="index.html" className="footer-logo">
-            <img src="https://cdn.pixabay.com/photo/2016/11/07/13/04/yoga-1805784_960_720.png" alt="footer_logo" className="img-fluid" />
-          </a>
-          <p className="footer-info-text">
-            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
-          </p>
-          <div className="footer-social-link">
-            <h3>Siguenos</h3>
-            <ul>
-              <li>
-                <a href="/">
-                  <i className="fa fa-facebook" />
+    <div className="container-fluid justify-content-center text-light fixed-bottom">
+      <footer className="footer ">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 col-lg-4">
+              <div className="footer-box-info pr-9">
+                <a href="index.html" className="footer-logo">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2016/11/07/13/04/yoga-1805784_960_720.png"
+                    alt="footer_logo"
+                    className="img-fluid"
+                  />
                 </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fa fa-twitter" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fa fa-google-plus" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fa fa-linkedin" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fa fa-instagram" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* End Social link */}
-        </div>
-        
-        {/* End Footer info */}
-        <div className="footer-awarad">
-          <img src="images/icon/best.png" alt="" />
-          <p>Best Design Company 2019</p>
-        </div>
-      </div>
-      {/* End Col */}
-      <div className="col-md-12 col-lg-8">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="contact-us">
-              <div className="contact-icon">
-                <i className="fa fa-map-o" aria-hidden="true" />
-              </div>
-              {/* End contact Icon */}
-              <div className="contact-info">
-                <h3>Santiago, Chile</h3>
-                <p>666 Alameda</p>
-              </div>
-              {/* End Contact Info */}
-            </div>
-            {/* End Contact Us */}
-          </div>
-          {/* End Col */}
-          <div className="col-md-6">
-            <div className="contact-us contact-us-last">
-              <div className="contact-icon">
-                <i className="fa fa-volume-control-phone" aria-hidden="true" />
-              </div>
-              {/* End contact Icon */}
-              <div className="contact-info">
-                <h3>+569 8353 5353</h3>
-                <p>Contactanos</p>
-              </div>
-              {/* End Contact Info */}
-            </div>
-            {/* End Contact Us */}
-          </div>
-          {/* End Col */}
-        </div>
-        {/* End Contact Row */}
-        <div className="row">
-          <div className="col-md-12 col-lg-6">
-            <div className="footer-widget footer-left-widget">
-              <div className="section-heading">
-                <h3>Menu</h3>
-                <span className="animate-border border-black" />
-              </div>
-              <ul>
-                <li>
-                  <a href="/">Quienes Somos</a>
-                </li>
-                <li>
-                  <a href="/">Servicios</a>
-                </li>
-                <li>
-                  <a href="/">Preguntas Frecuentes</a>
-                </li>
-                <li>
-                  <a href="/">Nuestro Equipo</a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="/">Contactanos</a>
-                </li>
-                <li>
-                  <a href="/">Blog</a>
-                </li>
-                <li>
-                  <a href="/">Testimonios</a>
-                </li>
-              </ul>
-            </div>
-            {/* End Footer Widget */}
-          </div>
-          {/* End col */}
-          <div className="col-md-12 col-lg-6">
-            <div className="footer-widget">
-              <div className="section-heading">
-                <h3>Subscribete</h3>
-                <span className="animate-border border-black" />
-              </div>
-              <p>{/* Don’t miss to subscribe to our new feeds, kindly fill the form below. */}
-                Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
-              <form action="/">
-                <div className="form-row">
-                  <div className="col footer-form">
-                    <input type="email" className="form-control" placeholder="Correo Electronico" />
-                    <button type="submit">
-                      <i className="fa fa-send" />
-                    </button>
-                  </div>
+                <p className="footer-info-text">
+                  Reference site about Lorem Ipsum, giving information on its
+                  origins, as well as a random Lipsum generator.
+                </p>
+                <div className="footer-social-link">
+                  <h3>Siguenos</h3>
+                  <ul>
+                    <li>
+                      <a href="/">
+                        <i className="fa fa-facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/">
+                        <i className="fa fa-twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/">
+                        <i className="fa fa-google-plus" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/">
+                        <i className="fa fa-linkedin" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/">
+                        <i className="fa fa-instagram" />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-              </form>
-              {/* End form */}
+                {/* End Social link */}
+              </div>
+
+              {/* End Footer info */}
+              <div className="footer-awarad">
+                <img src="images/icon/best.png" alt="" />
+                <p>Best Design Company 2019</p>
+              </div>
             </div>
-            {/* End footer widget */}
+            {/* End Col */}
+            <div className="col-md-12 col-lg-8">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="contact-us">
+                    <div className="contact-icon">
+                      <i className="fa fa-map-o" aria-hidden="true" />
+                    </div>
+                    {/* End contact Icon */}
+                    <div className="contact-info">
+                      <h3>Santiago, Chile</h3>
+                      <p>666 Alameda</p>
+                    </div>
+                    {/* End Contact Info */}
+                  </div>
+                  {/* End Contact Us */}
+                </div>
+                {/* End Col */}
+                <div className="col-md-6">
+                  <div className="contact-us contact-us-last">
+                    <div className="contact-icon">
+                      <i
+                        className="fa fa-volume-control-phone"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    {/* End contact Icon */}
+                    <div className="contact-info">
+                      <h3>+569 8353 5353</h3>
+                      <p>Contactanos</p>
+                    </div>
+                    {/* End Contact Info */}
+                  </div>
+                  {/* End Contact Us */}
+                </div>
+                {/* End Col */}
+              </div>
+              {/* End Contact Row */}
+              <div className="row">
+                <div className="col-md-12 col-lg-6">
+                  <div className="footer-widget footer-left-widget">
+                    <div className="section-heading">
+                      <h3>Menu</h3>
+                      <span className="animate-border border-black" />
+                    </div>
+                    <ul>
+                      <li>
+                        <a href="/">Quienes Somos</a>
+                      </li>
+                      <li>
+                        <a href="/">Servicios</a>
+                      </li>
+                      <li>
+                        <a href="/">Preguntas Frecuentes</a>
+                      </li>
+                      <li>
+                        <a href="/">Nuestro Equipo</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="/">Contactanos</a>
+                      </li>
+                      <li>
+                        <a href="/">Blog</a>
+                      </li>
+                      <li>
+                        <a href="/">Testimonios</a>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* End Footer Widget */}
+                </div>
+                {/* End col */}
+                <div className="col-md-12 col-lg-6">
+                  <div className="footer-widget">
+                    <div className="section-heading">
+                      <h3>Subscribete</h3>
+                      <span className="animate-border border-black" />
+                    </div>
+                    <p>
+                      {/* Don’t miss to subscribe to our new feeds, kindly fill the form below. */}
+                      Reference site about Lorem Ipsum, giving information on
+                      its origins, as well.
+                    </p>
+                    <form action="/">
+                      <div className="form-row">
+                        <div className="col footer-form">
+                          <input
+                            type="email"
+                            className="form-control"
+                            placeholder="Correo Electronico"
+                          />
+                          <button type="submit">
+                            <i className="fa fa-send" />
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    {/* End form */}
+                  </div>
+                  {/* End footer widget */}
+                </div>
+                {/* End Col */}
+              </div>
+              {/* End Row */}
+            </div>
+            {/* End Col */}
           </div>
-          {/* End Col */}
+          {/* End Widget Row */}
         </div>
-        {/* End Row */}
-      </div>
-      {/* End Col */}
-    </div>
-    {/* End Widget Row */}
-
-    
-  </div>
-  {/* End Contact Container */}
-  <div className="copyright">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6">
-          <span>Copyright © 2021, All Right Reserved Chaski Money</span>
-        </div>
-        {/* End Col */}
-        <div className="col-md-6">
-          <div className="copyright-menu">
-            <ul>
-              <li>
-                <a href="/">inicio</a>
-              </li>
-              <li>
-                <a href="/">Terminos</a>
-              </li>
-              <li>
-                <a href="/">Politica de Privacidad</a>
-              </li>
-              <li>
-                <a href="/">Contactos</a>
-              </li>
-            </ul>
+        {/* End Contact Container */}
+        <div className="copyright">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <span>Copyright © 2021, All Right Reserved Chaski Money</span>
+              </div>
+              {/* End Col */}
+              <div className="col-md-6">
+                <div className="copyright-menu">
+                  <ul>
+                    <li>
+                      <a href="/">inicio</a>
+                    </li>
+                    <li>
+                      <a href="/">Terminos</a>
+                    </li>
+                    <li>
+                      <a href="/">Politica de Privacidad</a>
+                    </li>
+                    <li>
+                      <a href="/">Contactos</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* End col */}
+            </div>
+            {/* End Row */}
           </div>
+          {/* End Copyright Container */}
         </div>
-        {/* End col */}
-      </div>
-      {/* End Row */}
+        {/* End Copyright */}
+        {/* Back to top */}
+        <div id="back-to-top" className="back-to-top">
+          <button
+            className="btn btn-dark"
+            title="Back to Top"
+            style={{ display: "block" }}
+          >
+            <i className="fa fa-angle-up" />
+          </button>
+        </div>
+        {/* End Back to top */}
+      </footer>
     </div>
-    {/* End Copyright Container */}
-  </div>
-  {/* End Copyright */}
-  {/* Back to top */}
-  <div id="back-to-top" className="back-to-top">
-    <button className="btn btn-dark" title="Back to Top" style={{display: 'block'}}>
-      <i className="fa fa-angle-up" />
-    </button>
-  </div>
-  {/* End Back to top */}
-</footer>
-</div>
-
   );
 };
 
 export default Footer;
-
-
-
 
 /* <div className="container-fluid pb-0 mb-0 justify-content-center text-light ">
 <footer>

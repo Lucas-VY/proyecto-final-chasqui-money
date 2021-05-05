@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar header-blue bg-transparent navbar-dark ">
+    <nav className="col-sm-3 col-md-4 col-lg-12 navbar header-blue bg-transparent navbar-dark ">
       <div className="row">
         <div className="container">
           <Link className="navbar-brand float-left link pl-2 pr-5" to="/">
@@ -14,7 +14,7 @@ const Navbar = () => {
               role="button"
               to="/QuienSomos"
             >
-              Quienes Somos?
+              Quiénes Somos?
             </Link>
             <Link
               className="nav-brand px-3 link"
@@ -48,7 +48,7 @@ const Navbar = () => {
               role="button"
               to="/Contactanos"
             >
-              Contactanos
+              Contáctanos
             </Link>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 role="button"
                 to="/Registrate"
               >
-                registrate
+                Regístrate
               </Link>
             </span>
           </div>

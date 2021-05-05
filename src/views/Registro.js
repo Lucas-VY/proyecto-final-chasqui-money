@@ -75,95 +75,99 @@ const Registro = () => {
   };
 
   return (
-    <main>
-      <Formulario action="" onSubmit={onSubmit}>
-        <Input
-          estado={usuario}
-          cambiarEstado={cambiarUsuario}
-          tipo="text"
-          label="Usuario"
-          placeholder="john123"
-          name="usuario"
-          leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
-          expresionRegular={expresiones.usuario}
-        />
-        <Input
-          estado={nombre}
-          cambiarEstado={cambiarNombre}
-          tipo="text"
-          label="Nombre"
-          placeholder="John Doe"
-          name="usuario"
-          leyendaError="El nombre solo puede contener letras y espacios."
-          expresionRegular={expresiones.nombre}
-        />
-        <Input
-          estado={password}
-          cambiarEstado={cambiarPassword}
-          tipo="password"
-          label="Contraseña"
-          name="password1"
-          leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
-          expresionRegular={expresiones.password}
-        />
-        <Input
-          estado={password2}
-          cambiarEstado={cambiarPassword2}
-          tipo="password"
-          label="Repetir Contraseña"
-          name="password2"
-          leyendaError="Ambas contraseñas deben ser iguales."
-          funcion={validarPassword2}
-        />
-        <Input
-          estado={correo}
-          cambiarEstado={cambiarCorreo}
-          tipo="email"
-          label="Correo Electrónico"
-          placeholder="john@correo.com"
-          name="correo"
-          leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
-          expresionRegular={expresiones.correo}
-        />
-        <Input
-          estado={telefono}
-          cambiarEstado={cambiarTelefono}
-          tipo="text"
-          label="Teléfono"
-          placeholder="4491234567"
-          name="telefono"
-          leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
-          expresionRegular={expresiones.telefono}
-        />
-
-        <ContenedorTerminos>
-          <Label>
-            <input
-              type="checkbox"
-              name="terminos"
-              id="terminos"
-              checked={terminos}
-              onChange={onChangeTerminos}
+    <div className="col-sm-3 col-md-4 col-lg-12">
+      <div className="card bg-transparent border border-dark">
+        <div className="card-body">
+          <Formulario action="" onSubmit={onSubmit}>
+            <Input
+              estado={usuario}
+              cambiarEstado={cambiarUsuario}
+              tipo="text"
+              label="Usuario"
+              placeholder="john123"
+              name="usuario"
+              leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
+              expresionRegular={expresiones.usuario}
             />
-            Acepto los Términos y Condiciones
-          </Label>
-        </ContenedorTerminos>
-        {formularioValido === false && (
-          <MensajeError>
-            <p>
-              <FontAwesomeIcon icon={faExclamationTriangle} />
-              <b>Error:</b> Por favor rellena el formulario correctamente.
-            </p>
-          </MensajeError>
-        )}
-        <ContenedorBotonCentrado>
-          <Boton type="submit">Enviar</Boton>
-          {formularioValido === true && (
-            <MensajeExito>Formulario enviado exitosamente!</MensajeExito>
-          )}
-        </ContenedorBotonCentrado>
-      </Formulario>
-    </main>
+            <Input
+              estado={nombre}
+              cambiarEstado={cambiarNombre}
+              tipo="text"
+              label="Nombre"
+              placeholder="John Doe"
+              name="usuario"
+              leyendaError="El nombre solo puede contener letras y espacios."
+              expresionRegular={expresiones.nombre}
+            />
+            <Input
+              estado={password}
+              cambiarEstado={cambiarPassword}
+              tipo="password"
+              label="Contraseña"
+              name="password1"
+              leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
+              expresionRegular={expresiones.password}
+            />
+            <Input
+              estado={password2}
+              cambiarEstado={cambiarPassword2}
+              tipo="password"
+              label="Repetir Contraseña"
+              name="password2"
+              leyendaError="Ambas contraseñas deben ser iguales."
+              funcion={validarPassword2}
+            />
+            <Input
+              estado={correo}
+              cambiarEstado={cambiarCorreo}
+              tipo="email"
+              label="Correo Electrónico"
+              placeholder="john@correo.com"
+              name="correo"
+              leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
+              expresionRegular={expresiones.correo}
+            />
+            <Input
+              estado={telefono}
+              cambiarEstado={cambiarTelefono}
+              tipo="text"
+              label="Teléfono"
+              placeholder="4491234567"
+              name="telefono"
+              leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
+              expresionRegular={expresiones.telefono}
+            />
+
+            <ContenedorTerminos>
+              <Label>
+                <input
+                  type="checkbox"
+                  name="terminos"
+                  id="terminos"
+                  checked={terminos}
+                  onChange={onChangeTerminos}
+                />
+                Acepto los Términos y Condiciones
+              </Label>
+            </ContenedorTerminos>
+            {formularioValido === false && (
+              <MensajeError>
+                <p>
+                  <FontAwesomeIcon icon={faExclamationTriangle} />
+                  <b>Error:</b> Por favor rellena el formulario correctamente.
+                </p>
+              </MensajeError>
+            )}
+            <ContenedorBotonCentrado>
+              <Boton type="submit">Enviar</Boton>
+              {formularioValido === true && (
+                <MensajeExito>Formulario enviado exitosamente!</MensajeExito>
+              )}
+            </ContenedorBotonCentrado>
+          </Formulario>
+        </div>
+      </div>
+    </div>
   );
 };
 
