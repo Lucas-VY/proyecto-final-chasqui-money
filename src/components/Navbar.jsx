@@ -5,6 +5,7 @@ const Navbar = () => {
     <nav className="navbar header-blue bg-transparent navbar-dark ">
       <div className="row">
         <div className="container">
+<<<<<<< HEAD
           <Link className="navbar-brand float-left link" to="/Home">
             <h2>Chaski Money</h2>
           </Link>
@@ -54,11 +55,38 @@ const Navbar = () => {
             >
               Contáctanos
             </Link>
+=======
+          <Link className="navbar-brand float-left link pl-2 pr-5"  to="/">
+            <h2>Chaski Money</h2>
+          </Link>
+          <div className="navbar  d-flex" id="navcol-1">
+                <Link className="nav-brand active link pr-3" role="button" to="/QuienSomos">
+                  Quienes Somos?
+                </Link>
+                <Link className="nav-brand px-3 link" role="button" to="/PreguntasFrecuentes">
+                    Preguntas Frecuentes
+                </Link>
+                <a className="dropdown-toggle nav-link dropdown-toggle px-3 link" data-toggle="dropdown" aria-expanded="false" href="/">
+                  Blog
+                </a>
+                <div className="dropdown-menu" role="menu">
+                  <Link className="dropdown-item link" role="button" to="/Noticias">
+                    Noticias
+                  </Link>
+                  <Link className="dropdown-item link" role="button" to="/Testimonios">
+                    Testimonios
+                  </Link>
+                </div>
+                <Link className="nav-brand active link px-2" role="button" to="/Contactanos">
+                  Contactanos
+                </Link>
+>>>>>>> 724738dd9db6e6e94f44c3f9811e71b29da354c4
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-lg-4">
+<<<<<<< HEAD
           <div className="container">
             <span className="navbar-brand navbar-text float-right">
               <Link className="login" to="/">
@@ -73,6 +101,18 @@ const Navbar = () => {
               </Link>
             </span>
           </div>
+=======
+        <div className="container">
+          <span className="navbar-brand navbar-text">
+            <Link className="login" to="/Ingresa">
+              Ingresa
+            </Link>
+            <Link className="register navbar-brand btn btn-light action-button mx-2 my-1" role="button" to="/Registrate">
+              registrate
+          </Link>
+          </span>
+        </div>
+>>>>>>> 724738dd9db6e6e94f44c3f9811e71b29da354c4
         </div>
       </div>
     </nav>
