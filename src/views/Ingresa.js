@@ -1,8 +1,8 @@
-const Ingresa = () =>{
+const Ingreso = () =>{
     return (
         <>
         </> 
     );
 }
 
-export default Ingresa;
+export default Ingreso;

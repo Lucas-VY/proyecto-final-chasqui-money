@@ -145,7 +145,7 @@ const Registro = () => {
               checked={terminos}
               onChange={onChangeTerminos}
             />
-            Acepto los Terminos y Condiciones
+            Acepto los Términos y Condiciones
           </Label>
         </ContenedorTerminos>
         {formularioValido === false && (
