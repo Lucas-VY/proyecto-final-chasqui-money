@@ -1,44 +1,40 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Conversor from "./components/Conversor";
 import Home from "./views/Home";
-import NoticiasRelevantes from "./views/NoticiasRelevantes";
 import PreguntasFrecuentes from "./views/PreguntasFrecuentes";
+import NoticiasRelevantes from "./views/NoticiasRelevantes";
 import Testimonios from "./views/Testimonios";
 import Contactanos from "./views/Contactanos";
 import QuienesSomos from "./views/QuienesSomos";
+import NotFound from "./views/NotFound";
+import injectContext from "./store/appContext";
+
+import "./components/navbar.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
         <div className="container-fluid">
-          <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route
-              exact
-              path="/preguntas-frecuentes"
-              component={PreguntasFrecuentes}
-            ></Route>
-            <Route
-              exact
-              path="/noticias-relevantes"
-              component={NoticiasRelevantes}
-            ></Route>
-            <Route exact path="/testimonios" component={Testimonios}></Route>
-            <Route exact path="/contactanos" component={Contactanos}></Route>
-            <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
+            <Route exact path="/" component={PreguntasFrecuentes}></Route>
+            <Route exact path="/" component={NoticiasRelevantes}></Route>
+            <Route exact path="/" component={Testimonios}></Route>
+            <Route exact path="/" component={Contactanos}></Route>
+            <Route exact path="/" component={QuienesSomos}></Route>
+            <Route exact path="/" component={NotFound}></Route>
           </Switch>
-          <Footer tituloFooter="Copyright" webSite="your website 2019" />
         </div>
+        <Footer />
       </BrowserRouter>
     </>
   );
 }
 
-export default App;
+export default injectContext(App);
 
 /* function App() {
   return (
