@@ -76,7 +76,7 @@ function Conversor() {
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
   }
-
+/*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
       <div className="col-sm-6">
@@ -90,7 +90,7 @@ function Conversor() {
             onChangeAmount={handleFromAmountChange}
             amount={fromAmount}
             />
-             <div className="equals">=</div>
+             <div> = </div>
              <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={toCurrency}
