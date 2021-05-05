@@ -1,19 +1,18 @@
 
-.container-fluid {
+
+.footer {
   overflow: hidden;
-  margin-top: 250px;
-  background: #262626;
-  color: #627482 !important;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-top: 00px;
+  color: white !important;
 }
 p {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
-  color:white;
+    color:white;
     line-height: 28px;
 }
 
+/* BARRAS ANIMADAS */
    .animate-border {
   position: relative;
   display: block;
@@ -84,27 +83,28 @@ p {
   100% {
     width: 80%; } } 
 
-.dk-footer {
+
+.footer {
   padding: 50px 0 0;
   background-color: #151414;
   position: relative;
   z-index: 2; }
-  .dk-footer .contact-us {
+  .footer .contact-us {
     margin-top: 0;
     margin-bottom: 0px;
     padding-left: 80px; }
-    .dk-footer .contact-us .contact-info {
+    .footer .contact-us .contact-info {
       margin-left: 5px; }
-    .dk-footer .contact-us.contact-us-last {
+    .footer .contact-us.contact-us-last {
       margin-left: -80px; }
       
-  .dk-footer .contact-icon i {
+  .footer .contact-icon i {
     font-size: 24px;
     top: -15px;
     position: relative;
     color:#007bff; }
 
-.dk-footer-box-info {
+.footer-box-info {
   position: absolute;
   top: -122px;
   background: #202020;
@@ -112,19 +112,19 @@ p {
   z-index: 2; }
 
  /* social media  */
-  .dk-footer-box-info .footer-social-link h3 {
+  .footer-box-info .footer-social-link h3 {
     color: #fff;
     font-size: 24px;
     margin-bottom: 25px; }
-  .dk-footer-box-info .footer-social-link ul {
+  .footer-box-info .footer-social-link ul {
     list-style-type: none;
     padding: 0;
     margin: 0; }
 
-  .dk-footer-box-info .footer-social-link li {
+  .footer-box-info .footer-social-link li {
     display: inline-block; }
 
-  .dk-footer-box-info .footer-social-link a i {
+  .footer-box-info .footer-social-link a i {
     display: block;
     width: 40px;
     height: 40px;
@@ -134,41 +134,18 @@ p {
     background: #000;
     margin-right: 15px;
     color: #fff; }
-    .dk-footer-box-info .footer-social-link a i.fa-facebook {
+    .footer-box-info .footer-social-link a i.fa-facebook {
       background-color: #3B5998; }
-    .dk-footer-box-info .footer-social-link a i.fa-twitter {
+    .footer-box-info .footer-social-link a i.fa-twitter {
       background-color: #55ACEE; }
-    .dk-footer-box-info .footer-social-link a i.fa-google-plus {
+    .footer-box-info .footer-social-link a i.fa-google-plus {
       background-color: #DD4B39; }
-    .dk-footer-box-info .footer-social-link a i.fa-linkedin {
+    .footer-box-info .footer-social-link a i.fa-linkedin {
       background-color: #0976B4; }
-    .dk-footer-box-info .footer-social-link a i.fa-instagram {
+    .footer-box-info .footer-social-link a i.fa-instagram {
       background-color: #B7242A; }
 
-.footer-awarad {
-  margin-top: 285px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-  -moz-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .footer-awarad p {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 20px;
-    padding-top: 15px; }
-
+/* MENU Y SUBSCRIBETE */
 .footer-info-text {
   margin: 26px 0 32px; }
 
@@ -213,20 +190,21 @@ p {
   display: block;
   clear: both; }
 
-.dk-footer-form {
+ /* ENVIO DE CORREO ELECTRONICO */ 
+.footer-form {
   position: relative; }
-  .dk-footer-form input[type=email] {
+  .footer-form input[type=email] {
     padding: 14px 28px;
     border-radius: 50px;
     background: #2E2E2E;
     border: 1px solid #2E2E2E; }
-  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::-webkit-input-placeholder {
+  .footer-form input::-webkit-input-placeholder, .footer-form input::-moz-placeholder, .footer-form input:-ms-input-placeholder, .footer-form input::-ms-input-placeholder, .footer-form input::-webkit-input-placeholder {
     color: #878787;
     font-size: 14px; }
-  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::placeholder {
+  .footer-form input::-webkit-input-placeholder, .footer-form input::-moz-placeholder, .footer-form input:-ms-input-placeholder, .footer-form input::-ms-input-placeholder, .footer-form input::placeholder {
     color: #878787;
     font-size: 14px; }
-  .dk-footer-form button[type=submit] {
+  .footer-form button[type=submit] {
     position: absolute;
     top: 0;
     right: 0;
@@ -236,7 +214,7 @@ p {
     border: 1px solid #007bff;
     background: #007bff;
     color: #fff; }
-  .dk-footer-form button:hover {
+  .footer-form button:hover {
     cursor: pointer; }
 
 /* ==========================
