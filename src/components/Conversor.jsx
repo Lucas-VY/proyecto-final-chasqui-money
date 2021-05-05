@@ -1,98 +1,102 @@
 import React, { useEffect, useState } from "react";
-import { render } from "react-dom";
-import axios from "axios";
 
-const Conversor = () => {
-  const [uSDAUD, setUSDAUD] = useState("");
-  const [first, setFirst] = useState("AUD");
-  const [second, setSecond] = useState("USD");
-  const [rate, setRate] = useState([]);
+const BASE_URL = "https://free.currconv.com/api/v7";
+const API_KEY = "2f01dcf43562e77ad5d4";
 
-  // useEffect(() => {
-  //   axios({
-  //     method: "GET",
-  //     url:
-  //       `https://free.currconv.com/api/v7/convert?q=${first}_${second}&compact=ultra&apiKey=5a49beefa5e7696bc287`,
-  //   })
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setUSDAUD(response.data.USD_AUD);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
+function CurrencyRow(props) {
+  const {
+    currencyOptions,
+    selectedCurrency,
+    onChangeCurrency,
+    onChangeAmount,
+    amount,
+  } = props;
+  return (
+    <div>
+      <input
+        type="number"
+        className="input"
+        value={amount}
+        onChange={onChangeAmount}
+      />
+      <select value={selectedCurrency} onChange={onChangeCurrency}>
+        {currencyOptions.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
 
-  const getRate = (first, second) => {
-    axios({
-      method: "GET",
-      url: `https://free.currconv.com/api/v7/convert?q=${first}_${second}&compact=ultra&apiKey=5a49beefa5e7696bc287`,
-    })
-      .then((response) => {
-        console.log(response.data);
+function Conversor() {
+  const [currencyOptions, setCurrencyOptions] = useState([]);
+  const [fromCurrency, setFromCurrency] = useState();
+  const [toCurrency, setToCurrency] = useState();
+  const [exchangeRate, setExchangeRate] = useState();
+  const [amount, setAmount] = useState(1);
+  const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
-        setRate(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
+  let toAmount, fromAmount;
+  if (amountInFromCurrency) {
+    fromAmount = amount;
+    toAmount = Math.round(amount * exchangeRate);
+  } else {
+    toAmount = amount;
+    fromAmount = amount / exchangeRate;
+  }
+
+  useEffect(() => {
+    fetch(`${BASE_URL}/currencies?apiKey=${API_KEY}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCurrencyOptions(Object.keys(data.results));
+        setFromCurrency("USD");
+        setToCurrency("CLP");
       });
-  };
+  }, []);
+
+  useEffect(() => {
+    if (fromCurrency != null && toCurrency != null) {
+      fetch(
+        `${BASE_URL}/convert?q=${fromCurrency}_${toCurrency}&compact=ultra&apiKey=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((data) => setExchangeRate(data[`${fromCurrency}_${toCurrency}`]));
+    }
+  }, [fromCurrency, toCurrency]);
+
+  function handleFromAmountChange(e) {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(true);
+  }
+
+  function handleToAmountChange(e) {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(false);
+  }
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "70px",
-          width: "100%",
-          backgroundColor: "#cdff63",
-          fontSize: "30px",
-          color: "blue",
-        }}
-      >
-        Currency Converter PRO
-      </div>
-      <div
-        style={{ height: "5px", width: "100%", backgroundColor: "#9ffe36" }}
-      ></div>
-      <br />
-      <div style={{ marginLeft: "33%" }}>
-        <div
-          style={{
-            height: "150px",
-            width: "400px",
-            backgroundColor: "#94e5ff",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontSize: "25px",
-          }}
-        >
-          1 {first} = {rate[`${first}_${second}`]} {second}
-        </div>
-        <br />
-        <input
-          type="text"
-          value={first}
-          onChange={(e) => setFirst(e.target.value)}
-        />
-        <input
-          type="text"
-          value={second}
-          onChange={(e) => setSecond(e.target.value)}
-        />
-        <button
-          onClick={() => {
-            getRate(first, second);
-          }}
-        >
-          Convert
-        </button>
-      </div>
+      <h1>Convert</h1>
+      <CurrencyRow
+        currencyOptions={currencyOptions}
+        selectedCurrency={fromCurrency}
+        onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+        onChangeAmount={handleFromAmountChange}
+        amount={fromAmount}
+      />
+      <div className="equals">=</div>
+      <CurrencyRow
+        currencyOptions={currencyOptions}
+        selectedCurrency={toCurrency}
+        onChangeCurrency={(e) => setToCurrency(e.target.value)}
+        onChangeAmount={handleToAmountChange}
+        amount={toAmount}
+      />
     </>
   );
-};
+}
 
 export default Conversor;
