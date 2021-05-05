@@ -8,24 +8,17 @@ import QuienesSomos from "./views/QuienesSomos";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
 
-
-import "./index.css";
-import "./components/footer.css";
-import "./components/navbar.css";
-import "./components/header.css";
-import "./components/carruselNoticias.css";
+import './components/navbar.css';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import CarrouselNotice from "./components/CarrouselNotice ";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="container-fluid">
           <Navbar />
+        <div className="container-fluid">
           <Switch>
-            <CarrouselNotice />
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/" component={PreguntasFrecuentes}></Route>
             <Route exact path="/" component={NoticiasRelevantes}></Route>
@@ -33,11 +26,9 @@ function App() {
             <Route exact path="/" component={Contactanos}></Route>
             <Route exact path="/" component={QuienesSomos}></Route>
             <Route exact path="/" component={NotFound}></Route>
-
-            
           </Switch>
-            <Footer tituloFooter="Copyright" webSite="your website 2019" />
         </div>
+        <Footer />
       </BrowserRouter>
     </>
   );
