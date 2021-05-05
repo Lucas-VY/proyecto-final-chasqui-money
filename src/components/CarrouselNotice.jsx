@@ -183,6 +183,31 @@ data-ride="carousel"
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/components/CarrouselNotice.jsx
+      <a
+        className="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        <span className="sr-only">Previous</span>
+      </a>
+      <a
+        className="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true" />
+        <span className="sr-only">Next</span>
+      </a>
+    </div>
+  );
+};
+
+export default CarrouselNotice;
+=======
       <a className="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
         <span className="glyphicon glyphicon-chevron-left" />
       </a>
@@ -193,3 +218,4 @@ data-ride="carousel"
   </div>
 </div>
 </div> */
+>>>>>>> 69243af4f14c8871c6387074d4deb2b78c47253e:src/components/CarrouselNotice .jsx

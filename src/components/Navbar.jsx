@@ -54,10 +54,6 @@ export default Navbar;
 
 
 
-
-/*  */
-
-
 /* <div className="header-blue">
 <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
   <div className="container">
@@ -108,4 +104,4 @@ export default Navbar;
     </div>
   </div>
 </nav>
-</div> */
+</div>  */

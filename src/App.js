@@ -8,7 +8,7 @@ import QuienesSomos from "./views/QuienesSomos";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
 
-import './components/navbar.css';
+import "./components/navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-          <Navbar />
+        <Navbar />
         <div className="container-fluid">
           <Switch>
             <Route exact path="/" component={Home}></Route>
@@ -35,7 +35,6 @@ function App() {
 }
 
 export default injectContext(App);
-
 
 /* function App() {
   return (
@@ -57,7 +56,6 @@ export default injectContext(App);
   );
 } */
 
-
 /*   let objectNavbar = {
     titulo: "Start Booststrap",
     home: "Home",
@@ -65,7 +63,6 @@ export default injectContext(App);
     services: "Services",
     contact: "Contact",
   }; */
-
 
 /* <Navbar
 titulo={objectNavbar.titulo}
