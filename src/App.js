@@ -36,7 +36,7 @@ function App() {
             <Route exact path="/contactanos" component={Contactanos}></Route>
             <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
             <Route exact path="/ingreso" component={Ingreso}></Route>
-            <Route exact path="/registro" component={Registro}></Route>
+            <Route exact path="/registrate" component={Registro}></Route>
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
         </div>
