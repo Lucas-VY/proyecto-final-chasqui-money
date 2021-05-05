@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar header-blue bg-transparent navbar-dark ">
-    <div className="row">
+      <div className="row">
         <div className="container">
           <Link className="navbar-brand float-left link pl-2 pr-5"  to="/">
             <h2>Chaski Money</h2>
@@ -51,8 +51,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
 
 /* <div className="header-blue">
 <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
