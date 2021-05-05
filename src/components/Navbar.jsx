@@ -12,9 +12,9 @@ const Navbar = () => {
             <Link
               className="nav-brand active link pr-3"
               role="button"
-              to="/QuienesSomos"
+              to="/QuienSomos"
             >
-              Quiénes Somos?
+              Quienes Somos?
             </Link>
             <Link
               className="nav-brand px-3 link"
@@ -48,7 +48,7 @@ const Navbar = () => {
               role="button"
               to="/Contactanos"
             >
-              Contáctanos
+              Contactanos
             </Link>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 role="button"
                 to="/Registrate"
               >
-                Regístrate
+                registrate
               </Link>
             </span>
           </div>
@@ -76,55 +76,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-/* <div className="header-blue">
-<nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
-  <div className="container">
-    <Link className="navbar-brand" href="/">
-      Chaski-Money
-    </Link>
-    <button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-      <span className="sr-only">
-        Toggle navigation
-    </span>
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div className="collapse navbar-collapse" id="navcol-1">
-      <ul className="nav navbar-nav">
-        <li className="nav-item" role="presentation">
-          <Link className="nav-link active" to="/">
-            Link
-          </Link>
-        </li>
-        <li className="dropdown">
-          <a className="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="/">
-            Blog
-          </a>
-          <div className="dropdown-menu" role="menu">
-            <Link className="dropdown-item" role="presentation" to="/">
-              First Item
-            </Link>
-            <Link className="dropdown-item" role="presentation" to="/">
-              Second Item
-            </Link>
-            <Link className="dropdown-item" role="presentation" to="/">
-              Third Item
-            </Link>
-          </div>
-        </li>
-      </ul>
-      <ul className="nav navbar-nav float-right" id="registers">
-
-      <span className="navbar-text">
-        <Link className="login" to="/" >
-          Log In
-        </Link>
-      </span>
-      <Link className="btn btn-light action-button mx-3" role="button" to="/">
-        Sign Up
-      </Link>
-      </ul>
-    </div>
-  </div>
-</nav>
-</div>  */

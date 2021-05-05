@@ -2,12 +2,12 @@ import './footer.css';
 const Footer = () => {
   return (
 
-<div className="container-fluid justify-content-center text-light ">   
-  <footer className="dk-footer">
+<div className="container-fluid justify-content-center text-light fixed-bottom">   
+  <footer className="footer ">
   <div className="container">
     <div className="row">
       <div className="col-md-12 col-lg-4">
-        <div className="dk-footer-box-info">
+        <div className="footer-box-info pr-9">
           <a href="index.html" className="footer-logo">
             <img src="https://cdn.pixabay.com/photo/2016/11/07/13/04/yoga-1805784_960_720.png" alt="footer_logo" className="img-fluid" />
           </a>
@@ -46,6 +46,7 @@ const Footer = () => {
           </div>
           {/* End Social link */}
         </div>
+        
         {/* End Footer info */}
         <div className="footer-awarad">
           <img src="images/icon/best.png" alt="" />
@@ -133,7 +134,7 @@ const Footer = () => {
                 Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
               <form action="/">
                 <div className="form-row">
-                  <div className="col dk-footer-form">
+                  <div className="col footer-form">
                     <input type="email" className="form-control" placeholder="Correo Electronico" />
                     <button type="submit">
                       <i className="fa fa-send" />
