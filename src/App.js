@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 import PreguntasFrecuentes from "./views/PreguntasFrecuentes";
-import NoticiasRelevantes from "./views/NoticiasRelevantes";
+import NoticiasRelevantes from "./views/Noticias";
 import Testimonios from "./views/Testimonios";
 import Contactanos from "./views/Contactanos";
 import QuienesSomos from "./views/QuienesSomos";
