@@ -18,8 +18,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <div className="container-fluid">
+        <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/preguntas-frecuentes" component={PreguntasFrecuentes}></Route>
@@ -31,8 +31,8 @@ function App() {
             <Route exact path="/registrate" component={Registro}></Route>
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
-        </div>
         <Footer />
+        </div>
       </BrowserRouter>
     </>
   );
