@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import axios from "axios";
 
-const CurrencyConverter = () => {
+const Conversor = () => {
   const [uSDAUD, setUSDAUD] = useState("");
   const [first, setFirst] = useState("AUD");
   const [second, setSecond] = useState("USD");
@@ -12,7 +12,7 @@ const CurrencyConverter = () => {
   //   axios({
   //     method: "GET",
   //     url:
-  //       "https://free.currconv.com/api/v7/convert?q=USD_AUD&compact=ultra&apiKey=5a49beefa5e7696bc287",
+  //       `https://free.currconv.com/api/v7/convert?q=${first}_${second}&compact=ultra&apiKey=5a49beefa5e7696bc287`,
   //   })
   //     .then((response) => {
   //       console.log(response.data);
@@ -95,4 +95,4 @@ const CurrencyConverter = () => {
   );
 };
 
-export default CurrencyConverter;
+export default Conversor;

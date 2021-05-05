@@ -1,10 +1,11 @@
+import Conversor from "../components/Conversor";
+
 const Home = () => {
-    return (
-        <>
-
-
-        </>
-    )
-} 
+  return (
+    <>
+      <Conversor />
+    </>
+  );
+};
 
 export default Home;

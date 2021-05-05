@@ -1,43 +1,37 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./views/Home";
-import NoticiasRelevantes from "./views/NoticiasRelevantes"
-import "./index.css";
-import "./components/footer.css";
-import "./components/navbar.css";
-import "./components/header.css";
-import "./components/carruselNoticias.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import CarrouselNotice from "./components/CarrouselNotice ";
+import Conversor from "./components/Conversor";
+import Home from "./views/Home";
+import NoticiasRelevantes from "./views/NoticiasRelevantes";
+import PreguntasFrecuentes from "./views/PreguntasFrecuentes";
+import Testimonios from "./views/Testimonios";
+import Contactanos from "./views/Contactanos";
+import QuienesSomos from "./views/QuienesSomos";
 
 function App() {
-  let objectNavbar = {
-    titulo: "Start Booststrap",
-    home: "Home",
-    about: "About",
-    services: "Services",
-    contact: "Contact",
-  };
   return (
     <>
       <BrowserRouter>
         <div className="container-fluid">
-          <Navbar
-            titulo={objectNavbar.titulo}
-            home={objectNavbar.home}
-            about={objectNavbar.about}
-            services={objectNavbar.services}
-            contact={objectNavbar.contact}
-          />
+          <Navbar />
           <Switch>
-            <Header />
-            <CarruselNoticias />
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/" component={NoticiasRelevantes}></Route>
-            
+            <Route
+              exact
+              path="/preguntas-frecuentes"
+              component={PreguntasFrecuentes}
+            ></Route>
+            <Route
+              exact
+              path="/noticias-relevantes"
+              component={NoticiasRelevantes}
+            ></Route>
+            <Route exact path="/testimonios" component={Testimonios}></Route>
+            <Route exact path="/contactanos" component={Contactanos}></Route>
+            <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
           </Switch>
-            <Footer tituloFooter="Copyright" webSite="your website 2019" />
+          <Footer tituloFooter="Copyright" webSite="your website 2019" />
         </div>
       </BrowserRouter>
     </>
@@ -45,7 +39,6 @@ function App() {
 }
 
 export default App;
-
 
 /* function App() {
   return (
@@ -66,3 +59,19 @@ export default App;
     </>
   );
 } */
+
+/*   let objectNavbar = {
+    titulo: "Start Booststrap",
+    home: "Home",
+    about: "About",
+    services: "Services",
+    contact: "Contact",
+  }; */
+
+/* <Navbar
+titulo={objectNavbar.titulo}
+home={objectNavbar.home}
+about={objectNavbar.about}
+services={objectNavbar.services}
+contact={objectNavbar.contact}
+/> */
