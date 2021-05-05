@@ -12,9 +12,9 @@ const Navbar = () => {
             <Link
               className="nav-brand active link pr-3"
               role="button"
-              to="/QuienSomos"
+              to="/QuienesSomos"
             >
-              Quienes Somos?
+              Quiénes Somos?
             </Link>
             <Link
               className="nav-brand px-3 link"
