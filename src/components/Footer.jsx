@@ -2,8 +2,8 @@ import './footer.css';
 const Footer = () => {
   return (
 
-<div className="container-fluid pb-0 mb-0 justify-content-center text-light ">   
-  <footer id="dk-footer" className="dk-footer">
+<div className="container-fluid justify-content-center text-light ">   
+  <footer className="dk-footer">
   <div className="container">
     <div className="row">
       <div className="col-md-12 col-lg-4">
@@ -152,6 +152,8 @@ const Footer = () => {
       {/* End Col */}
     </div>
     {/* End Widget Row */}
+
+    
   </div>
   {/* End Contact Container */}
   <div className="copyright">

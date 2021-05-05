@@ -1,10 +1,17 @@
 .header-blue {
-    background:linear-gradient(135deg, #172a74, #21a9af);
-    background-color:#184e8e;
+    
     padding-bottom:50px;
     font-family:'Source Sans Pro', sans-serif;
+    
   }
-  
+  .link{
+    color: white;
+  }
+
+  .link:hover{
+    color: gray;
+  }
+
   @media (min-width:768px) {
     .header-blue {
       padding-bottom:20px;
@@ -16,7 +23,6 @@
       padding-bottom:1rem;
     }
   }
-  
   .header-blue .navbar .navbar-brand {
     font-weight:bold;
     color:inherit;
@@ -26,10 +32,7 @@
     color:#f0f0f0;
   }
   
-  .header-blue .navbar .navbar-collapse {
-    border-top:1px solid rgba(255,255,255,0.3);
-    margin-top:.5rem;
-  }
+ 
   
   @media (min-width:768px) {
     .header-blue .navbar .navbar-collapse {
@@ -127,5 +130,8 @@
   .header-blue .navbar .form-inline .search-field:focus {
     border-bottom:1px solid #ccc;
   }
-  
+
+  .register:hover{
+    color: gray;
+  }
 

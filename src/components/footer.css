@@ -85,18 +85,19 @@ p {
     width: 80%; } } 
 
 .dk-footer {
-  padding: 70px 0 0;
+  padding: 50px 0 0;
   background-color: #151414;
   position: relative;
   z-index: 2; }
   .dk-footer .contact-us {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     padding-left: 80px; }
     .dk-footer .contact-us .contact-info {
       margin-left: 5px; }
     .dk-footer .contact-us.contact-us-last {
       margin-left: -80px; }
+      
   .dk-footer .contact-icon i {
     font-size: 24px;
     top: -15px;
@@ -109,6 +110,8 @@ p {
   background: #202020;
   padding: 40px;
   z-index: 2; }
+
+ /* social media  */
   .dk-footer-box-info .footer-social-link h3 {
     color: #fff;
     font-size: 24px;
@@ -117,8 +120,10 @@ p {
     list-style-type: none;
     padding: 0;
     margin: 0; }
+
   .dk-footer-box-info .footer-social-link li {
     display: inline-block; }
+
   .dk-footer-box-info .footer-social-link a i {
     display: block;
     width: 40px;

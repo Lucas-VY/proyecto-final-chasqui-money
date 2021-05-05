@@ -1,6 +1,9 @@
+
+
 const Home = () => {
     return (
         <>
+        
          {/*    <div className="row">
                 <div className="col-md-12">
                     <div className="multi-carousel">
