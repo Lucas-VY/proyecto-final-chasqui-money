@@ -51,6 +51,7 @@ function Conversor() {
     fetch(`${BASE_URL}/currencies?apiKey=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.results);
         setCurrencyOptions(Object.keys(data.results));
         setFromCurrency("USD");
         setToCurrency("CLP");
@@ -76,7 +77,7 @@ function Conversor() {
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
   }
-/*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
+  /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
       <div className="col-sm-6">
@@ -84,20 +85,20 @@ function Conversor() {
           <div className="card-body">
             <h5 className="card-title">Convierte tu Moneda</h5>
             <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={fromCurrency}
-            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
-            onChangeAmount={handleFromAmountChange}
-            amount={fromAmount}
+              currencyOptions={currencyOptions}
+              selectedCurrency={fromCurrency}
+              onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+              onChangeAmount={handleFromAmountChange}
+              amount={fromAmount}
             />
-             <div> = </div>
-             <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={toCurrency}
-            onChangeCurrency={(e) => setToCurrency(e.target.value)}
-            onChangeAmount={handleToAmountChange}
-            amount={toAmount}
-        />
+            <div> = </div>
+            <CurrencyRow
+              currencyOptions={currencyOptions}
+              selectedCurrency={toCurrency}
+              onChangeCurrency={(e) => setToCurrency(e.target.value)}
+              onChangeAmount={handleToAmountChange}
+              amount={toAmount}
+            />
           </div>
         </div>
       </div>
