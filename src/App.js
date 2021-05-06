@@ -18,7 +18,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="container-fluid">
+        <div
+          className="container-fluid p-0 d-flex flex-column justify-content-between"
+          style={{ height: "100vh" }}
+        >
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
