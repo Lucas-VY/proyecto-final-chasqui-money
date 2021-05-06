@@ -27,7 +27,7 @@ const Navbar = () => {
                 </div>
               </li>
               <li className="nav-item" role="presentation">
-                <Link className="nav-link active" to="/contactanos">Contactanos</Link>
+                <Link className="nav-link active" to="/contactanos">Contáctanos</Link>
               </li>
             </ul>
           </div>
