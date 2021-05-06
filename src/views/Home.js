@@ -1,4 +1,3 @@
-import Particles from "react-particles-js";
 import { Link } from "react-router-dom";
 import Conversor from "../components/Conversor";
 import "../css/Home.css";
