@@ -27,16 +27,16 @@ const Home = () => {
   <div className="row">
     <div className="col-md-3">
       <div className="card-counter primary">
-        <i className="fa fa-code-fork" />
+        <i className="fas fa-coins" />
         <span className="count-numbers">12</span>
-        <span className="count-name">Flowz</span>
+        <span className="count-name">Monedas</span>
       </div>
     </div>
     <div className="col-md-3">
       <div className="card-counter danger">
         <i className="fa fa-ticket" />
         <span className="count-numbers">599</span>
-        <span className="count-name">Instances</span>
+        <span className="count-name">Transferencias</span>
       </div>
     </div>
     <div className="col-md-3">
@@ -49,8 +49,8 @@ const Home = () => {
     <div className="col-md-3">
       <div className="card-counter info">
         <i className="fa fa-users" />
-        <span className="count-numbers">35</span>
-        <span className="count-name">Users</span>
+        <span className="count-numbers">500</span>
+        <span className="count-name">Usuarios</span>
       </div>
     </div>
   </div>
