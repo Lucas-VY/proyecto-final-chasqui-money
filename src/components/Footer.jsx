@@ -1,4 +1,4 @@
-import './footer.css';
+import "./footer.css";
 const Footer = () => {
   return (
     <div className="container-fluid footer pb-0 mb-0 fixed-bottom justify-content-center text-light ">

@@ -19,11 +19,19 @@ function App() {
     <>
       <BrowserRouter>
         <div className="container-fluid">
-        <Navbar />
+          <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/preguntas-frecuentes" component={PreguntasFrecuentes}></Route>
-            <Route exact path="/noticias-relevantes" component={Noticias}></Route>
+            <Route
+              exact
+              path="/preguntas-frecuentes"
+              component={PreguntasFrecuentes}
+            ></Route>
+            <Route
+              exact
+              path="/noticias-relevantes"
+              component={Noticias}
+            ></Route>
             <Route exact path="/testimonios" component={Testimonios}></Route>
             <Route exact path="/contactanos" component={Contactanos}></Route>
             <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
@@ -31,7 +39,7 @@ function App() {
             <Route exact path="/registrate" component={Registro}></Route>
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
-        <Footer />
+          <Footer />
         </div>
       </BrowserRouter>
     </>

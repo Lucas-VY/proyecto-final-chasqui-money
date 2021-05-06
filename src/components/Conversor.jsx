@@ -52,6 +52,7 @@ function Conversor() {
     fetch(`${BASE_URL}/currencies?apiKey=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.results);
         setCurrencyOptions(Object.keys(data.results));
         setFromCurrency("USD");
         setToCurrency("CLP");
@@ -77,7 +78,7 @@ function Conversor() {
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
   }
-/*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
+  /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
       <CurrencyRow

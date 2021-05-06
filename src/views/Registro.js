@@ -1,169 +1,180 @@
-import React, { useState } from "react";
-import {
-  Formulario,
-  Label,
-  ContenedorTerminos,
-  ContenedorBotonCentrado,
-  Boton,
-  MensajeExito,
-  MensajeError,
-} from "../components/Formulario";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
-import Input from "../components/Input";
+import React from "react";
+import { validateInfo } from "../components/ValidateInfo";
+import useForm from "../components/UseForms";
+import "./Registro.css";
 
-const Registro = () => {
-  const [usuario, cambiarUsuario] = useState({ campo: "", valido: null });
-  const [nombre, cambiarNombre] = useState({ campo: "", valido: null });
-  const [password, cambiarPassword] = useState({ campo: "", valido: null });
-  const [password2, cambiarPassword2] = useState({ campo: "", valido: null });
-  const [correo, cambiarCorreo] = useState({ campo: "", valido: null });
-  const [telefono, cambiarTelefono] = useState({ campo: "", valido: null });
-  const [terminos, cambiarTerminos] = useState(false);
-  const [formularioValido, cambiarFormularioValido] = useState(null);
-
-  const expresiones = {
-    usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    password: /^.{4,12}$/, // 4 a 12 digitos.
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-  };
-
-  const validarPassword2 = () => {
-    if (password.campo.length > 0) {
-      if (password.campo !== password2.campo) {
-        cambiarPassword2((prevState) => {
-          return { ...prevState, valido: "false" };
-        });
-      } else {
-        cambiarPassword2((prevState) => {
-          return { ...prevState, valido: "true" };
-        });
-      }
-    }
-  };
-
-  const onChangeTerminos = (e) => {
-    cambiarTerminos(e.target.checked);
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    if (
-      usuario.valido === "true" &&
-      nombre.valido === "true" &&
-      password.valido === "true" &&
-      password2.valido === "true" &&
-      correo.valido === "true" &&
-      telefono.valido === "true" &&
-      terminos
-    ) {
-      cambiarFormularioValido(true);
-      cambiarUsuario({ campo: "", valido: "" });
-      cambiarNombre({ campo: "", valido: null });
-      cambiarPassword({ campo: "", valido: null });
-      cambiarPassword2({ campo: "", valido: "null" });
-      cambiarCorreo({ campo: "", valido: null });
-      cambiarTelefono({ campo: "", valido: null });
-
-      // ...
+export const Registro = () => {
+  const result = (mensaje, codigo, response) => {
+    if (codigo === 200) {
+      alert(mensaje);
+      //redireccionar al login
     } else {
-      cambiarFormularioValido(false);
+      alert("No fue posible registrar: " + mensaje);
     }
   };
+
+  const { handleSubmit, handleChange, values, errors } = useForm(
+    result,
+    validateInfo,
+    {
+      name: "",
+      last_name: "",
+      rut: "",
+      email: "",
+      password: "",
+      phone: "",
+    },
+    "user/signup",
+    "POST"
+  );
 
   return (
-    <main>
-      <Formulario action="" onSubmit={onSubmit}>
-        <Input
-          estado={usuario}
-          cambiarEstado={cambiarUsuario}
-          tipo="text"
-          label="Usuario"
-          placeholder="john123"
-          name="usuario"
-          leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
-          expresionRegular={expresiones.usuario}
-        />
-        <Input
-          estado={nombre}
-          cambiarEstado={cambiarNombre}
-          tipo="text"
-          label="Nombre"
-          placeholder="John Doe"
-          name="usuario"
-          leyendaError="El nombre solo puede contener letras y espacios."
-          expresionRegular={expresiones.nombre}
-        />
-        <Input
-          estado={password}
-          cambiarEstado={cambiarPassword}
-          tipo="password"
-          label="Contraseña"
-          name="password1"
-          leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
-          expresionRegular={expresiones.password}
-        />
-        <Input
-          estado={password2}
-          cambiarEstado={cambiarPassword2}
-          tipo="password"
-          label="Repetir Contraseña"
-          name="password2"
-          leyendaError="Ambas contraseñas deben ser iguales."
-          funcion={validarPassword2}
-        />
-        <Input
-          estado={correo}
-          cambiarEstado={cambiarCorreo}
-          tipo="email"
-          label="Correo Electrónico"
-          placeholder="john@correo.com"
-          name="correo"
-          leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
-          expresionRegular={expresiones.correo}
-        />
-        <Input
-          estado={telefono}
-          cambiarEstado={cambiarTelefono}
-          tipo="text"
-          label="Teléfono"
-          placeholder="4491234567"
-          name="telefono"
-          leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
-          expresionRegular={expresiones.telefono}
-        />
-
-        <ContenedorTerminos>
-          <Label>
-            <input
-              type="checkbox"
-              name="terminos"
-              id="terminos"
-              checked={terminos}
-              onChange={onChangeTerminos}
-            />
-            Acepto los Términos y Condiciones
-          </Label>
-        </ContenedorTerminos>
-        {formularioValido === false && (
-          <MensajeError>
-            <p>
-              <FontAwesomeIcon icon={faExclamationTriangle} />
-              <b>Error:</b> Por favor rellena el formulario correctamente.
-            </p>
-          </MensajeError>
-        )}
-        <ContenedorBotonCentrado>
-          <Boton type="submit">Enviar</Boton>
-          {formularioValido === true && (
-            <MensajeExito>Formulario enviado exitosamente!</MensajeExito>
-          )}
-        </ContenedorBotonCentrado>
-      </Formulario>
-    </main>
+    <div className="container-fluid containerForm">
+      <div className="signup-form ">
+        <form onSubmit={handleSubmit} className="form" noValidate>
+          <h2 className="text-center mb-4">Regístrate!</h2>
+          <hr />
+          <div className="form-group mt-5">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="fa fa-user" />
+                </span>
+              </div>
+              <input
+                className="form-control "
+                type="text"
+                name="name"
+                placeholder="ingrese nombre"
+                value={values.name}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.name && <p className="parrafo">{errors.name}</p>}
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="fa fa-user" />
+                </span>
+              </div>
+              <input
+                className="form-control "
+                type="text"
+                name="last_name"
+                placeholder="ingrese apellido"
+                value={values.last_name}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.last_name && <p className="parrafo">{errors.last_name}</p>}
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="far fa-id-card" />
+                </span>
+              </div>
+              <input
+                className="form-control "
+                type="text"
+                name="rut"
+                placeholder="ingrese rut"
+                value={values.rut}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.rut && <p className="parrafo">{errors.rut}</p>}
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="fa fa-paper-plane" />
+                </span>
+              </div>
+              <input
+                className="form-control"
+                type="email"
+                name="email"
+                placeholder="ingrese email"
+                value={values.email}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.email && <p className="parrafo">{errors.email}</p>}
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="fas fa-mobile-alt" />
+                </span>
+              </div>
+              <input
+                className="form-control"
+                type="texto"
+                name="phone"
+                placeholder="numero de telefono de 9 digitos"
+                value={values.phone}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.phone && <p className="parrafo">{errors.phone}</p>}
+          </div>
+          <p>Minimo 8 caracteres</p>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="fa fa-user" />
+                </span>
+              </div>
+              <input
+                className="form-control"
+                type="password"
+                name="password"
+                placeholder="ingresa contraseña"
+                value={values.password}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.password && <p className="parrafo">{errors.password}</p>}
+          </div>
+          <div className="form-group">
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <span className="fa fa-user" />
+                </span>
+              </div>
+              <input
+                className="form-control"
+                type="password"
+                name="password2"
+                placeholder="confirma contraseña"
+                value={values.password2}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.password2 && <p className="parrafo">{errors.password2}</p>}
+          </div>
+          <div className="form-group">
+            <label className="form-check-label mt-4">
+              <input type="checkbox" required="required" /> He leído y acepto
+              los <a href="#">Terminos y condiciones</a>
+            </label>
+          </div>
+          <div className="form-group d-flex justify-content-center">
+            <button type="submit" className="btn btn-primary btn-lg">
+              Registrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
