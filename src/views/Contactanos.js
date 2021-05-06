@@ -1,8 +1,5 @@
-const Contactanos = () =>{
-    return (
-        <>
-        </> 
-    );
-}
+const Contactanos = () => {
+  return <></>;
+};
 
 export default Contactanos;
