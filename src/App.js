@@ -30,15 +30,8 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact
-              path="/preguntas-frecuentes"
-              component={PreguntasFrecuentes}
-            ></Route>
-            <Route
-              exact
-              path="/noticias-relevantes"
-              component={Noticias}
-            ></Route>
+            <Route exact path="/preguntas-frecuentes" component={PreguntasFrecuentes}></Route>
+            <Route exact path="/noticias-relevantes" component={Noticias}></Route>
             <Route exact path="/testimonios" component={Testimonios}></Route>
             <Route exact path="/contactanos" component={Contactanos}></Route>
             <Route exact path="/quienes-somos" component={QuienesSomos}></Route>

@@ -16,7 +16,7 @@ const Home = () => {
             <p>Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum.</p>
             <Link className="btn btn-primary btn-lg" to="/Registrate" role="button">
               Registrate Gratis
-              </Link>
+            </Link>
           </div>
         </div>
       </div>
