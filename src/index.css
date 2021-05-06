@@ -8,6 +8,12 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family:'Source Sans Pro', sans-serif;
-    position: fixed;
+}
+ 
+.jumbo{
+    z-index: 100;
 }
 
+.containerForm {
+    z-index: 100;
+  }

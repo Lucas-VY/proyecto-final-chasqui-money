@@ -32,7 +32,7 @@ export const Registro = () => {
     <div className="container-fluid containerForm">
       <div className="signup-form ">
         <form onSubmit={handleSubmit} className="form" noValidate>
-          <h2 className="text-center mb-4">Regístrate!</h2>
+          <h2 className="text-center mb-4">Regístrate</h2>
           <hr />
           <div className="form-group mt-5">
             <div className="input-group">
@@ -164,7 +164,7 @@ export const Registro = () => {
           <div className="form-group">
             <label className="form-check-label mt-4">
               <input type="checkbox" required="required" /> He leído y acepto
-              los <a href="#">Términos y condiciones</a>
+              los <a href="/">Términos y condiciones</a>
             </label>
           </div>
           <div className="form-group d-flex justify-content-center">
