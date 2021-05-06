@@ -1,24 +1,24 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.App {
+.CarrouselNoticias {
   width: 50%;
   margin: 10rem auto;
   height: 570px;
 }
 
-.slide img {
+.CarrouselNoticias .Desliza img {
   width: 20rem;
   margin: 0 auto;
 }
 
-.slide {
+.CarrouselNoticias .Desliza {
   transform: scale(0.2);
   transition: transform 300ms;
   opacity: 0.5;
 }
 
-.activeSlide {
+.activeDesliza {
   transform: scale(1.1);
   opacity: 1;
 }
