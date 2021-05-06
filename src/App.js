@@ -20,13 +20,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div style={{
-          position: "relative",
-          overflow: "hidden",
-          }}>
-         <div style={{position:"absolute"}}>
-           <Particles height="100vh" width="100vw" params={particlesConfig}/>
-         </div>
+        <div
+          className="container-fluid p-0 d-flex flex-column justify-content-between"
+          style={{ height: "100vh" }}
+        >
+          <div style={{ position: "absolute" }}>
+            <Particles height="100vh" width="100vw" params={particlesConfig} />
+          </div>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>

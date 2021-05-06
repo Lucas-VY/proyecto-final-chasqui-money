@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="container-fluid footer pb-0 mb-0 fixed-bottom justify-content-center text-light ">
+    <div className="container-fluid footer p-0 m-0 justify-content-center text-light ">
       <footer className="bg-dark text-center text-white">
         {/* Grid container */}
         <div className="container p-4 pb-0">

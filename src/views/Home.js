@@ -1,7 +1,7 @@
 import Particles from "react-particles-js";
 import { Link } from "react-router-dom";
 import Conversor from "../components/Conversor";
-import '../css/Home.css';
+import "../css/Home.css";
 
 const Home = () => {
   return (
@@ -20,12 +20,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
-    </>
+    </div>
   );
 };
 
 export default Home;
-
 
 /* <div className=""></div> */
