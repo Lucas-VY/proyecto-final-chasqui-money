@@ -9,3 +9,6 @@ body {
   background-attachment: fixed;
   font-family: "Source Sans Pro", sans-serif;
 }
+.jumbo{
+    z-index: 100;
+}

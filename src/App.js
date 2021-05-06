@@ -13,20 +13,31 @@ import injectContext from "./store/appContext";
 import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Particles from "react-particles-js";
+import particlesConfig from "./components/ParticlesConfig";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+<<<<<<< HEAD
         <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
           style={{ height: "100vh" }}
         >
+=======
+        <div style={{
+          position: "relative",
+          overflow: "hidden",
+          }}>
+         <div style={{position:"absolute"}}>
+           <Particles height="100vh" width="100vw" params={particlesConfig}/>
+         </div>
+>>>>>>> f4801047371a3be8c9fc1278978b07bdf3545eea
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route
-              exact
+            <Route exact
               path="/preguntas-frecuentes"
               component={PreguntasFrecuentes}
             ></Route>

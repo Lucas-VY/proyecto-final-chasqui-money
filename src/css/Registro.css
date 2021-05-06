@@ -90,6 +90,7 @@
   padding-bottom: 200px;
   margin-top: 70px;
   padding-top: 20px;
+  z-index: 100;
 }
 .containerForm2 {
   background-color: #5e8998;

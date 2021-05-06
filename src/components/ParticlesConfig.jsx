@@ -1,7 +1,7 @@
 const particlesConfig = {
     particles: {
       number: {
-        value: 80,
+        value: 70,
         density: {
           enable: true,
           value_area: 800,
@@ -36,7 +36,7 @@ const particlesConfig = {
         },
       },
       size: {
-        value: 20,
+        value: 5,
         random: true,
         anim: {
           enable: false,
@@ -88,10 +88,10 @@ const particlesConfig = {
         },
         bubble: {
           distance: 400,
-          size: 40,
+          size: 10,
           duration: 2,
-          opacity: 8,
-          speed: 3,
+          opacity: 2,
+          speed: 2,
         },
         repulse: {
           distance: 200,
@@ -107,12 +107,12 @@ const particlesConfig = {
     retina_detect: true,
     config_demo: {
       hide_card: false,
+      z_index: 100,
       background_color: "#0000FF",
       background_image: "",
       background_position: "50% 50%",
       background_repeat: "no-repeat",
       background_size: "cover",
-      background_repeat: "no-repeat",
       background_attachment: "fixed",
     },
   };
