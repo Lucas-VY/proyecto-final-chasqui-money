@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const BASE_URL = "https://free.currconv.com/api/v7";
+const BASE_URL = "";
+/* https://free.currconv.com/api/v7 */
 const API_KEY = "2f01dcf43562e77ad5d4";
 
 function CurrencyRow(props) {
@@ -79,28 +80,20 @@ function Conversor() {
 /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-      <div className="col-sm-6">
-        <div className="card bg-transparent border-none">
-          <div className="card-body">
-            <h5 className="card-title">Convierte tu Moneda</h5>
-            <CurrencyRow
+      <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={fromCurrency}
             onChangeCurrency={(e) => setFromCurrency(e.target.value)}
             onChangeAmount={handleFromAmountChange}
             amount={fromAmount}
             />
-             <div> = </div>
+             <div><h2> = </h2></div>
              <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={toCurrency}
             onChangeCurrency={(e) => setToCurrency(e.target.value)}
             onChangeAmount={handleToAmountChange}
-            amount={toAmount}
-        />
-          </div>
-        </div>
-      </div>
+            amount={toAmount}/>
     </>
   );
 }
