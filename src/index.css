@@ -1,13 +1,11 @@
-body{
-    background:linear-gradient(135deg, #172a74, #21a9af);
-    background-color:#184e8e;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family:'Source Sans Pro', sans-serif;
-    position: fixed;
+body {
+  background: linear-gradient(135deg, #172a74, #21a9af);
+  background-color: #184e8e;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Source Sans Pro", sans-serif;
 }
-

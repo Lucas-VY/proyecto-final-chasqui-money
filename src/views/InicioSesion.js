@@ -27,7 +27,7 @@ export const InicioSesion = () => {
 
   return (
     <div className="container-fluid containerForm">
-      <div className="signup-form ">
+      <div className="signup-form col-12 col-md-6">
         <form onSubmit={handleSubmit} className="form" noValidate>
           <h2 className="text-center mb-4">Ingresa</h2>
           <hr />
