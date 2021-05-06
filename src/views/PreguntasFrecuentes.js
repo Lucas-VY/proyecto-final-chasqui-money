@@ -24,7 +24,7 @@ const PreguntasFrecuentes = () => {
                 >
                   <h6 class="mb-0 font-weight-bold">
                     <a
-                      href="#"
+                      href="/"
                       data-toggle="collapse"
                       data-target="#collapseOne"
                       aria-expanded="true"
@@ -61,7 +61,7 @@ const PreguntasFrecuentes = () => {
                 >
                   <h6 class="mb-0 font-weight-bold">
                     <a
-                      href="#"
+                      href="/"
                       data-toggle="collapse"
                       data-target="#collapseTwo"
                       aria-expanded="false"
@@ -98,7 +98,7 @@ const PreguntasFrecuentes = () => {
                 >
                   <h6 class="mb-0 font-weight-bold">
                     <a
-                      href="#"
+                      href="/"
                       data-toggle="collapse"
                       data-target="#collapseThree"
                       aria-expanded="false"
