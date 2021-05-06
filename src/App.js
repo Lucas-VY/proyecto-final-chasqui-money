@@ -14,7 +14,7 @@ import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Particles from "react-particles-js";
-import particlesConfig from "./components/ParticlesConfig";
+import particlesConfig from "./components/particlesConfig";
 
 function App() {
   return (
