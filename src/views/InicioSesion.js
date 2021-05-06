@@ -12,7 +12,6 @@ export const InicioSesion = () => {
       alert("No fue posible registrar: " + mensaje);
     }
   };
-
   const { handleSubmit, handleChange, values, errors } = useForm(
     result,
     validateLogin,
