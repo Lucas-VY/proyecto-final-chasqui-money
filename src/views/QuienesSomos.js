@@ -6,8 +6,10 @@ const QuienesSomos = () => {
       <div className="team-grid">
         <div className="container">
           <div className="intro">
-            <h2 className="text-center">Creadores</h2>
-            <p className="text-center">
+            <h2 className="text-center" id="titulo">
+              Creadores
+            </h2>
+            <p className="text-center" id="pquienes-somos">
               Somos una ecomerce , encargada a través de la intermediación de
               cambios de divisas, hacerle llegar el dinero al destinatario.
             </p>
@@ -46,7 +48,9 @@ const QuienesSomos = () => {
               >
                 <div className="cover">
                   <h3 className="name">Bárbara Ulloa</h3>
-                  <p className="title">Developer Full-Stack</p>
+                  <p className="title" id="pquienes-somos">
+                    Developer Full-Stack
+                  </p>
                   <div className="social">
                     <a href="/">
                       <i className="fa fa-facebook-official" />
@@ -70,7 +74,9 @@ const QuienesSomos = () => {
               >
                 <div className="cover">
                   <h3 className="name">Alex Herrera</h3>
-                  <p className="title">Developer Full-Stack</p>
+                  <p className="title" id="pquienes-somos">
+                    Developer Full-Stack
+                  </p>
                   <div className="social">
                     <a href="/">
                       <i className="fa fa-facebook-official" />

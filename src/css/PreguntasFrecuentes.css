@@ -31,3 +31,12 @@
 .collapsible-link[aria-expanded="true"]::before {
   transform: rotate(180deg);
 }
+
+#ppreguntas-frecuentes {
+  color: black;
+}
+
+#reseña {
+  color: white;
+  font-size: 20px;
+}

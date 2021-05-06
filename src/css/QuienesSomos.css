@@ -1,8 +1,9 @@
-p {
+#pquienes-somos {
   color: #fff;
+  font-size: 20px;
 }
 
-h2 {
+#titulo {
   font-weight: bold;
   margin-bottom: 40px;
   padding-top: 40px;
