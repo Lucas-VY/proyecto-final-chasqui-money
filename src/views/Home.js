@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import CarrouselNoticias from "../components/CarrouselNotice";
 import Conversor from "../components/Conversor";
 import "../css/Home.css";
 
