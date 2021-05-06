@@ -11,7 +11,7 @@ const Navbar = () => {
             <span className="sr-only">Toggle navigation</span>
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navcol-1">
+          <div className="navbar-collapse" id="navcol-1">
             <ul className="nav navbar-nav">
               <li className="nav-item" role="presentation">
                 <Link className="nav-link active" to="/quienes-somos">Quienes Somos?</Link>
@@ -31,16 +31,12 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <div className="row">
-              <div className="container-fluid">
-                <span className="navbar-text d-flex justify-content-end">
-                  <Link className="login" to="/inicio-sesion" >Ingresa</Link>
-                </span>
-                <Link className="btn btn-light action-button" role="button" to="/registrate">Regístrate</Link>
-              </div>
-            </div>
 
           </div>
+                <span className="navbar-text px-2">
+                  <Link className="login px-2" to="/inicio-sesion" >Ingresa</Link>
+                <Link className="btn btn-light action-button" role="button" to="/registrate">Regístrate</Link>
+                </span>
         </div>
       </nav>
     </div>
