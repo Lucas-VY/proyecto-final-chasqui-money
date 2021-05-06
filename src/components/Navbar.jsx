@@ -56,13 +56,7 @@ const Navbar = () => {
                 </div>
               </li>
               <li className="nav-item" role="presentation">
-<<<<<<< HEAD
-                <Link className="nav-link active" to="/contactanos">
-                  Contáctanos
-                </Link>
-=======
                 <Link className="nav-link active" to="/contactanos">Contáctanos</Link>
->>>>>>> bf160ae38cb089ddc33b365346d3fc708acc8980
               </li>
             </ul>
           </div>
