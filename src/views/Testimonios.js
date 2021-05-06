@@ -14,7 +14,7 @@ const Testimonios = () => {
                   the very best explanation of frameworks for brginners that
                   I've ever seen.{" "}
                 </p>{" "}
-                <img src="https://i.imgur.com/lE89Aey.jpg" />
+                <img src="https://i.imgur.com/lE89Aey.jpg" alt=""/>
                 <div id="image-caption">Nick Doe</div>
               </div>
             </div>
@@ -26,10 +26,7 @@ const Testimonios = () => {
                   the very best explanation of frameworks for brginners that
                   I've ever seen.
                 </p>{" "}
-                <img
-                  src="https://i.imgur.com/QptVdsp.jpg"
-                  className="img-fluid"
-                />
+                <img src="https://i.imgur.com/QptVdsp.jpg" className="img-fluid" alt=""/>
                 <div id="image-caption">Cromption Greves</div>
               </div>
             </div>
@@ -41,10 +38,7 @@ const Testimonios = () => {
                   the very best explanation of frameworks for brginners that
                   I've ever seen.
                 </p>{" "}
-                <img
-                  src="https://i.imgur.com/jQWThIn.jpg"
-                  className="img-fluid"
-                />
+                <img className="img-fluid" src="https://i.imgur.com/jQWThIn.jpg" alt=""/>
                 <div id="image-caption">Harry Mon</div>
               </div>
             </div>

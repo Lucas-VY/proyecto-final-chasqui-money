@@ -2,78 +2,44 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container-fluid p-0">
-      <nav className="col-sm-3 col-md-4 col-lg-12 navbar header-blue bg-transparent navbar-dark">
-        <div className="row">
-          <div className="container">
-            <Link className="navbar-brand float-left link pl-2 pr-5" to="/">
-              <h2>Chaski Money</h2>
-            </Link>
-            <div className="navbar  d-flex" id="navcol-1">
-              <Link
-                className="nav-brand active link pr-3"
-                role="button"
-                to="/QuienesSomos"
-              >
-                Quiénes Somos?
-              </Link>
-              <Link
-                className="nav-brand px-3 link"
-                role="button"
-                to="/PreguntasFrecuentes"
-              >
-                Preguntas Frecuentes
-              </Link>
-              <a
-                className="dropdown-toggle nav-link dropdown-toggle px-3 link"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                href="/"
-              >
-                Blog
-              </a>
-              <div className="dropdown-menu" role="menu">
-                <Link
-                  className="dropdown-item link"
-                  role="button"
-                  to="/Noticias"
-                >
-                  Noticias
-                </Link>
-                <Link
-                  className="dropdown-item link"
-                  role="button"
-                  to="/Testimonios"
-                >
-                  Testimonios
-                </Link>
+    //fixed-top Fija el navbar arriba 
+    <div className="header-blue">
+      <nav className="navbar navbar-dark header-blue navbar-expand-md navigation-clean-search">
+        <div className="container-fluid fixed-top">
+          <Link className="navbar-brand" to="/"><h2>Chasky Money</h2></Link>
+          <button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+            <span className="sr-only">Toggle navigation</span>
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navcol-1">
+            <ul className="nav navbar-nav">
+              <li className="nav-item" role="presentation">
+                <Link className="nav-link active" to="/quienes-somos">Quienes Somos?</Link>
+              </li>
+              <li className="nav-item" role="presentation">
+                <Link className="nav-link active" to="/preguntas-frecuentes">Preguntas Frecuentes</Link>
+              </li>
+              <li className="dropdown">
+                <Link className="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" to="/">Blog </Link>
+                <div className="dropdown-menu" role="menu">
+                  <Link className="dropdown-item" role="presentation" to="/noticias-relevantes">Noticias</Link>
+                  <Link className="dropdown-item" role="presentation" to="/testimonios">Testimonios</Link>
+                </div>
+              </li>
+              <li className="nav-item" role="presentation">
+                <Link className="nav-link active" to="/contactanos">Contactanos</Link>
+              </li>
+            </ul>
+
+            <div className="row">
+              <div className="container-fluid">
+                <span className="navbar-text d-flex justify-content-end">
+                  <Link className="login" to="/inicio-sesion" >Ingresa</Link>
+                </span>
+                <Link className="btn btn-light action-button" role="button" to="/registrate">Regístrate</Link>
               </div>
-              <Link
-                className="nav-brand active link px-2"
-                role="button"
-                to="/Contactanos"
-              >
-                Contáctanos
-              </Link>
             </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-4">
-            <div className="container">
-              <span className="navbar-brand navbar-text">
-                <Link className="login" to="/inicio-sesion">
-                  Ingresa
-                </Link>
-                <Link
-                  className="register navbar-brand btn btn-light action-button mx-2 my-1"
-                  role="button"
-                  to="/registrate"
-                >
-                  Regístrate
-                </Link>
-              </span>
-            </div>
+
           </div>
         </div>
       </nav>

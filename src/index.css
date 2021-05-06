@@ -12,3 +12,7 @@ body {
 .jumbo{
     z-index: 100;
 }
+
+.footer{
+  z-index: 100;
+}
