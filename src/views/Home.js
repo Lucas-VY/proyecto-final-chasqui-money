@@ -13,17 +13,26 @@ const Home = () => {
             <h1 className="display-4">Cuánto Dinero vas a enviar?</h1>
             <Conversor />
             <hr className="my-4" />
-            <p>Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum.</p>
-            <Link className="btn btn-primary btn-lg" to="/Registrate" role="button">
-              Registrate Gratis
+            <p>
+              Mauris egestas tellus non ex condimentum, ac ullamcorper sapien
+              dictum.
+            </p>
+            <Link
+              className="btn btn-primary btn-lg"
+              to="/Registrate"
+              role="button"
+            >
+              Regístrate Gratis
             </Link>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Home;
 
-/* <div className=""></div> */
+{
+  /* <div className=""></div> */
+}
