@@ -13,18 +13,19 @@ const Home = () => {
             <h1 className="display-4">Cuánto Dinero vas a enviar?</h1>
             <Conversor />
             <hr className="my-4" />
-            <Link className="btn btn-primary btn-lg" to="/Registrate" role="button">Regístrate Gratis</Link>
+            <Link
+              className="btn btn-primary btn-lg"
+              to="/Registrate"
+              role="button"
+            >
+              Regístrate Gratis
+            </Link>
           </div>
         </div>
-          <CarrouselNoticias />
+        <CarrouselNoticias />
       </div>
-
     </>
   );
 };
 
 export default Home;
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e77f968657eaa0f83491ae33d5ccdc5c90fa40a
