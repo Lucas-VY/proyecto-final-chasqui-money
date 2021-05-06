@@ -14,7 +14,7 @@ import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Particles from "react-particles-js";
-import particlesConfig from "./components/ParticlesConfig";
+import particlesConfig from "./components/particlesConfig";
 
 function App() {
   return (
@@ -25,8 +25,7 @@ function App() {
           style={{ height: "100vh" }}
         >
           <div style={{ position: "absolute" }}>
-            {" "}
-            <Particles height="100vh" width="100vw" params={particlesConfig} />
+            <Particles height="100vh" width="100%" params={particlesConfig} />
           </div>
           <Navbar />
           <Switch>
