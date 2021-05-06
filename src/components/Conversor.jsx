@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import '../components/Conversor.css';
 
 const BASE_URL = "";
 /* https://free.currconv.com/api/v7 */
@@ -88,7 +89,7 @@ function Conversor() {
             onChangeAmount={handleFromAmountChange}
             amount={fromAmount}
             />
-             <div><h2> = </h2></div>
+             <div className="igual"><h2> = </h2></div>
              <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={toCurrency}
