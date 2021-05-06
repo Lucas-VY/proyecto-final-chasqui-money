@@ -28,28 +28,28 @@ const Home = () => {
     <div className="col-md-3">
       <div className="card-counter primary">
         <i className="fas fa-coins" />
-        <span className="count-numbers">12</span>
-        <span className="count-name">Monedas</span>
+        <span className="count-numbers">200</span>
+        <span className="count-name">Monedas Disponibles</span>
       </div>
     </div>
     <div className="col-md-3">
       <div className="card-counter danger">
-        <i className="fa fa-ticket" />
-        <span className="count-numbers">599</span>
+        <i className="fas fa-handshake" />
+        <span className="count-numbers">+1M</span>
         <span className="count-name">Transferencias</span>
       </div>
     </div>
     <div className="col-md-3">
       <div className="card-counter success">
         <i className="fa fa-database" />
-        <span className="count-numbers">6875</span>
+        <span className="count-numbers">+400K</span>
         <span className="count-name">Data</span>
       </div>
     </div>
     <div className="col-md-3">
       <div className="card-counter info">
         <i className="fa fa-users" />
-        <span className="count-numbers">500</span>
+        <span className="count-numbers">+500K</span>
         <span className="count-name">Usuarios</span>
       </div>
     </div>

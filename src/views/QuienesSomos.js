@@ -24,7 +24,8 @@ const QuienesSomos = () => {
               >
                 <div className="cover">
                   <h3 className="name">Lucas Varas</h3>
-                  <p className="title">Developer Full-Stack</p>
+                  <p className="title" id="pquienes-somos">
+                    Developer Full-Stack</p>
                   <div className="social">
                     <a href="/">
                       <i className="fa fa-facebook-official" />
