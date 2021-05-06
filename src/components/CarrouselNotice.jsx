@@ -1,6 +1,6 @@
+import './CarrouselNoticias.css';
 import { useState } from "react";
 import Slider from "react-slick";
-import './CarrouselNoticias.css';
 import astronaut from "../assets/astronaut.png";
 import celebrating from "../assets/celebrating.png";
 import education from "../assets/education.png";
@@ -9,9 +9,8 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const images = [ astronaut, celebrating, education, taken];
 
-function CarrouselNoticias(){
-
-  const NextArrow = ({onClick}) => {
+function CarrouselNoticias() {
+  const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
         <FaArrowRight />
@@ -21,7 +20,7 @@ function CarrouselNoticias(){
 
   const PrevArrow = ({ onClick }) => {
     return (
-      <div className="arrow prev" onClick={ onClick }>
+      <div className="arrow prev" onClick={onClick}>
         <FaArrowLeft />
       </div>
     );
@@ -42,17 +41,15 @@ function CarrouselNoticias(){
 };
 
   return(
-    <>
     <div className="CarrouselNoticias">
       <Slider {...settings}>
           {images.map((img, idx) => (
-            <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+            <div className={idx === imageIndex ? "Desliza activeDesliza" : "Desliza"}>
               <img src={img} alt={img} />
             </div>
           ))}
       </Slider>
-    </div>
-    </>   
+    </div>  
     ) 
 };
 

@@ -12,9 +12,9 @@ const Home = () => {
           <div className="jumbotron text-center border border-dark bg-light jumbo">
             <h1 className="display-4">Cuánto Dinero vas a enviar?</h1>
             <Conversor />
-            <hr className="my-4" />
+            <hr className="my-2" />
             <Link
-              className="btn btn-primary btn-lg"
+              className="btn btn-counter btn-primary btn-lg"
               to="/Registrate"
               role="button"
             >
@@ -22,8 +22,40 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <CarrouselNoticias />
       </div>
+      <div className="container">
+  <div className="row">
+    <div className="col-md-3">
+      <div className="card-counter primary">
+        <i className="fa fa-code-fork" />
+        <span className="count-numbers">12</span>
+        <span className="count-name">Flowz</span>
+      </div>
+    </div>
+    <div className="col-md-3">
+      <div className="card-counter danger">
+        <i className="fa fa-ticket" />
+        <span className="count-numbers">599</span>
+        <span className="count-name">Instances</span>
+      </div>
+    </div>
+    <div className="col-md-3">
+      <div className="card-counter success">
+        <i className="fa fa-database" />
+        <span className="count-numbers">6875</span>
+        <span className="count-name">Data</span>
+      </div>
+    </div>
+    <div className="col-md-3">
+      <div className="card-counter info">
+        <i className="fa fa-users" />
+        <span className="count-numbers">35</span>
+        <span className="count-name">Users</span>
+      </div>
+    </div>
+  </div>
+</div>
+
     </>
   );
 };
