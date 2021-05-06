@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+//import React, { useContext } from "react";
 import { validateLogin } from "../components/ValidateInfo";
 import useForm from "../components/UseForms";
 import { Link } from "react-router-dom";
+import "../css/InicioSesion.css";
 
 export const InicioSesion = () => {
   const result = (mensaje, codigo, json) => {
