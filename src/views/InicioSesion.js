@@ -85,7 +85,7 @@ export const InicioSesion = () => {
           </div>
           <div className="text-center mt-5">
             <p className="mb-0">¿No estas registrado?</p>
-            <Link className="text-center mt-0" to="/signup">
+            <Link className="text-center mt-0" to="/registrate">
               Regístrate aqui!
             </Link>
           </div>

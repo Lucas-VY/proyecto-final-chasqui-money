@@ -10,7 +10,7 @@ import InicioSesion from "./views/InicioSesion";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
 
-import "./components/navbar.css";
+import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 

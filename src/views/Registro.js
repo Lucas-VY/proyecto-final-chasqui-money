@@ -1,7 +1,7 @@
 import React from "react";
 import { validateInfo } from "../components/ValidateInfo";
 import useForm from "../components/UseForms";
-import "./Registro.css";
+import "../css/Registro.css";
 
 export const Registro = () => {
   const result = (mensaje, codigo, response) => {
