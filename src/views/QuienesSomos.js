@@ -24,13 +24,13 @@ const QuienesSomos = () => {
                   <h3 className="name">Lucas Varas</h3>
                   <p className="title">Developer Full-Stack</p>
                   <div className="social">
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-facebook-official" />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-instagram" />
                     </a>
                   </div>
@@ -48,13 +48,13 @@ const QuienesSomos = () => {
                   <h3 className="name">Bárbara Ulloa</h3>
                   <p className="title">Developer Full-Stack</p>
                   <div className="social">
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-facebook-official" />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-instagram" />
                     </a>
                   </div>
@@ -72,13 +72,13 @@ const QuienesSomos = () => {
                   <h3 className="name">Alex Herrera</h3>
                   <p className="title">Developer Full-Stack</p>
                   <div className="social">
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-facebook-official" />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <i className="fa fa-instagram" />
                     </a>
                   </div>
