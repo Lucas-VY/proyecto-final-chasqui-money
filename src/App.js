@@ -25,7 +25,7 @@ function App() {
           style={{ height: "100vh" }}
         >
           <div style={{ position: "absolute" }}>
-            <Particles height="100vh" width="100%" params={particlesConfig} />
+            <Particles height="100vh" width="100vw" params={particlesConfig} />
           </div>
           <Navbar />
           <Switch>
