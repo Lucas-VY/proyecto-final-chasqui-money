@@ -1,26 +1,30 @@
+import { Link } from "react-router-dom";
 import Conversor from "../components/Conversor";
 
 const Home = () => {
   return (
     <>
-    <div className="container">
-  <div className="row">
-    <div className="col-6">
-      <h1>Calcula y cotiza tu tasa de cambio</h1>
-      <p>Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. 
-        Nam consequat neque quis sapien viverra convallis. In non tempus lorem. </p>
+      {/* col-sm-3 col-md-4 col-lg-12 */}
+
+
+<div className="container"></div>
+      <div className="container">
+        <div className="row d-flex justify-content-center">
+          <div className="jumbotron bg-transparent text-center border border-dark ">
+            <h1 className="display-4">Cuánto Dinero vas a enviar?</h1>
+            <Conversor />
+            <hr className="my-4" />
+            <p>Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum.</p>
+            <Link className="btn btn-primary btn-lg" to="/Registro" role="button">Registrate Aquí!</Link>
+          </div>
+        </div>
       </div>
-    <div className="col-6">
-      <div className="col-12">
-      <Conversor />
-        <div className="screen" />
-      </div>
-    </div>
-  </div>
-</div>
-      
+
     </>
   );
 };
 
 export default Home;
+
+
+/* <div className=""></div> */
