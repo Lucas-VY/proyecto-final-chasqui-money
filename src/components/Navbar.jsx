@@ -12,7 +12,7 @@ const Navbar = () => {
             <Link
               className="nav-brand active link pr-3"
               role="button"
-              to="/QuienSomos"
+              to="/QuienesSomos"
             >
               Quiénes Somos?
             </Link>
@@ -57,13 +57,13 @@ const Navbar = () => {
         <div className="col-lg-4">
           <div className="container">
             <span className="navbar-brand navbar-text">
-              <Link className="login" to="/Ingresa">
+              <Link className="login" to="/inicio-sesion">
                 Ingresa
               </Link>
               <Link
                 className="register navbar-brand btn btn-light action-button mx-2 my-1"
                 role="button"
-                to="/Registrate"
+                to="/registrate"
               >
                 Regístrate
               </Link>

@@ -124,7 +124,7 @@ export const Registro = () => {
             </div>
             {errors.phone && <p className="parrafo">{errors.phone}</p>}
           </div>
-          <p>Minimo 8 caracteres</p>
+          <p>Mínimo 8 caracteres</p>
           <div className="form-group">
             <div className="input-group">
               <div className="input-group-prepend">
@@ -164,7 +164,7 @@ export const Registro = () => {
           <div className="form-group">
             <label className="form-check-label mt-4">
               <input type="checkbox" required="required" /> He leído y acepto
-              los <a href="#">Terminos y condiciones</a>
+              los <a href="#">Términos y condiciones</a>
             </label>
           </div>
           <div className="form-group d-flex justify-content-center">
