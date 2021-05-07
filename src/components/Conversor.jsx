@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import '../components/Conversor.css';
 
-const BASE_URL = "";
+const BASE_URL = "https://free.currconv.com/api/v7";
 /* https://free.currconv.com/api/v7 */
 const API_KEY = "2f01dcf43562e77ad5d4";
 
+/* CONVERSOR EN INPUT Y SELECT PARA MONEDAS */
 function CurrencyRow(props) {
   const {
     currencyOptions,
@@ -14,13 +15,10 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-    <div>
-      <input
-        type="number"
-        className="input"
-        value={amount}
-        onChange={onChangeAmount}
-      />
+    <div className="container">
+      <input className="input" id="input-conversor" type="number" value={amount} onChange={onChangeAmount}/>
+
+      {/* selector de monedas   */}
       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
@@ -82,20 +80,48 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-      <CurrencyRow
+     <div className="convertor-card">
+        <div className="base">
+          <span className="name">Escoge tu Moneda</span>
+          <div className="value-section">
+          <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={fromCurrency}
             onChangeCurrency={(e) => setFromCurrency(e.target.value)}
             onChangeAmount={handleFromAmountChange}
             amount={fromAmount}
             />
-             <div className="igual"><h2> = </h2></div>
-             <CurrencyRow
+          </div>
+        </div>
+        <div className="converted">
+          <span className="name">Tu Cambio</span>
+          <div className="value-section">
+          <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={toCurrency}
             onChangeCurrency={(e) => setToCurrency(e.target.value)}
             onChangeAmount={handleToAmountChange}
             amount={toAmount}/>
+          </div>
+        </div>
+      </div>
+
+
+       {/*  <CurrencyRow
+            currencyOptions={currencyOptions}
+            selectedCurrency={fromCurrency}
+            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+            onChangeAmount={handleFromAmountChange}
+            amount={fromAmount}
+            />
+             <br></br>
+        <CurrencyRow
+            currencyOptions={currencyOptions}
+            selectedCurrency={toCurrency}
+            onChangeCurrency={(e) => setToCurrency(e.target.value)}
+            onChangeAmount={handleToAmountChange}
+            amount={toAmount}/> */}
+
     </>
   );
 }
