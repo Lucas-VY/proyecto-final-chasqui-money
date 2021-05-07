@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import '../components/Conversor.css';
+import "../components/Conversor.css";
 
-const BASE_URL = "https://free.currconv.com/api/v7";
+const BASE_URL = "";
 /* https://free.currconv.com/api/v7 */
 const API_KEY = "2f01dcf43562e77ad5d4";
 
@@ -14,23 +14,46 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-    <div>
-      <input
-        type="number"
-        className="input"
-        value={amount}
-        onChange={onChangeAmount}
-      />
-       <select value={selectedCurrency} onChange={onChangeCurrency}>
-        {currencyOptions.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
+
+
+    <>
+      <form>
+        <div className="form-group">
+          <input className="input form-control " type="number" value={amount} onChange={onChangeAmount}
+
+          />
+          <div className="input-group mb-2">
+            <div className="input-group-prepend">
+              <label className="input-group-text" htmlFor="inputGroupSelect01">Opciones</label>
+            </div>
+            <select className="custom-select text-success" id="inputGroupSelect01" value={selectedCurrency} onChange={onChangeCurrency}>
+            {currencyOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          </div>
+          
+        </div>
+      </form>
+    </>
+
   );
 }
+/* <input
+  type="number"
+  className="input"
+  value={amount}
+  onChange={onChangeAmount}
+/>
+<select value={selectedCurrency} onChange={onChangeCurrency}>
+  {currencyOptions.map((option) => (
+    <option key={option} value={option}>
+      {option}
+    </option>
+  ))}
+</select> */
 
 function Conversor() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
@@ -76,20 +99,24 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-      <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={fromCurrency}
-            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
-            onChangeAmount={handleFromAmountChange}
-            amount={fromAmount}
-            />
-             <br></br>
+      <form action="">
+        <legend>Tu envías</legend>
         <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={toCurrency}
-            onChangeCurrency={(e) => setToCurrency(e.target.value)}
-            onChangeAmount={handleToAmountChange}
-            amount={toAmount}/>
+          currencyOptions={currencyOptions}
+          selectedCurrency={fromCurrency}
+          onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+          onChangeAmount={handleFromAmountChange}
+          amount={fromAmount}
+        />
+        <br></br>
+        <legend>Tu beneficiario recibe</legend>
+        <CurrencyRow
+          currencyOptions={currencyOptions}
+          selectedCurrency={toCurrency}
+          onChangeCurrency={(e) => setToCurrency(e.target.value)}
+          onChangeAmount={handleToAmountChange}
+          amount={toAmount} />
+      </form>
     </>
   );
 }

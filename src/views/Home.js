@@ -6,24 +6,41 @@ import "../css/Home.css";
 const Home = () => {
   return (
     <>
+  
+  <div className="container-fluid">
+        <div className="row d-flex justify-content-center jumbo">
+          <div className="jumbotron text-center border-none bg-transparent jumbo">
+              <h1 className="header__title">Consulta Tu Cambio</h1>
+              <p className="header__paragraph">
+                Cambio de dinero Rapido y seguro
+              </p> 
+            <Conversor />
+            <hr className="my-2" />
+            <Link
+              className="btn btn-counter btn-primary btn-lg"
+              to="/Registrate"
+              role="button"
+            >
+              Regístrate Gratis
+            </Link>
+          </div>
+        </div>
+      </div>
 
-
-
-
-      <div className="container-fluid">
+ {/* <div className="container-fluid">
         <div className="row d-flex justify-content-center jumbo">
           <main className="main">
             <header className="header">
               <h1 className="header__title">Currency Converter</h1>
               <p className="header__paragraph">
                 Fast and secure currency exchange
-    </p>
+              </p>
             </header>
             <form className="form js-form">
               <fieldset>
                 <legend>
                   From
-      </legend>
+                </legend>
                 <select className="form__select js-firstSelect">
                   <option>PLN</option>
                   <option>USD</option>
@@ -44,9 +61,9 @@ const Home = () => {
               <button className="form__button js-submit">Exchange</button>
             </form>
           </main>
-
         </div>
-      </div>
+      </div> 
+ */}
 
 
       {/* BANNERS */}

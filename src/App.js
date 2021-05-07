@@ -9,6 +9,7 @@ import Registro from "./views/Registro";
 import InicioSesion from "./views/InicioSesion";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
+import UserView from "./views/UserView";
 
 import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
@@ -30,21 +31,14 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route
-              exact
-              path="/PreguntasFrecuentes"
-              component={PreguntasFrecuentes}
-            ></Route>
-            <Route
-              exact
-              path="/noticias-relevantes"
-              component={Noticias}
-            ></Route>
+            <Route exact path="/PreguntasFrecuentes" component={PreguntasFrecuentes}></Route>
+            <Route exact path="/noticias-relevantes"component={Noticias}></Route>
             <Route exact path="/testimonios" component={Testimonios}></Route>
             <Route exact path="/contactanos" component={Contactanos}></Route>
             <Route exact path="/QuienesSomos" component={QuienesSomos}></Route>
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
+            <Route exact path="/user" component={UserView}></Route>
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
           <Footer />
