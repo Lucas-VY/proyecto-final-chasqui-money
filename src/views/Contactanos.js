@@ -1,97 +1,117 @@
+import React from "react";
+import { validateInfo } from "../components/ValidateInfo";
+import useForm from "../components/UseForms";
 import "../css/Contactanos.css";
 
-const Contactanos = () => {
+export const Contactanos = () => {
+  const result = (mensaje, codigo, response) => {
+    if (codigo === 200) {
+      alert(mensaje);
+      //redireccionar al login
+    } else {
+      alert("No fue posible registrar: " + mensaje);
+    }
+  };
+
+  const { handleSubmit, handleChange, values, errors } = useForm(
+    result,
+    validateInfo,
+    {
+      name: "",
+      last_name: "",
+      rut: "",
+      email: "",
+      password: "",
+      phone: "",
+    },
+    "user/signup",
+    "POST"
+  );
+
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="well well-sm">
-              <form className="form-horizontal" method="post">
-                <fieldset>
-                  <legend className="text-center header">Contact us</legend>
-                  <div className="form-group">
-                    <span className="col-md-1 col-md-offset-2 text-center">
-                      <i className="fa fa-user bigicon" />
-                    </span>
-                    <div className="col-md-8">
-                      <input
-                        id="fname"
-                        name="name"
-                        type="text"
-                        placeholder="First Name"
-                        className="form-control"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <span className="col-md-1 col-md-offset-2 text-center">
-                      <i className="fa fa-user bigicon" />
-                    </span>
-                    <div className="col-md-8">
-                      <input
-                        id="lname"
-                        name="name"
-                        type="text"
-                        placeholder="Last Name"
-                        className="form-control"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <span className="col-md-1 col-md-offset-2 text-center">
-                      <i className="fa fa-envelope-o bigicon" />
-                    </span>
-                    <div className="col-md-8">
-                      <input
-                        id="email"
-                        name="email"
-                        type="text"
-                        placeholder="Email Address"
-                        className="form-control"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <span className="col-md-1 col-md-offset-2 text-center">
-                      <i className="fa fa-phone-square bigicon" />
-                    </span>
-                    <div className="col-md-8">
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="text"
-                        placeholder="Phone"
-                        className="form-control"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <span className="col-md-1 col-md-offset-2 text-center">
-                      <i className="fa fa-pencil-square-o bigicon" />
-                    </span>
-                    <div className="col-md-8">
-                      <textarea
-                        className="form-control"
-                        id="message"
-                        name="message"
-                        placeholder="Enter your massage for us here. We will get back to you within 2 business days."
-                        rows={7}
-                        defaultValue={""}
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <div className="col-md-12 text-center">
-                      <button type="submit" className="btn btn-primary btn-lg">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
+      <div className="container-fluid containerForm">
+        <div className="signup-form col-12 col-md-6 ">
+          <form onSubmit={handleSubmit} className="form" noValidate>
+            <h2 className="text-center mb-4">Contáctanos</h2>
+            <hr />
+            <div className="form-group mt-5">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-user" />
+                  </span>
+                </div>
+                <input
+                  className="form-control "
+                  type="text"
+                  name="name"
+                  placeholder="ingrese nombre"
+                  value={values.name}
+                  onChange={handleChange}
+                />
+              </div>
+              {errors.name && <p className="parrafo">{errors.name}</p>}
             </div>
-          </div>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-user" />
+                  </span>
+                </div>
+                <input
+                  className="form-control "
+                  type="text"
+                  name="last_name"
+                  placeholder="ingrese apellido"
+                  value={values.last_name}
+                  onChange={handleChange}
+                />
+              </div>
+              {errors.last_name && (
+                <p className="parrafo">{errors.last_name}</p>
+              )}
+            </div>
+
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-paper-plane" />
+                  </span>
+                </div>
+                <input
+                  className="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="ingrese email"
+                  value={values.email}
+                  onChange={handleChange}
+                />
+              </div>
+              {errors.email && <p className="parrafo">{errors.email}</p>}
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-comment"></i>
+                  </div>
+                </div>
+                <textarea
+                  class="form-control"
+                  placeholder="Envianos tu Mensaje"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div className="form-group d-flex justify-content-center">
+              <button type="submit" className="btn btn-primary btn-lg">
+                Enviar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>
