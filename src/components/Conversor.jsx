@@ -14,18 +14,13 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-<<<<<<< HEAD
     <>
-      <input className="input" id="input-conversor" type="number" value={amount} onChange={onChangeAmount}/>
-=======
-    <div>
       <input
         type="number"
         className="input"
         value={amount}
         onChange={onChangeAmount}
       />
->>>>>>> parent of 090297c... conversor
       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
