@@ -1,6 +1,25 @@
+import { faCloudDownloadAlt } from "@fortawesome/free-solid-svg-icons";
+import React, { useEffect } from "react";
 import "../css/Noticias.css";
 
+const URL = "https://newsapi.org/v2/everything?q=keyword&";
+//https://newsapi.org/v2/everything?q=keyword&apiKey=4c12586d6b7041539e2c141a6084b33b
+const apiKey = "4c12586d6b7041539e2c141a6084b33b";
+
 const Noticias = () => {
+  const [noticiasPrueba, setNoticiasPrueba] = React.useState(null);
+
+  React.useEffect(() => {
+    //console.log("useEffect")
+    obtenerNoticias();
+  }, []);
+
+  const obtenerNoticias = async () => {
+    const name = await fetch("https://newsapi.org/v2/everything?q=keyword&");
+    const notice = await name.json();
+    setNoticiasPrueba(notice);
+  };
+
   return (
     <>
       {/* Page Content */}

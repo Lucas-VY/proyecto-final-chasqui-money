@@ -14,15 +14,15 @@ import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Particles from "react-particles-js";
-import particlesConfig from "./components/ParticlesConfig";
+import particlesConfig from "./components/particlesConfig";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <div
+       <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
-          style={{ height: "100vh" }}
+          style={{ height: "100vh"}}
         >
           <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
@@ -48,7 +48,7 @@ function App() {
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
           <Footer />
-        </div>
+       </div>
       </BrowserRouter>
     </>
   );

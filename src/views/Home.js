@@ -6,10 +6,23 @@ import "../css/Home.css";
 const Home = () => {
   return (
     <>
-      {/* col-sm-3 col-md-4 col-lg-12 */}
-
-      <Conversor />
-
+  
+  <div className="container-fluid">
+        <div className="row d-flex justify-content-center jumbo">
+          <div className="jumbotron text-center border border-dark bg-light jumbo">
+            <h1 className="display-4">Cuánto Dinero vas a enviar?</h1>
+            <Conversor />
+            <hr className="my-2" />
+            <Link
+              className="btn btn-counter btn-primary btn-lg"
+              to="/Registrate"
+              role="button"
+            >
+              Regístrate Gratis
+            </Link>
+          </div>
+        </div>
+      </div>
 
 
       {/* BANNERS */}
@@ -19,7 +32,7 @@ const Home = () => {
             <div className="card-counter primary">
               <i className="fas fa-coins" />
               <span className="count-numbers">200</span>
-              <span className="count-name">Monedas Disponibles</span>
+              <span className="count-name">Monedas</span>
             </div>
           </div>
           <div className="col-md-3">

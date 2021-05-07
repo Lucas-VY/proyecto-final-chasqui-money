@@ -5,7 +5,6 @@ const BASE_URL = "https://free.currconv.com/api/v7";
 /* https://free.currconv.com/api/v7 */
 const API_KEY = "2f01dcf43562e77ad5d4";
 
-/* CONVERSOR EN INPUT Y SELECT PARA MONEDAS */
 function CurrencyRow(props) {
   const {
     currencyOptions,
@@ -15,17 +14,14 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-    <div className="container">
+    <div>
       <input
-        className="input"
-        id="input-conversor"
         type="number"
+        className="input"
         value={amount}
         onChange={onChangeAmount}
       />
-
-      {/* selector de monedas   */}
-      <select value={selectedCurrency} onChange={onChangeCurrency}>
+       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
             {option}
@@ -43,14 +39,10 @@ function Conversor() {
   const [exchangeRate, setExchangeRate] = useState();
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
-
   let toAmount, fromAmount;
   if (amountInFromCurrency) {
     fromAmount = amount;
     toAmount = Math.round(amount * exchangeRate);
-  } else {
-    toAmount = amount;
-    fromAmount = amount / exchangeRate;
   }
 
   useEffect(() => {
@@ -73,12 +65,10 @@ function Conversor() {
         .then((data) => setExchangeRate(data[`${fromCurrency}_${toCurrency}`]));
     }
   }, [fromCurrency, toCurrency]);
-
   function handleFromAmountChange(e) {
     setAmount(e.target.value);
     setAmountInFromCurrency(true);
   }
-
   function handleToAmountChange(e) {
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
@@ -86,6 +76,7 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
+<<<<<<< HEAD
       {/* <main className="main" id="conversor-home">
         <header className="header">
           <h1 className="header__title">Convierte tu moneda</h1>
@@ -137,8 +128,28 @@ function Conversor() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
+=======
+      <CurrencyRow
+            currencyOptions={currencyOptions}
+            selectedCurrency={fromCurrency}
+            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+            onChangeAmount={handleFromAmountChange}
+            amount={fromAmount}
+            />
+             <br></br>
+        <CurrencyRow
+            currencyOptions={currencyOptions}
+            selectedCurrency={toCurrency}
+            onChangeCurrency={(e) => setToCurrency(e.target.value)}
+            onChangeAmount={handleToAmountChange}
+            amount={toAmount}/>
+>>>>>>> 321463b7379c06d3eab903bba09d5609cb275c03
     </>
   );
 }
 
 export default Conversor;
+
+
+
+
