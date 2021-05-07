@@ -14,7 +14,7 @@ import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Particles from "react-particles-js";
-import particlesConfig from "./components/ParticlesConfig";
+import particlesConfig from "./components/particlesConfig";
 
 function App() {
   return (
@@ -22,9 +22,9 @@ function App() {
       <BrowserRouter>
        <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
-          style={{ height: "100vh" }}
+          style={{ height: "100vh"}}
         >
-          <div style={{ position: "aboslute" }}>
+          <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
           </div>
           <Navbar />

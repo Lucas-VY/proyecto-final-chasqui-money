@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../components/Conversor.css';
 
-const BASE_URL = "";
+const BASE_URL = "https://free.currconv.com/api/v7";
 /* https://free.currconv.com/api/v7 */
 const API_KEY = "2f01dcf43562e77ad5d4";
 
@@ -14,21 +14,21 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-    <>
+    <div>
       <input
         type="number"
         className="input"
         value={amount}
         onChange={onChangeAmount}
       />
-      <select value={selectedCurrency} onChange={onChangeCurrency}>
+       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
             {option}
           </option>
         ))}
       </select>
-      </>
+    </div>
   );
 }
 
@@ -39,14 +39,10 @@ function Conversor() {
   const [exchangeRate, setExchangeRate] = useState();
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
-
   let toAmount, fromAmount;
   if (amountInFromCurrency) {
     fromAmount = amount;
     toAmount = Math.round(amount * exchangeRate);
-  } else {
-    toAmount = amount;
-    fromAmount = amount / exchangeRate;
   }
 
   useEffect(() => {
@@ -69,12 +65,10 @@ function Conversor() {
         .then((data) => setExchangeRate(data[`${fromCurrency}_${toCurrency}`]));
     }
   }, [fromCurrency, toCurrency]);
-
   function handleFromAmountChange(e) {
     setAmount(e.target.value);
     setAmountInFromCurrency(true);
   }
-
   function handleToAmountChange(e) {
     setAmount(e.target.value);
     setAmountInFromCurrency(false);
@@ -89,8 +83,8 @@ function Conversor() {
             onChangeAmount={handleFromAmountChange}
             amount={fromAmount}
             />
-             <div className="igual"><h2> = </h2></div>
-             <CurrencyRow
+             <br></br>
+        <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={toCurrency}
             onChangeCurrency={(e) => setToCurrency(e.target.value)}
@@ -101,3 +95,7 @@ function Conversor() {
 }
 
 export default Conversor;
+
+
+
+
