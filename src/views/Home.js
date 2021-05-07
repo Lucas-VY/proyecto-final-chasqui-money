@@ -7,26 +7,10 @@ const Home = () => {
   return (
     <>
       {/* col-sm-3 col-md-4 col-lg-12 */}
-     
-    <div className="jumbo">
+
       <Conversor />
-    </div>
-    {/*  <div className="container-fluid">
-        <div className="row d-flex justify-content-center border border-dark jumbo">
-          <div className="jumbotron text-center border border-dark bg-light jumbo">
-            <h1 className="display-5">Cuánto Dinero vas a enviar?</h1>
-            
-            <hr className="my-2" />
-            <Link
-              className="btn btn-counter btn-primary btn-lg"
-              to="/Registrate"
-              role="button"
-            >
-              Regístrate Gratis
-            </Link>
-          </div>
-        </div>
-      </div>  */}
+
+
 
       {/* BANNERS */}
       <div className="container">
