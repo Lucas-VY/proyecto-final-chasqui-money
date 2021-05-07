@@ -20,11 +20,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div
+       <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
           style={{ height: "100vh" }}
         >
-          <div style={{ position: "absolute" }}>
+          <div style={{ position: "aboslute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
           </div>
           <Navbar />
@@ -48,7 +48,7 @@ function App() {
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
           <Footer />
-        </div>
+       </div>
       </BrowserRouter>
     </>
   );

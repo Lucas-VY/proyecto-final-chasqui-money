@@ -6,9 +6,10 @@ import "../css/Home.css";
 const Home = () => {
   return (
     <>
-      {/* col-sm-3 col-md-4 col-lg-12 */}
+  
 
-      <Conversor />
+      <Conversor/>
+
 
 
 
@@ -19,7 +20,7 @@ const Home = () => {
             <div className="card-counter primary">
               <i className="fas fa-coins" />
               <span className="count-numbers">200</span>
-              <span className="count-name">Monedas Disponibles</span>
+              <span className="count-name">Monedas</span>
             </div>
           </div>
           <div className="col-md-3">

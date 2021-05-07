@@ -15,10 +15,8 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-    <div className="container">
+    <>
       <input className="input" id="input-conversor" type="number" value={amount} onChange={onChangeAmount}/>
-
-      {/* selector de monedas   */}
       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
@@ -26,7 +24,7 @@ function CurrencyRow(props) {
           </option>
         ))}
       </select>
-    </div>
+      </>
   );
 }
 
@@ -80,42 +78,34 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-
-<main className="main" id="conversor-home">
-        <header className="header">
-          <h1 className="header__title">Convierte tu moneda</h1>
-          <p className="header__paragraph">
-            Rapido y seguro conversor de moneda
-          </p>
-        </header>
-        <form className="form js-form">
-          <fieldset>
-            <legend>
-              Tu envías
-      </legend>
-            <select className="form__select js-firstSelect">
-              <option>PLN</option>
-              <option>USD</option>
-              <option>EUR</option>
-            </select>
-            <input className="form__field js-firstInput" type="number" name="buy" defaultValue={100} />
-          </fieldset>
-          <button className="form__button">&lt;&gt;</button>
-          <fieldset>
-            <legend>Tu beneficiario recibe</legend>
-            <select className="form__select js-secondSelect">
-              <option>USD</option>
-              <option>EUR</option>
-              <option>PLN</option>
-            </select>
-            <div className="form__result js-result">25.23</div>
-          </fieldset>
-          <button className="form__button js-submit">registrate gratis</button>
-        </form>
-      </main>  
+     <div className="convertor-card">
+        <div className="base">
+          <span className="name">Escoge tu Moneda</span>
+          <div className="value-section">
+          <CurrencyRow
+            currencyOptions={currencyOptions}
+            selectedCurrency={fromCurrency}
+            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+            onChangeAmount={handleFromAmountChange}
+            amount={fromAmount}
+            />
+          </div>
+        </div>
+        <div className="converted">
+          <span className="name">Tu Cambio</span>
+          <div className="value-section">
+          <CurrencyRow
+            currencyOptions={currencyOptions}
+            selectedCurrency={toCurrency}
+            onChangeCurrency={(e) => setToCurrency(e.target.value)}
+            onChangeAmount={handleToAmountChange}
+            amount={toAmount}/>
+          </div>
+        </div>
+      </div>
 
 
-         {/* <CurrencyRow
+       {/*  <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={fromCurrency}
             onChangeCurrency={(e) => setFromCurrency(e.target.value)}
@@ -128,8 +118,8 @@ function Conversor() {
             selectedCurrency={toCurrency}
             onChangeCurrency={(e) => setToCurrency(e.target.value)}
             onChangeAmount={handleToAmountChange}
-            amount={toAmount}/>
- */}
+            amount={toAmount}/> */}
+
     </>
   );
 }
