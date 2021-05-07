@@ -21,7 +21,7 @@ function CurrencyRow(props) {
         value={amount}
         onChange={onChangeAmount}
       />
-       <select value={selectedCurrency} onChange={onChangeCurrency}>
+      <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
             {option}
@@ -76,43 +76,6 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-<<<<<<< HEAD
-      {/* <main className="main" id="conversor-home">
-        <header className="header">
-          <h1 className="header__title">Convierte tu moneda</h1>
-          <p className="header__paragraph">
-            Rapido y seguro conversor de moneda
-          </p>
-        </header>
-        <form className="form js-form">
-          <fieldset>
-            <legend>Tu envías</legend>
-            <select className="form__select js-firstSelect">
-              <option>PLN</option>
-              <option>USD</option>
-              <option>EUR</option>
-            </select>
-            <input
-              className="form__field js-firstInput"
-              type="number"
-              name="buy"
-              defaultValue={100}
-            />
-          </fieldset>
-          <button className="form__button">&lt;&gt;</button>
-          <fieldset>
-            <legend>Tu beneficiario recibe</legend>
-            <select className="form__select js-secondSelect">
-              <option>USD</option>
-              <option>EUR</option>
-              <option>PLN</option>
-            </select>
-            <div className="form__result js-result">25.23</div>
-          </fieldset>
-          <button className="form__button js-submit">registrate gratis</button>
-        </form>
-      </main> */}
-
       <CurrencyRow
         currencyOptions={currencyOptions}
         selectedCurrency={fromCurrency}
@@ -128,28 +91,8 @@ function Conversor() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
-=======
-      <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={fromCurrency}
-            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
-            onChangeAmount={handleFromAmountChange}
-            amount={fromAmount}
-            />
-             <br></br>
-        <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={toCurrency}
-            onChangeCurrency={(e) => setToCurrency(e.target.value)}
-            onChangeAmount={handleToAmountChange}
-            amount={toAmount}/>
->>>>>>> 321463b7379c06d3eab903bba09d5609cb275c03
     </>
   );
 }
 
 export default Conversor;
-
-
-
-
