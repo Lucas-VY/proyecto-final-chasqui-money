@@ -30,11 +30,11 @@ export const InicioSesion = () => {
         <form onSubmit={handleSubmit} className="form" noValidate>
           <h2 className="text-center mb-4">Ingresa</h2>
           <hr />
-          <div className="form-group mt-5">
+          <div className="form-group">
             <div className="input-group">
               <div className="input-group-prepend">
                 <span className="input-group-text">
-                  <i className="fa fa-paper-plane" />
+                  <span className="fa fa-paper-plane" />
                 </span>
               </div>
               <input
@@ -48,24 +48,23 @@ export const InicioSesion = () => {
             </div>
             {errors.email && <p className="parrafo">{errors.email}</p>}
           </div>
-
           <div className="form-group">
             <div className="input-group">
               <div className="input-group-prepend">
                 <span className="input-group-text">
-                  <i className="fa fa-lock" />
+                  <span className="fa fa-user" />
                 </span>
               </div>
               <input
                 className="form-control"
                 type="password"
-                name="password"
+                name="password2"
                 placeholder="confirma contraseña"
-                value={values.password}
+                value={values.password2}
                 onChange={handleChange}
               />
             </div>
-            {errors.password && <p className="parrafo">{errors.password}</p>}
+            {errors.password2 && <p className="parrafo">{errors.password2}</p>}
           </div>
           <div className="form-group" style={{ marginLeft: "100px" }}>
             <label className="form-check-label mt-4">
