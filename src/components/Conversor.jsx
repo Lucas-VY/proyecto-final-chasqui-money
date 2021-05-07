@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../components/Conversor.css';
+import "../components/Conversor.css";
 
 const BASE_URL = "https://free.currconv.com/api/v7";
 /* https://free.currconv.com/api/v7 */
@@ -16,7 +16,13 @@ function CurrencyRow(props) {
   } = props;
   return (
     <div className="container">
-      <input className="input" id="input-conversor" type="number" value={amount} onChange={onChangeAmount}/>
+      <input
+        className="input"
+        id="input-conversor"
+        type="number"
+        value={amount}
+        onChange={onChangeAmount}
+      />
 
       {/* selector de monedas   */}
       <select value={selectedCurrency} onChange={onChangeCurrency}>
@@ -80,8 +86,7 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-
-<main className="main" id="conversor-home">
+      {/* <main className="main" id="conversor-home">
         <header className="header">
           <h1 className="header__title">Convierte tu moneda</h1>
           <p className="header__paragraph">
@@ -90,15 +95,18 @@ function Conversor() {
         </header>
         <form className="form js-form">
           <fieldset>
-            <legend>
-              Tu envías
-      </legend>
+            <legend>Tu envías</legend>
             <select className="form__select js-firstSelect">
               <option>PLN</option>
               <option>USD</option>
               <option>EUR</option>
             </select>
-            <input className="form__field js-firstInput" type="number" name="buy" defaultValue={100} />
+            <input
+              className="form__field js-firstInput"
+              type="number"
+              name="buy"
+              defaultValue={100}
+            />
           </fieldset>
           <button className="form__button">&lt;&gt;</button>
           <fieldset>
@@ -112,24 +120,23 @@ function Conversor() {
           </fieldset>
           <button className="form__button js-submit">registrate gratis</button>
         </form>
-      </main>  
+      </main> */}
 
-
-         {/* <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={fromCurrency}
-            onChangeCurrency={(e) => setFromCurrency(e.target.value)}
-            onChangeAmount={handleFromAmountChange}
-            amount={fromAmount}
-            />
-             <br></br>
-        <CurrencyRow
-            currencyOptions={currencyOptions}
-            selectedCurrency={toCurrency}
-            onChangeCurrency={(e) => setToCurrency(e.target.value)}
-            onChangeAmount={handleToAmountChange}
-            amount={toAmount}/>
- */}
+      <CurrencyRow
+        currencyOptions={currencyOptions}
+        selectedCurrency={fromCurrency}
+        onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+        onChangeAmount={handleFromAmountChange}
+        amount={fromAmount}
+      />
+      <br></br>
+      <CurrencyRow
+        currencyOptions={currencyOptions}
+        selectedCurrency={toCurrency}
+        onChangeCurrency={(e) => setToCurrency(e.target.value)}
+        onChangeAmount={handleToAmountChange}
+        amount={toAmount}
+      />
     </>
   );
 }
