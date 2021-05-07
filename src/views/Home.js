@@ -9,8 +9,11 @@ const Home = () => {
   
   <div className="container-fluid">
         <div className="row d-flex justify-content-center jumbo">
-          <div className="jumbotron text-center border border-dark bg-light jumbo">
-            <h1 className="display-4">Cuánto Dinero vas a enviar?</h1>
+          <div className="jumbotron text-center border-none bg-transparent jumbo">
+              <h1 className="header__title">Consulta Tu Cambio</h1>
+              <p className="header__paragraph">
+                Cambio de dinero Rapido y seguro
+              </p> 
             <Conversor />
             <hr className="my-2" />
             <Link
@@ -23,6 +26,44 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+ {/* <div className="container-fluid">
+        <div className="row d-flex justify-content-center jumbo">
+          <main className="main">
+            <header className="header">
+              <h1 className="header__title">Currency Converter</h1>
+              <p className="header__paragraph">
+                Fast and secure currency exchange
+              </p>
+            </header>
+            <form className="form js-form">
+              <fieldset>
+                <legend>
+                  From
+                </legend>
+                <select className="form__select js-firstSelect">
+                  <option>PLN</option>
+                  <option>USD</option>
+                  <option>EUR</option>
+                </select>
+                <input className="form__field js-firstInput" type="number" name="buy" defaultValue={100} />
+              </fieldset>
+              <button className="form__button">&lt;&gt;</button>
+              <fieldset>
+                <legend>To</legend>
+                <select className="form__select js-secondSelect">
+                  <option>USD</option>
+                  <option>EUR</option>
+                  <option>PLN</option>
+                </select>
+                <div className="form__result js-result">25.23</div>
+              </fieldset>
+              <button className="form__button js-submit">Exchange</button>
+            </form>
+          </main>
+        </div>
+      </div> 
+ */}
 
 
       {/* BANNERS */}
