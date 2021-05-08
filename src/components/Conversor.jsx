@@ -14,31 +14,37 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-
-
     <>
       <form>
         <div className="form-group">
-          <input className="input form-control " type="number" value={amount} onChange={onChangeAmount}
-
+          <input
+            className="input form-control "
+            type="number"
+            value={amount}
+            onChange={onChangeAmount}
           />
           <div className="input-group mb-2">
             <div className="input-group-prepend">
-              <label className="input-group-text" htmlFor="inputGroupSelect01">Opciones</label>
+              <label className="input-group-text" htmlFor="inputGroupSelect01">
+                Opciones
+              </label>
             </div>
-            <select className="custom-select text-success" id="inputGroupSelect01" value={selectedCurrency} onChange={onChangeCurrency}>
-            {currencyOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+            <select
+              className="custom-select text-success"
+              id="inputGroupSelect01"
+              value={selectedCurrency}
+              onChange={onChangeCurrency}
+            >
+              {currencyOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
-          
         </div>
       </form>
     </>
-
   );
 }
 /* <input
@@ -115,14 +121,11 @@ function Conversor() {
           selectedCurrency={toCurrency}
           onChangeCurrency={(e) => setToCurrency(e.target.value)}
           onChangeAmount={handleToAmountChange}
-          amount={toAmount} />
+          amount={toAmount}
+        />
       </form>
     </>
   );
 }
 
 export default Conversor;
-
-
-
-
