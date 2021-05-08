@@ -3,6 +3,8 @@ import { validateLogin } from "../components/ValidateInfo";
 import useForm from "../components/UseForms";
 import { Link } from "react-router-dom";
 import "../css/InicioSesion.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export const InicioSesion = () => {
   const result = (mensaje, codigo, json) => {
@@ -25,6 +27,9 @@ export const InicioSesion = () => {
   );
 
   return (
+    <>
+  <Navbar />
+
     <div className="container-fluid containerForm">
       <div className="signup-form col-12 col-md-6">
         <form onSubmit={handleSubmit} className="form" noValidate>
@@ -90,6 +95,9 @@ export const InicioSesion = () => {
         </form>
       </div>
     </div>
+
+    <Footer />
+    </>
   );
 };
 

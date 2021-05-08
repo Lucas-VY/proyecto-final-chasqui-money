@@ -1,8 +1,11 @@
 import "../css/PreguntasFrecuentes.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const PreguntasFrecuentes = () => {
   return (
     <>
+    <Navbar />
       <div className="container">
         <div className="row py-5">
           <div className="col-lg-9 mx-auto text-white text-center">
@@ -139,6 +142,8 @@ const PreguntasFrecuentes = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

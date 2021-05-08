@@ -21,12 +21,12 @@ const Navbar = () => {
           <div className="navbar-collapse" id="navcol-1">
             <ul className="nav navbar-nav">
               <li className="nav-item" role="presentation">
-                <Link className="nav-link active" to="/QuienesSomos">
+                <Link className="nav-link active" to="/quienes-somos">
                   Quiénes Somos?
                 </Link>
               </li>
               <li className="nav-item" role="presentation">
-                <Link className="nav-link active" to="/PreguntasFrecuentes">
+                <Link className="nav-link active" to="/preguntas-frecuentes">
                   Preguntas Frecuentes
                 </Link>
               </li>
@@ -35,7 +35,6 @@ const Navbar = () => {
                   className="dropdown-toggle nav-link dropdown-toggle"
                   data-toggle="dropdown"
                   aria-expanded="false"
-                  to="/"
                 >
                   Blog{" "}
                 </Link>

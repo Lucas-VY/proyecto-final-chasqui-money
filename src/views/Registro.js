@@ -2,6 +2,8 @@ import React from "react";
 import { validateInfo } from "../components/ValidateInfo";
 import useForm from "../components/UseForms";
 import "../css/Registro.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export const Registro = () => {
   const result = (mensaje, codigo, response) => {
@@ -29,6 +31,10 @@ export const Registro = () => {
   );
 
   return (
+    <>
+    <Navbar />
+
+
     <div className="container-fluid containerForm">
       <div className="signup-form col-12 col-md-6 ">
         <form onSubmit={handleSubmit} className="form" noValidate>
@@ -175,6 +181,9 @@ export const Registro = () => {
         </form>
       </div>
     </div>
+
+    <Footer />
+    </>
   );
 };
 

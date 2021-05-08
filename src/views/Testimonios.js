@@ -1,8 +1,12 @@
 import "../css/Testimonios.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Testimonios = () => {
   return (
     <>
+    <Navbar />
+
       <div className="container">
         <div id="demo" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
@@ -61,6 +65,8 @@ const Testimonios = () => {
           </a>
         </div>
       </div>
+
+    <Footer />
     </>
   );
 };

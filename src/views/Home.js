@@ -2,11 +2,15 @@ import { Link } from "react-router-dom";
 //import CarrouselNoticias from "../components/CarrouselNotice";
 import Conversor from "../components/Conversor";
 import "../css/Home.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+
 
 const Home = () => {
   return (
-    <>
-  
+    <> 
+<Navbar/>
   {/* CONVERSOR */}
   <div className="container-fluid">
         <div className="row d-flex justify-content-center jumbo">
@@ -60,6 +64,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 };

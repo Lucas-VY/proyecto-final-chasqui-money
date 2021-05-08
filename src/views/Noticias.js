@@ -1,6 +1,8 @@
 import { faCloudDownloadAlt } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
 import "../css/Noticias.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const URL = "https://newsapi.org/v2/everything?q=keyword&";
 //https://newsapi.org/v2/everything?q=keyword&apiKey=4c12586d6b7041539e2c141a6084b33b
@@ -9,6 +11,8 @@ const apiKey = "4c12586d6b7041539e2c141a6084b33b";
 const Noticias = () => {
   return (
     <>
+    <Navbar />
+
       {/* Page Content */}
       <div className="container">
         {/* Page Heading */}
@@ -151,6 +155,8 @@ const Noticias = () => {
         </ul>
       </div>
       {/* /.container */}
+
+      <Footer />
     </>
   );
 };

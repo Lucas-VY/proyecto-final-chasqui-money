@@ -18,8 +18,7 @@ import UserView from "./views/UserView";
 import UserView2 from "./views/UserView2";
 
 import "./components/Navbar.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import Particles from "react-particles-js";
 import particlesConfig from "./components/particlesConfig";
 
@@ -31,25 +30,26 @@ function App() {
           className="container-fluid p-0 d-flex flex-column justify-content-between"
           style={{ height: "100vh" }}
         >
-          <div style={{ position: "absolute" }}>
+           <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
-          </div>
-          <Navbar />
+          </div> 
+     
             <Switch>
               <Route exact path="/" component={Home}></Route>
-              <Route exact path="/PreguntasFrecuentes" component={PreguntasFrecuentes}></Route>
+              <Route exact path="/preguntas-frecuentes" component={PreguntasFrecuentes}></Route>
               <Route exact path="/noticias-relevantes" component={Noticias}></Route>
               <Route exact path="/testimonios" component={Testimonios}></Route>
               <Route exact path="/contactanos" component={Contactanos}></Route>
-              <Route exact path="/QuienesSomos" component={QuienesSomos}></Route>
+              <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
               <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
               <Route exact path="/registrate" component={Registro}></Route>
               <Route exact path="/inicio-sesion/user" component={UserView}></Route>
               <Route exact path="/inicio-sesion/user2" component={UserView2}></Route>
+              {/* NOT FOUND DEBE IR AL FINAL DE TODO SIEMPRE */}
               <Route component={NotFound}></Route>
             </Switch>
-          <Footer />
         </div>
+
       </BrowserRouter>
     </>
   );

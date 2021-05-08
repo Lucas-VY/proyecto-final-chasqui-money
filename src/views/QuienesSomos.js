@@ -1,8 +1,11 @@
 import "../css/QuienesSomos.css";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const QuienesSomos = () => {
   return (
     <>
+    <Navbar />
       <div className="team-grid">
         <div className="container">
           <div className="intro">
@@ -95,6 +98,8 @@ const QuienesSomos = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };
