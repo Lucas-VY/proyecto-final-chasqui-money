@@ -77,7 +77,7 @@ export const InicioSesion = () => {
             </Link>
           </div>
           <div className="form-group d-flex justify-content-center">
-            <button type="submit" className="btn btn-primary btn-lg">
+            <button className="btn btn-primary btn-lg" to="/UserView2" type="submit" >
               Ingresar
             </button>
           </div>

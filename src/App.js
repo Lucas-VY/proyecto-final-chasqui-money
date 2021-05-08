@@ -9,7 +9,13 @@ import Registro from "./views/Registro";
 import InicioSesion from "./views/InicioSesion";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
+
+//TEST para escoger que vista usamos
+// vista 1
 import UserView from "./views/UserView";
+
+//vista 2
+import UserView2 from "./views/UserView2";
 
 import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
@@ -38,8 +44,9 @@ function App() {
             <Route exact path="/QuienesSomos" component={QuienesSomos}></Route>
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
-            <Route exact path="/user" component={UserView}></Route>
-            <Route exact path="/" component={NotFound}></Route>
+            {/* <Route exact path="/UserView" component={UserView}></Route>
+            <Route exact path="/userView2" component={UserView2}></Route> */}
+            <Route component={NotFound}></Route>
           </Switch>
           <Footer />
        </div>
