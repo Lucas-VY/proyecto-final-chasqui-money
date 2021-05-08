@@ -9,7 +9,13 @@ import Registro from "./views/Registro";
 import InicioSesion from "./views/InicioSesion";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
+
+//TEST para escoger que vista usamos
+// vista 1
 import UserView from "./views/UserView";
+
+//vista 2
+import UserView2 from "./views/UserView2";
 
 import "./components/Navbar.css";
 import Navbar from "./components/Navbar";
@@ -29,30 +35,19 @@ function App() {
             <Particles height="100vh" width="100vw" params={particlesConfig} />
           </div>
           <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route
-              exact
-              path="/PreguntasFrecuentes"
-              component={PreguntasFrecuentes}
-            ></Route>
-            <Route
-              exact
-              path="/noticias-relevantes"
-              component={Noticias}
-            ></Route>
-            <Route exact path="/testimonios" component={Testimonios}></Route>
-            <Route exact path="/contactanos" component={Contactanos}></Route>
-            <Route exact path="/QuienesSomos" component={QuienesSomos}></Route>
-            <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
-            <Route exact path="/registrate" component={Registro}></Route>
-            <Route
-              exact
-              path="/inicio-sesion/user"
-              component={UserView}
-            ></Route>
-            <Route exact path="/" component={NotFound}></Route>
-          </Switch>
+            <Switch>
+              <Route exact path="/" component={Home}></Route>
+              <Route exact path="/PreguntasFrecuentes" component={PreguntasFrecuentes}></Route>
+              <Route exact path="/noticias-relevantes" component={Noticias}></Route>
+              <Route exact path="/testimonios" component={Testimonios}></Route>
+              <Route exact path="/contactanos" component={Contactanos}></Route>
+              <Route exact path="/QuienesSomos" component={QuienesSomos}></Route>
+              <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
+              <Route exact path="/registrate" component={Registro}></Route>
+              <Route exact path="/inicio-sesion/user" component={UserView}></Route>
+              <Route exact path="/inicio-sesion/user2" component={UserView2}></Route>
+              <Route component={NotFound}></Route>
+            </Switch>
           <Footer />
         </div>
       </BrowserRouter>
