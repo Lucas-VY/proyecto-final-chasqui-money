@@ -21,9 +21,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-       <div
+        <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
-          style={{ height: "100vh"}}
+          style={{ height: "100vh" }}
         >
           <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
@@ -31,18 +31,30 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/PreguntasFrecuentes" component={PreguntasFrecuentes}></Route>
-            <Route exact path="/noticias-relevantes"component={Noticias}></Route>
+            <Route
+              exact
+              path="/PreguntasFrecuentes"
+              component={PreguntasFrecuentes}
+            ></Route>
+            <Route
+              exact
+              path="/noticias-relevantes"
+              component={Noticias}
+            ></Route>
             <Route exact path="/testimonios" component={Testimonios}></Route>
             <Route exact path="/contactanos" component={Contactanos}></Route>
             <Route exact path="/QuienesSomos" component={QuienesSomos}></Route>
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
-            <Route exact path="/user" component={UserView}></Route>
+            <Route
+              exact
+              path="/inicio-sesion/user"
+              component={UserView}
+            ></Route>
             <Route exact path="/" component={NotFound}></Route>
           </Switch>
           <Footer />
-       </div>
+        </div>
       </BrowserRouter>
     </>
   );

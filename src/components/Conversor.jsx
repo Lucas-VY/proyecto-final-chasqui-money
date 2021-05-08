@@ -14,49 +14,37 @@ function CurrencyRow(props) {
     amount,
   } = props;
   return (
-<<<<<<< HEAD
-    <div>
-      <input
-        type="number"
-        className="input"
-        value={amount}
-        onChange={onChangeAmount}
-      />
-      <select value={selectedCurrency} onChange={onChangeCurrency}>
-        {currencyOptions.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
-=======
-
-
     <>
       <form>
         <div className="form-group">
-          <input className="input form-control " type="number" value={amount} onChange={onChangeAmount}
-
+          <input
+            className="input form-control "
+            type="number"
+            value={amount}
+            onChange={onChangeAmount}
           />
           <div className="input-group mb-2">
             <div className="input-group-prepend">
-              <label className="input-group-text" htmlFor="inputGroupSelect01">Opciones</label>
+              <label className="input-group-text" htmlFor="inputGroupSelect01">
+                Opciones
+              </label>
             </div>
-            <select className="custom-select text-success" id="inputGroupSelect01" value={selectedCurrency} onChange={onChangeCurrency}>
-            {currencyOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+            <select
+              className="custom-select text-success"
+              id="inputGroupSelect01"
+              value={selectedCurrency}
+              onChange={onChangeCurrency}
+            >
+              {currencyOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
-          
         </div>
       </form>
     </>
-
->>>>>>> a4b05dc96ff57d0c4650f4eb0857ccc6734dd019
   );
 }
 /* <input
@@ -117,23 +105,6 @@ function Conversor() {
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
-<<<<<<< HEAD
-      <CurrencyRow
-        currencyOptions={currencyOptions}
-        selectedCurrency={fromCurrency}
-        onChangeCurrency={(e) => setFromCurrency(e.target.value)}
-        onChangeAmount={handleFromAmountChange}
-        amount={fromAmount}
-      />
-      <br></br>
-      <CurrencyRow
-        currencyOptions={currencyOptions}
-        selectedCurrency={toCurrency}
-        onChangeCurrency={(e) => setToCurrency(e.target.value)}
-        onChangeAmount={handleToAmountChange}
-        amount={toAmount}
-      />
-=======
       <form action="">
         <legend>Tu envías</legend>
         <CurrencyRow
@@ -150,9 +121,9 @@ function Conversor() {
           selectedCurrency={toCurrency}
           onChangeCurrency={(e) => setToCurrency(e.target.value)}
           onChangeAmount={handleToAmountChange}
-          amount={toAmount} />
+          amount={toAmount}
+        />
       </form>
->>>>>>> a4b05dc96ff57d0c4650f4eb0857ccc6734dd019
     </>
   );
 }
