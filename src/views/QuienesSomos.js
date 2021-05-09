@@ -1,11 +1,14 @@
 import "../css/QuienesSomos.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import IMG_1020 from "../assets/IMG_1020.JPG";
+import IMG_1019 from "../assets/IMG_1019.jpeg";
+import IMG_1021 from "../assets/IMG_1021.jpeg";
 
 const QuienesSomos = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="team-grid">
         <div className="container">
           <div className="intro">
@@ -13,8 +16,9 @@ const QuienesSomos = () => {
               Creadores
             </h2>
             <p className="text-center" id="pquienes-somos">
-              Somos una ecomerce , encargada a través de la intermediación de
-              cambios de divisas, hacerle llegar el dinero al destinatario.
+              Microempresa encargada que a través de la intermediación de
+              cambios de divisas, le hacemos llegar dinero al
+              destinatario/beneficiario.
             </p>
           </div>
           <div className="row people d-flex justify-content-center">
@@ -22,13 +26,14 @@ const QuienesSomos = () => {
               <div
                 className="box"
                 style={{
-                  backgroundImage: "url(https://i.imgur.com/HjKTNkG.jpg)",
+                  backgroundImage: `url(${IMG_1019})`,
                 }}
               >
                 <div className="cover">
                   <h3 className="name">Lucas Varas</h3>
                   <p className="title" id="pquienes-somos">
-                    Developer Full-Stack</p>
+                    Developer Full-Stack
+                  </p>
                   <div className="social">
                     <a href="/">
                       <i className="fa fa-facebook-official" />
@@ -47,7 +52,7 @@ const QuienesSomos = () => {
               <div
                 className="box"
                 style={{
-                  backgroundImage: "url(https://i.imgur.com/WgXRMDs.jpg)",
+                  backgroundImage: `url(${IMG_1020})`,
                 }}
               >
                 <div className="cover">
@@ -73,7 +78,7 @@ const QuienesSomos = () => {
               <div
                 className="box"
                 style={{
-                  backgroundImage: "url(https://i.imgur.com/0Cdlenp.jpg)",
+                  backgroundImage: `url(${IMG_1021})`,
                 }}
               >
                 <div className="cover">
