@@ -77,7 +77,7 @@ const PerfilUser = () => {
                       </svg>
                       Github
                     </h6>
-                    <span className="text-secondary">bootdey</span>
+                    <span className="text-secondary">byanse</span>
                   </li>
                   <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 className="mb-0">
@@ -97,7 +97,7 @@ const PerfilUser = () => {
                       </svg>
                       Twitter
                     </h6>
-                    <span className="text-secondary">@bootdey</span>
+                    <span className="text-secondary">@Barbara_Ulloa</span>
                   </li>
                   <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 className="mb-0">
@@ -126,7 +126,7 @@ const PerfilUser = () => {
                       </svg>
                       Instagram
                     </h6>
-                    <span className="text-secondary">bootdey</span>
+                    <span className="text-secondary">byanse</span>
                   </li>
                   <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 className="mb-0">
@@ -146,7 +146,7 @@ const PerfilUser = () => {
                       </svg>
                       Facebook
                     </h6>
-                    <span className="text-secondary">bootdey</span>
+                    <span className="text-secondary">Bárbara Ulloa</span>
                   </li>
                 </ul>
               </div>
@@ -204,11 +204,10 @@ const PerfilUser = () => {
                     <div className="card-body">
                       <h6 className="d-flex align-items-center mb-3">
                         <i className="material-icons text-info mr-2">
-                          assignment
+                          Actividades
                         </i>
-                        Project Status
                       </h6>
-                      <small>Web Design</small>
+                      <small>Diarias</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -219,7 +218,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Website Markup</small>
+                      <small>Mensual</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -230,7 +229,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>One Page</small>
+                      <small>Anual</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -241,7 +240,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Mobile Template</small>
+                      <small>Dispositivo Movil</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -252,7 +251,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Backend API</small>
+                      <small>Página web</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -271,11 +270,10 @@ const PerfilUser = () => {
                     <div className="card-body">
                       <h6 className="d-flex align-items-center mb-3">
                         <i className="material-icons text-info mr-2">
-                          assignment
+                          Países de Destino
                         </i>
-                        Project Status
                       </h6>
-                      <small>Web Design</small>
+                      <small>Chile</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -286,7 +284,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Website Markup</small>
+                      <small>Colombia</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -297,7 +295,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>One Page</small>
+                      <small>Estados Unidos</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -308,7 +306,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Mobile Template</small>
+                      <small>Perú</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -319,7 +317,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Backend API</small>
+                      <small>Venezuela</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -341,7 +339,7 @@ const PerfilUser = () => {
                   <div className="card-body">
                     <h5 className="card-title">Revisa</h5>
                     <p className="card-text">
-                      Revisa tu historial de transacciones aquí
+                      Accede a tu historial de transacciones aquí
                     </p>
                     <a href="/" className="btn btn-primary">
                       click aquí
