@@ -1,101 +1,71 @@
 import { Link } from "react-router-dom";
-import Conversor from "../components/Conversor";
-import "../css/UserView.css";
-import IMG_1020 from "../assets/IMG_1020.JPG";
+import '../css/UserView.css'
+import Sidebar from '../components/Sidebar';
 
 const UserView = () => {
-  return (
-    <>
-      <div className="container">
-        <div className="main-body">
-          {/* Breadcrumb */}
-          {/* /Breadcrumb */}
-          <div className="row gutters-sm">
-            <div className="col-md-4 mb-3">
-              <div className="card">
-                <div className="card-body">
-                  <div className="d-flex flex-column align-items-center text-center">
-                    <img
-                      src={IMG_1020}
-                      alt="Admin"
-                      className="rounded-circle"
-                      width={150}
-                    />
-                    <div className="mt-3">
-                      <h4>Bárbara Ulloa</h4>
-                      <p className="text-secondary mb-1">
-                        Full Stack Developer
-                      </p>
-                      <p className="text-muted font-size-sm">
-                        Santiago de Chile
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="card mt-3"></div>
-            </div>
-            <div className="col-md-8">
-              <div className="card mb-3">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Full Name</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      Kenneth Valdez
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Email</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">fip@jukmuh.al</div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Phone</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      (239) 816-9029
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Mobile</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      (320) 380-4539
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Address</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    return(
+        <>
+    
+ <Sidebar/>
 
-      <div className="col-md-4 mb-3">
-        <div className="card">
-          <div className="card-body">
-            <Conversor />
+
+      <main role="main" className="col-md-9 ml-sm-auto col-lg-10 my-3">
+        <div className="card-list">
+          <div className="row">
+          <div className="col-md-3">
+            <div className="card-counter primary">
+              <i className="fas fa-coins" />
+              <div className="count-numbers value">200</div>
+                <div className="count-name stat"><b></b>Total transferencias</div>
+            </div>
+          </div>
+
+            
+            <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <div className="card-counter danger">
+              <i className="fas fa-handshake" />
+              <span className="count-numbers">+1M</span>
+              <span className="count-name">Transferencias</span>
+            </div>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <div className="card-counter success">
+              <i className="fa fa-database" />
+              <span className="count-numbers">+400K</span>
+              <span className="count-name">Data</span>
+            </div>
+            </div>
+
+            
+        <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <div className="card-counter info">
+              <i className="fa fa-users" />
+              <span className="count-numbers">+500K</span>
+              <span className="count-name">Usuarios</span>
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+
+
+            {/* <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+              <div className="card red">
+                <div className="title">new customers</div>
+                <i className="zmdi zmdi-download" />
+                <div className="value">3</div>
+                <div className="stat"><b>13</b>% decrease</div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+
+      </main>
+      
+</>
+
+    )   
 };
 
 export default UserView;

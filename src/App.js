@@ -10,12 +10,14 @@ import InicioSesion from "./views/InicioSesion";
 import NotFound from "./views/NotFound";
 import injectContext from "./store/appContext";
 
-//TEST para escoger que vista usamos
-// vista 1
-import UserView from "./views/UserView";
 
-//vista 2
-import UserView2 from "./views/UserView2";
+// vistas de perfil
+import PerfilUser from "./views/PerfilUser";
+import UserView from "./views/UserView";
+import NoticiasPerfil from './views/NoticiasPerfil';
+import Transferencias from "./views/Transferencias";
+import ContactanosPerfil from "./views/Contactanos-perfil"
+import ChaskiCard from "./views/ChaskiCard";
 
 import "./components/Navbar.css";
 
@@ -28,28 +30,36 @@ function App() {
       <BrowserRouter>
         <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
-          style={{ height: "100vh" }}
-        >
-           <div style={{ position: "absolute" }}>
+          style={{ height: "100vh" }}>
+          <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
-          </div> 
-     
-            <Switch>
-              <Route exact path="/" component={Home}></Route>
-              <Route exact path="/preguntas-frecuentes" component={PreguntasFrecuentes}></Route>
-              <Route exact path="/noticias-relevantes" component={Noticias}></Route>
-              <Route exact path="/testimonios" component={Testimonios}></Route>
-              <Route exact path="/contactanos" component={Contactanos}></Route>
-              <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
-              <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
-              <Route exact path="/registrate" component={Registro}></Route>
-              <Route exact path="/inicio-sesion/user" component={UserView}></Route>
-              <Route exact path="/inicio-sesion/user2" component={UserView2}></Route>
-              {/* NOT FOUND DEBE IR AL FINAL DE TODO SIEMPRE */}
-              <Route component={NotFound}></Route>
-            </Switch>
-        </div>
+          </div>
 
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route
+              exact
+              path="/preguntas-frecuentes"
+              component={PreguntasFrecuentes}></Route>
+            <Route
+              exact
+              path="/noticias-relevantes"
+              component={Noticias}></Route>
+            <Route exact path="/testimonios" component={Testimonios}></Route>
+            <Route exact path="/contactanos" component={Contactanos}></Route>
+            <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
+            <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
+            <Route exact path="/registrate" component={Registro}></Route>
+            <Route exact path="/inicio-sesion/user-view"component={UserView}></Route>
+            <Route exact path="/inicio-sesion/user-perfil" component={PerfilUser}></Route>
+            <Route exact path="/inicio-sesion/user-transferencias" component={Transferencias}></Route>
+            <Route exact path="/inicio-sesion/user-noticias" component={NoticiasPerfil}></Route>
+            <Route exact path="/inicio-sesion/user-contactanos" component={ContactanosPerfil}></Route>
+            <Route exact path="/inicio-sesion/user-credit-card" component={ChaskiCard}></Route>
+            {/* NOT FOUND DEBE IR AL FINAL DE TODO SIEMPRE */}
+            <Route component={NotFound}></Route>
+          </Switch>
+        </div>
       </BrowserRouter>
     </>
   );

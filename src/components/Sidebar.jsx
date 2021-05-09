@@ -17,7 +17,7 @@ const Sidebar = () => {
         
 
             <li className="nav-item">
-              <Link className="nav-link" to="/inicio-sesion/user2">
+              <Link className="nav-link" to="/inicio-sesion/user-view">
               <i className="fas fa-home"></i>
                      Inicio 
                 <span className="sr-only">
@@ -29,7 +29,7 @@ const Sidebar = () => {
             <br />
 
             <li className="nav-item">
-              <Link className="nav-link" to="/perfil-user">
+              <Link className="nav-link" to="/inicio-sesion/user-perfil">
                 <i className="fas fa-user-circle" />
                 Tú Perfil
               </Link>
@@ -38,7 +38,7 @@ const Sidebar = () => {
             <br />
 
             <li className="nav-item">
-              <Link className="nav-link" href="/">
+              <Link className="nav-link" href="/inicio-sesion/user-transferencias">
                 <i className="fas fa-money-bill-wave" />
                 Transfer
               </Link>
@@ -47,7 +47,7 @@ const Sidebar = () => {
             <br />
 
             <li className="nav-item">
-              <Link className="nav-link" to="/noticias-relevantes">
+              <Link className="nav-link" to="/inicio-sesion/user-noticias">
                 <i className="far fa-newspaper" />
                 Noticias
               </Link>
@@ -56,7 +56,7 @@ const Sidebar = () => {
             <br />
 
             <li className="nav-item">
-              <Link className="nav-link" to="/contactanos">
+              <Link className="nav-link" to="/inicio-sesion/user-contactanos">
                 <i className="fas fa-question" />
                 Contactanos
               </Link>
@@ -65,7 +65,7 @@ const Sidebar = () => {
             <br />
 
         <li className="nav-item">
-              <Link className="nav-link" to="/credit-card">
+              <Link className="nav-link" to="/inicio-sesion/user-credit-card">
                 <i className="fab fa-cc-visa" />
                 Chaski Card
               </Link>
