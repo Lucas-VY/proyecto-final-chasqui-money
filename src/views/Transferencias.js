@@ -8,18 +8,20 @@ const Transferencias = () => {
       <Sidebar />
       <div className="container mt-5 px-5">
         <div className="mb-4">
-          <h2>Confirmación de orden y pago</h2>
-          <span>Realice la confirmación de sus datos y culmine el pago</span>
+          <h2 className="text-white ">Confirmación de orden y pago</h2>
+          <span className="text-white ">
+            Realice la confirmación de sus datos y culmine el pago
+          </span>
         </div>
         <div className="row">
           <div className="col-md-6">
-            <div className="card p-3 text-dark">
+            <div className="card carta-transferencia p-3 text-dark">
               <h6 className="text-uppercase">Detalles de Pago</h6>
               <div className="inputbox mt-3">
                 <input
                   type="text"
                   name="name"
-                  className="form-control"
+                  className="form-control forma-transferencia"
                   required="required"
                 />
                 <span>Name on card</span>
@@ -30,7 +32,7 @@ const Transferencias = () => {
                     <input
                       type="text"
                       name="name"
-                      className="form-control"
+                      className="form-control forma-transferencia"
                       required="required"
                     />
                     <i className="fa fa-credit-card" /> <span>Card Number</span>
@@ -42,7 +44,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control"
+                        className="form-control forma-transferencia"
                         required="required"
                       />
                       <span>Expiry</span>
@@ -51,7 +53,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control"
+                        className="form-control forma-transferencia"
                         required="required"
                       />
                       <span>CVV</span>
@@ -67,7 +69,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control"
+                        className="form-control forma-transferencia"
                         required="required"
                       />
                       <span>Street Address</span>
@@ -78,7 +80,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control"
+                        className="form-control forma-transferencia"
                         required="required"
                       />
                       <span>City</span>
@@ -91,7 +93,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control"
+                        className="form-control forma-transferencia"
                         required="required"
                       />
                       <span>State/Province</span>
@@ -102,7 +104,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control"
+                        className="form-control forma-transferencia"
                         required="required"
                       />
                       <span>Zip code</span>
@@ -114,7 +116,7 @@ const Transferencias = () => {
           </div>
           <div className="col-md-6">
             <div className="container-fluid">
-              <div className="card p-3 text-dark">
+              <div className="card carta-transferencia p-3 text-dark">
                 <div className="row d-flex justify-content-center">
                   <div className="text-center border-none bg-transparent">
                     <h1 className="header__title">Consulta Tu Pago</h1>
@@ -134,7 +136,7 @@ const Transferencias = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
-            <div className="card">
+            <div className="card carta-transferencia">
               <div className="card-body">
                 <h5 className="header-title pb-3 mt-0 text-dark">
                   Historial de Pago
@@ -155,7 +157,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Kevin Heal
@@ -173,7 +175,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar2.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Frank M. Lyons
@@ -191,7 +193,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Angelo Butler
@@ -209,7 +211,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar4.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Phillip Morse
@@ -227,7 +229,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Kevin Heal
@@ -245,7 +247,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Frank M. Lyons
@@ -264,7 +266,7 @@ const Transferencias = () => {
                 </div>
                 {/*end table-responsive*/}
                 <div className="pt-3 border-top text-right">
-                  <a href="#" className="text-primary">
+                  <a href="/" className="text-primary">
                     View all <i className="mdi mdi-arrow-right" />
                   </a>
                 </div>

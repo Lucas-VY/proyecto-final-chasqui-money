@@ -1,3 +1,7 @@
+.body {
+  font-family: "Lato", sans-serif;
+}
+
 .form-control {
   font-size: 15px;
 }
@@ -51,7 +55,7 @@
   font-size: 16px;
   font-weight: bold;
   background: #051972 !important;
-  border: none;
+
   min-width: 140px;
 }
 .signup-form .btn:hover,
@@ -77,6 +81,7 @@
 }
 .signup-form .fa-paper-plane {
   font-size: 18px;
+  font-family: "Lato", sans-serif;
 }
 .signup-form .fa-check {
   color: #fff;
@@ -84,6 +89,7 @@
   top: 18px;
   font-size: 7px;
   position: absolute;
+  font-family: "Lato", sans-serif;
 }
 
 .containerForm {
@@ -91,12 +97,14 @@
   margin-top: 70px;
   padding-top: 20px;
   z-index: 100;
+  font-family: "Lato", sans-serif;
 }
 .containerForm2 {
   background-color: #5e8998;
   padding-bottom: 200px;
   margin-top: 70px;
   padding-top: 20px;
+  font-family: "Lato", sans-serif;
 }
 .parrafo {
   font-size: 0.8rem;
