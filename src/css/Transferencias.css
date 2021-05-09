@@ -2,7 +2,7 @@ body {
   margin-top: 0px;
   font-family: "Lato", sans-serif;
 }
-.card {
+.carta-transferencia {
   border: none;
   -webkit-box-shadow: 1px 0 20px rgba(96, 93, 175, 0.05);
   box-shadow: 1px 0 20px rgba(96, 93, 175, 0.05);
@@ -49,7 +49,7 @@ body {
   height: 100vh;
 }
 
-.card {
+.carta-transferencia {
   border: none;
 }
 

@@ -15,7 +15,7 @@ const Transferencias = () => {
         </div>
         <div className="row">
           <div className="col-md-6">
-            <div className="card p-3 text-dark">
+            <div className="card carta-transferencia p-3 text-dark">
               <h6 className="text-uppercase">Detalles de Pago</h6>
               <div className="inputbox mt-3">
                 <input
@@ -116,7 +116,7 @@ const Transferencias = () => {
           </div>
           <div className="col-md-6">
             <div className="container-fluid">
-              <div className="card p-3 text-dark">
+              <div className="card carta-transferencia p-3 text-dark">
                 <div className="row d-flex justify-content-center">
                   <div className="text-center border-none bg-transparent">
                     <h1 className="header__title">Consulta Tu Pago</h1>
@@ -136,7 +136,7 @@ const Transferencias = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
-            <div className="card">
+            <div className="card carta-transferencia">
               <div className="card-body">
                 <h5 className="header-title pb-3 mt-0 text-dark">
                   Historial de Pago
