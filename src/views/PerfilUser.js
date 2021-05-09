@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import Conversor from "../components/Conversor";
 import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
+import Sidebar from '../components/Sidebar';
 
 const PerfilUser = () => {
   return (
     <>
+
+    <Sidebar />
       <div className="container">
         <div className="main-body">
           {/* /Breadcrumb */}

@@ -1,20 +1,23 @@
 import { faCloudDownloadAlt } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
 import "../css/Noticias.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
+
+import Sidebar from '../components/Sidebar';
 
 /* API NOTICIAS */
 const URL = "https://newsapi.org/v2/everything?q=keyword&";
 //https://newsapi.org/v2/everything?q=keyword&apiKey=4c12586d6b7041539e2c141a6084b33b
 const apiKey = "4c12586d6b7041539e2c141a6084b33b";
 
-const Noticias = () => {
-  return (
-    <>
-    <Navbar />
 
-      {/* Page Content */}
+
+const NoticiasPerfil = () => {
+    return(
+        <>
+            <Sidebar />
+
+             {/* Page Content */}
       <div className="container">
         {/* Page Heading */}
         <h1 className="my-4" id="titulo-noticias">
@@ -157,9 +160,10 @@ const Noticias = () => {
       </div>
       {/* /.container */}
 
-      <Footer />
-    </>
-  );
-};
 
-export default Noticias;
+
+        </>
+    )
+}
+
+export default NoticiasPerfil;
