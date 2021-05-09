@@ -21,7 +21,7 @@ const Transferencias = () => {
                 <input
                   type="text"
                   name="name"
-                  className="form-control forma-transferencia"
+                  className="form-control"
                   required="required"
                 />
                 <span>Name on card</span>
@@ -32,7 +32,7 @@ const Transferencias = () => {
                     <input
                       type="text"
                       name="name"
-                      className="form-control forma-transferencia"
+                      className="form-control"
                       required="required"
                     />
                     <i className="fa fa-credit-card" /> <span>Card Number</span>
@@ -44,7 +44,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control forma-transferencia"
+                        className="form-control"
                         required="required"
                       />
                       <span>Expiry</span>
@@ -53,7 +53,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control forma-transferencia"
+                        className="form-control"
                         required="required"
                       />
                       <span>CVV</span>
@@ -69,7 +69,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control forma-transferencia"
+                        className="form-control"
                         required="required"
                       />
                       <span>Street Address</span>
@@ -80,7 +80,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control forma-transferencia"
+                        className="form-control"
                         required="required"
                       />
                       <span>City</span>
@@ -93,7 +93,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control forma-transferencia"
+                        className="form-control"
                         required="required"
                       />
                       <span>State/Province</span>
@@ -104,7 +104,7 @@ const Transferencias = () => {
                       <input
                         type="text"
                         name="name"
-                        className="form-control forma-transferencia"
+                        className="form-control"
                         required="required"
                       />
                       <span>Zip code</span>
