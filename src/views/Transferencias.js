@@ -8,8 +8,10 @@ const Transferencias = () => {
       <Sidebar />
       <div className="container mt-5 px-5">
         <div className="mb-4">
-          <h2>Confirmación de orden y pago</h2>
-          <span>Realice la confirmación de sus datos y culmine el pago</span>
+          <h2 className="text-white ">Confirmación de orden y pago</h2>
+          <span className="text-white ">
+            Realice la confirmación de sus datos y culmine el pago
+          </span>
         </div>
         <div className="row">
           <div className="col-md-6">
@@ -155,7 +157,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Kevin Heal
@@ -173,7 +175,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar2.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Frank M. Lyons
@@ -191,7 +193,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Angelo Butler
@@ -209,7 +211,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar4.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Phillip Morse
@@ -227,7 +229,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Kevin Heal
@@ -245,7 +247,7 @@ const Transferencias = () => {
                         <td>
                           <img
                             src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                            alt
+                            alt=""
                             className="thumb-sm rounded-circle mr-2"
                           />
                           Frank M. Lyons
@@ -264,7 +266,7 @@ const Transferencias = () => {
                 </div>
                 {/*end table-responsive*/}
                 <div className="pt-3 border-top text-right">
-                  <a href="#" className="text-primary">
+                  <a href="/" className="text-primary">
                     View all <i className="mdi mdi-arrow-right" />
                   </a>
                 </div>
