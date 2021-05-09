@@ -53,3 +53,7 @@ body {
 .shadow-none {
   box-shadow: none !important;
 }
+
+.sinborde {
+  border: 0;
+}
