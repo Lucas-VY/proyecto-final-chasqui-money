@@ -5,7 +5,7 @@ const Navbar = () => {
     //fixed-top Fija el navbar arriba
     <>
     <div className="header-blue">
-      <nav className="navbar navbar-dark header-blue navbar-expand-md navigation-clean-search col-sm-3 col-md-4 col-lg-12">
+      <nav className="navbar navbar-dark header-blue navbar-expand-md navigation-clean-search">
         <div className="container-fluid fixed-top">
           <Link className="navbar-brand" to="/">
             <h2>Chasky Money</h2>

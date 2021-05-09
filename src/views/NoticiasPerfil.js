@@ -1,23 +1,32 @@
-import { faCloudDownloadAlt } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Noticias.css";
 
-
-import Sidebar from '../components/Sidebar';
+import Sidebar from "../components/Sidebar";
 
 /* API NOTICIAS */
-const URL = "https://newsapi.org/v2/everything?q=keyword&";
+const BASE_URL = "https://newsapi.org/v2/everything?q=keyword&";
 //https://newsapi.org/v2/everything?q=keyword&apiKey=4c12586d6b7041539e2c141a6084b33b
-const apiKey = "4c12586d6b7041539e2c141a6084b33b";
+const API_KEY = "4c12586d6b7041539e2c141a6084b33b";
 
+function NoticiasApi() {
+  const [Noticia, setNoticia] = useState([]);
 
+  useEffect(() => {
+    fetch(`${BASE_URL}/everything?q=keyword&${API_KEY}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.url);
+        setNoticia(Object.keys(data.url));
+      });
+  }, []);
+}
 
 const NoticiasPerfil = () => {
-    return(
-        <>
-            <Sidebar />
+  return (
+    <>
+      <Sidebar />
 
-             {/* Page Content */}
+      {/* Page Content */}
       <div className="container">
         {/* Page Heading */}
         <h1 className="my-4" id="titulo-noticias">
@@ -159,11 +168,8 @@ const NoticiasPerfil = () => {
         </ul>
       </div>
       {/* /.container */}
-
-
-
-        </>
-    )
-}
+    </>
+  );
+};
 
 export default NoticiasPerfil;
