@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom";
-import Conversor from "../components/Conversor";
 import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
+import Sidebar from "../components/Sidebar";
 
 const PerfilUser = () => {
   return (
     <>
+      <Sidebar />
       <div className="container">
         <div className="main-body">
           {/* /Breadcrumb */}
           <div className="row gutters-sm">
             <div className="col-md-4 mb-3">
               <div className="card">
-                <div className="card-body">
+                <div className="card-body perfil">
                   <div className="d-flex flex-column align-items-center text-center">
                     <img
                       src={IMG_1020}
@@ -20,21 +20,18 @@ const PerfilUser = () => {
                       className="rounded-circle"
                       width={150}
                     />
-                    <div className="mt-3">
+                    <div className="mt-3 text-dark">
                       <h4>Bárbara Ulloa</h4>
-                      <p className="text-secondary mb-1">
-                        Full Stack Developer
-                      </p>
-                      <p className="text-muted font-size-sm">
-                        Santiago de Chile
-                      </p>
-                      <span className="text-secondary"></span>
+                      <hr />
+                      <p className="text-dark mb-1">Nacionalidad</p>
+                      <hr />
+                      <p className="text-dark mb-1">Venezolana</p>
+                      <hr />
+                      <p className="text-dark mb-1">País de Residencia Chile</p>
+                      <br></br>
                     </div>
                   </div>
                 </div>
-                <hr />
-                <hr />
-                <hr />
               </div>
               <div className="card mt-3">
                 <div className="card h-100">
@@ -44,7 +41,7 @@ const PerfilUser = () => {
                         Bancos de uso frecuente
                       </i>
                     </h6>
-                    <small>Banco Estado</small>
+                    <small className="text-dark">Banco Estado</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -55,7 +52,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small>Banco Santander</small>
+                    <small className="text-dark">Banco Santander</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -66,7 +63,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small>Banco de Chile</small>
+                    <small className="text-dark">Banco de Chile</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -77,7 +74,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small>Banco Falabella</small>
+                    <small className="text-dark">Banco Falabella</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -88,7 +85,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small>Banco Edwards</small>
+                    <small className="text-dark">Banco Edwards</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -107,77 +104,71 @@ const PerfilUser = () => {
               <div className="card mb-3">
                 <div className="card-body">
                   <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Nombre y Apellido</h6>
+                    <div className="inputbox mt-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        required="required"
+                        value=""
+                      />
+                      <span className="text-dark">Nombre y Apellido:</span>
                     </div>
-                    <form>
-                      <label>
-                        <input className="sinborde" type="text" name="name" />
-                      </label>
-                    </form>
                   </div>
-                  <hr />
                   <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Email</h6>
+                    <div className="inputbox mt-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        required="required"
+                      />
+                      <span className="text-dark">Email:</span>
                     </div>
-                    <form>
-                      <label>
-                        <input className="sinborde" type="email" name="name" />
-                      </label>
-                    </form>
                   </div>
-                  <hr />
                   <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Telefóno Móvil</h6>
+                    <div className="inputbox mt-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        required="required"
+                      />
+                      <span className="text-dark">Teléfono Móvil:</span>
                     </div>
-                    <form>
-                      <label>
-                        <input className="sinborde" type="tel" name="name" />
-                      </label>
-                    </form>
                   </div>
-                  <hr />
                   <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Dirección</h6>
+                    <div className="inputbox mt-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        required="required"
+                      />
+                      <span className="text-dark">Dirección:</span>
                     </div>
-                    <form>
-                      <label>
-                        <input className="sinborde" type="text" name="name" />
-                      </label>
-                    </form>
                   </div>
-                  <hr />
                   <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Contraseña</h6>
+                    <div className="inputbox mt-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        required="required"
+                      />
+                      <span className="text-dark">Contraseña:</span>
                     </div>
-                    <form>
-                      <label>
-                        <input
-                          className="sinborde"
-                          type="password"
-                          name="name"
-                        />
-                      </label>
-                    </form>
                   </div>
-                  <hr />
                   <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0"> Repetir Contraseña</h6>
+                    <div className="inputbox mt-3">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        required="required"
+                      />
+                      <span className="text-dark">Repetir Contraseña:</span>
                     </div>
-                    <form>
-                      <label>
-                        <input
-                          className="sinborde"
-                          type="password"
-                          name="name"
-                        />
-                      </label>
-                    </form>
                   </div>
                 </div>
               </div>
@@ -190,7 +181,7 @@ const PerfilUser = () => {
                           Actividades
                         </i>
                       </h6>
-                      <small>Diarias</small>
+                      <small className="text-dark">Diarias</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -201,7 +192,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Mensual</small>
+                      <small className="text-dark">Mensual</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -212,7 +203,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Anual</small>
+                      <small className="text-dark">Anual</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -223,7 +214,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Dispositivo Movil</small>
+                      <small className="text-dark">Dispositivo Movil</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -234,7 +225,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Página web</small>
+                      <small className="text-dark">Página web</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -256,7 +247,7 @@ const PerfilUser = () => {
                           Países de Destino
                         </i>
                       </h6>
-                      <small>Chile</small>
+                      <small className="text-dark">Chile</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -267,7 +258,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Colombia</small>
+                      <small className="text-dark">Colombia</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -278,7 +269,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Estados Unidos</small>
+                      <small className="text-dark">Estados Unidos</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -289,7 +280,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Perú</small>
+                      <small className="text-dark">Perú</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -300,7 +291,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small>Venezuela</small>
+                      <small className="text-dark">Venezuela</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -320,8 +311,8 @@ const PerfilUser = () => {
               <div className="col-sm-6">
                 <div className="card">
                   <div className="card-body">
-                    <h5 className="card-title">Revisa</h5>
-                    <p className="card-text">
+                    <h5 className="card-title text-dark">Revisa</h5>
+                    <p className="card-text text-dark">
                       Accede a tu historial de transacciones aquí
                     </p>
                     <a href="/" className="btn btn-primary">
@@ -333,8 +324,10 @@ const PerfilUser = () => {
               <div className="col-sm-6">
                 <div className="card">
                   <div className="card-body">
-                    <h5 className="card-title">Realiza tu transacción</h5>
-                    <p className="card-text">
+                    <h5 className="card-title text-dark">
+                      Realiza tu transacción
+                    </h5>
+                    <p className="card-text text-dark">
                       Dirígite a realizar tu operación, haciendo
                     </p>
                     <a href="/" className="btn btn-primary">
