@@ -156,7 +156,7 @@ const PerfilUser = () => {
                 <div className="card-body">
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Full Name</h6>
+                      <h6 className="mb-0">Nombre y Apellido</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
                       Kenneth Valdez
@@ -172,7 +172,7 @@ const PerfilUser = () => {
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Phone</h6>
+                      <h6 className="mb-0">Teléfono Fijo</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
                       (239) 816-9029
@@ -181,7 +181,7 @@ const PerfilUser = () => {
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Mobile</h6>
+                      <h6 className="mb-0">Telefóno Móvil</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
                       (320) 380-4539
@@ -190,7 +190,7 @@ const PerfilUser = () => {
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Address</h6>
+                      <h6 className="mb-0">Dirección</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
                       Bay Area, San Francisco, CA
