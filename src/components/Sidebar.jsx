@@ -38,7 +38,7 @@ const Sidebar = () => {
             <br />
 
             <li className="nav-item">
-              <Link className="nav-link" href="/inicio-sesion/user-transferencias">
+              <Link className="nav-link" to="/inicio-sesion/user-transferencias">
                 <i className="fas fa-money-bill-wave" />
                 Transfer
               </Link>
