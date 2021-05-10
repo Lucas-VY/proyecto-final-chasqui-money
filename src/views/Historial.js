@@ -13,9 +13,9 @@ const Historial = () =>{
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="row">
               <div className="col-12">
-                <div className="card carta-transferencia">
+                <div className="card carta-transferencia  bg-transparent">
                   <div className="card-body">
-                    <h5 className="header-title pb-3 mt-0 text-dark">
+                    <h5 className="header-title pb-3 mt-0 text-white">
                       Historial de Pago
                     </h5>
                     <div className="table-responsive">
