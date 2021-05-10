@@ -1,7 +1,8 @@
 .table th {
     font-weight: 500;
     /* color: #827fc0; */
-    color: #fff;
+    background-color: rgba(89, 102, 91, 0.281);
+    color: rgb(230, 230, 230);
   }
   /* .table thead {
     background-color: #f3f2f7;
@@ -13,11 +14,13 @@
     padding: 14px 12px;
     vertical-align: middle;
   }
+
+  /* TABLA */
   .table tr td {
     /* color: #8887a9; */
-    color: #fff;
-    font-size: 25px;
-    
+    color: rgb(219, 213, 213);
+    font-size: 22px;
+    background-color: rgba(89, 102, 91, 0.281);
   }
   .thumb-sm {
     height: 32px;
@@ -32,8 +35,8 @@
     font-weight: 500;
   }
   .badge-soft-primary {
-    background-color: rgba(96, 93, 175, 0.2);
+    background-color: rgba(93, 175, 111, 0.2);
     /* color: #605daf; */
-    color: #fff;
+    color: rgb(30, 223, 30);
   }
   
