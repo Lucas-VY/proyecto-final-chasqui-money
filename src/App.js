@@ -13,15 +13,16 @@ import injectContext from "./store/appContext";
 // vistas de perfil
 import PerfilUser from "./views/PerfilUser";
 import UserView from "./views/UserView";
-import NoticiasPerfil from "./views/NoticiasPerfil";
 import Transferencias from "./views/Transferencias";
+import Historial from "./views/Historial";
+import NoticiasPerfil from "./views/NoticiasPerfil";
 import ContactanosPerfil from "./views/ContactanosPerfil";
 import ChaskiCard from "./views/ChaskiCard";
 
 import "./components/Navbar.css";
 
 import Particles from "react-particles-js";
-import particlesConfig from "./components/ParticlesConfig";
+import particlesConfig from "./components/particlesConfig";
 
 function App() {
   return (
@@ -58,6 +59,11 @@ function App() {
               exact
               path="/user/transferencias"
               component={Transferencias}
+            ></Route>
+            <Route
+              exact
+              path="/user/historial"
+              component={Historial}
             ></Route>
             <Route
               exact

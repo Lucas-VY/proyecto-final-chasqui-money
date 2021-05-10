@@ -2,6 +2,7 @@ import { Link, Redirect } from "react-router-dom";
 
 const Navbar = () => {
   return (
+    /* FALTA HACERLO RESPONSIVE */
     //fixed-top Fija el navbar arriba
     <>
     <div className="header-blue">

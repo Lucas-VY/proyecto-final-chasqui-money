@@ -1,4 +1,5 @@
 import "../css/PerfilUser.css";
+import { Link } from "react-router-dom";
 import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
@@ -44,70 +45,80 @@ const PerfilUser = () => {
                 <div className="card">
                   <div className="card-body">
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
+                        {/* <label className="text-dark">Nombre y Apellido:</label> */}
+                        {/* valores deben guardarse en un state */}
                         <input
+                          placeholder="Nombre y Apellido"
                           type="text"
-                          name="name"
+                          /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */
+                          name=""
                           className="form-control"
                           required="required"
-                          value=""
-                        />
-                        <span className="text-dark">Nombre y Apellido:</span>
+                          
+                          />
+                          {/* modificar input disabled con use state */}
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
+                        {/* <label className="text-dark">Email:</label> */}
                         <input
+                          placeholder="Email"
                           type="text"
-                          name="name"
+                          /* en name request.json.get // en backend */
+                          name=""
                           className="form-control"
                           required="required"
                         />
-                        <span className="text-dark">Email:</span>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
+                        {/* <label className="text-dark">Teléfono Móvil:</label> */}
                         <input
+                          placeholder="Teléfono Móvil"
                           type="text"
-                          name="name"
+                          name=""
                           className="form-control"
                           required="required"
                         />
-                        <span className="text-dark">Teléfono Móvil:</span>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
+                        {/* <label className="text-dark">Dirección:</label> */}
                         <input
+                          placeholder="Dirección"
                           type="text"
-                          name="name"
+                          name=""
                           className="form-control"
                           required="required"
                         />
-                        <span className="text-dark">Dirección:</span>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
+                        {/* <label className="text-dark">Contraseña:</label> */}
                         <input
-                          type="text"
-                          name="name"
+                          placeholder="Contraseña"
+                          type="password"
+                          name=""
                           className="form-control"
                           required="required"
                         />
-                        <span className="text-dark">Contraseña:</span>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
+                        {/* <label className="text-dark">Repetir Contraseña:</label> */}
                         <input
-                          type="text"
-                          name="name"
+                          placeholder="Confirma Contraseña"
+                          type="password"
+                          name=""
                           className="form-control"
                           required="required"
                         />
-                        <span className="text-dark">Repetir Contraseña:</span>
                       </div>
                     </div>
                   </div>
@@ -324,9 +335,9 @@ const PerfilUser = () => {
                     <p className="card-text text-dark">
                       Accede a tu historial de transacciones aquí
                     </p>
-                    <a href="/" className="btn btn-primary">
+                    <Link to="/" className="btn btn-primary">
                       click aquí
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -340,9 +351,9 @@ const PerfilUser = () => {
                     <p className="card-text text-dark">
                       Dirígite a realizar tu operación, haciendo
                     </p>
-                    <a href="/" className="btn btn-primary">
+                    <Link to="/user/transferencias" className="btn btn-primary">
                       click aquí
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

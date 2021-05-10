@@ -43,6 +43,20 @@ const Sidebar = () => {
           </li>
 
           <br />
+          
+
+          <li className="nav-item">
+            <Link
+              className="nav-link text-center text-xl-left"
+              to="/user/historial"
+            >
+              <i className="fas fa-history" />
+              <span className="d-none d-xl-inline-block">Historial</span>
+            </Link>
+          </li>
+
+          <br />
+          
 
           <li className="nav-item">
             <Link
@@ -67,6 +81,7 @@ const Sidebar = () => {
           </li>
 
           <br />
+
 
           <li className="nav-item">
             <Link
