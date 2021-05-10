@@ -22,7 +22,7 @@ import ChaskiCard from "./views/ChaskiCard";
 import "./components/Navbar.css";
 
 import Particles from "react-particles-js";
-import particlesConfig from "./components/particlesConfig";
+import particlesConfig from "./components/ParticlesConfig";
 
 function App() {
   return (
@@ -60,11 +60,7 @@ function App() {
               path="/user/transferencias"
               component={Transferencias}
             ></Route>
-            <Route
-              exact
-              path="/user/historial"
-              component={Historial}
-            ></Route>
+            <Route exact path="/user/historial" component={Historial}></Route>
             <Route
               exact
               path="/user/noticias"
