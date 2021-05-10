@@ -1,9 +1,18 @@
+import React, { useState } from "react";
+import { useLocalStorage } from '../components/useLocalStorage'
+
 import "../css/PerfilUser.css";
 import { Link } from "react-router-dom";
 import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
-const PerfilUser = () => {
+function PerfilUser(props) {
+  /* guarda texto */
+  const [text, setText] = useLocalStorage('text', '')
+
+  const [nombreApellido, setNombreApellido] = useState("")
+
+
   return (
     <>
       <div className="container-fluid">
@@ -12,10 +21,11 @@ const PerfilUser = () => {
             <Sidebar />
           </div>
 
+        {/*  FOTO Y DATOS DE PERFIL */}
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="row gutters-sm">
               <div className="col-12 my-2 col-lg-5 col-xl-4">
-                <div className="card">
+                <div className="card bg-transparent card-perfil">
                   <div className="card-body perfil">
                     <div className="d-flex flex-column align-items-center text-center">
                       <img
@@ -24,16 +34,16 @@ const PerfilUser = () => {
                         className="rounded-circle"
                         width={150}
                       />
-                      <div className="mt-3 text-dark">
-                        <h4>Bárbara Ulloa</h4>
+                      <div className="mt-3 text-white">
+                        <h4>Barbara Ulloa</h4>
                         <hr />
-                        <p className="text-dark mb-1">Nacionalidad</p>
+                        <h5 className="text-white mb-1">Nacionalidad:</h5>
                         <hr />
-                        <p className="text-dark mb-1">Venezolana</p>
+                        <h5 className="text-white mb-1">Venezolana</h5>
                         <hr />
-                        <p className="text-dark mb-1">
-                          País de Residencia Chile
-                        </p>
+                        <h5 className="text-white mb-1">
+                          País de Residencia: Chile
+                        </h5>
                         <br></br>
                       </div>
                     </div>
@@ -41,14 +51,17 @@ const PerfilUser = () => {
                 </div>
               </div>
 
+            {/* INPUTS DE ACTUALIZACION */}
               <div className="col-12 my-2 col-lg-7 col-xl-8">
-                <div className="card">
+                <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
                       <div className="inputbox mt-2">
                         {/* <label className="text-dark">Nombre y Apellido:</label> */}
                         {/* valores deben guardarse en un state */}
                         <input
+                          onChange ={ e => setText(e.target.value)}    
+                          value={text}
                           placeholder="Nombre y Apellido"
                           type="text"
                           /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */
@@ -101,7 +114,7 @@ const PerfilUser = () => {
                       <div className="inputbox mt-2">
                         {/* <label className="text-dark">Contraseña:</label> */}
                         <input
-                          placeholder="Contraseña"
+                          placeholder="Nueva Contraseña"
                           type="password"
                           name=""
                           className="form-control"
@@ -125,16 +138,17 @@ const PerfilUser = () => {
                 </div>
               </div>
 
+          {/* CARDS CON BARRAS */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
-                <div className="card">
-                  <div className="card h-100">
+                <div className="card bg-transparent">
+                  <div className="card h-100 bg-transparent">
                     <div className="card-body">
                       <h6 className="d-flex align-items-center mb-3">
                         <i className="material-icons text-info mr-2">
                           Bancos de uso frecuente
                         </i>
                       </h6>
-                      <small className="text-dark">Banco Estado</small>
+                      <small className="text-white">Banco Estado</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -145,7 +159,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small className="text-dark">Banco Santander</small>
+                      <small className="text-white">Banco Santander</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -156,7 +170,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small className="text-dark">Banco de Chile</small>
+                      <small className="text-white">Banco de Chile</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -167,7 +181,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small className="text-dark">Banco Falabella</small>
+                      <small className="text-white">Banco Falabella</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -178,7 +192,7 @@ const PerfilUser = () => {
                           aria-valuemax={100}
                         />
                       </div>
-                      <small className="text-dark">Banco Edwards</small>
+                      <small className="text-white">Banco Edwards</small>
                       <div className="progress mb-3" style={{ height: 5 }}>
                         <div
                           className="progress-bar bg-primary"
@@ -195,14 +209,14 @@ const PerfilUser = () => {
               </div>
 
               <div className="col-12 my-2 col-md-6 col-lg-4">
-                <div className="card h-100">
+                <div className="card h-100 bg-transparent">
                   <div className="card-body">
                     <h6 className="d-flex align-items-center mb-3">
                       <i className="material-icons text-info mr-2">
                         Actividades
                       </i>
                     </h6>
-                    <small className="text-dark">Diarias</small>
+                    <small className="text-white">Diarias</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -213,7 +227,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Mensual</small>
+                    <small className="text-white">Mensual</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -224,7 +238,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Anual</small>
+                    <small className="text-white">Anual</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -235,7 +249,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Dispositivo Movil</small>
+                    <small className="text-white">Dispositivo Movil</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -246,7 +260,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Página web</small>
+                    <small className="text-white">Página web</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -262,14 +276,14 @@ const PerfilUser = () => {
               </div>
 
               <div className="col-12 my-2 col-md-6 col-lg-4">
-                <div className="card h-100">
+                <div className="card h-100 bg-transparent">
                   <div className="card-body">
                     <h6 className="d-flex align-items-center mb-3">
                       <i className="material-icons text-info mr-2">
                         Países de Destino
                       </i>
                     </h6>
-                    <small className="text-dark">Chile</small>
+                    <small className="text-white">Chile</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -280,7 +294,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Colombia</small>
+                    <small className="text-white">Colombia</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -291,7 +305,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Estados Unidos</small>
+                    <small className="text-white">Estados Unidos</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -302,7 +316,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Perú</small>
+                    <small className="text-white">Perú</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -313,7 +327,7 @@ const PerfilUser = () => {
                         aria-valuemax={100}
                       />
                     </div>
-                    <small className="text-dark">Venezuela</small>
+                    <small className="text-white">Venezuela</small>
                     <div className="progress mb-3" style={{ height: 5 }}>
                       <div
                         className="progress-bar bg-primary"
@@ -329,10 +343,10 @@ const PerfilUser = () => {
               </div>
 
               <div className="col-12 my-2 col-md-6">
-                <div className="card">
+                <div className="card bg-transparent">
                   <div className="card-body">
-                    <h5 className="card-title text-dark">Revisa</h5>
-                    <p className="card-text text-dark">
+                    <h5 className="card-title text-white">Revisa</h5>
+                    <p className="card-text text-white">
                       Accede a tu historial de transacciones aquí
                     </p>
                     <Link to="/" className="btn btn-primary">
@@ -343,12 +357,12 @@ const PerfilUser = () => {
               </div>
 
               <div className="col-12 my-2 col-md-6">
-                <div className="card">
+                <div className="card bg-transparent">
                   <div className="card-body">
-                    <h5 className="card-title text-dark">
+                    <h5 className="card-title text-white">
                       Realiza tu transacción
                     </h5>
-                    <p className="card-text text-dark">
+                    <p className="card-text text-white">
                       Dirígite a realizar tu operación, haciendo
                     </p>
                     <Link to="/user/transferencias" className="btn btn-primary">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import '../css/Historial.css';
 
@@ -12,12 +13,12 @@ const Historial = () =>{
 
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="row">
-              <div className="col-12">
-                <div className="card carta-transferencia  bg-transparent">
+              <div className="col-12 mx-5 my-5">
+                <div className="card carta-transferencia bg-transparent">
                   <div className="card-body">
-                    <h5 className="header-title pb-3 mt-0 text-white">
+                    <h3 className="header-title pb-3 mt-0 text-white">
                       Historial de Pago
-                    </h5>
+                    </h3>
                     <div className="table-responsive">
                       <table className="table table-hover mb-0">
                         <thead>
@@ -143,9 +144,9 @@ const Historial = () =>{
                     </div>
                     {/*end table-responsive*/}
                     <div className="pt-3 border-top text-right">
-                      <a href="/" className="text-primary">
+                      <Link to="/user/historial" className="text-primary">
                         View all <i className="mdi mdi-arrow-right" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
