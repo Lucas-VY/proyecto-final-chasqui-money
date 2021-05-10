@@ -8,9 +8,9 @@ import Sidebar from "../components/Sidebar";
 
 function PerfilUser(props) {
   /* guarda texto */
-  const [text, setText] = useLocalStorage('text', '')
+  const [text, setText] = useLocalStorage('text', '');
 
-  const [nombreApellido, setNombreApellido] = useState("")
+  const [name, setName] = useState("");
 
 
   return (
@@ -36,15 +36,17 @@ function PerfilUser(props) {
                       />
                       <div className="mt-3 text-white">
                         <h4>Barbara Ulloa</h4>
+                        {/* <hr /> */}
+                        <p className="text-white mb-1">Nacionalidad: Venezolana</p>
                         <hr />
-                        <h5 className="text-white mb-1">Nacionalidad:</h5>
+                        <p className="text-white mb-1">Telefono Movil: +569 xxxx xxxx</p>
                         <hr />
-                        <h5 className="text-white mb-1">Venezolana</h5>
+                        <p className="text-white mb-1">Direccion: Av Jose miguel carrera 666</p>
                         <hr />
-                        <h5 className="text-white mb-1">
+                        <p className="text-white mb-1">
                           País de Residencia: Chile
-                        </h5>
-                        <br></br>
+                        </p>
+                       {/*  <br></br> */}
                       </div>
                     </div>
                   </div>
@@ -56,6 +58,7 @@ function PerfilUser(props) {
                 <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
+
                       <div className="inputbox mt-2">
                         {/* <label className="text-dark">Nombre y Apellido:</label> */}
                         {/* valores deben guardarse en un state */}
@@ -65,7 +68,7 @@ function PerfilUser(props) {
                           placeholder="Nombre y Apellido"
                           type="text"
                           /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */
-                          name=""
+                          name="nombre"
                           className="form-control"
                           required="required"
                           
@@ -80,14 +83,14 @@ function PerfilUser(props) {
                           placeholder="Email"
                           type="text"
                           /* en name request.json.get // en backend */
-                          name=""
+                          name="email"
                           className="form-control"
                           required="required"
                         />
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-2">
+                      <div className="inputbox mt-3">
                         {/* <label className="text-dark">Teléfono Móvil:</label> */}
                         <input
                           placeholder="Teléfono Móvil"
@@ -99,19 +102,21 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-2">
+                      <div className="inputbox mt-3">
                         {/* <label className="text-dark">Dirección:</label> */}
                         <input
                           placeholder="Dirección"
                           type="text"
-                          name=""
+                          name="direccion"
                           className="form-control"
                           required="required"
                         />
                       </div>
                     </div>
+
+                    {/* CONTRASEÑA se modifica con el BACKEND */}
                     <div className="row">
-                      <div className="inputbox mt-2">
+                      <div className="inputbox mt-3">
                         {/* <label className="text-dark">Contraseña:</label> */}
                         <input
                           placeholder="Nueva Contraseña"
@@ -123,7 +128,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-2">
+                      <div className="inputbox mt-3">
                         {/* <label className="text-dark">Repetir Contraseña:</label> */}
                         <input
                           placeholder="Confirma Contraseña"
@@ -132,6 +137,7 @@ function PerfilUser(props) {
                           className="form-control"
                           required="required"
                         />
+                        
                       </div>
                     </div>
                   </div>
