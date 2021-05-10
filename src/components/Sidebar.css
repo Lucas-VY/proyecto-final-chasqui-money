@@ -1,11 +1,22 @@
-.navbar-brand{
-    color: #fff;
+.navbar-brand {
+  color: #fff;
 }
 
-.nav-link{
-    color: #fff;
+.nav-link {
+  color: #fff;
 }
 
-.titulo{
-    font-size: 180%;
+.titulo {
+  font-size: 180%;
+}
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
