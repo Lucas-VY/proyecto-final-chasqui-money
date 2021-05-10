@@ -15,7 +15,7 @@ import PerfilUser from "./views/PerfilUser";
 import UserView from "./views/UserView";
 import NoticiasPerfil from "./views/NoticiasPerfil";
 import Transferencias from "./views/Transferencias";
-import ContactanosPerfil from "./views/Contactanos-perfil";
+import ContactanosPerfil from "./views/ContactanosPerfil";
 import ChaskiCard from "./views/ChaskiCard";
 
 import "./components/Navbar.css";

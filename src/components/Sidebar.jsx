@@ -26,7 +26,7 @@ const Sidebar = () => {
               to="/user/perfil"
             >
               <i className="fas fa-user-circle" />
-              <span className="d-none d-xl-inline-block">Tú Perfil</span>
+              <span className="d-none d-xl-inline-block">Perfil</span>
             </Link>
           </li>
 
@@ -38,7 +38,7 @@ const Sidebar = () => {
               to="/user/transferencias"
             >
               <i className="fas fa-money-bill-wave" />
-              <span className="d-none d-xl-inline-block">Transfer</span>
+              <span className="d-none d-xl-inline-block">Transferencias</span>
             </Link>
           </li>
 
