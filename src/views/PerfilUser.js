@@ -7,7 +7,7 @@ import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
 function PerfilUser(props) {
-  /* guarda texto */
+  /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   const [text, setText] = useLocalStorage('text', '');
 
   const [name, setName] = useState("");
@@ -39,7 +39,7 @@ function PerfilUser(props) {
                         {/* <hr /> */}
                         <p className="text-white mb-1">Nacionalidad: Venezolana</p>
                         <hr />
-                        <p className="text-white mb-1">Telefono Movil: +569 xxxx xxxx</p>
+                        <p className="text-white mb-1">Teléfono Móvil: +569 xxxx xxxx</p>
                         <hr />
                         <p className="text-white mb-1">Direccion: Av Jose miguel carrera 666</p>
                         <hr />
@@ -90,7 +90,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
                         {/* <label className="text-dark">Teléfono Móvil:</label> */}
                         <input
                           placeholder="Teléfono Móvil"
@@ -102,7 +102,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
                         {/* <label className="text-dark">Dirección:</label> */}
                         <input
                           placeholder="Dirección"
@@ -116,7 +116,7 @@ function PerfilUser(props) {
 
                     {/* CONTRASEÑA se modifica con el BACKEND */}
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
                         {/* <label className="text-dark">Contraseña:</label> */}
                         <input
                           placeholder="Nueva Contraseña"
@@ -128,7 +128,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox mt-3">
+                      <div className="inputbox mt-2">
                         {/* <label className="text-dark">Repetir Contraseña:</label> */}
                         <input
                           placeholder="Confirma Contraseña"
@@ -137,9 +137,11 @@ function PerfilUser(props) {
                           className="form-control"
                           required="required"
                         />
-                        
                       </div>
                     </div>
+                      <div className="row">
+                        <button className="btn btn-primary mt-2 float-right">Actualizar</button>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -348,6 +350,7 @@ function PerfilUser(props) {
                 </div>
               </div>
 
+              {/* CARDS DE ABAJO */}
               <div className="col-12 my-2 col-md-6">
                 <div className="card bg-transparent">
                   <div className="card-body">
@@ -355,7 +358,7 @@ function PerfilUser(props) {
                     <p className="card-text text-white">
                       Accede a tu historial de transacciones aquí
                     </p>
-                    <Link to="/" className="btn btn-primary">
+                    <Link to="/user/historial" className="btn btn-primary">
                       click aquí
                     </Link>
                   </div>
