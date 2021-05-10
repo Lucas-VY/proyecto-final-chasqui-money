@@ -52,34 +52,26 @@ function App() {
             <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
+            <Route exact path="/user/view" component={UserView}></Route>
+            <Route exact path="/user/perfil" component={PerfilUser}></Route>
             <Route
               exact
-              path="/inicio-sesion/user-view"
-              component={UserView}
-            ></Route>
-            <Route
-              exact
-              path="/inicio-sesion/user-perfil"
-              component={PerfilUser}
-            ></Route>
-            <Route
-              exact
-              path="/inicio-sesion/user-transferencias"
+              path="/user/transferencias"
               component={Transferencias}
             ></Route>
             <Route
               exact
-              path="/inicio-sesion/user-noticias"
+              path="/user/noticias"
               component={NoticiasPerfil}
             ></Route>
             <Route
               exact
-              path="/inicio-sesion/user-contactanos"
+              path="/user/contactanos"
               component={ContactanosPerfil}
             ></Route>
             <Route
               exact
-              path="/inicio-sesion/user-credit-card"
+              path="/user/credit-card"
               component={ChaskiCard}
             ></Route>
             {/* NOT FOUND DEBE IR AL FINAL DE TODO SIEMPRE */}

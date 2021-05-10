@@ -7,7 +7,7 @@ const Transferencias = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-3 px-0">
+          <div className="col-md-3 col-xl-2 px-0">
             <Sidebar />
           </div>
 

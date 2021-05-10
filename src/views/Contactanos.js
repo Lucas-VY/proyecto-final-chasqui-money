@@ -2,8 +2,8 @@ import React from "react";
 import { validateInfo } from "../components/ValidateInfo";
 import useForm from "../components/UseForms";
 import "../css/Contactanos.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const Contactanos = () => {
   const result = (mensaje, codigo, response) => {
@@ -32,7 +32,7 @@ export const Contactanos = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
 
       <div className="container-fluid containerForm">
         <div className="signup-form col-12 col-md-6 ">
@@ -96,15 +96,15 @@ export const Contactanos = () => {
               </div>
               {errors.email && <p className="parrafo">{errors.email}</p>}
             </div>
-            <div class="form-group">
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-comment"></i>
+            <div className="form-group">
+              <div className="input-group mb-2">
+                <div className="input-group-prepend">
+                  <div className="input-group-text">
+                    <i className="fa fa-comment"></i>
                   </div>
                 </div>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   placeholder="Envianos tu Mensaje"
                   required
                 ></textarea>
@@ -119,7 +119,7 @@ export const Contactanos = () => {
         </div>
       </div>
 
-    <Footer />
+      <Footer />
     </>
   );
 };
