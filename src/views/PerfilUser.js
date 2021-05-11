@@ -140,7 +140,9 @@ function PerfilUser(props) {
                       </div>
                     </div>
                       <div className="row">
-                        <button className="btn btn-primary mt-2 float-right">Actualizar</button>
+                        <button className="btn btn-primary mt-2 float-right">
+                          Actualizar
+                        </button>
                       </div>
                   </div>
                 </div>
