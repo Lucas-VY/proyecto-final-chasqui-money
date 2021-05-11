@@ -1,5 +1,4 @@
 import Sidebar from "../components/Sidebar";
-import Conversor from "../components/Conversor";
 import "../css/Transferencias.css";
 
 const Transferencias = () => {
