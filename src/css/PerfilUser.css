@@ -12,7 +12,7 @@
 } */
 
 /* MODIFICAR LAS CLASES GENERALES */
-/* .card {
+/* ].card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   background-clip: border-box;
  border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-} */
+}
 
 /* MARGEN DEL PERFIL  */
 .perfil{
