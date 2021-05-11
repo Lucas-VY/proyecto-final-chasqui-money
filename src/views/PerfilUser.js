@@ -63,12 +63,7 @@ function PerfilUser(props) {
                 <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
-<<<<<<< HEAD
-                      <div className="inputbox col-12 mt-2">
-=======
-
                       <div className="inputbox col-12 mt-3">
->>>>>>> a6c5fb521621696bb409ec06bc079325a7e2b8b8
                         {/* <label className="text-dark">Nombre y Apellido:</label> */}
                         {/* valores deben guardarse en un state */}
                         <input
@@ -147,19 +142,11 @@ function PerfilUser(props) {
                         />
                       </div>
                     </div>
-<<<<<<< HEAD
                     <div className="row">
-                      <button className="btn btn-primary mt-2">
+                      <button className="btn btn-primary mt-4">
                         Actualizar
                       </button>
                     </div>
-=======
-                      <div className="row">
-                        <button className="btn btn-primary mt-4">
-                          Actualizar
-                        </button>
-                      </div>
->>>>>>> a6c5fb521621696bb409ec06bc079325a7e2b8b8
                   </div>
                 </div>
               </div>

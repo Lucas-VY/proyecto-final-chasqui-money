@@ -14,12 +14,12 @@ const Transferencias = () => {
           <div className="col-12 col-md-9 mt-5 px-5">
             {/* BODY AQUI */}
 
-            <div className="card text-center">
-              <div className="card-header">
+            <div className="card-transferencias text-center bg-transparent">
+              <h3 className="card-header text-white">
                 Información de Pago Chaski Money
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Instrucciones</h5>
+              </h3>
+              <div className="card-body-transferencias text-white">
+                <h5 className="card-title ">Instrucciones</h5>
                 <p className="card-text">
                   1.-Transfiere a nuestra cuenta, cuyos datos se reflejan a
                   continuación
@@ -78,7 +78,7 @@ const Transferencias = () => {
                           className="form-control"
                           id="cc_name"
                           pattern="\w+ \w+.*"
-                          title="First and last name"
+                          title=""
                           required="required"
                         />
                       </div>
@@ -90,7 +90,7 @@ const Transferencias = () => {
                           autoComplete="off"
                           maxLength={60}
                           pattern="\d{60}"
-                          title="Credit card number"
+                          title=""
                           required
                         />
                       </div>
@@ -137,7 +137,7 @@ const Transferencias = () => {
                             pattern="\d{20}"
                             title="Three digits at back of your card"
                             required
-                            placeholder="Monto Enviado"
+                            placeholder="Monto Enviadogir"
                           />
                         </div>
                       </div>
@@ -147,7 +147,7 @@ const Transferencias = () => {
                         <div className="col-md-6">
                           <button
                             type="reset"
-                            className="btn btn-default btn-lg btn-block"
+                            className="btn btn-danger btn-lg btn-block"
                           >
                             Cancelar registro
                           </button>
@@ -165,7 +165,7 @@ const Transferencias = () => {
                   </div>
                 </div>
               </div>
-              <div class="card-footer text-muted">
+              <div className="card-footer-transferencias text-white">
                 Asegúrese de ingresar todos los datos correctamente, ya que de
                 lo contrario sera imposible validar su transacción
               </div>
