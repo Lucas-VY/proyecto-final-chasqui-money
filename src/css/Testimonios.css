@@ -1,5 +1,5 @@
 #demo {
-  background: #f2f2f2;
+ /*  background: #f2f2f2; */
   max-width: 900px;
   margin: auto;
   border-radius: 3px;
@@ -21,7 +21,7 @@
 }
 
 #carousel-color {
-  color: black;
+  color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -89,7 +89,7 @@ i {
 .carousel-control-next {
   transition: none;
   opacity: unset;
-  color: rgba(78, 77, 77, 0.856);
+  color: rgba(255, 255, 255, 0.856);
 }
 
 .carousel-control-prev:hover,
@@ -100,5 +100,5 @@ i {
 }
 
 #testimonios {
-  color: black;
+  color: #fff;
 }

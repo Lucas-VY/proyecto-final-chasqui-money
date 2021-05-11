@@ -37,8 +37,8 @@ export const Registro = () => {
 
     <div className="container-fluid containerForm">
       <div className="signup-form col-12 col-md-6 ">
-        <form onSubmit={handleSubmit} className="form" noValidate>
-          <h2 className="text-center mb-4">Regístrate</h2>
+        <form onSubmit={handleSubmit} className="form bg-transparent" noValidate>
+          <h2 className="text-center text-white mb-4">Regístrate</h2>
           <hr />
           <div className="form-group mt-5">
             <div className="input-group">
@@ -130,7 +130,7 @@ export const Registro = () => {
             </div>
             {errors.phone && <p className="parrafo">{errors.phone}</p>}
           </div>
-          <p>Mínimo 8 caracteres</p>
+          <p className="text-white">Mínimo 8 caracteres</p>
           <div className="form-group">
             <div className="input-group">
               <div className="input-group-prepend">
@@ -168,7 +168,7 @@ export const Registro = () => {
             {errors.password2 && <p className="parrafo">{errors.password2}</p>}
           </div>
           <div className="form-group">
-            <label className="form-check-label mt-4">
+            <label className="form-check-label mt-4 text-white">
               <input type="checkbox" required="required" /> He leído y acepto
               los <a href="/">Términos y condiciones</a>
             </label>

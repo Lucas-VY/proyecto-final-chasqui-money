@@ -21,19 +21,19 @@ const PreguntasFrecuentes = () => {
         <div className="row">
           <div className="col-lg-9 mx-auto">
             <div id="accordionExample" className="accordion shadow">
-              <div className="card">
+              <div className="card bg-transparent">
                 <div
                   id="headingOne"
-                  className="card-header bg-white shadow-sm border-0"
+                  className="card-header bg-transparent shadow-sm border-0"
                 >
-                  <h6 className="mb-0 font-weight-bold">
+                  <h6 className="mb-0 font-weight-bold text-white">
                     <a
                       href="/"
                       data-toggle="collapse"
                       data-target="#collapseOne"
                       aria-expanded="true"
                       aria-controls="collapseOne"
-                      className="d-block position-relative text-dark text-uppercase collapsible-link py-2"
+                      className="d-block position-relative text-white text-uppercase collapsible-link py-2"
                     >
                       ¿Cómo enviar dinero con Chaski Money?
                     </a>
@@ -45,9 +45,9 @@ const PreguntasFrecuentes = () => {
                   data-parent="#accordionExample"
                   className="collapse show"
                 >
-                  <div className="card-body p-5">
+                  <div className="card-body p-5 bg-transparent">
                     <p
-                      className="font-weight-light m-0"
+                      className="font-weight-light m-0 text-white"
                       id="ppreguntas-frecuentes"
                     >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
@@ -60,19 +60,19 @@ const PreguntasFrecuentes = () => {
                   </div>
                 </div>
               </div>
-              <div className="card">
+              <div className="card bg-transparent">
                 <div
                   id="headingTwo"
-                  className="card-header bg-white shadow-sm border-0"
+                  className="card-header shadow-sm border-0"
                 >
-                  <h6 className="mb-0 font-weight-bold">
+                  <h6 className="mb-0 font-weight-bold bg-transparent">
                     <a
                       href="/"
                       data-toggle="collapse"
                       data-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
-                      className="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2"
+                      className="d-block position-relative collapsed text-white text-uppercase collapsible-link py-2"
                     >
                       ¿Por qué enviar con Chaski Money?
                     </a>
@@ -82,11 +82,11 @@ const PreguntasFrecuentes = () => {
                   id="collapseTwo"
                   aria-labelledby="headingTwo"
                   data-parent="#accordionExample"
-                  className="collapse"
+                  className="collapse bg-transparent"
                 >
-                  <div className="card-body p-5">
+                  <div className="card-body bg-transparent p-5">
                     <p
-                      className="font-weight-light m-0"
+                      className="font-weight-light m-0 text-white"
                       id="ppreguntas-frecuentes"
                     >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
@@ -99,10 +99,10 @@ const PreguntasFrecuentes = () => {
                   </div>
                 </div>
               </div>
-              <div className="card">
+              <div className="card bg-transparent">
                 <div
                   id="headingThree"
-                  className="card-header bg-white shadow-sm border-0"
+                  className="card-header shadow-sm border-0"
                 >
                   <h6 className="mb-0 font-weight-bold">
                     <a
@@ -111,7 +111,7 @@ const PreguntasFrecuentes = () => {
                       data-target="#collapseThree"
                       aria-expanded="false"
                       aria-controls="collapseThree"
-                      className="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2"
+                      className="d-block position-relative collapsed text-white text-uppercase collapsible-link py-2"
                     >
                       Ventajas de enviar con Chaski Money
                     </a>
@@ -123,9 +123,9 @@ const PreguntasFrecuentes = () => {
                   data-parent="#accordionExample"
                   className="collapse"
                 >
-                  <div className="card-body p-5">
+                  <div className="card-body bg-transparent p-5">
                     <p
-                      className="font-weight-light m-0"
+                      className="font-weight-light text-white m-0"
                       id="ppreguntas-frecuentes"
                     >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life

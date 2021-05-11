@@ -7,11 +7,11 @@ const Testimonios = () => {
     <>
     <Navbar />
 
-      <div className="container">
+      <div className="container ">
         <div id="demo" className="carousel slide" data-ride="carousel">
-          <div className="carousel-inner">
+          <div className="carousel-inner ">
             <div className="carousel-item active">
-              <div className="carousel-caption" id="carousel-color">
+              <div className="carousel-caption bg-transparent" id="carousel-color">
                 <p id="testimonios">
                   If Shai Reznik's TDD videos don't convince you to add
                   automated testing your code, I don't know what will.This was

@@ -39,8 +39,8 @@ const ContactanosPerfil = () => {
 
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="signup-form col-12">
-              <form onSubmit={handleSubmit} className="form" noValidate>
-                <h2 className="text-center mb-4">Contáctanos</h2>
+              <form onSubmit={handleSubmit} className="form bg-transparent" noValidate>
+                <h2 className="text-center text-white mb-4">Contáctanos</h2>
                 <hr />
                 <div className="form-group mt-5">
                   <div className="input-group">
