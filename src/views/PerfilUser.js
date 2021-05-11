@@ -8,9 +8,15 @@ import Sidebar from "../components/Sidebar";
 
 function PerfilUser(props) {
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
-  const [text, setText] = useLocalStorage("text", "");
+  /* const [text, setText] = useLocalStorage("fullname", ""); */
 
-  const [name, setName] = useState("");
+
+  /* ACTUALIZA VALORES DEL PERFIL y guarda en LOCALSTORAGE*/
+  const [fullName, setFullName] = useLocalStorage('fullname', '');
+  const [country, setCountry] = useLocalStorage('country', '')
+  const [movil, setMovil] = useLocalStorage('movil', '')
+  const [address, setAddress] = useLocalStorage("address", '')
+  const [email, setEmail] = useLocalStorage('email', '')
 
   return (
     <>
@@ -34,22 +40,22 @@ function PerfilUser(props) {
                         width={150}
                       />
                       <div className="mt-3 text-white">
-                        <h4>Barbara Ulloa</h4>
+                        <h4>Nombre: {fullName}</h4>
                         {/* <hr /> */}
                         <p className="text-white mb-1">
-                          Nacionalidad: Venezolana
+                          Pais Residencia: {country}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Teléfono Móvil: +569 xxxx xxxx
+                          Teléfono Móvil: {movil}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Direccion: Av Jose miguel carrera 666
+                          Direccion: {address}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          País de Residencia: Chile
+                          Email: {email}
                         </p>
                         {/*  <br></br> */}
                       </div>
@@ -63,12 +69,11 @@ function PerfilUser(props) {
                 <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
-                      <div className="inputbox col-12 mt-3">
-                        {/* <label className="text-dark">Nombre y Apellido:</label> */}
+                      <div className="inputbox col-12 mt-2">
                         {/* valores deben guardarse en un state */}
                         <input
-                          onChange={(e) => setText(e.target.value)}
-                          value={text}
+                          onChange={e => setFullName(e.target.value)}
+                          /* value={fullName} */
                           placeholder="Nombre y Apellido"
                           type="text"
                           /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */
@@ -80,9 +85,22 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        {/* <label className="text-dark">Email:</label> */}
+                      <div className="inputbox col-12 mt-3">
                         <input
+                          onChange={e => setCountry(e.target.value)}
+                          placeholder="Pais de residencia"
+                          type="text"
+                          /* en name request.json.get // en backend */
+                          name="country"
+                          className="form-control"
+                          required="required"
+                        />
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="inputbox col-12 mt-3">
+                        <input
+                          onChange={e => setEmail(e.target.value)}
                           placeholder="Email"
                           type="text"
                           /* en name request.json.get // en backend */
@@ -93,9 +111,9 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        {/* <label className="text-dark">Teléfono Móvil:</label> */}
+                      <div className="inputbox col-12 mt-3">
                         <input
+                          onChange={e => setMovil(e.target.value)}
                           placeholder="Teléfono Móvil"
                           type="text"
                           name=""
@@ -105,9 +123,9 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        {/* <label className="text-dark">Dirección:</label> */}
+                      <div className="inputbox col-12 mt-3">
                         <input
+                          onChange={e => setAddress(e.target.value)}
                           placeholder="Dirección"
                           type="text"
                           name="direccion"
@@ -120,7 +138,6 @@ function PerfilUser(props) {
                     {/* CONTRASEÑA se modifica con el BACKEND */}
                     <div className="row">
                       <div className="inputbox col-12 mt-4">
-                        {/* <label className="text-dark">Contraseña:</label> */}
                         <input
                           placeholder="Nueva Contraseña"
                           type="password"
@@ -131,7 +148,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-4">
+                      <div className="inputbox col-12 mt-3">
                         {/* <label className="text-dark">Repetir Contraseña:</label> */}
                         <input
                           placeholder="Confirma Contraseña"
@@ -143,13 +160,15 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <button className="btn btn-primary mt-4">
+                      <button className="btn btn-primary mx-3 mt-3" onClick={e => window.reload}>
                         Actualizar
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
+
+
 
               {/* CARDS CON BARRAS */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
