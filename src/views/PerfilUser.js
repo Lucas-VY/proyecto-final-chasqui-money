@@ -59,7 +59,7 @@ function PerfilUser(props) {
                   <div className="card-body">
                     <div className="row">
 
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-3">
                         {/* <label className="text-dark">Nombre y Apellido:</label> */}
                         {/* valores deben guardarse en un state */}
                         <input
@@ -77,7 +77,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-4">
                         {/* <label className="text-dark">Email:</label> */}
                         <input
                           placeholder="Email"
@@ -90,7 +90,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-4">
                         {/* <label className="text-dark">Teléfono Móvil:</label> */}
                         <input
                           placeholder="Teléfono Móvil"
@@ -102,7 +102,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-4">
                         {/* <label className="text-dark">Dirección:</label> */}
                         <input
                           placeholder="Dirección"
@@ -116,7 +116,7 @@ function PerfilUser(props) {
 
                     {/* CONTRASEÑA se modifica con el BACKEND */}
                     <div className="row">
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-4">
                         {/* <label className="text-dark">Contraseña:</label> */}
                         <input
                           placeholder="Nueva Contraseña"
@@ -128,7 +128,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-4">
                         {/* <label className="text-dark">Repetir Contraseña:</label> */}
                         <input
                           placeholder="Confirma Contraseña"
@@ -140,7 +140,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                       <div className="row">
-                        <button className="btn btn-primary mt-2">
+                        <button className="btn btn-primary mt-4">
                           Actualizar
                         </button>
                       </div>
