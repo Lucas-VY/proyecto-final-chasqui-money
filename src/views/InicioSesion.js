@@ -36,10 +36,10 @@ export const InicioSesion = (props) => {
         <div className="signup-form col-12 col-md-6">
           <form
             onSubmit={() => props.history.push("/user/perfil")}
-            className="form"
+            className="form bg-transparent"
             noValidate
           >
-            <h2 className="text-center mb-4">Ingresa</h2>
+            <h2 className="text-center text-white mb-4">Ingresa</h2>
             <hr />
             <div className="form-group">
               <div className="input-group">
@@ -80,8 +80,8 @@ export const InicioSesion = (props) => {
               )}
             </div>
             <div className="form-group" style={{ marginLeft: "100px" }}>
-              <label className="form-check-label mt-4">
-                <input type="checkbox" required="required" /> Recordar usurario
+              <label className="form-check-label mt-4 text-white">
+                <input type="checkbox" required="required" /> Recordar usuario
               </label>
             </div>
             <div className="text-center mb-2">
@@ -98,10 +98,10 @@ export const InicioSesion = (props) => {
                 Ingresar
               </button>
             </div>
-            <div className="text-center mt-5">
-              <p className="mb-0">¿No estas registrado?</p>
+            <div className="text-center mt-5 text-white">
+              <p className="mb-0 text-white">¿No estas registrado?</p>
               <Link className="text-center mt-0" to="/registrate">
-                Regístrate aqui!
+                Regístrate aqui
               </Link>
             </div>
           </form>

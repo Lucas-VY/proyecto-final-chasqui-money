@@ -98,7 +98,7 @@ const Historial = () =>{
                             <td>2/6/2018</td>
                             <td>$70,000</td>
                             <td>
-                              <span className="badge badge-boxed badge-soft-warning">
+                              <span className="badge badge-boxed badge-soft-primary">
                                 Success
                               </span>
                             </td>
@@ -116,7 +116,7 @@ const Historial = () =>{
                             <td>5/8/2018</td>
                             <td>$15,000</td>
                             <td>
-                              <span className="badge badge-boxed badge-soft-primary">
+                              <span className="badge badge-boxed badge-soft-warning">
                                 panding
                               </span>
                             </td>
