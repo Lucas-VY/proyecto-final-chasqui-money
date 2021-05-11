@@ -14,6 +14,7 @@ const ChaskiCard = () => {
           <div className="col-12 col-md-9 mt-5 px-5">
             {/* BODY AQUI */}
             
+              <h1 className="text-center text-white">PROXIMAMENTE</h1>
             <div className="Wrap">
         <style>
           {/* .a {
@@ -63,8 +64,10 @@ const ChaskiCard = () => {
               <path
                 d="M110.4 6.8L90.6 48.7 100 48.7 103.8 40 125.4 40 129.2 48.7 138.7 48.7 118.8 6.8 110.4 6.8zM114.6 15.5L122.2 32.9 107 32.9 114.6 15.5"
                 className="a"
-              /></svg
-            ><svg
+              />
+              </svg>
+              
+              <svg
               xmlns="http://www.w3.org/2000/svg"
               className="Logo"
               viewBox="0 0 97.8 97.1"
@@ -84,8 +87,8 @@ const ChaskiCard = () => {
               <path
                 className="Logo"
                 d="M66.5 68.2c0.3 9.8 0.3 19.1 0 28.5 -10.1 0.2-19-0.1-28.3 0.1 -2.4 0.1-6.7 0.6-9.1-0.1 -0.8-0.2-2.7-2.3-3.7-3.4 -8.1-8-17-16.9-24.6-24.7 -0.1-0.1-0.1-0.2-0.1-0.4 0.1 0 0.1-0.1 0.2-0.1C23.2 68.2 44.1 68.2 66.5 68.2z"
-              /></svg
-            ><svg
+              /></svg>
+              <svg
               xmlns="http://www.w3.org/2000/svg"
               className="Chip"
               viewBox="0 0 387.8 380.3"
@@ -129,7 +132,7 @@ const ChaskiCard = () => {
               <h4>Good Thru</h4>
               <p id="fechas-tarjeta">02&#x2F;20</p>
             </div>
-            <div className="Name"><h3>Jordan Luca Schlansky</h3></div>
+            <div className="Name"><h3>Luis Rodriguez</h3></div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="Visa"
