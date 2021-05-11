@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocalStorage } from '../components/useLocalStorage'
+import { useLocalStorage } from "../components/useLocalStorage";
 
 import "../css/PerfilUser.css";
 import { Link } from "react-router-dom";
@@ -8,10 +8,9 @@ import Sidebar from "../components/Sidebar";
 
 function PerfilUser(props) {
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
-  const [text, setText] = useLocalStorage('text', '');
+  const [text, setText] = useLocalStorage("text", "");
 
   const [name, setName] = useState("");
-
 
   return (
     <>
@@ -21,7 +20,7 @@ function PerfilUser(props) {
             <Sidebar />
           </div>
 
-        {/*  FOTO Y DATOS DE PERFIL */}
+          {/*  FOTO Y DATOS DE PERFIL */}
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="row gutters-sm">
               <div className="col-12 my-2 col-lg-5 col-xl-4">
@@ -37,33 +36,38 @@ function PerfilUser(props) {
                       <div className="mt-3 text-white">
                         <h4>Barbara Ulloa</h4>
                         {/* <hr /> */}
-                        <p className="text-white mb-1">Nacionalidad: Venezolana</p>
+                        <p className="text-white mb-1">
+                          Nacionalidad: Venezolana
+                        </p>
                         <hr />
-                        <p className="text-white mb-1">Teléfono Móvil: +569 xxxx xxxx</p>
+                        <p className="text-white mb-1">
+                          Teléfono Móvil: +569 xxxx xxxx
+                        </p>
                         <hr />
-                        <p className="text-white mb-1">Direccion: Av Jose miguel carrera 666</p>
+                        <p className="text-white mb-1">
+                          Direccion: Av Jose miguel carrera 666
+                        </p>
                         <hr />
                         <p className="text-white mb-1">
                           País de Residencia: Chile
                         </p>
-                       {/*  <br></br> */}
+                        {/*  <br></br> */}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-            {/* INPUTS DE ACTUALIZACION */}
+              {/* INPUTS DE ACTUALIZACION */}
               <div className="col-12 my-2 col-lg-7 col-xl-8">
                 <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
-
                       <div className="inputbox col-12 mt-2">
                         {/* <label className="text-dark">Nombre y Apellido:</label> */}
                         {/* valores deben guardarse en un state */}
                         <input
-                          onChange ={ e => setText(e.target.value)}    
+                          onChange={(e) => setText(e.target.value)}
                           value={text}
                           placeholder="Nombre y Apellido"
                           type="text"
@@ -71,9 +75,8 @@ function PerfilUser(props) {
                           name=""
                           className="form-control"
                           required="required"
-                          
-                          />
-                          {/* modificar input disabled con use state */}
+                        />
+                        {/* modificar input disabled con use state */}
                       </div>
                     </div>
                     <div className="row">
@@ -139,16 +142,16 @@ function PerfilUser(props) {
                         />
                       </div>
                     </div>
-                      <div className="row">
-                        <button className="btn btn-primary mt-2">
-                          Actualizar
-                        </button>
-                      </div>
+                    <div className="row">
+                      <button className="btn btn-primary mt-2">
+                        Actualizar
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
 
-          {/* CARDS CON BARRAS */}
+              {/* CARDS CON BARRAS */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
                 <div className="card bg-transparent">
                   <div className="card h-100 bg-transparent">
@@ -388,6 +391,6 @@ function PerfilUser(props) {
       </div>
     </>
   );
-};
+}
 
 export default PerfilUser;
