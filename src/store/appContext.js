@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
-import getState from "./flux.js";
-export const Context = React.createContext(null);
+import getState from "./flux";
+export const Context = createContext(null);
 
 
 const injectContext = PassedComponent => {
@@ -22,6 +22,7 @@ const injectContext = PassedComponent => {
 			// funciones a ejecutar cuando cargue la pag 
 			state.actions.getProfile();
 
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		}, []);
 
 		return (

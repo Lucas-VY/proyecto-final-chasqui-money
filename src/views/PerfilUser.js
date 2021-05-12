@@ -11,7 +11,7 @@ import Sidebar from "../components/Sidebar";
 
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
-  const { store, actions } = useContext(Context);
+  const { store } = useContext(Context);
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
@@ -51,11 +51,11 @@ const PerfilUser = () => {
                         width={150}
                       />
 
+
                   {/* MAPING  */}
                   {!!store.profile && store.profile.map((value, i) =>{
                     return (
                       <>
-
                       <div className="mt-3 text-white" key={i}>
                         <h5>Nombre: {value.name}</h5>
                         <h5>Apellido: {value.last_name}</h5>
