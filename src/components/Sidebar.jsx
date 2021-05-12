@@ -23,7 +23,7 @@ const Sidebar = () => {
           <li className="nav-item">
             <Link
               className="nav-link text-center text-xl-left"
-              to="/user/profil"
+              to="/user/profile"
             >
               <i className="fas fa-user-circle" />
               <span className="d-none d-xl-inline-block">Perfil</span>
