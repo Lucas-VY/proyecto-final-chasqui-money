@@ -11,7 +11,7 @@ export const InicioSesion = (props) => {
     if (codigo === 200) {
       alert("Bienvenido " + json.user.name);
       //redireccionar al login
-      props.history.push("/user/perfil");
+      props.history.push("/user/profil");
     } else {
       alert("No fue posible registrar: " + mensaje);
     }
@@ -35,7 +35,7 @@ export const InicioSesion = (props) => {
       <div className="container-fluid containerForm">
         <div className="signup-form col-12 col-md-6">
           <form
-            onSubmit={() => props.history.push("/user/perfil")}
+            onSubmit={() => props.history.push("/user/profil")}
             className="form bg-transparent"
             noValidate
           >
@@ -92,7 +92,7 @@ export const InicioSesion = (props) => {
             <div className="form-group d-flex justify-content-center">
               <button
                 className="btn btn-primary btn-lg"
-                to="/user/perfil"
+                to="/user/profil"
                 type="submit"
               >
                 Ingresar

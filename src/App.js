@@ -54,7 +54,7 @@ function App() {
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
             <Route exact path="/user/view" component={UserView}></Route>
-            <Route exact path="/user/perfil" component={PerfilUser}></Route>
+            <Route exact path="/user/profil" component={PerfilUser}></Route>
             <Route
               exact
               path="/user/transferencias"
