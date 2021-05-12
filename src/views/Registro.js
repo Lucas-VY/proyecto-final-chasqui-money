@@ -21,7 +21,7 @@ export const Registro = () => {
     {
       name: "",
       last_name: "",
-      rut: "",
+      country: "",
       email: "",
       password: "",
       phone: "",
@@ -47,11 +47,13 @@ export const Registro = () => {
                   <span className="fa fa-user" />
                 </span>
               </div>
+
+              {/* NOMBRE  */}
               <input
                 className="form-control "
                 type="text"
                 name="name"
-                placeholder="ingrese nombre"
+                placeholder="Ingrese tú nombre"
                 value={values.name}
                 onChange={handleChange}
               />
@@ -65,11 +67,13 @@ export const Registro = () => {
                   <span className="fa fa-user" />
                 </span>
               </div>
+
+              {/* APELLIDO */}
               <input
                 className="form-control "
                 type="text"
                 name="last_name"
-                placeholder="ingrese apellido"
+                placeholder="Ingrese tú apellido"
                 value={values.last_name}
                 onChange={handleChange}
               />
@@ -80,15 +84,17 @@ export const Registro = () => {
             <div className="input-group">
               <div className="input-group-prepend">
                 <span className="input-group-text">
-                  <span className="far fa-id-card" />
+                  <span className="far fa-flag" />
                 </span>
               </div>
+
+            {/* PAIS */}
               <input
                 className="form-control "
                 type="text"
                 name="rut"
-                placeholder="ingrese rut"
-                value={values.rut}
+                placeholder="Ingrese tú pais"
+                value={values.country}
                 onChange={handleChange}
               />
             </div>
@@ -101,6 +107,9 @@ export const Registro = () => {
                   <span className="fa fa-paper-plane" />
                 </span>
               </div>
+
+
+              {/* EMAIL */}
               <input
                 className="form-control"
                 type="email"
@@ -119,11 +128,13 @@ export const Registro = () => {
                   <span className="fas fa-mobile-alt" />
                 </span>
               </div>
+
+              {/* CELULAR  */}
               <input
                 className="form-control"
                 type="texto"
                 name="phone"
-                placeholder="numero de telefono de 9 digitos"
+                placeholder="Nº de teléfono codigo de área más 9 digitos"
                 value={values.phone}
                 onChange={handleChange}
               />
@@ -138,6 +149,8 @@ export const Registro = () => {
                   <span className="fa fa-user" />
                 </span>
               </div>
+
+              {/* CONTRASEÑA */}
               <input
                 className="form-control"
                 type="password"
@@ -156,6 +169,8 @@ export const Registro = () => {
                   <span className="fa fa-user" />
                 </span>
               </div>
+
+              {/* CONFIRMACIÓN CONTRASEÑA */}
               <input
                 className="form-control"
                 type="password"

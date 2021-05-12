@@ -1,31 +1,40 @@
 import React, { useState } from "react";
+import { useContext } from 'react';
+import { Context } from '../store/appContext';
+import { Link } from "react-router-dom";
+
 import { useLocalStorage } from "../components/useLocalStorage";
 
 import "../css/PerfilUser.css";
-import { Link } from "react-router-dom";
 import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
-function PerfilUser(props) {
+/* cambiar a funcion para usar los hooks */
+const PerfilUser = () => {
+  const { store, actions } = useContext(Context);
+
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
 
 
   /* ACTUALIZA VALORES DEL PERFIL y guarda en LOCALSTORAGE*/
-  const [fullName, setFullName] = useLocalStorage('fullname', '');
+  /*  USAR EL STATE EN EL LUGAR DONDE SE Quiere CAMBIAR  */
+/*   const [fullName, setFullName] = useLocalStorage('fullname', '');
   const [country, setCountry] = useLocalStorage('country', '')
   const [movil, setMovil] = useLocalStorage('movil', '')
   const [address, setAddress] = useLocalStorage("address", '')
-  const [email, setEmail] = useLocalStorage('email', '')
+  const [email, setEmail] = useLocalStorage('email', '') */
 
   return (
     <>
       <div className="container-fluid">
         <div className="row">
+
+          {/* SIDEBAR COMPONENTE CON RESPONSIVE  */}
           <div className="col-md-3 col-xl-2 px-0">
             <Sidebar />
           </div>
-
+            
           {/*  FOTO Y DATOS DE PERFIL */}
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="row gutters-sm">
@@ -33,36 +42,49 @@ function PerfilUser(props) {
                 <div className="card bg-transparent card-perfil">
                   <div className="card-body perfil">
                     <div className="d-flex flex-column align-items-center text-center">
+
+                      {/* poner FOTO ó AVATAR?  */}
                       <img
                         src={IMG_1020}
                         alt="Admin"
                         className="rounded-circle"
                         width={150}
                       />
-                      <div className="mt-3 text-white">
-                        <h4>Nombre: {fullName}</h4>
-                        {/* <hr /> */}
+
+                  {/* MAPING  */}
+                  {!!store.profile && store.profile.map((value, i) =>{
+                    return (
+                      <>
+
+                      <div className="mt-3 text-white" key={i}>
+                        <h5>Nombre: {value.name}</h5>
+                        <h5>Apellido: {value.last_name}</h5>
+                        <hr />
                         <p className="text-white mb-1">
-                          Pais Residencia: {country}
+                          Pais: {value.country}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Teléfono Móvil: {movil}
+                          Teléfono: {value.movil}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Direccion: {address}
+                          Direccion: {value.address}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Email: {email}
+                          Email: {value.email}
                         </p>
                         {/*  <br></br> */}
                       </div>
+                      </>
+                  );
+                })}
                     </div>
                   </div>
                 </div>
               </div>
+
 
               {/* INPUTS DE ACTUALIZACION */}
               <div className="col-12 my-2 col-lg-7 col-xl-8">
@@ -72,7 +94,7 @@ function PerfilUser(props) {
                       <div className="inputbox col-12 mt-2">
                         {/* valores deben guardarse en un state */}
                         <input
-                          onChange={e => setFullName(e.target.value)}
+                          /* onChange={e => setFullName(e.target.value)} */
                           /* value={fullName} */
                           placeholder="Nombre y Apellido"
                           type="text"
@@ -87,7 +109,7 @@ function PerfilUser(props) {
                     <div className="row">
                       <div className="inputbox col-12 mt-3">
                         <input
-                          onChange={e => setCountry(e.target.value)}
+                          /* onChange={e => setCountry(e.target.value)} */
                           placeholder="Pais de residencia"
                           type="text"
                           /* en name request.json.get // en backend */
@@ -100,7 +122,7 @@ function PerfilUser(props) {
                     <div className="row">
                       <div className="inputbox col-12 mt-3">
                         <input
-                          onChange={e => setEmail(e.target.value)}
+                          /* onChange={e => setEmail(e.target.value)} */
                           placeholder="Email"
                           type="text"
                           /* en name request.json.get // en backend */
@@ -113,7 +135,7 @@ function PerfilUser(props) {
                     <div className="row">
                       <div className="inputbox col-12 mt-3">
                         <input
-                          onChange={e => setMovil(e.target.value)}
+                          /* onChange={e => setMovil(e.target.value)} */
                           placeholder="Teléfono Móvil"
                           type="text"
                           name=""
@@ -125,7 +147,7 @@ function PerfilUser(props) {
                     <div className="row">
                       <div className="inputbox col-12 mt-3">
                         <input
-                          onChange={e => setAddress(e.target.value)}
+                          /* onChange={e => setAddress(e.target.value)} */
                           placeholder="Dirección"
                           type="text"
                           name="direccion"
@@ -160,7 +182,7 @@ function PerfilUser(props) {
                       </div>
                     </div>
                     <div className="row">
-                      <button className="btn btn-primary mx-3 mt-3" onClick={e => window.reload}>
+                      <button className="btn btn-primary mx-3 mt-3">
                         Actualizar
                       </button>
                     </div>
@@ -170,7 +192,7 @@ function PerfilUser(props) {
 
 
 
-              {/* CARDS CON BARRAS */}
+              {/* CARDS CON BARRAS ACTIVIDADES FRECUENTES */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
                 <div className="card bg-transparent">
                   <div className="card h-100 bg-transparent">
@@ -240,6 +262,7 @@ function PerfilUser(props) {
                 </div>
               </div>
 
+              {/* BARRA ACTIVIDADES FRECUENTES  */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
                 <div className="card h-100 bg-transparent">
                   <div className="card-body">
@@ -307,6 +330,7 @@ function PerfilUser(props) {
                 </div>
               </div>
 
+              {/*BARRAS DE ACTIVIDADES FRECUENTES TRANSFERENCIAS  */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
                 <div className="card h-100 bg-transparent">
                   <div className="card-body">
@@ -374,7 +398,7 @@ function PerfilUser(props) {
                 </div>
               </div>
 
-              {/* CARDS DE ABAJO */}
+              {/* CARDS DE ABAJO 1 */}
               <div className="col-12 my-2 col-md-6">
                 <div className="card bg-transparent">
                   <div className="card-body">
@@ -389,6 +413,7 @@ function PerfilUser(props) {
                 </div>
               </div>
 
+              {/* CARDS DE ABAJO 2 */}
               <div className="col-12 my-2 col-md-6">
                 <div className="card bg-transparent">
                   <div className="card-body">
