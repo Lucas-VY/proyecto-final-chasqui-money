@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
+=======
+import React, { useState, useEffect } from "react";
+import { useContext } from 'react';
+import { Context } from '../store/appContext';
+>>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
 import { Link } from "react-router-dom";
 
 //import { useLocalStorage } from "../components/useLocalStorage";
@@ -12,6 +18,26 @@ import Sidebar from "../components/Sidebar";
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
+
+  /* const [profile, setProfile]= useState("")
+
+  const getProfile= () => {
+    fetch("http://127.0.0.1:5000/user/profile/1")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProfile(data)
+        console.log(data)
+        console.log(profile.name)
+        
+      });
+  } */
+
+    /* useEffect(() => {
+      // funciones a ejecutar cuando cargue la pag
+      getProfile();
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);  */
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
@@ -48,6 +74,15 @@ const PerfilUser = () => {
                         width={150}
                       />
 
+<<<<<<< HEAD
+=======
+                 {/*  {!!profile && 
+                  <div className="mt-3 text-white">
+                  <h5>Nombre: {profile.name}</h5>
+                  </div>
+                  } */}
+                  
+>>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
                       <div className="mt-3 text-white">
                         <h5>Nombre: {store.profile.name}</h5>
                         <h5>Apellido: {store.profile.last_name}</h5>
@@ -57,7 +92,11 @@ const PerfilUser = () => {
                         </p>
                         <hr />
                         <p className="text-white mb-1">
+<<<<<<< HEAD
                           Teléfono: {store.profile.movil}
+=======
+                          Teléfono: {store.profile.phone}
+>>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
                         </p>
                         <hr />
                         <p className="text-white mb-1">
@@ -67,8 +106,13 @@ const PerfilUser = () => {
                         <p className="text-white mb-1">
                           Email: {store.profile.email}
                         </p>
-                        {/*  <br></br> */}
+                       
                       </div>
+<<<<<<< HEAD
+=======
+                      
+                
+>>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
                     </div>
                   </div>
                 </div>
