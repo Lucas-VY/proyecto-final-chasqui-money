@@ -21,7 +21,7 @@ export const Registro = (props) => {
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
-
+    console.log(name, value);
     if (name === "name") {
       setInputName(value);
     } else if (name === "last_name") {
@@ -54,7 +54,7 @@ export const Registro = (props) => {
         password: inputPassword,
         password2: inputPassword2,
       });
-
+      console.log("esta registrando");
       if (Object.keys(errores).length === 0 && inputTerminos === true) {
         setIsSubmitting(true);
 
