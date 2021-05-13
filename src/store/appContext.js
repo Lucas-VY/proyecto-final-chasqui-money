@@ -17,12 +17,12 @@ const injectContext = (PassedComponent) => {
       })
     );
 
-    useEffect(() => {
+    /* useEffect(() => {
       // funciones a ejecutar cuando cargue la pag
       state.actions.getProfile();
 
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, []); */
 
     return (
       <Context.Provider value={state}>

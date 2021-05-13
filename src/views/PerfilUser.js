@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link } from "react-router-dom";
@@ -12,6 +12,26 @@ import Sidebar from "../components/Sidebar";
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
+
+  const [profile, setProfile]= useState("")
+
+  const getProfile= () => {
+    fetch("http://127.0.0.1:5000/user/profile/1")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProfile(data)
+        console.log(data)
+        console.log(profile.name)
+        
+      });
+  }
+
+    useEffect(() => {
+      // funciones a ejecutar cuando cargue la pag
+      getProfile();
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); 
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
@@ -51,9 +71,13 @@ const PerfilUser = () => {
                         width={150}
                       />
 
-
+                  {!!profile && 
+                  <div className="mt-3 text-white">
+                  <h5>Nombre: {profile.name}</h5>
+                  </div>
+                  }
                   {/* MAPING  */}
-                  {!!store.profile && store.profile.map((value, i) =>{
+                  {/* {!!profile && profile.map((value, i) =>{
                     return (
                       <>
                       <div className="mt-3 text-white" key={i}>
@@ -75,11 +99,11 @@ const PerfilUser = () => {
                         <p className="text-white mb-1">
                           Email: {value.email}
                         </p>
-                        {/*  <br></br> */}
+                       
                       </div>
                       </>
                   );
-                })}
+                })} */}
                     </div>
                   </div>
                 </div>
