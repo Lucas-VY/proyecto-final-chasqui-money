@@ -58,7 +58,6 @@ export const Registro = (props) => {
       if (Object.keys(errores).length === 0 && inputTerminos === true) {
         setIsSubmitting(true);
 
-<<<<<<< HEAD
         actions
           .registro({
             name: inputName,
@@ -72,20 +71,6 @@ export const Registro = (props) => {
           .then((result) => {
             props.history.push("/inicio-sesion");
           });
-=======
-        actions.registro({
-          name: inputName,
-          last_name: inputLastName,
-          rut: inputRut,
-          email: inputEmail,
-          phone: inputPhone,
-          password: inputPassword,
-          password2: inputPassword2,
-        })
-        .then((result) => {
-          props.history.push("/inicio-sesion");
-        });
->>>>>>> 9e4d4e142e662362c89132788bb52aa5a495cc7e
       }
 
       setErrors(errores);
@@ -258,7 +243,7 @@ export const Registro = (props) => {
                   name="terminos"
                   checked={inputTerminos}
                   onChange={handleChange}
-                />{" "}
+                />
                 He leído y acepto los <a href="/">Términos y condiciones</a>
               </label>
             </div>
