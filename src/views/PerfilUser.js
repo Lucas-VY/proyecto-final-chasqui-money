@@ -11,7 +11,7 @@ import Sidebar from "../components/Sidebar";
 
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
-  const { store } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */

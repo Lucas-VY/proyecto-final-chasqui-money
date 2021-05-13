@@ -1,8 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      /* ARRAY  */
-      profile: {
+		/* ARRAY  de objetos(perfiles son obj)*/
+		profile: [
         /* {
 		 		name: '',
 				lastname:'',
@@ -11,12 +11,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				address: '',
 				email: '',
 			} */
-      },
+		],
 
       // ?	transferencias: []
     },
     actions: {
       // Use getActions to call a function within a fuction
+
       /* PROFILES */
       getProfile: () => {
         fetch("http://localhost:5000/user/profile")
@@ -27,7 +28,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             });
           });
       },
-
+	  
+	  /* REGISTRO */
       registro: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
