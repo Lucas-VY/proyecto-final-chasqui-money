@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Context } from "../store/appContext";
 
-export const Registro = () => {
+export const Registro = (props) => {
   const { actions } = useContext(Context);
 
   const [inputName, setInputName] = useState("");
@@ -66,6 +66,9 @@ export const Registro = () => {
           phone: inputPhone,
           password: inputPassword,
           password2: inputPassword2,
+        })
+        .then((result) => {
+          props.history.push("/inicio-sesion");
         });
       }
 
