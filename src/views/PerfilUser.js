@@ -11,7 +11,10 @@ import Sidebar from "../components/Sidebar";
 
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
-  const { store, actions } = useContext(Context);
+  const { store } = useContext(Context);
+
+  //const [profile, setProfile]= useState("")
+
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
@@ -52,34 +55,28 @@ const PerfilUser = () => {
                       />
 
 
-                  {/* MAPING  */}
-                  {!!store.profile && store.profile.map((value, i) =>{
-                    return (
-                      <>
-                      <div className="mt-3 text-white" key={i}>
-                        <h5>Nombre: {value.name}</h5>
-                        <h5>Apellido: {value.last_name}</h5>
+                      <div className="mt-3 text-white">
+                        <h5>Nombre: {store.profile.name}</h5>
+                        <h5>Apellido: {store.profile.last_name}</h5>
                         <hr />
                         <p className="text-white mb-1">
-                          Pais: {value.country}
+                          Pais: {store.profile.country}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Teléfono: {value.movil}
+                          Teléfono: {store.profile.movil}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Direccion: {value.address}
+                          Direccion: {store.profile.address}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Email: {value.email}
+                          Email: {store.profile.email}
                         </p>
-                        {/*  <br></br> */}
+                       
                       </div>
-                      </>
-                  );
-                })}
+
                     </div>
                   </div>
                 </div>

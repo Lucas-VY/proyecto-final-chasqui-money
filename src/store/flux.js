@@ -3,19 +3,11 @@ import { data } from "jquery";
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      /* ARRAY  */
-      profile: [
-        /* {
-		 		name: '',
-				lastname:'',
-				country: '',
-				phone: '',
-				address: '',
-				email: '',
-			} */
-      ],
+      /* USER ES un OBJ  */
+      profile: {
 
-      // ?	transferencias: []
+      },
+
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -29,7 +21,6 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({
               profile: data,
             });
-            
           });
       },
 	  
