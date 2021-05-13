@@ -1,203 +1,258 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { validateInfo } from "../components/ValidateInfo";
-import useForm from "../components/UseForms";
 import "../css/Registro.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Context } from "../store/appContext";
 
 export const Registro = () => {
-  const result = (mensaje, codigo, response) => {
-    if (codigo === 200) {
-      alert(mensaje);
-      //redireccionar al login
-    } else {
-      alert("No fue posible registrar: " + mensaje);
+  const { actions } = useContext(Context);
+
+  const [inputName, setInputName] = useState("");
+  const [inputLastName, setInputLastName] = useState("");
+  const [inputRut, setInputRut] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPhone, setInputPhone] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
+  const [inputPassword2, setInputPassword2] = useState("");
+  const [inputTerminos, setInputTerminos] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, checked } = e.target;
+
+    if (name === "name") {
+      setInputName(value);
+    } else if (name === "last_name") {
+      setInputLastName(value);
+    } else if (name === "rut") {
+      setInputRut(value);
+    } else if (name === "email") {
+      setInputEmail(value);
+    } else if (name === "phone") {
+      setInputPhone(value);
+    } else if (name === "password") {
+      setInputPassword(value);
+    } else if (name === "password2") {
+      setInputPassword2(value);
+    } else if (name === "terminos") {
+      setInputTerminos(checked);
     }
   };
 
-  const { handleSubmit, handleChange, values, errors } = useForm(
-    result,
-    validateInfo,
-    {
-      name: "",
-      last_name: "",
-      country: "",
-      email: "",
-      password: "",
-      phone: "",
-    },
-    "user/signup",
-    "POST"
-  );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isSubmitting === false) {
+      const errores = validateInfo({
+        name: inputName,
+        last_name: inputLastName,
+        rut: inputRut,
+        email: inputEmail,
+        phone: inputPhone,
+        password: inputPassword,
+        password2: inputPassword2,
+      });
+
+      if (Object.keys(errores).length === 0 && inputTerminos === true) {
+        setIsSubmitting(true);
+
+        actions.registro({
+          name: inputName,
+          last_name: inputLastName,
+          rut: inputRut,
+          email: inputEmail,
+          phone: inputPhone,
+          password: inputPassword,
+          password2: inputPassword2,
+        });
+      }
+
+      setErrors(errores);
+    }
+  };
 
   return (
     <>
-    <Navbar />
+      <Navbar />
 
+      <div className="container-fluid containerForm">
+        <div className="signup-form col-12 col-md-6 ">
+          <form
+            onSubmit={handleSubmit}
+            className="form bg-transparent"
+            noValidate
+          >
+            <h2 className="text-center text-white mb-4">Regístrate</h2>
+            <hr />
+            <div className="form-group mt-5">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-user" />
+                  </span>
+                </div>
 
-    <div className="container-fluid containerForm">
-      <div className="signup-form col-12 col-md-6 ">
-        <form onSubmit={handleSubmit} className="form bg-transparent" noValidate>
-          <h2 className="text-center text-white mb-4">Regístrate</h2>
-          <hr />
-          <div className="form-group mt-5">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="fa fa-user" />
-                </span>
+                {/* NOMBRE  */}
+                <input
+                  className="form-control "
+                  type="text"
+                  name="name"
+                  placeholder="Ingrese tú nombre"
+                  value={inputName}
+                  onChange={handleChange}
+                />
               </div>
-
-              {/* NOMBRE  */}
-              <input
-                className="form-control "
-                type="text"
-                name="name"
-                placeholder="Ingrese tú nombre"
-                value={values.name}
-                onChange={handleChange}
-              />
+              {errors.name && <p className="parrafo">{errors.name}</p>}
             </div>
-            {errors.name && <p className="parrafo">{errors.name}</p>}
-          </div>
-          <div className="form-group">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="fa fa-user" />
-                </span>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-user" />
+                  </span>
+                </div>
+
+                {/* APELLIDO */}
+                <input
+                  className="form-control "
+                  type="text"
+                  name="last_name"
+                  placeholder="Ingrese tú apellido"
+                  value={inputLastName}
+                  onChange={handleChange}
+                />
               </div>
-
-              {/* APELLIDO */}
-              <input
-                className="form-control "
-                type="text"
-                name="last_name"
-                placeholder="Ingrese tú apellido"
-                value={values.last_name}
-                onChange={handleChange}
-              />
+              {errors.last_name && (
+                <p className="parrafo">{errors.last_name}</p>
+              )}
             </div>
-            {errors.last_name && <p className="parrafo">{errors.last_name}</p>}
-          </div>
-          <div className="form-group">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="far fa-flag" />
-                </span>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="far fa-flag" />
+                  </span>
+                </div>
+
+                {/* RUT */}
+                <input
+                  className="form-control "
+                  type="text"
+                  name="rut"
+                  placeholder="Ingrese tú rut"
+                  value={inputRut}
+                  onChange={handleChange}
+                />
               </div>
-
-            {/* PAIS */}
-              <input
-                className="form-control "
-                type="text"
-                name="rut"
-                placeholder="Ingrese tú pais"
-                value={values.country}
-                onChange={handleChange}
-              />
+              {errors.rut && <p className="parrafo">{errors.rut}</p>}
             </div>
-            {errors.rut && <p className="parrafo">{errors.rut}</p>}
-          </div>
-          <div className="form-group">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="fa fa-paper-plane" />
-                </span>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-paper-plane" />
+                  </span>
+                </div>
+
+                {/* EMAIL */}
+                <input
+                  className="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="ingrese email"
+                  value={inputEmail}
+                  onChange={handleChange}
+                />
               </div>
-
-
-              {/* EMAIL */}
-              <input
-                className="form-control"
-                type="email"
-                name="email"
-                placeholder="ingrese email"
-                value={values.email}
-                onChange={handleChange}
-              />
+              {errors.email && <p className="parrafo">{errors.email}</p>}
             </div>
-            {errors.email && <p className="parrafo">{errors.email}</p>}
-          </div>
-          <div className="form-group">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="fas fa-mobile-alt" />
-                </span>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fas fa-mobile-alt" />
+                  </span>
+                </div>
+
+                {/* CELULAR  */}
+                <input
+                  className="form-control"
+                  type="texto"
+                  name="phone"
+                  placeholder="Nº de teléfono codigo de área más 9 digitos"
+                  value={inputPhone}
+                  onChange={handleChange}
+                />
               </div>
-
-              {/* CELULAR  */}
-              <input
-                className="form-control"
-                type="texto"
-                name="phone"
-                placeholder="Nº de teléfono codigo de área más 9 digitos"
-                value={values.phone}
-                onChange={handleChange}
-              />
+              {errors.phone && <p className="parrafo">{errors.phone}</p>}
             </div>
-            {errors.phone && <p className="parrafo">{errors.phone}</p>}
-          </div>
-          <p className="text-white">Mínimo 8 caracteres</p>
-          <div className="form-group">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="fa fa-user" />
-                </span>
+            <p className="text-white">Mínimo 8 caracteres</p>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-user" />
+                  </span>
+                </div>
+
+                {/* CONTRASEÑA */}
+                <input
+                  className="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="ingresa contraseña"
+                  value={inputPassword}
+                  onChange={handleChange}
+                />
               </div>
-
-              {/* CONTRASEÑA */}
-              <input
-                className="form-control"
-                type="password"
-                name="password"
-                placeholder="ingresa contraseña"
-                value={values.password}
-                onChange={handleChange}
-              />
+              {errors.password && <p className="parrafo">{errors.password}</p>}
             </div>
-            {errors.password && <p className="parrafo">{errors.password}</p>}
-          </div>
-          <div className="form-group">
-            <div className="input-group">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <span className="fa fa-user" />
-                </span>
+            <div className="form-group">
+              <div className="input-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <span className="fa fa-user" />
+                  </span>
+                </div>
+
+                {/* CONFIRMACIÓN CONTRASEÑA */}
+                <input
+                  className="form-control"
+                  type="password"
+                  name="password2"
+                  placeholder="confirmar contraseña"
+                  value={inputPassword2}
+                  onChange={handleChange}
+                />
               </div>
-
-              {/* CONFIRMACIÓN CONTRASEÑA */}
-              <input
-                className="form-control"
-                type="password"
-                name="password2"
-                placeholder="confirma contraseña"
-                value={values.password2}
-                onChange={handleChange}
-              />
+              {errors.password2 && (
+                <p className="parrafo">{errors.password2}</p>
+              )}
             </div>
-            {errors.password2 && <p className="parrafo">{errors.password2}</p>}
-          </div>
-          <div className="form-group">
-            <label className="form-check-label mt-4 text-white">
-              <input type="checkbox" required="required" /> He leído y acepto
-              los <a href="/">Términos y condiciones</a>
-            </label>
-          </div>
-          <div className="form-group d-flex justify-content-center">
-            <button type="submit" className="btn btn-primary btn-lg">
-              Registrar
-            </button>
-          </div>
-        </form>
+            <div className="form-group">
+              <label className="form-check-label mt-4 text-white">
+                <input
+                  type="checkbox"
+                  required="required"
+                  name="terminos"
+                  checked={inputTerminos}
+                  onChange={handleChange}
+                />{" "}
+                He leído y acepto los <a href="/">Términos y condiciones</a>
+              </label>
+            </div>
+            <div className="form-group d-flex justify-content-center">
+              <button type="submit" className="btn btn-primary btn-lg">
+                Registrar
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <Footer />
+      <Footer />
     </>
   );
 };
