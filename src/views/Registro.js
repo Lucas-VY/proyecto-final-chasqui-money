@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Context } from "../store/appContext";
 
-export const Registro = () => {
+export const Registro = (props) => {
   const { actions } = useContext(Context);
 
   const [inputName, setInputName] = useState("");
@@ -58,15 +58,19 @@ export const Registro = () => {
       if (Object.keys(errores).length === 0 && inputTerminos === true) {
         setIsSubmitting(true);
 
-        actions.registro({
-          name: inputName,
-          last_name: inputLastName,
-          rut: inputRut,
-          email: inputEmail,
-          phone: inputPhone,
-          password: inputPassword,
-          password2: inputPassword2,
-        });
+        actions
+          .registro({
+            name: inputName,
+            last_name: inputLastName,
+            rut: inputRut,
+            email: inputEmail,
+            phone: inputPhone,
+            password: inputPassword,
+            password2: inputPassword2,
+          })
+          .then((result) => {
+            props.history.push("/inicio-sesion");
+          });
       }
 
       setErrors(errores);

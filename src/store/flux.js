@@ -43,9 +43,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         return fetch("http://127.0.0.1:5000//user/signup", requestOptions)
           .then((response) => response.json())
-          .then((result) => {
-            console.log(result);
-          })
           .catch((error) => {
             console.log("error", error);
             throw error;

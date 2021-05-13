@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useContext } from 'react';
-import { Context } from '../store/appContext';
+import { useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 import { useLocalStorage } from "../components/useLocalStorage";
@@ -16,10 +16,9 @@ const PerfilUser = () => {
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
 
-
   /* ACTUALIZA VALORES DEL PERFIL y guarda en LOCALSTORAGE*/
   /*  USAR EL STATE EN EL LUGAR DONDE SE Quiere CAMBIAR  */
-/*   const [fullName, setFullName] = useLocalStorage('fullname', '');
+  /*   const [fullName, setFullName] = useLocalStorage('fullname', '');
   const [country, setCountry] = useLocalStorage('country', '')
   const [movil, setMovil] = useLocalStorage('movil', '')
   const [address, setAddress] = useLocalStorage("address", '')
@@ -29,12 +28,11 @@ const PerfilUser = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-
           {/* SIDEBAR COMPONENTE CON RESPONSIVE  */}
           <div className="col-md-3 col-xl-2 px-0">
             <Sidebar />
           </div>
-            
+
           {/*  FOTO Y DATOS DE PERFIL */}
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="row gutters-sm">
@@ -42,7 +40,6 @@ const PerfilUser = () => {
                 <div className="card bg-transparent card-perfil">
                   <div className="card-body perfil">
                     <div className="d-flex flex-column align-items-center text-center">
-
                       {/* poner FOTO ó AVATAR?  */}
                       <img
                         src={IMG_1020}
@@ -51,40 +48,31 @@ const PerfilUser = () => {
                         width={150}
                       />
 
-
-                  {/* MAPING  */}
-                  {!!store.profile && store.profile.map((value, i) =>{
-                    return (
-                      <>
-                      <div className="mt-3 text-white" key={i}>
-                        <h5>Nombre: {value.name}</h5>
-                        <h5>Apellido: {value.last_name}</h5>
+                      <div className="mt-3 text-white">
+                        <h5>Nombre: {store.profile.name}</h5>
+                        <h5>Apellido: {store.profile.last_name}</h5>
                         <hr />
                         <p className="text-white mb-1">
-                          Pais: {value.country}
+                          Pais: {store.profile.country}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Teléfono: {value.movil}
+                          Teléfono: {store.profile.movil}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Direccion: {value.address}
+                          Direccion: {store.profile.address}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Email: {value.email}
+                          Email: {store.profile.email}
                         </p>
                         {/*  <br></br> */}
                       </div>
-                      </>
-                  );
-                })}
                     </div>
                   </div>
                 </div>
               </div>
-
 
               {/* INPUTS DE ACTUALIZACION */}
               <div className="col-12 my-2 col-lg-7 col-xl-8">
@@ -189,8 +177,6 @@ const PerfilUser = () => {
                   </div>
                 </div>
               </div>
-
-
 
               {/* CARDS CON BARRAS ACTIVIDADES FRECUENTES */}
               <div className="col-12 my-2 col-md-6 col-lg-4">
@@ -435,6 +421,6 @@ const PerfilUser = () => {
       </div>
     </>
   );
-}
+};
 
 export default PerfilUser;
