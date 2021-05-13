@@ -1,8 +1,10 @@
+import { data } from "jquery";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-		/* ARRAY  de objetos(perfiles son obj)*/
-		profile: [
+      /* ARRAY  */
+      profile: [
         /* {
 		 		name: '',
 				lastname:'',
@@ -11,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				address: '',
 				email: '',
 			} */
-		],
+      ],
 
       // ?	transferencias: []
     },
@@ -20,12 +22,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       /* PROFILES */
       getProfile: () => {
-        fetch("http://localhost:5000/user/profile")
+        fetch("http://127.0.0.1:5000/user/profile/")
           .then((resp) => resp.json())
           .then((data) => {
+            console.log(data)
             setStore({
               profile: data,
             });
+            
           });
       },
 	  
