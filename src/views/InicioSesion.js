@@ -54,8 +54,6 @@ export const InicioSesion = (props) => {
       setErrors(errores);
     }
   };
-  //redireccionar al login
-  props.history.push("/user/profile");
 
   return (
     <>
@@ -115,6 +113,7 @@ export const InicioSesion = (props) => {
                   required="required"
                   name="recordar"
                   checked={inputRecordar}
+                  onChange={handleChange}
                 />{" "}
                 Recordar usuario
               </label>

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
+//import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
-=======
-import React, { useState, useEffect } from "react";
-import { useContext } from 'react';
-import { Context } from '../store/appContext';
->>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
 import { Link } from "react-router-dom";
 
 //import { useLocalStorage } from "../components/useLocalStorage";
@@ -32,7 +26,7 @@ const PerfilUser = () => {
       });
   } */
 
-    /* useEffect(() => {
+  /* useEffect(() => {
       // funciones a ejecutar cuando cargue la pag
       getProfile();
 
@@ -74,15 +68,12 @@ const PerfilUser = () => {
                         width={150}
                       />
 
-<<<<<<< HEAD
-=======
-                 {/*  {!!profile && 
+                      {/*  {!!profile && 
                   <div className="mt-3 text-white">
                   <h5>Nombre: {profile.name}</h5>
                   </div>
                   } */}
-                  
->>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
+
                       <div className="mt-3 text-white">
                         <h5>Nombre: {store.profile.name}</h5>
                         <h5>Apellido: {store.profile.last_name}</h5>
@@ -92,11 +83,7 @@ const PerfilUser = () => {
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-<<<<<<< HEAD
-                          Teléfono: {store.profile.movil}
-=======
                           Teléfono: {store.profile.phone}
->>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
                         </p>
                         <hr />
                         <p className="text-white mb-1">
@@ -106,13 +93,7 @@ const PerfilUser = () => {
                         <p className="text-white mb-1">
                           Email: {store.profile.email}
                         </p>
-                       
                       </div>
-<<<<<<< HEAD
-=======
-                      
-                
->>>>>>> c6f59e90483d0a6830d384de96c74db2214950c7
                     </div>
                   </div>
                 </div>
