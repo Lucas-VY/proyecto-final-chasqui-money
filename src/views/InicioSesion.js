@@ -1,32 +1,59 @@
-//import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { validateLogin } from "../components/ValidateInfo";
-import useForm from "../components/UseForms";
+//import useForm from "../components/UseForms";
 import { Link } from "react-router-dom";
 import "../css/InicioSesion.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Context } from "../store/appContext";
 
 export const InicioSesion = (props) => {
-  const result = (mensaje, codigo, json) => {
-    if (codigo === 200) {
-      alert("Bienvenido " + json.user.name);
-      //redireccionar al login
-      props.history.push("/user/profile");
-    } else {
-      alert("No fue posible registrar: " + mensaje);
+  const { actions } = useContext(Context);
+
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPassword2, setInputPassword2] = useState("");
+  const [errors, setErrors] = useState({});
+  const [inputRecordar, setInputRecordar] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, checked } = e.target;
+    console.log(name, value);
+    if (name === "email") {
+      setInputEmail(value);
+    } else if (name === "password2") {
+      setInputPassword2(value);
+    } else if (name === "recordar") {
+      setInputRecordar(checked);
     }
   };
-  // falta usar el submit realmente
-  const { handleSubmit, handleChange, values, errors } = useForm(
-    result,
-    validateLogin,
-    {
-      email: "",
-      password: "",
-    },
-    "user/signin",
-    "POST"
-  );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isSubmitting === false) {
+      const errores = validateLogin({
+        email: inputEmail,
+        password2: inputPassword2,
+      });
+
+      console.log("esta registrando");
+      if (Object.keys(errores).length === 0) {
+        setIsSubmitting(true);
+
+        actions
+          .inicioSesion({
+            email: inputEmail,
+            password2: inputPassword2,
+          })
+          .then((result) => {
+            props.history.push("/user/profile");
+          });
+      }
+
+      setErrors(errores);
+    }
+  };
 
   return (
     <>
@@ -35,7 +62,7 @@ export const InicioSesion = (props) => {
       <div className="container-fluid containerForm">
         <div className="signup-form col-12 col-md-6">
           <form
-            onSubmit={() => props.history.push("/user/profile")}
+            onSubmit={handleSubmit}
             className="form bg-transparent"
             noValidate
           >
@@ -53,7 +80,7 @@ export const InicioSesion = (props) => {
                   type="email"
                   name="email"
                   placeholder="ingrese email"
-                  value={values.email}
+                  value={inputEmail}
                   onChange={handleChange}
                 />
               </div>
@@ -70,8 +97,8 @@ export const InicioSesion = (props) => {
                   className="form-control"
                   type="password"
                   name="password2"
-                  placeholder="confirma contraseña"
-                  value={values.password2}
+                  placeholder="confirmar contraseña"
+                  value={inputPassword2}
                   onChange={handleChange}
                 />
               </div>
@@ -81,7 +108,14 @@ export const InicioSesion = (props) => {
             </div>
             <div className="form-group" style={{ marginLeft: "100px" }}>
               <label className="form-check-label mt-4 text-white">
-                <input type="checkbox" required="required" /> Recordar usuario
+                <input
+                  type="checkbox"
+                  required="required"
+                  name="recordar"
+                  checked={inputRecordar}
+                  onChange={handleChange}
+                />{" "}
+                Recordar usuario
               </label>
             </div>
             <div className="text-center mb-2">

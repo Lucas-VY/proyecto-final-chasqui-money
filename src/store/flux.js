@@ -1,12 +1,8 @@
-//import { data } from "jquery";
-
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       /* USER ES un OBJ  */
-      profile: {
-
-      },
+      profile: {},
 
     },
     actions: {
@@ -14,11 +10,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       /* PROFILES FUNCIONANDO*/
       getProfile: () => {
-        /* falta hacer dinamica la url para seleccionar el perfil */
         fetch("http://127.0.0.1:5000/user/profile/")
           .then((resp) => resp.json())
           .then((data) => {
-            console.log(data)
+            console.log(data);
             setStore({
               profile: data,
             });
@@ -42,9 +37,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         return fetch("http://127.0.0.1:5000//user/signup", requestOptions)
           .then((response) => response.json())
-          .then((result) => {
-            console.log(result);
-          })
+          .catch((error) => {
+            console.log("error", error);
+            throw error;
+          });
+      },
+
+      inicioSesion: (values) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(values);
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        return fetch("http://127.0.0.1:5000//user/signin", requestOptions)
+          .then((response) => response.json())
           .catch((error) => {
             console.log("error", error);
             throw error;

@@ -21,7 +21,7 @@ export const Registro = (props) => {
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
-
+    console.log(name, value);
     if (name === "name") {
       setInputName(value);
     } else if (name === "last_name") {
@@ -54,22 +54,23 @@ export const Registro = (props) => {
         password: inputPassword,
         password2: inputPassword2,
       });
-
+      console.log("esta registrando");
       if (Object.keys(errores).length === 0 && inputTerminos === true) {
         setIsSubmitting(true);
 
-        actions.registro({
-          name: inputName,
-          last_name: inputLastName,
-          rut: inputRut,
-          email: inputEmail,
-          phone: inputPhone,
-          password: inputPassword,
-          password2: inputPassword2,
-        })
-        .then((result) => {
-          props.history.push("/inicio-sesion");
-        });
+        actions
+          .registro({
+            name: inputName,
+            last_name: inputLastName,
+            rut: inputRut,
+            email: inputEmail,
+            phone: inputPhone,
+            password: inputPassword,
+            password2: inputPassword2,
+          })
+          .then((result) => {
+            props.history.push("/inicio-sesion");
+          });
       }
 
       setErrors(errores);
@@ -242,7 +243,7 @@ export const Registro = (props) => {
                   name="terminos"
                   checked={inputTerminos}
                   onChange={handleChange}
-                />{" "}
+                />
                 He leído y acepto los <a href="/">Términos y condiciones</a>
               </label>
             </div>
