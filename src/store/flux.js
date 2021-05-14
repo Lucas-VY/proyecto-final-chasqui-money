@@ -57,7 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         };
 
-        return fetch("http://127.0.0.1:5000//user/signin", requestOptions)
+        return fetch("http://127.0.0.1:5000/user/signin", requestOptions)
           .then((response) => response.json())
           .catch((error) => {
             console.log("error", error);

@@ -10,10 +10,15 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <> 
-<Navbar/>
+
   {/* CONVERSOR */}
   <div className="container-fluid">
+        <div className="row">
+        <Navbar/>
+        </div>
+
         <div className="row d-flex justify-content-center jumbo">
+          <div className="col-md-4">
           <div className="jumbotron text-center border-none bg-transparent jumbo">
               <h1 className="header__title">Consulta Tu Cambio</h1>
               <p className="header__paragraph">
@@ -25,9 +30,9 @@ const Home = () => {
               Regístrate Gratis
             </Link>
           </div>
-        </div>
-      </div>
+          </div>
 
+        </div>
 
 
 
@@ -65,7 +70,10 @@ const Home = () => {
         </div>
       </div>
 
+      </div>
+
       <Footer/>
+
     </>
   );
 };

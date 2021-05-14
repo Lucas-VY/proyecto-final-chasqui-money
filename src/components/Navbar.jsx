@@ -6,7 +6,7 @@ const Navbar = () => {
     //fixed-top Fija el navbar arriba
     <>
     <div className="header-blue">
-      <nav className="navbar navbar-dark header-blue navbar-expand-md navigation-clean-search col-sm-3 col-md-4 col-lg-12">
+      <nav className="navbar navbar-dark header-blue navbar-expand-md navigation-clean-search">
         <div className="container-fluid fixed-top">
           <Link className="navbar-brand" to="/">
             <h2>Chasky Money</h2>
@@ -59,12 +59,12 @@ const Navbar = () => {
               <li className="nav-item" role="presentation">
                 <Link className="nav-link active" to="/contactanos">Contáctanos</Link>
               </li>
-            </ul>
-          </div>
-          <span className="navbar-text px-2">
+          <span className="navbar-text ">
             <Link className="login px-2" to="/inicio-sesion">
               Ingresa
             </Link>
+          </span>
+          <span className="navbar-text">
             <Link
               className="btn btn-light action-button"
               role="button"
@@ -73,6 +73,8 @@ const Navbar = () => {
               Regístrate
             </Link>
           </span>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>

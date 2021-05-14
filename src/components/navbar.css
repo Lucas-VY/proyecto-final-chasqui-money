@@ -145,3 +145,7 @@
 .register:hover {
   color: gray;
 }
+
+.inicio-nav {
+  padding-right: 10px;
+}

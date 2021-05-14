@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
 import "../css/Noticias.css";
 
 import Sidebar from "../components/Sidebar";
 
 /* API NOTICIAS */
-const BASE_URL = "https://newsapi.org/v2/everything?q=keyword&";
+//const BASE_URL = "https://newsapi.org/v2/everything?q=keyword&";
 //https://newsapi.org/v2/everything?q=keyword&apiKey=4c12586d6b7041539e2c141a6084b33b
-const API_KEY = "4c12586d6b7041539e2c141a6084b33b";
+//const API_KEY = "4c12586d6b7041539e2c141a6084b33b";
 
-function NoticiasApi() {
+/* function NoticiasApi() {
   const [Noticia, setNoticia] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function NoticiasApi() {
         setNoticia(Object.keys(data.url));
       });
   }, []);
-}
+} */
 
 const NoticiasPerfil = () => {
   return (
