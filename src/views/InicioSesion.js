@@ -42,12 +42,12 @@ export const InicioSesion = (props) => {
         setIsSubmitting(true);
 
         actions
-          .registro({
+          .inicioSesion({
             email: inputEmail,
             password2: inputPassword2,
           })
           .then((result) => {
-            props.history.push("/user/profile");
+            props.history.push("/user/profile/");
           });
       }
 

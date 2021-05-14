@@ -44,17 +44,17 @@ export function validateInfo(values) {
 export function validateLogin(values) {
   let errors = {};
 
-  if (!values.email) {
+  /* if (!values.email) {
     errors.email = "Email es requerido";
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = "Email no valido";
-  }
+  } */
 
-  if (!values.password) {
-    errors.password = "Contraseña es requerida";
-  } else if (values.password.length < 8) {
-    errors.password = "la contraseña debe tener 8 caracteres";
-  }
+  /* if (!values.password2) {
+    errors.password2 = "Contraseña es requerida";
+  } else if (values.password2.length < 8) {
+    errors.password2 = "la contraseña debe tener 8 caracteres";
+  } */
 
   return errors;
 }

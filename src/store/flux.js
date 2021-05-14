@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       // Use getActions to call a function within a fuction
       /* PROFILES */
       getProfile: () => {
-        fetch("http://127.0.0.1:5000/user/profile/2")
+        fetch("http://127.0.0.1:5000/user/profile/")
           .then((resp) => resp.json())
           .then((data) => {
             console.log(data);
