@@ -1,4 +1,4 @@
-import { data } from "jquery";
+//import { data } from "jquery";
 
 const getState = ({ getStore, getActions, setStore }) => {
   return {
@@ -12,8 +12,9 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       // Use getActions to call a function within a fuction
 
-      /* PROFILES */
+      /* PROFILES FUNCIONANDO*/
       getProfile: () => {
+        /* falta hacer dinamica la url para seleccionar el perfil */
         fetch("http://127.0.0.1:5000/user/profile/")
           .then((resp) => resp.json())
           .then((data) => {
@@ -24,7 +25,8 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 	  
-	  /* REGISTRO */
+
+	  /* REGISTRO FUNCIONANDO */
       registro: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");

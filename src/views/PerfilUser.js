@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
+//import { useLocalStorage } from "../components/useLocalStorage";
+
 import { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link } from "react-router-dom";
 
-import { useLocalStorage } from "../components/useLocalStorage";
 
 import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
@@ -12,9 +13,6 @@ import Sidebar from "../components/Sidebar";
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
-
-  //const [profile, setProfile]= useState("")
-
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
@@ -47,14 +45,14 @@ const PerfilUser = () => {
                     <div className="d-flex flex-column align-items-center text-center">
 
                       {/* poner FOTO ó AVATAR?  */}
+
                       <img
                         src={IMG_1020}
                         alt="Admin"
                         className="rounded-circle"
                         width={150}
                       />
-
-
+                  
                       <div className="mt-3 text-white">
                         <h5>Nombre: {store.profile.name}</h5>
                         <h5>Apellido: {store.profile.last_name}</h5>
@@ -64,7 +62,7 @@ const PerfilUser = () => {
                         </p>
                         <hr />
                         <p className="text-white mb-1">
-                          Teléfono: {store.profile.movil}
+                          Teléfono: {store.profile.phone}
                         </p>
                         <hr />
                         <p className="text-white mb-1">
@@ -76,7 +74,8 @@ const PerfilUser = () => {
                         </p>
                        
                       </div>
-
+                      
+                
                     </div>
                   </div>
                 </div>
