@@ -47,7 +47,7 @@ export const InicioSesion = (props) => {
             password2: inputPassword2,
           })
           .then((result) => {
-            props.history.push("/user/profile");
+            props.history.push("/user/profile/");
           });
       }
 

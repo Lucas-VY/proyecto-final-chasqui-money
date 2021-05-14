@@ -42,7 +42,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw error;
           });
       },
-
+      
+      /* LOGIN  */
       inicioSesion: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -68,3 +69,4 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
+
