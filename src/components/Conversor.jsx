@@ -69,9 +69,12 @@ function Conversor() {
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
   let toAmount, fromAmount;
+
   if (amountInFromCurrency) {
     fromAmount = amount;
-    toAmount = Math.round(amount * exchangeRate);
+    toAmount =
+      Math.round(amount * exchangeRate) * 0.05 * -1 +
+      Math.round(exchangeRate * amount);
   }
 
   useEffect(() => {
