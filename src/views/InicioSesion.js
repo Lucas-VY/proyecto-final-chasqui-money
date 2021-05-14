@@ -42,7 +42,7 @@ export const InicioSesion = (props) => {
         setIsSubmitting(true);
 
         actions
-          .registro({
+          .inicioSesion({
             email: inputEmail,
             password2: inputPassword2,
           })
