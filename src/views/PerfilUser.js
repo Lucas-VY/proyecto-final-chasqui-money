@@ -1,9 +1,10 @@
-//import React, { useState, useEffect } from "react";
-import { useContext } from "react";
-import { Context } from "../store/appContext";
+//import React, { useState } from "react";
+//import { useLocalStorage } from "../components/useLocalStorage";
+
+import { useContext } from 'react';
+import { Context } from '../store/appContext';
 import { Link } from "react-router-dom";
 
-//import { useLocalStorage } from "../components/useLocalStorage";
 
 import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
@@ -12,26 +13,6 @@ import Sidebar from "../components/Sidebar";
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
-
-  /* const [profile, setProfile]= useState("")
-
-  const getProfile= () => {
-    fetch("http://127.0.0.1:5000/user/profile/1")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setProfile(data)
-        console.log(data)
-        console.log(profile.name)
-        
-      });
-  } */
-
-  /* useEffect(() => {
-      // funciones a ejecutar cuando cargue la pag
-      getProfile();
-
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);  */
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
   /* const [text, setText] = useLocalStorage("fullname", ""); */
@@ -61,19 +42,14 @@ const PerfilUser = () => {
                   <div className="card-body perfil">
                     <div className="d-flex flex-column align-items-center text-center">
                       {/* poner FOTO ó AVATAR?  */}
+
                       <img
                         src={IMG_1020}
                         alt="Admin"
                         className="rounded-circle"
                         width={150}
                       />
-
-                      {/*  {!!profile && 
-                  <div className="mt-3 text-white">
-                  <h5>Nombre: {profile.name}</h5>
-                  </div>
-                  } */}
-
+                  
                       <div className="mt-3 text-white">
                         <h5>Nombre: {store.profile.name}</h5>
                         <h5>Apellido: {store.profile.last_name}</h5>
