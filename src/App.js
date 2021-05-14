@@ -62,11 +62,7 @@ function App() {
               path="/user/transferencias"
               component={Transferencias}
             ></Route>
-            <Route
-              exact
-              path="/user/historial"
-              component={Historial}
-            ></Route>
+            <Route exact path="/user/historial" component={Historial}></Route>
             <Route
               exact
               path="/user/noticias"
