@@ -41,21 +41,21 @@ const Home = () => {
                 <span className="count-name">Monedas</span>
               </div>
             </div>
-            <div className="col-xs-2 col-md-3">
+            <div className="col-xs-12 col-md-3">
               <div className="card-counter danger">
                 <i className="fas fa-handshake" />
                 <span className="count-numbers">+1M</span>
                 <span className="count-name">Transferencias</span>
               </div>
             </div>
-            <div className="col-xs-2 col-md-3">
+            <div className="col-xs-12 col-md-3">
               <div className="card-counter success">
                 <i className="fa fa-database" />
                 <span className="count-numbers">+400K</span>
                 <span className="count-name">Data</span>
               </div>
             </div>
-            <div className="col-xs-2 col-md-3">
+            <div className="col-xs-12 col-md-3">
               <div className="card-counter info">
                 <i className="fa fa-users" />
                 <span className="count-numbers">+500K</span>

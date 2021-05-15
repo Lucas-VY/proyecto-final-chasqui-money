@@ -1,19 +1,32 @@
 //import { faCloudDownloadAlt } from "@fortawesome/free-solid-svg-icons";
-//import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "../css/Noticias.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 /* API NOTICIAS  COMPROBAR */
-//const URL = "https://newsapi.org/v2/everything?q=keyword&";
+const BASE_URL = "https://newsapi.org/v2/everything?q=keyword&";
 //https://newsapi.org/v2/everything?q=keyword&apiKey=4c12586d6b7041539e2c141a6084b33b
-//const apiKey = "4c12586d6b7041539e2c141a6084b33b";
+const API_KEY = "4c12586d6b7041539e2c141a6084b33b";
 
-const Noticias = () => {
+const Noticias = (props) => {
+  const { noticias } = props;
+
+  const [noticiaIndividual, setNoticiaIndividual] = useState([]);
+
+  useEffect(() => {
+    fetch(`${BASE_URL}/everything?q=keyword&${API_KEY}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.results);
+        setNoticiaIndividual(Object.keys(data.url));
+      });
+  }, []);
+
   return (
     <>
-    <Navbar />
+      <Navbar />
 
       {/* Page Content */}
       <div className="container">
@@ -35,10 +48,7 @@ const Noticias = () => {
           <div className="col-md-5">
             <h3 id="titulo-noticias-individual">Noticia One</h3>
             <p className="text-justify" id="parrafo-noticias">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laudantium veniam exercitationem expedita laborum at voluptate.
-              Labore, voluptates totam at aut nemo deserunt rem magni pariatur
-              quos perspiciatis atque eveniet unde.
+              <Noticias></Noticias>
             </p>
             <a className="btn btn-primary" href="/">
               View Noticia
