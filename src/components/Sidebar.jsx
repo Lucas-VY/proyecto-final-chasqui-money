@@ -10,15 +10,6 @@ const Sidebar = () => {
             <h1 className="titulo px-2">Chasky Money</h1>
           </li>
 
-          <li className="nav-item">
-            <Link className="nav-link text-center text-xl-left" to="/user/view">
-              <i className="fas fa-home"></i>
-              <span className="d-none d-xl-inline-block">Inicio</span>
-              <span className="sr-only">(current)</span>
-            </Link>
-          </li>
-
-          <br />
 
           <li className="nav-item">
             <Link

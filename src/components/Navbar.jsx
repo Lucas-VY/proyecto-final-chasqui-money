@@ -51,7 +51,7 @@ const Navbar = () => {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <Link className="dropdown-item" to="/noticias-relevantes">
-                  Noticas
+                  Noticias
                 </Link>
                 <Link className="dropdown-item" to="/testimonios">
                   Testimonios
@@ -69,13 +69,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-<<<<<<< HEAD
               <Link className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light" to="/registrate">
-                Registrate
-=======
-              <Link className="nav-link" to="/registrate">
                 Regístrate
->>>>>>> fcf377ae0ba0503105d5f2cb9b47a3232c42092b
               </Link>
             </li>
           </ul>

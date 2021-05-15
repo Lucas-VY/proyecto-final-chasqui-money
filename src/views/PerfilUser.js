@@ -42,30 +42,28 @@ const PerfilUser = () => {
                   <div className="card-body perfil">
                     <div className="d-flex flex-column align-items-center text-center">
                       {/* poner FOTO ó AVATAR?  */}
-
                       <img
                         src={IMG_1020}
                         alt="Admin"
                         className="rounded-circle"
                         width={150}
                       />
-                  
-                      <div className="mt-3 text-white">
+                      <div className="mt-2 text-white">
                         <h5>Nombre: {store.profile.name}</h5>
                         <h5>Apellido: {store.profile.last_name}</h5>
-                        <hr />
+                        <hr/>
                         <p className="text-white mb-1">
                           Pais: {store.profile.country}
                         </p>
-                        <hr />
+                        <hr/>
                         <p className="text-white mb-1">
                           Teléfono: {store.profile.phone}
                         </p>
-                        <hr />
+                        <hr/>
                         <p className="text-white mb-1">
                           Direccion: {store.profile.address}
                         </p>
-                        <hr />
+                        <hr/>
                         <p className="text-white mb-1">
                           Email: {store.profile.email}
                         </p>
@@ -80,7 +78,7 @@ const PerfilUser = () => {
                 <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
-                      <div className="inputbox col-12 mt-2">
+                      <div className="inputbox col-12 mt-4">
                         {/* valores deben guardarse en un state */}
                         <input
                           /* onChange={e => setFullName(e.target.value)} */
@@ -96,7 +94,7 @@ const PerfilUser = () => {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-3">
+                      <div className="inputbox col-12 mt-4">
                         <input
                           /* onChange={e => setCountry(e.target.value)} */
                           placeholder="Pais de residencia"
@@ -108,19 +106,7 @@ const PerfilUser = () => {
                         />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="inputbox col-12 mt-3">
-                        <input
-                          /* onChange={e => setEmail(e.target.value)} */
-                          placeholder="Email"
-                          type="text"
-                          /* en name request.json.get // en backend */
-                          name="email"
-                          className="form-control"
-                          required="required"
-                        />
-                      </div>
-                    </div>
+
                     <div className="row">
                       <div className="inputbox col-12 mt-3">
                         <input
@@ -134,7 +120,7 @@ const PerfilUser = () => {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-3">
+                      <div className="inputbox col-12 mt-4">
                         <input
                           /* onChange={e => setAddress(e.target.value)} */
                           placeholder="Dirección"
@@ -159,7 +145,7 @@ const PerfilUser = () => {
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-3">
+                      <div className="inputbox col-12 mt-4">
                         {/* <label className="text-dark">Repetir Contraseña:</label> */}
                         <input
                           placeholder="Confirma Contraseña"
@@ -171,7 +157,7 @@ const PerfilUser = () => {
                       </div>
                     </div>
                     <div className="row">
-                      <button className="btn btn-primary mx-3 mt-3">
+                      <button className="btn btn-primary mx-3 mt-4">
                         Actualizar
                       </button>
                     </div>

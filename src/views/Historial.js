@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import '../css/Historial.css';
 
+
+
+
 const Historial = () =>{
     return (
         <>
@@ -24,7 +27,7 @@ const Historial = () =>{
                         <thead>
                           <tr className="align-self-center">
                             <th>Nombre de Benificiario</th>
-                            <th>Método de Pago</th>
+                            <th>ID Comprobante</th>
                             <th>Día de pago</th>
                             <th>Monto</th>
                             <th>Status</th>
@@ -40,12 +43,12 @@ const Historial = () =>{
                               />
                               Kevin Heal
                             </td>
-                            <td>Paypal</td>
+                            <td>Nº {}</td>
                             <td>5/8/2018</td>
                             <td>$15,000</td>
                             <td>
                               <span className="badge badge-boxed badge-soft-warning">
-                                panding
+                                Pendiente
                               </span>
                             </td>
                           </tr>
@@ -58,12 +61,12 @@ const Historial = () =>{
                               />
                               Frank M. Lyons
                             </td>
-                            <td>Paypal</td>
+                            <td>Nº {}</td>
                             <td>15/7/2018</td>
                             <td>$35,000</td>
                             <td>
                               <span className="badge badge-boxed badge-soft-primary">
-                                Success
+                                Aceptado
                               </span>
                             </td>
                           </tr>
@@ -76,12 +79,12 @@ const Historial = () =>{
                               />
                               Angelo Butler
                             </td>
-                            <td>Pioneer</td>
+                            <td>Nº {}</td>
                             <td>30/9/2018</td>
                             <td>$45,000</td>
                             <td>
                               <span className="badge badge-boxed badge-soft-warning">
-                                Panding
+                                Pendiente
                               </span>
                             </td>
                           </tr>
@@ -94,12 +97,12 @@ const Historial = () =>{
                               />
                               Phillip Morse
                             </td>
-                            <td>Paypal</td>
+                            <td>Nº {}</td>
                             <td>2/6/2018</td>
                             <td>$70,000</td>
                             <td>
                               <span className="badge badge-boxed badge-soft-primary">
-                                Success
+                                Aceptado
                               </span>
                             </td>
                           </tr>
@@ -112,12 +115,12 @@ const Historial = () =>{
                               />
                               Kevin Heal
                             </td>
-                            <td>Paypal</td>
+                            <td>Nº {}</td>
                             <td>5/8/2018</td>
                             <td>$15,000</td>
                             <td>
                               <span className="badge badge-boxed badge-soft-warning">
-                                panding
+                                Pendiente
                               </span>
                             </td>
                           </tr>
@@ -130,12 +133,12 @@ const Historial = () =>{
                               />
                               Frank M. Lyons
                             </td>
-                            <td>Paypal</td>
+                            <td>Nº {}</td>
                             <td>15/7/2018</td>
                             <td>$35,000</td>
                             <td>
                               <span className="badge badge-boxed badge-soft-primary">
-                                Success
+                                Aceptado
                               </span>
                             </td>
                           </tr>

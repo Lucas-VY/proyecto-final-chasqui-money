@@ -12,7 +12,6 @@ import injectContext from "./store/appContext";
 
 // vistas de perfil
 import PerfilUser from "./views/PerfilUser";
-import UserView from "./views/UserView";
 import Transferencias from "./views/Transferencias";
 import Historial from "./views/Historial";
 import NoticiasPerfil from "./views/NoticiasPerfil";
@@ -54,7 +53,6 @@ function App() {
             <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
-            <Route exact path="/user/view" component={UserView}></Route>
 
             <Route exact path="/user/profile/" component={PerfilUser}></Route>
             <Route
