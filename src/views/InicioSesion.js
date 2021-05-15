@@ -59,7 +59,7 @@ export const InicioSesion = (props) => {
     
       <Navbar />
 
-      <div className="container-fluid containerForm">
+      <div className="container-fluid">
         <div className="signup-form col-12 col-md-6">
           <form
             onSubmit={handleSubmit}
