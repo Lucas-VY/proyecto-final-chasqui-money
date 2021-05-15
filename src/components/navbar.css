@@ -74,11 +74,11 @@
   }
 }
 */
-/* btn-ingresa{
-  margin-top: -5px;
+.btn-ingresa{
+  margin-top: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  border-radius: 2px;
+  /* background-color: #fff; */
+  border-radius: 8px;
 } 
 
 
@@ -110,4 +110,4 @@
   border-bottom: 1px solid #ccc;
 }
 
- */
+ 

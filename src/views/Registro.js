@@ -10,7 +10,6 @@ export const Registro = (props) => {
 
   const [inputName, setInputName] = useState("");
   const [inputLastName, setInputLastName] = useState("");
-  const [inputRut, setInputRut] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputPhone, setInputPhone] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -26,8 +25,6 @@ export const Registro = (props) => {
       setInputName(value);
     } else if (name === "last_name") {
       setInputLastName(value);
-    } else if (name === "rut") {
-      setInputRut(value);
     } else if (name === "email") {
       setInputEmail(value);
     } else if (name === "phone") {
@@ -48,7 +45,6 @@ export const Registro = (props) => {
       const errores = validateInfo({
         name: inputName,
         last_name: inputLastName,
-        rut: inputRut,
         email: inputEmail,
         phone: inputPhone,
         password: inputPassword,
@@ -62,7 +58,6 @@ export const Registro = (props) => {
           .registro({
             name: inputName,
             last_name: inputLastName,
-            rut: inputRut,
             email: inputEmail,
             phone: inputPhone,
             password: inputPassword,
@@ -137,26 +132,6 @@ export const Registro = (props) => {
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <span className="far fa-flag" />
-                  </span>
-                </div>
-
-                {/* RUT */}
-                <input
-                  className="form-control "
-                  type="text"
-                  name="rut"
-                  placeholder="Ingrese tú rut"
-                  value={inputRut}
-                  onChange={handleChange}
-                />
-              </div>
-              {errors.rut && <p className="parrafo">{errors.rut}</p>}
-            </div>
-            <div className="form-group">
-              <div className="input-group">
-                <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    <span className="fa fa-paper-plane" />
                   </span>
                 </div>
 

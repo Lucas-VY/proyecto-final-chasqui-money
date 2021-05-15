@@ -4,49 +4,82 @@ import { Link, Redirect } from "react-router-dom";
 
 const Navbar = () => {
   return (
-
     <>
-    {/* NAVBAR TEST  */}
-      <nav className="navbar navbar-expand-lg navbar-white bg-transparent fixed-top">
-        <Link className="navbar-brand" to="/">Chasky Money</Link>
-        <button className="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
+      {/* NAVBAR TEST  */}
+      <nav className="navbar navbar-expand-lg navbar-white bg-transparent">
+        <Link className="navbar-brand" to="/">
+          Chasky Money
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i className="navbar-toggler fas fa-align-justify text-dark bg-white"></i>
+        
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <Link className="nav-link" to="/quienes-somos">Quiénes Somos?<span className="sr-only">(current)</span></Link>
+              <Link className="nav-link" to="/quienes-somos">
+                Quiénes Somos?<span className="sr-only">(current)</span>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/preguntas-frecuentes">Preguntas</Link>
+              <Link className="nav-link" to="/preguntas-frecuentes">
+                Preguntas
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="/"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Blog
-        </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <Link className="dropdown-item" to="/noticias-relevantes">Noticas</Link>
-                <Link className="dropdown-item" to="/testimonios">Testimonios</Link>
+              </Link>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <Link className="dropdown-item" to="/noticias-relevantes">
+                  Noticas
+                </Link>
+                <Link className="dropdown-item" to="/testimonios">
+                  Testimonios
+                </Link>
               </div>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contactanos">Contactanos</Link>
+              <Link className="nav-link" to="/contactanos">
+                Contactanos
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/inicio-sesion">Ingresa</Link>
+              <Link className="nav-link" to="/inicio-sesion">
+                Ingresa
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/registrate">Registrate</Link>
+              <Link className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light" to="/registrate">
+                Registrate
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
 
+      {false && <Redirect to="UserView" />}
 
-
-
-
-{/*  navbar antiguo */}
+      {/* navbar antiguo */}
 
       {/* <div className="header-blue">
         <nav className="navbar navbar-dark  navbar-expand-lg navigation-clean-search col-xs-12 col-sm-6 col-md-4 col-lg-3">
