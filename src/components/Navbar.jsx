@@ -60,7 +60,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contactanos">
-                Contactanos
+                Contáctanos
               </Link>
             </li>
             <li className="nav-item">
@@ -69,8 +69,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
+<<<<<<< HEAD
               <Link className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light" to="/registrate">
                 Registrate
+=======
+              <Link className="nav-link" to="/registrate">
+                Regístrate
+>>>>>>> fcf377ae0ba0503105d5f2cb9b47a3232c42092b
               </Link>
             </li>
           </ul>
