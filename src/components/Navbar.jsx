@@ -68,14 +68,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-<<<<<<< HEAD
-              <Link className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light" to="/registrate">
-=======
               <Link
                 className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light"
                 to="/registrate"
               >
->>>>>>> e811ea96dcf070163219edb49e3a5d640b1054e3
                 Regístrate
               </Link>
             </li>

@@ -147,9 +147,10 @@ const Historial = () =>{
                     </div>
                     {/*end table-responsive*/}
                     <div className="pt-3 border-top text-right">
-                      <Link to="/user/historial" className="text-primary">
-                        View all <i className="mdi mdi-arrow-right" />
-                      </Link>
+                      <p className="text-white">confirma con nosotros enviando tu ID de comprobante a través de Whatsapp</p>
+                      <a href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia" className="btn btn-success btn-sm">
+                        <i className="fab fa-whatsapp fa-lg"> Confirma Aquí</i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -163,3 +164,6 @@ const Historial = () =>{
 }
 
 export default Historial;
+
+
+/* https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia */

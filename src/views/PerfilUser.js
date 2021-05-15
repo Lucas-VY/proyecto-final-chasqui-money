@@ -1,5 +1,5 @@
 //import React, { useState } from "react";
-//import { useLocalStorage } from "../components/useLocalStorage";
+import { useLocalStorage } from "../components/useLocalStorage";
 
 import { useContext } from 'react';
 import { Context } from '../store/appContext';
@@ -15,11 +15,11 @@ const PerfilUser = () => {
   const { store } = useContext(Context);
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
-  /* const [text, setText] = useLocalStorage("fullname", ""); */
-
+/*   const [text, setText] = useLocalStorage("fullname", "");
+ */
   /* ACTUALIZA VALORES DEL PERFIL y guarda en LOCALSTORAGE*/
   /*  USAR EL STATE EN EL LUGAR DONDE SE Quiere CAMBIAR  */
-  /*   const [fullName, setFullName] = useLocalStorage('fullname', '');
+  /* const [fullName, setFullName] = useLocalStorage('fullname', '');
   const [country, setCountry] = useLocalStorage('country', '')
   const [movil, setMovil] = useLocalStorage('movil', '')
   const [address, setAddress] = useLocalStorage("address", '')
@@ -50,18 +50,11 @@ const PerfilUser = () => {
                       />
                       <div className="mt-2 text-white">
                         <h5>Nombre: {store.profile.name}</h5>
+                        <hr />
                         <h5>Apellido: {store.profile.last_name}</h5>
                         <hr/>
                         <p className="text-white mb-1">
-                          Pais: {store.profile.country}
-                        </p>
-                        <hr/>
-                        <p className="text-white mb-1">
                           Teléfono: {store.profile.phone}
-                        </p>
-                        <hr/>
-                        <p className="text-white mb-1">
-                          Direccion: {store.profile.address}
                         </p>
                         <hr/>
                         <p className="text-white mb-1">
