@@ -12,11 +12,11 @@ const Home = () => {
       {/* CONVERSOR */}
       <div className="container-fluid">
         <div className="row d-flex justify-content-center jumbo">
-          <div className="col-xs-2 col-md-3 col-lg-4 col-xl-4">
+          <div className="col-xs-12 col-md-8 col-lg-4 ">
             <div className="jumbotron text-center border-none bg-transparent jumbo">
               <h1 className="header__title">Consulta Tu Cambio</h1>
               <p className="header__paragraph">
-                Cambio de dinero Rapido y seguro
+                Cambio de dinero Rápido y seguro
               </p>
               <Conversor />
               <hr className="my-2" />
@@ -34,28 +34,28 @@ const Home = () => {
         {/* BANNERS */}
         <div className="container">
           <div className="row">
-            <div className="col-xs-2 col-md-3 col-lg-3 col-xl-3">
+            <div className="col-xs-2 col-md-3">
               <div className="card-counter primary">
                 <i className="fas fa-coins" />
                 <span className="count-numbers">200</span>
                 <span className="count-name">Monedas</span>
               </div>
             </div>
-            <div className="col-xs-2 col-md-3 col-lg-3 col-xl-3">
+            <div className="col-xs-2 col-md-3">
               <div className="card-counter danger">
                 <i className="fas fa-handshake" />
                 <span className="count-numbers">+1M</span>
                 <span className="count-name">Transferencias</span>
               </div>
             </div>
-            <div className="col-xs-2 col-md-3 col-lg-3 col-xl-3">
+            <div className="col-xs-2 col-md-3">
               <div className="card-counter success">
                 <i className="fa fa-database" />
                 <span className="count-numbers">+400K</span>
                 <span className="count-name">Data</span>
               </div>
             </div>
-            <div className="col-xs-2 col-md-3 col-lg-3 col-xl-3">
+            <div className="col-xs-2 col-md-3">
               <div className="card-counter info">
                 <i className="fa fa-users" />
                 <span className="count-numbers">+500K</span>

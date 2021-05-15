@@ -20,7 +20,6 @@ const Navbar = () => {
           aria-label="Toggle navigation"
         >
           <i className="navbar-toggler fas fa-align-justify text-dark bg-white"></i>
-        
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
@@ -69,13 +68,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-<<<<<<< HEAD
-              <Link className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light" to="/registrate">
+              <Link
+                className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light"
+                to="/registrate"
+              >
                 Registrate
-=======
-              <Link className="nav-link" to="/registrate">
-                Regístrate
->>>>>>> fcf377ae0ba0503105d5f2cb9b47a3232c42092b
               </Link>
             </li>
           </ul>
