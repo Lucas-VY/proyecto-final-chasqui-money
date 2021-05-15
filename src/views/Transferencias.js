@@ -1,68 +1,7 @@
-import React, { useState, useContext } from "react";
-import { validateInfo } from "../components/ValidateInfo";
 import Sidebar from "../components/Sidebar";
 import "../css/Transferencias.css";
-import { Context } from "../store/appContext";
 
-export const Transferencias = (props) => {
-  const { actions } = useContext(Context);
-
-  const [inputBeneficiario, setInputBeneficiario] = useState("");
-  const [inputBanco, setInputBanco] = useState("");
-  const [inputNumeroCuenta, setInputNumeroCuenta] = useState("");
-  const [inputRegistroOperacion, setInputRegistroOperacion] = useState("");
-  const [inputMonto, setInputMonto] = useState("");
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    console.log(name, value);
-    if (name === "name") {
-      setInputBeneficiario(value);
-    } else if (name === "banco") {
-      setInputBanco(value);
-    } else if (name === "numeroCuenta") {
-      setInputNumeroCuenta(value);
-    } else if (name === "registroOperacion") {
-      setInputRegistroOperacion(value);
-    } else if (name === "monto") {
-      setInputMonto(value);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (isSubmitting === false) {
-      const errores = validateInfo({
-        name: inputBeneficiario,
-        banco: inputBanco,
-        numeroCuenta: inputNumeroCuenta,
-        registroOperacion: inputRegistroOperacion,
-        monto: inputMonto,
-      });
-      console.log("esta guardando");
-      if (Object.keys(errores).length === 0) {
-        setIsSubmitting(true);
-
-        actions
-          .transferencias({
-            name: inputBeneficiario,
-            banco: inputBanco,
-            numeroCuenta: inputNumeroCuenta,
-            registroOperacion: inputRegistroOperacion,
-            monto: inputMonto,
-          })
-          .then((result) => {
-            props.history.push("/user/historial");
-          });
-      }
-
-      setErrors(errores);
-    }
-  };
-
+const Transferencias = () => {
   return (
     <>
       <div className="container-fluid">
@@ -115,11 +54,7 @@ export const Transferencias = (props) => {
                     </div>
 
                     {/* Detalles de transaccion */}
-                    <form
-                      onSubmit={handleSubmit}
-                      className="form"
-                      autoComplete="off"
-                    >
+                    <form className="form" autoComplete="off">
                       <div className="form-group">
                         <label htmlFor="cc_name">
                           Nombre del Beneficiario o Titular
@@ -132,9 +67,6 @@ export const Transferencias = (props) => {
                           title="First and last name"
                           required="required"
                           placeholder="Nombre del Beneficiario o Titular"
-                          value={inputBeneficiario}
-                          name="name"
-                          onChange={handleChange}
                         />
                       </div>
                       <div className="form-group">
@@ -149,9 +81,6 @@ export const Transferencias = (props) => {
                           title=""
                           required="required"
                           placeholder="Banco donde recibe el pago"
-                          value={inputBanco}
-                          name="banco"
-                          onChange={handleChange}
                         />
                       </div>
                       <div className="form-group">
@@ -165,9 +94,6 @@ export const Transferencias = (props) => {
                           title=""
                           required
                           placeholder="Nº de cuenta de recepción"
-                          value={inputNumeroCuenta}
-                          name="numeroCuenta"
-                          onChange={handleChange}
                         />
                       </div>
                       <div className="form-group row">
@@ -202,9 +128,6 @@ export const Transferencias = (props) => {
                             title="Three digits at back of your card"
                             required
                             placeholder="Nº de operación bancaria"
-                            value={inputRegistroOperacion}
-                            name="registroOperacion"
-                            onChange={handleChange}
                           />
                         </div>
 
@@ -218,9 +141,6 @@ export const Transferencias = (props) => {
                             title="Three digits at back of your card"
                             required
                             placeholder="Monto Enviado"
-                            value={inputMonto}
-                            name="monto"
-                            onChange={handleChange}
                           />
                         </div>
                       </div>
