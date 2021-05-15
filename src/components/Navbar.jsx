@@ -7,9 +7,9 @@ const Navbar = () => {
 
     <>
     {/* NAVBAR TEST  */}
-      <nav className="navbar navbar-expand-lg navbar-white bg-transparent">
+      <nav className="navbar navbar-expand-lg navbar-white bg-transparent fixed-top">
         <Link className="navbar-brand" to="/">Chasky Money</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -45,8 +45,8 @@ const Navbar = () => {
 
 
 
-navbar antiguo
-{/*  */}
+
+{/*  navbar antiguo */}
 
       {/* <div className="header-blue">
         <nav className="navbar navbar-dark  navbar-expand-lg navigation-clean-search col-xs-12 col-sm-6 col-md-4 col-lg-3">
