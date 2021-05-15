@@ -1,5 +1,5 @@
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { ListGroup } from "react-bootstrap";
+//import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+//import { ListGroup } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 
 const Navbar = () => {
@@ -72,7 +72,7 @@ const Navbar = () => {
                 className="btn text-dark btn-sm action-button btn-ingresa border border-white bg-light"
                 to="/registrate"
               >
-                Registrate
+                Regístrate
               </Link>
             </li>
           </ul>
