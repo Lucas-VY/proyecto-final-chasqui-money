@@ -19,7 +19,7 @@ import NoticiasPerfil from "./views/NoticiasPerfil";
 import ContactanosPerfil from "./views/ContactanosPerfil";
 import ChaskiCard from "./views/ChaskiCard";
 
-import "./components/Navbar.css";
+import "./components/navbar.css";
 
 import Particles from "react-particles-js";
 import particlesConfig from "./components/particlesConfig";
@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      {/*       */}
+        {/*       */}
         <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
           style={{ height: "100vh" }}
@@ -36,7 +36,7 @@ function App() {
           <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
           </div>
-            {/*        */}
+          {/*        */}
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route
@@ -55,7 +55,7 @@ function App() {
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
             <Route exact path="/user/view" component={UserView}></Route>
-            
+
             <Route exact path="/user/profile/" component={PerfilUser}></Route>
             <Route
               exact
