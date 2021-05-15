@@ -49,14 +49,6 @@ const Footer = () => {
             >
               <i className="fab fa-linkedin-in" />
             </a>
-            {/* Github */}
-            <a
-              className="btn btn-outline-light btn-floating m-1"
-              href="#!"
-              role="button"
-            >
-              <i className="fab fa-github" />
-            </a>
           </section>
           {/* Section: Social media */}
         </div>

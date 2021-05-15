@@ -37,7 +37,6 @@ export const InicioSesion = (props) => {
         password2: inputPassword2,
       });
 
-      console.log("esta registrando");
       if (Object.keys(errores).length === 0) {
         setIsSubmitting(true);
 
@@ -57,6 +56,7 @@ export const InicioSesion = (props) => {
 
   return (
     <>
+    
       <Navbar />
 
       <div className="container-fluid containerForm">

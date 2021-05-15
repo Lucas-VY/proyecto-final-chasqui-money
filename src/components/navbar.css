@@ -1,16 +1,15 @@
-.header-blue .navbar {
+/* .header-blue .navbar {
   background: transparent;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+
   color: #fff;
   border-radius: 0;
   box-shadow: none;
   border: none;
 }
+
 .header-blue {
-  padding-bottom: 50px;
   font-family: "Lato", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 .link {
   color: white;
@@ -31,10 +30,7 @@
     padding-bottom: 1rem;
   }
 }
-.header-blue .navbar .navbar-brand {
-  font-weight: bold;
-  color: inherit;
-}
+
 
 .header-blue .navbar .navbar-brand:hover {
   color: #f0f0f0;
@@ -61,16 +57,8 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.header-blue .navbar .navbar-toggler:hover,
-.header-blue .navbar-toggler:focus {
-  background: none;
-}
 
-.header-blue .navbar .navbar-nav a.active,
-.header-blue .navbar .navbar-nav > .show .dropdown-item {
-  background: none;
-  box-shadow: none;
-}
+
 
 @media (min-width: 768px) {
   .header-blue .navbar-nav .nav-link {
@@ -85,24 +73,15 @@
     padding-right: 1.2rem;
   }
 }
-
-.header-blue .navbar .navbar-nav > li > .dropdown-menu {
+*/
+/* btn-ingresa{
   margin-top: -5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 2px;
-}
+} 
 
-.header-blue .navbar .dropdown-menu .dropdown-item:focus,
-.header-blue .navbar .dropdown-menu .dropdown-item {
-  line-height: 2;
-  color: #37434d;
-}
 
-.header-blue .navbar .dropdown-menu .dropdown-item:focus,
-.header-blue .navbar .dropdown-menu .dropdown-item:hover {
-  background: #ebeff1;
-}
 
 .header-blue .action-button,
 .header-blue .action-button:not(.disabled):active {
@@ -125,23 +104,10 @@
   color: #d9d9d9;
 }
 
-.header-blue .navbar .form-inline .search-field {
-  display: inline-block;
-  width: 80%;
-  background: none;
-  border: none;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-  color: #ccc;
-  box-shadow: none;
-  color: inherit;
-  transition: border-bottom-color 0.3s;
-}
+
 
 .header-blue .navbar .form-inline .search-field:focus {
   border-bottom: 1px solid #ccc;
 }
 
-.register:hover {
-  color: gray;
-}
+ */

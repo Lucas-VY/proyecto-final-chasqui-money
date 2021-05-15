@@ -28,6 +28,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      {/*       */}
         <div
           className="container-fluid p-0 d-flex flex-column justify-content-between"
           style={{ height: "100vh" }}
@@ -35,7 +36,7 @@ function App() {
           <div style={{ position: "absolute" }}>
             <Particles height="100vh" width="100vw" params={particlesConfig} />
           </div>
-
+            {/*        */}
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route
@@ -54,7 +55,8 @@ function App() {
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>
             <Route exact path="/registrate" component={Registro}></Route>
             <Route exact path="/user/view" component={UserView}></Route>
-            <Route exact path="/user/profile" component={PerfilUser}></Route>
+            
+            <Route exact path="/user/profile/" component={PerfilUser}></Route>
             <Route
               exact
               path="/user/transferencias"
