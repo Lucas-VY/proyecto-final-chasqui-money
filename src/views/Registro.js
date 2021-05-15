@@ -83,9 +83,9 @@ export const Registro = (props) => {
             className="form bg-transparent"
             noValidate
           >
-            <h2 className="text-center text-white mb-4">Regístrate</h2>
+            <h2 className="text-center text-white mb-1">Regístrate</h2>
             <hr />
-            <div className="form-group mt-5">
+            <div className="form-group">
               <div className="input-group">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
@@ -211,7 +211,7 @@ export const Registro = (props) => {
               )}
             </div>
             <div className="form-group">
-              <label className="form-check-label mt-4 text-white">
+              <label className="form-check-label mt-2 text-white">
                 <input
                   type="checkbox"
                   required="required"

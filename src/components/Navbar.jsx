@@ -36,7 +36,6 @@ const Navbar = () => {
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
-                to="/"
                 id="navbarDropdownMenuLink"
                 role="button"
                 data-toggle="dropdown"

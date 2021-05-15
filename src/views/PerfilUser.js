@@ -76,10 +76,10 @@ const PerfilUser = () => {
                         <input
                           /* onChange={e => setFullName(e.target.value)} */
                           /* value={fullName} */
-                          placeholder="Nombre y Apellido"
+                          placeholder="Nombre"
                           type="text"
                           /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */
-                          name=""
+                          name="firstname"
                           className="form-control"
                           required="required"
                         />
@@ -90,10 +90,10 @@ const PerfilUser = () => {
                       <div className="inputbox col-12 mt-4">
                         <input
                           /* onChange={e => setCountry(e.target.value)} */
-                          placeholder="Pais de residencia"
+                          placeholder="Apellido"
                           type="text"
                           /* en name request.json.get // en backend */
-                          name="country"
+                          name="lastname"
                           className="form-control"
                           required="required"
                         />
@@ -107,18 +107,6 @@ const PerfilUser = () => {
                           placeholder="Teléfono Móvil"
                           type="text"
                           name=""
-                          className="form-control"
-                          required="required"
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        <input
-                          /* onChange={e => setAddress(e.target.value)} */
-                          placeholder="Dirección"
-                          type="text"
-                          name="direccion"
                           className="form-control"
                           required="required"
                         />

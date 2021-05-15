@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             });
           });
       },
-	  
+      
 
 	  /* REGISTRO FUNCIONANDO */
       registro: (values) => {
