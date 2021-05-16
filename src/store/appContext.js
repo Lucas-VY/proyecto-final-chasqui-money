@@ -21,6 +21,10 @@ const injectContext = (PassedComponent) => {
       // funciones a ejecutar cuando cargue la pag
       state.actions.getProfile();
       state.actions.inicioSesion();
+      state.actions.registro();
+      //state.actions.transferencias();
+      //state.actions.contactanos();
+      //state.actions.contactanosPerfil();
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
