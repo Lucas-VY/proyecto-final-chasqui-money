@@ -1,33 +1,62 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { validateInfo } from "../components/ValidateInfo";
-import useForm from "../components/UseForms";
 import "../css/Contactanos.css";
 import Sidebar from "../components/Sidebar";
+import { Context } from "../store/appContext";
 
-const ContactanosPerfil = () => {
-  const result = (mensaje, codigo, response) => {
-    if (codigo === 200) {
-      alert(mensaje);
-      //redireccionar al login
-    } else {
-      alert("No fue posible registrar: " + mensaje);
+export const ContactanosPerfil = (props) => {
+  const { actions } = useContext(Context);
+
+  const [inputName, setInputName] = useState("");
+  const [inputLastName, setInputLastName] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputTexto, setInputTexto] = useState("");
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+    if (name === "name") {
+      setInputName(value);
+    } else if (name === "last_name") {
+      setInputLastName(value);
+    } else if (name === "email") {
+      setInputEmail(value);
+    } else if (name === "texto") {
+      setInputTexto(value);
     }
   };
 
-  const { handleSubmit, handleChange, values, errors } = useForm(
-    result,
-    validateInfo,
-    {
-      name: "",
-      last_name: "",
-      rut: "",
-      email: "",
-      password: "",
-      phone: "",
-    },
-    "user/signup",
-    "POST"
-  );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isSubmitting === false) {
+      const errores = validateInfo({
+        name: inputName,
+        last_name: inputLastName,
+        email: inputEmail,
+        texto: inputTexto,
+      });
+      console.log("esta registrando");
+      if (Object.keys(errores).length === 0) {
+        setIsSubmitting(true);
+
+        actions
+          .contactanos({
+            name: inputName,
+            last_name: inputLastName,
+            email: inputEmail,
+            texto: inputTexto,
+          })
+          .then((result) => {
+            props.history.push("/home");
+          });
+      }
+
+      setErrors(errores);
+    }
+  };
 
   return (
     <>
@@ -39,7 +68,11 @@ const ContactanosPerfil = () => {
 
           <div className="col-12 col-md-9 mt-5 px-5">
             <div className="signup-form col-12">
-              <form onSubmit={handleSubmit} className="form bg-transparent" noValidate>
+              <form
+                onSubmit={handleSubmit}
+                className="form bg-transparent"
+                noValidate
+              >
                 <h2 className="text-center text-white mb-4">Contáctanos</h2>
                 <hr />
                 <div className="form-group mt-5">
@@ -54,7 +87,7 @@ const ContactanosPerfil = () => {
                       type="text"
                       name="name"
                       placeholder="ingrese nombre"
-                      value={values.name}
+                      value={inputName}
                       onChange={handleChange}
                     />
                   </div>
@@ -72,7 +105,7 @@ const ContactanosPerfil = () => {
                       type="text"
                       name="last_name"
                       placeholder="ingrese apellido"
-                      value={values.last_name}
+                      value={inputLastName}
                       onChange={handleChange}
                     />
                   </div>
@@ -93,7 +126,7 @@ const ContactanosPerfil = () => {
                       type="email"
                       name="email"
                       placeholder="ingrese email"
-                      value={values.email}
+                      value={inputEmail}
                       onChange={handleChange}
                     />
                   </div>
@@ -110,6 +143,9 @@ const ContactanosPerfil = () => {
                       className="form-control"
                       placeholder="Envianos tu Mensaje"
                       required
+                      name="texto"
+                      value={inputTexto}
+                      onChange={handleChange}
                     ></textarea>
                   </div>
                 </div>

@@ -1,34 +1,63 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { validateInfo } from "../components/ValidateInfo";
-import useForm from "../components/UseForms";
 import "../css/Contactanos.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Context } from "../store/appContext";
 
-export const Contactanos = () => {
-  const result = (mensaje, codigo, response) => {
-    if (codigo === 200) {
-      alert(mensaje);
-      //redireccionar al login
-    } else {
-      alert("No fue posible registrar: " + mensaje);
+export const Contactanos = (props) => {
+  const { actions } = useContext(Context);
+
+  const [inputName, setInputName] = useState("");
+  const [inputLastName, setInputLastName] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputTexto, setInputTexto] = useState("");
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+    if (name === "name") {
+      setInputName(value);
+    } else if (name === "last_name") {
+      setInputLastName(value);
+    } else if (name === "email") {
+      setInputEmail(value);
+    } else if (name === "texto") {
+      setInputTexto(value);
     }
   };
 
-  const { handleSubmit, handleChange, values, errors } = useForm(
-    result,
-    validateInfo,
-    {
-      name: "",
-      last_name: "",
-      rut: "",
-      email: "",
-      password: "",
-      phone: "",
-    },
-    "user/signup",
-    "POST"
-  );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isSubmitting === false) {
+      const errores = validateInfo({
+        name: inputName,
+        last_name: inputLastName,
+        email: inputEmail,
+        texto: inputTexto,
+      });
+      console.log("esta registrando");
+      if (Object.keys(errores).length === 0) {
+        setIsSubmitting(true);
+
+        actions
+          .contactanos({
+            name: inputName,
+            last_name: inputLastName,
+            email: inputEmail,
+            texto: inputTexto,
+          })
+          .then((result) => {
+            props.history.push("/home");
+          });
+      }
+
+      setErrors(errores);
+    }
+  };
 
   return (
     <>
@@ -55,7 +84,7 @@ export const Contactanos = () => {
                   type="text"
                   name="name"
                   placeholder="ingrese nombre"
-                  value={values.name}
+                  value={inputName}
                   onChange={handleChange}
                 />
               </div>
@@ -73,7 +102,7 @@ export const Contactanos = () => {
                   type="text"
                   name="last_name"
                   placeholder="ingrese apellido"
-                  value={values.last_name}
+                  value={inputLastName}
                   onChange={handleChange}
                 />
               </div>
@@ -94,7 +123,7 @@ export const Contactanos = () => {
                   type="email"
                   name="email"
                   placeholder="ingrese email"
-                  value={values.email}
+                  value={inputEmail}
                   onChange={handleChange}
                 />
               </div>
@@ -111,6 +140,9 @@ export const Contactanos = () => {
                   className="form-control"
                   placeholder="Envianos tu Mensaje"
                   required
+                  name="texto"
+                  value={inputTexto}
+                  onChange={handleChange}
                 ></textarea>
               </div>
             </div>

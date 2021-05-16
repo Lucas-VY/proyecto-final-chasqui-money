@@ -3,7 +3,6 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       /* USER ES un OBJ  */
       profile: {},
-
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -19,9 +18,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             });
           });
       },
-      
 
-	  /* REGISTRO FUNCIONANDO */
+      /* REGISTRO FUNCIONANDO */
       registro: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -42,7 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw error;
           });
       },
-      
+
       /* LOGIN  */
       inicioSesion: (values) => {
         var myHeaders = new Headers();
@@ -64,9 +62,52 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw error;
           });
       },
+
+      /* CONTACTANOS  */
+      contactanos: (values) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(values);
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        return fetch("", requestOptions)
+          .then((response) => response.json())
+          .catch((error) => {
+            console.log("error", error);
+            throw error;
+          });
+      },
+
+      /* CONTACTANOS PERFIL  */
+      contactanosPerfil: (values) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(values);
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        return fetch("", requestOptions)
+          .then((response) => response.json())
+          .catch((error) => {
+            console.log("error", error);
+            throw error;
+          });
+      },
     },
   };
 };
 
 export default getState;
-

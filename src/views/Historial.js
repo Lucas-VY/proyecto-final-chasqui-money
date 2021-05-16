@@ -1,14 +1,11 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import '../css/Historial.css';
+import "../css/Historial.css";
 
-
-
-
-const Historial = () =>{
-    return (
-        <>
-         <div className="container-fluid">
+const Historial = () => {
+  return (
+    <>
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-3 col-xl-2 px-0">
             <Sidebar />
@@ -147,8 +144,14 @@ const Historial = () =>{
                     </div>
                     {/*end table-responsive*/}
                     <div className="pt-3 border-top text-right">
-                      <p className="text-white">confirma con nosotros enviando tu ID de comprobante a través de Whatsapp</p>
-                      <a href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia" className="btn btn-success btn-sm">
+                      <p className="text-white">
+                        confirma con nosotros enviando tu ID de comprobante a
+                        través de Whatsapp
+                      </p>
+                      <a
+                        href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
+                        className="btn btn-success btn-sm"
+                      >
                         <i className="fab fa-whatsapp fa-lg"> Confirma Aquí</i>
                       </a>
                     </div>
@@ -159,11 +162,10 @@ const Historial = () =>{
           </div>
         </div>
       </div>
-        </>
-    )
-}
+    </>
+  );
+};
 
 export default Historial;
-
 
 /* https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia */
