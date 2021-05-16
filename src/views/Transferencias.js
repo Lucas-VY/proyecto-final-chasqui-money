@@ -10,7 +10,7 @@ const Transferencias = () => {
             <Sidebar />
           </div>
 
-          <div className="col-12 col-md-9 mt-5 px-5">
+          <div className="col-12 col-md-9 mt-2 mb-3 px-5">
             {/* BODY AQUI */}
 
             <div className="card-transferencias text-center bg-transparent">
