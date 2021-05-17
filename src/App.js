@@ -14,14 +14,13 @@ import injectContext from "./store/appContext";
 import PerfilUser from "./views/PerfilUser";
 import Transferencias from "./views/Transferencias";
 import Historial from "./views/Historial";
-import NoticiasPerfil from "./views/NoticiasPerfil";
 import ContactanosPerfil from "./views/ContactanosPerfil";
 import ChaskiCard from "./views/ChaskiCard";
 
 import "./components/navbar.css";
 
 import Particles from "react-particles-js";
-import particlesConfig from "./components/ParticlesConfig";
+import particlesConfig from "./components/particlesConfig";
 
 function App() {
   return (
@@ -61,11 +60,6 @@ function App() {
               component={Transferencias}
             ></Route>
             <Route exact path="/user/historial" component={Historial}></Route>
-            <Route
-              exact
-              path="/user/noticias"
-              component={NoticiasPerfil}
-            ></Route>
             <Route
               exact
               path="/user/contactanos"

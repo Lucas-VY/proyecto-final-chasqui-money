@@ -10,7 +10,6 @@ const Sidebar = () => {
             <h1 className="titulo px-2">Chasky Money</h1>
           </li>
 
-
           <li className="nav-item">
             <Link
               className="nav-link text-center text-xl-left"
@@ -34,7 +33,6 @@ const Sidebar = () => {
           </li>
 
           <br />
-          
 
           <li className="nav-item">
             <Link
@@ -43,19 +41,6 @@ const Sidebar = () => {
             >
               <i className="fas fa-history" />
               <span className="d-none d-xl-inline-block">Historial</span>
-            </Link>
-          </li>
-
-          <br />
-          
-
-          <li className="nav-item">
-            <Link
-              className="nav-link text-center text-xl-left"
-              to="/user/noticias"
-            >
-              <i className="far fa-newspaper" />
-              <span className="d-none d-xl-inline-block">Noticias</span>
             </Link>
           </li>
 
@@ -72,7 +57,6 @@ const Sidebar = () => {
           </li>
 
           <br />
-
 
           <li className="nav-item">
             <Link
