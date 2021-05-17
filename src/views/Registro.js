@@ -99,7 +99,7 @@ export const Registro = (props) => {
                   type="text"
                   name="name"
                   placeholder="Ingrese tú nombre"
-                  value={inputName}
+                  //value={inputName}
                   onChange={handleChange}
                 />
               </div>
@@ -119,7 +119,7 @@ export const Registro = (props) => {
                   type="text"
                   name="last_name"
                   placeholder="Ingrese tú apellido"
-                  value={inputLastName}
+                  //value={inputLastName}
                   onChange={handleChange}
                 />
               </div>
@@ -141,7 +141,7 @@ export const Registro = (props) => {
                   type="email"
                   name="email"
                   placeholder="ingrese email"
-                  value={inputEmail}
+                 // value={inputEmail}
                   onChange={handleChange}
                 />
               </div>
@@ -161,7 +161,7 @@ export const Registro = (props) => {
                   type="texto"
                   name="phone"
                   placeholder="Nº de teléfono codigo de área más 9 digitos"
-                  value={inputPhone}
+                 // value={inputPhone}
                   onChange={handleChange}
                 />
               </div>
@@ -182,7 +182,7 @@ export const Registro = (props) => {
                   type="password"
                   name="password"
                   placeholder="ingresa contraseña"
-                  value={inputPassword}
+                 // value={inputPassword}
                   onChange={handleChange}
                 />
               </div>
@@ -202,7 +202,7 @@ export const Registro = (props) => {
                   type="password"
                   name="password2"
                   placeholder="confirmar contraseña"
-                  value={inputPassword2}
+                 // value={inputPassword2}
                   onChange={handleChange}
                 />
               </div>
