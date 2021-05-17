@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import "../css/Noticias.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import NoticiasPerfil from "./NoticiasPerfil";
 
 const Noticias = () => {
   const apiKey = "4c12586d6b7041539e2c141a6084b33b";
