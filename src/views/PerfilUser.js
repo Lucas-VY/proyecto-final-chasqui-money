@@ -5,14 +5,21 @@ import { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link } from "react-router-dom";
 
-
 import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
+/* const [state, setstate] = useState({
+    name:'',
+    last_name:'',
+    phone:'',
+    email:'',
+  }) */
+
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
+
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
 /*   const [text, setText] = useLocalStorage("fullname", "");
@@ -74,8 +81,8 @@ const PerfilUser = () => {
                       <div className="inputbox col-12 mt-4">
                         {/* valores deben guardarse en un state */}
                         <input
-                          /* onChange={e => setFullName(e.target.value)} */
-                          /* value={fullName} */
+                          /* onChange={e => setName(e.target.value)}
+                          value={name} */
                           placeholder="Nombre"
                           type="text"
                           /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */

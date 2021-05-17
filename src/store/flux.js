@@ -3,12 +3,15 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       /* USER ES un OBJ  */
       profile: {},
+      baseURL: "http://127.0.0.1:5000",
+      email: '',
+      password: ''
     },
     actions: {
       // Use getActions to call a function within a fuction
 
       /* PROFILES FUNCIONANDO*/
-      getProfile: () => {
+      getProfile: (props) => {
         fetch("http://127.0.0.1:5000/user/profile/")
           .then((resp) => resp.json())
           .then((data) => {
@@ -16,7 +19,10 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({
               profile: data,
             });
-          });
+          })
+          /* .then((result) => {
+            props.history.push("/user/profile/");
+          }); */
       },
 
       /* REGISTRO FUNCIONANDO */
@@ -42,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       /* LOGIN FALTA DINAMIZAR EL LOGIN CON EL PERFIL */
-      inicioSesion: (values) => {
+      /* inicioSesion: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -61,7 +67,59 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log("error", error);
             throw error;
           });
+      }, */
+
+      handleSubmitLogin: (e, history) => {
+        e.preventDefault();
+        const store = getStore();
+        const { email, password } = store;
+        const data = {
+          email: email,
+          password: password,
+        };
+        getActions().login("/user/profile/", data, history);
       },
+
+      handleChange: (e) => {
+        setStore({
+          [e.target.name]: e.target.value,
+        });
+      },
+
+      login :async (url, data, history) => {
+        const store = getStore();
+        const { baseURL } = store;
+        const resp = await fetch(baseURL + url, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const info = await resp.json();
+        console.log(info);
+        if (info.msg) {
+          setStore({
+            errors: info,
+          });
+        } else {
+          setStore({
+            currentUser: info,
+            isLogged: true,
+            errors: null,
+            email: "",
+            password: "",
+            type_user: "",
+            /* aqui agregar el type y condicionar el history a profe o usuario */
+          });
+          sessionStorage.setItem("currentUser", JSON.stringify(info));
+          sessionStorage.setItem("isLogged", true);
+            history.push("/user/profile/");
+          
+        }
+      },
+
+
 
       /* CONTACTANOS  */
       contactanos: (values) => {

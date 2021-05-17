@@ -11,11 +11,7 @@ export function validateInfo(values) {
   } else if (!/^[a-zA-Z]+$/.test(values.last_name)) {
     errors.last_name = "ingresa un apellido correcto";
   }
-  if (!values.rut) {
-    errors.rut = "Rut es requerido";
-  } else if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(values.rut)) {
-    errors.rut = "ingresa un rut valido ej: 16534466-9";
-  }
+  
   if (!values.phone) {
     errors.phone = "Telefono es requerido";
   } else if (!/^\d{9}$/.test(values.phone)) {
@@ -72,11 +68,7 @@ export function validateForm(values) {
   } else if (!/^[a-zA-Z]+$/.test(values.last_name)) {
     errors.last_name = "ingresa un apellido correcto";
   }
-  if (!values.rut) {
-    errors.rut = "Rut es requerido";
-  } else if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(values.rut)) {
-    errors.rut = "ingresa un rut valido ej: 16534466-9";
-  }
+  
   if (!values.phone) {
     errors.phone = "Telefono es requerido";
   } else if (!/^\d{9}$/.test(values.phone)) {
@@ -113,11 +105,7 @@ export function validateFormTrabajador(values) {
   } else if (!/^[a-zA-Z]+$/.test(values.last_name)) {
     errors.last_name = "ingresa un apellido correcto";
   }
-  if (!values.rut) {
-    errors.rut = "Rut es requerido";
-  } else if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(values.rut)) {
-    errors.rut = "ingresa un rut valido ej: 16534466-9";
-  }
+ 
   if (!values.phone) {
     errors.phone = "Telefono es requerido";
   } else if (!/^\d{9}$/.test(values.phone)) {

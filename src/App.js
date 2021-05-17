@@ -21,7 +21,7 @@ import ChaskiCard from "./views/ChaskiCard";
 import "./components/navbar.css";
 
 import Particles from "react-particles-js";
-import particlesConfig from "./components/particlesConfig";
+import particlesConfig from "./components/ParticlesConfig";
 
 function App() {
   return (
