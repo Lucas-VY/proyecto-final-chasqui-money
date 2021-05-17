@@ -27,13 +27,13 @@ const Noticias = () => {
     <>
       <Navbar />
       <div>
-        <ul className="text-white">
-          {!noticias
-            ? "Cargando..."
-            : noticias.map((noticia, index) => {
-                return (
+        {!noticias
+          ? "Cargando..."
+          : noticias.map((noticia, index) => {
+              return (
+                <div className="container">
                   <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-6">
                       <a href="/">
                         <img
                           className="img-fluid rounded mb-3 mb-md-0"
@@ -42,19 +42,19 @@ const Noticias = () => {
                         />
                       </a>
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-6">
                       <h3 id="titulo-noticias-individual">{noticia.title}</h3>
                       <p className="text-justify" id="parrafo-noticias">
                         {noticia.description}
                       </p>
                       <a className="btn btn-primary" href={noticia.url}>
-                        View Noticia
+                        Ver Noticia
                       </a>
                     </div>
                   </div>
-                );
-              })}
-        </ul>
+                </div>
+              );
+            })}
       </div>
       <Footer />
     </>
