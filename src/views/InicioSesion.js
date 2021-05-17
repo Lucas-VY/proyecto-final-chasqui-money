@@ -16,7 +16,7 @@ export const InicioSesion = (props) => {
   const [inputRecordar, setInputRecordar] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  /* const handleChange = (e) => {
     const { name, value, checked } = e.target;
     console.log(name, value);
     if (name === "email") {
@@ -27,6 +27,9 @@ export const InicioSesion = (props) => {
       setInputRecordar(checked);
     }
   };
+ */
+    
+    
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,9 +48,9 @@ export const InicioSesion = (props) => {
             email: inputEmail,
             password2: inputPassword2,
           })
-          .then((result) => {
-            props.history.push("/user/profile/");
-          });
+          /* .then((result) => {
+            props.history.push(`/user/profile/${}`);
+          }); */
       }
 
       setErrors(errores);
@@ -62,7 +65,10 @@ export const InicioSesion = (props) => {
       <div className="container-fluid">
         <div className="signup-form col-12 col-md-6">
           <form
-            onSubmit={handleSubmit}
+            /* onSubmit={handleSubmit} */
+            onSubmit={(e) =>
+              actions.handleSubmitLogin(e, props.history)
+            }
             className="form bg-transparent"
             noValidate
           >
@@ -80,8 +86,8 @@ export const InicioSesion = (props) => {
                   type="email"
                   name="email"
                   placeholder="ingrese email"
-                  value={inputEmail}
-                  onChange={handleChange}
+                  /* value={inputEmail} */
+                  onChange={(e) => actions.handleChange(e)}
                 />
               </div>
               {errors.email && <p className="parrafo">{errors.email}</p>}
@@ -96,10 +102,10 @@ export const InicioSesion = (props) => {
                 <input
                   className="form-control"
                   type="password"
-                  name="password2"
+                  name="password"
                   placeholder="confirmar contraseña"
-                  value={inputPassword2}
-                  onChange={handleChange}
+                  /* value={inputPassword2} */
+                  onChange={(e) => actions.handleChange(e)}
                 />
               </div>
               {errors.password2 && (
@@ -113,7 +119,7 @@ export const InicioSesion = (props) => {
                   required="required"
                   name="recordar"
                   checked={inputRecordar}
-                  onChange={handleChange}
+                  onChange={(e) => actions.handleChange(e)}
                 />{" "}
                 Recordar usuario
               </label>
@@ -125,12 +131,11 @@ export const InicioSesion = (props) => {
             </div>
 
             {/* PRUEBA DE USUARIO DINAMICO  */}
-            {/*  to="/user/profile/"" */}
             <div className="form-group d-flex justify-content-center">
               <button
                 className="btn btn-primary btn-lg"
-                to={`/user/profile/${store.profile.id}`}
                 type="submit"
+                /* to="/user/profile/" */
               >
                 Ingresar
               </button>
