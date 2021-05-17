@@ -16,6 +16,11 @@ export const InicioSesion = (props) => {
   const [inputRecordar, setInputRecordar] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+
+  useEffect(() => {
+    if (store.isLogged) props.history.push("/user/profile");
+  }, [props.history, store.isLogged]);
+
   /* const handleChange = (e) => {
     const { name, value, checked } = e.target;
     console.log(name, value);

@@ -4,8 +4,20 @@
 
 #titulo-noticias-individual {
   color: white;
+  margin-top: 20px;
 }
 
 #parrafo-noticias {
   color: white;
+}
+
+.img-fluid {
+  height: 300px;
+  width: 700px;
+  margin-top: 20px;
+}
+
+#parrafo-noticias {
+  margin-top: 20px;
+  margin-right: 20px;
 }

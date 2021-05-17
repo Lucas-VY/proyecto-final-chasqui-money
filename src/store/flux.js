@@ -8,7 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       password: '',
       currentUser: null,
       isLogged: false,
-      errors: null
+      errors:null
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -81,7 +81,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           email: email,
           password: password,
         };
-        getActions().login("/user/signin/", data, history);
+        getActions().login("/user/signin", data, history);
       },
 
       handleChange: (e) => {
@@ -90,12 +90,12 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
       },
 
-      /* getUser: () => {
+      getUser:() =>{
         if(sessionStorage.getItem("currentUser")){
-          let resultado = sessionStorage.getItem("currentUser")
-          setStore([{profile:JSON.parse(resultado)}])
+          let resultado=sessionStorage.getItem("currentUser")
+          setStore({profile:JSON.parse(resultado)})
         }
-      }, */
+      },
 
       isLogged: () => {
         if (sessionStorage.getItem("currentUser")) {
@@ -132,6 +132,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             email: "",
             password: "",
+            
             /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
@@ -139,6 +140,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           if(store.currentUser){
             history.push("/user/profile/");
           }
+            
           
         }
       },
