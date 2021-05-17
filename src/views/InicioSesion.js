@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import { Context } from "../store/appContext";
 
 export const InicioSesion = (props) => {
-  const { actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword2, setInputPassword2] = useState("");
@@ -123,10 +123,13 @@ export const InicioSesion = (props) => {
                 ¿Olvidaste tu contraseña?
               </Link>
             </div>
+
+            {/* PRUEBA DE USUARIO DINAMICO  */}
+            {/*  to="/user/profile/"" */}
             <div className="form-group d-flex justify-content-center">
               <button
                 className="btn btn-primary btn-lg"
-                to="/user/profile"
+                to={`/user/profile/${store.profile.id}`}
                 type="submit"
               >
                 Ingresar

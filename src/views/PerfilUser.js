@@ -10,9 +10,17 @@ import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
+/* const [state, setstate] = useState({
+    name:'',
+    last_name:'',
+    phone:'',
+    email:'',
+  }) */
+
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
+
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
 /*   const [text, setText] = useLocalStorage("fullname", "");

@@ -8,15 +8,18 @@ const getState = ({ getStore, getActions, setStore }) => {
       // Use getActions to call a function within a fuction
 
       /* PROFILES FUNCIONANDO*/
-      getProfile: () => {
-        fetch("http://127.0.0.1:5000/user/profile/")
+      getProfile: (props) => {
+        fetch("http://127.0.0.1:5000/user/profile/:id")
           .then((resp) => resp.json())
           .then((data) => {
             console.log(data);
             setStore({
               profile: data,
             });
-          });
+          })
+          /* .then((result) => {
+            props.history.push("/user/profile/");
+          }); */
       },
 
       /* REGISTRO FUNCIONANDO */
