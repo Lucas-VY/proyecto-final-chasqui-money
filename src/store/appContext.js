@@ -19,6 +19,7 @@ const injectContext = (PassedComponent) => {
 
     useEffect(() => {
       state.actions.getProfile();
+      /* state.actions.getUser(); */
       /* state.actions.login(); */
       state.actions.registro();
     }, [state.actions]);

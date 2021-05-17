@@ -1,4 +1,4 @@
-//import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //import { useLocalStorage } from "../components/useLocalStorage";
 
 import { useContext } from 'react';
@@ -9,17 +9,20 @@ import "../css/PerfilUser.css";
 import IMG_1020 from "../assets/IMG_1020.JPG";
 import Sidebar from "../components/Sidebar";
 
-/* const [state, setstate] = useState({
-    name:'',
-    last_name:'',
-    phone:'',
-    email:'',
-  }) */
 
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
+  const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    if (store.currentUser !== null) {
+      let usuario = store.currentUser;
+      setUser(usuario);
+      console.log(usuario)
+    }
+  },[])
+  
 
   /* HOOK PERSONALIZADO guarda texto en Local STORAGE se usa aplicandoselo a un value */
 /*   const [text, setText] = useLocalStorage("fullname", "");
@@ -56,16 +59,16 @@ const PerfilUser = () => {
                         width={150}
                       />
                       <div className="mt-2 text-white">
-                        <h5>Nombre: {store.profile.name}</h5>
+                        <h5>Nombre: {store.currentUser.resultado.name}</h5>
                         <hr />
-                        <h5>Apellido: {store.profile.last_name}</h5>
+                        <h5>Apellido: {store.currentUser.resultado.last_name}</h5>
                         <hr/>
                         <p className="text-white mb-1">
-                          Teléfono: {store.profile.phone}
+                          Teléfono: {store.currentUser.resultado.phone}
                         </p>
                         <hr/>
                         <p className="text-white mb-1">
-                          Email: {store.profile.email}
+                          Email: {store.currentUser.resultado.email}
                         </p>
                       </div>
                     </div>
@@ -396,6 +399,6 @@ const PerfilUser = () => {
       </div>
     </>
   );
-};
+  };
 
 export default PerfilUser;
