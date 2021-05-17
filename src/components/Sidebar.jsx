@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link} from "react-router-dom";
+import { Context } from "../store/appContext";
 import "./Sidebar.css";
+import {NavLink} from "reactstrap";
+
+
+
+
+
 
 const Sidebar = () => {
+  const {actions } = useContext(Context);
   return (
     <>
       <nav className="sidebar bg-dark barra d-none d-md-block col-md-3 col-xl-2 px-0">
@@ -70,11 +79,12 @@ const Sidebar = () => {
 
           <br />
 
+
           <li className="nav-item">
-            <Link className="nav-link text-center text-xl-left" to="/">
+            <NavLink href="/" onClick={actions.logout} className="nav-link text-center text-xl-left">
               <i className="fas fa-sign-out-alt" />
               <span className="d-none d-xl-inline-block">Salir</span>
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

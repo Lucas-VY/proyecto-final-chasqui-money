@@ -5,7 +5,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       profile: {},
       baseURL: "http://127.0.0.1:5000",
       email: '',
-      password: ''
+      password: '',
+      currentUser: null,
+      isLogged: false,
+      errors:null
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -68,6 +71,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw error;
           });
       }, */
+      
 
       handleSubmitLogin: (e, history) => {
         e.preventDefault();
@@ -77,13 +81,32 @@ const getState = ({ getStore, getActions, setStore }) => {
           email: email,
           password: password,
         };
-        getActions().login("/user/profile/", data, history);
+        getActions().login("/user/signin", data, history);
       },
 
       handleChange: (e) => {
         setStore({
           [e.target.name]: e.target.value,
         });
+      },
+
+      getUser:() =>{
+        if(sessionStorage.getItem("currentUser")){
+          let resultado=sessionStorage.getItem("currentUser")
+          setStore({profile:JSON.parse(resultado)})
+        }
+      },
+
+      isLogged: () => {
+        if (sessionStorage.getItem("currentUser")) {
+          let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+          let isLogged = sessionStorage.getItem("isLogged");
+
+          setStore({
+            currentUser: currentUser,
+            isLogged: isLogged,
+          });
+        }
       },
 
       login :async (url, data, history) => {
@@ -109,16 +132,27 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             email: "",
             password: "",
-            type_user: "",
+            
             /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
+          if(store.currentUser){
             history.push("/user/profile/");
+          }
+            
           
         }
       },
 
+      logout: () => {
+        sessionStorage.removeItem("currentUser");
+        sessionStorage.removeItem("isLogged");
+        setStore({
+          currentUser: null,
+          isLogged: false,
+        });
+      },
 
 
       /* CONTACTANOS  */

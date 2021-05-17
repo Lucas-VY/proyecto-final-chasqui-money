@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { validateLogin } from "../components/ValidateInfo";
 //import useForm from "../components/UseForms";
 import { Link } from "react-router-dom";
@@ -16,6 +16,11 @@ export const InicioSesion = (props) => {
   const [inputRecordar, setInputRecordar] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+
+  useEffect(() => {
+    if (store.isLogged) props.history.push("/user/profile");
+  }, [props.history, store.isLogged]);
+
   /* const handleChange = (e) => {
     const { name, value, checked } = e.target;
     console.log(name, value);
@@ -28,8 +33,6 @@ export const InicioSesion = (props) => {
     }
   };
  */
-    
-    
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,6 +59,11 @@ export const InicioSesion = (props) => {
       setErrors(errores);
     }
   };
+
+  useEffect(() => {
+    if (store.isLogged) props.history.push("/user/profile");
+  }, [props.history, store.isLogged]);
+    
 
   return (
     <>
