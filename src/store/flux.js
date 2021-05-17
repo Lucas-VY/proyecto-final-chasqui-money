@@ -41,7 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
-      /* LOGIN  */
+      /* LOGIN FALTA DINAMIZAR EL LOGIN CON EL PERFIL */
       inicioSesion: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");

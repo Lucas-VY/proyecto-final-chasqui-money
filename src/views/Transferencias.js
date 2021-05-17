@@ -66,7 +66,7 @@ const Transferencias = () => {
                           pattern="\w+ \w+.*"
                           title="First and last name"
                           required="required"
-                          placeholder="Nombre del Beneficiario o Titular"
+                          placeholder="Nombre completo de tú Beneficiario o Titular"
                         />
                       </div>
                       <div className="form-group">
@@ -80,7 +80,7 @@ const Transferencias = () => {
                           pattern="\w+ \w+.*"
                           title=""
                           required="required"
-                          placeholder="Banco donde recibe el pago"
+                          placeholder="Nombre de Banco de tu beneficiario"
                         />
                       </div>
                       <div className="form-group">
@@ -93,7 +93,7 @@ const Transferencias = () => {
                           pattern="\d{60}"
                           title=""
                           required
-                          placeholder="Nº de cuenta de recepción"
+                          placeholder="Nº de cuenta de tu beneficiario"
                         />
                       </div>
                       <div className="form-group row">
@@ -107,8 +107,8 @@ const Transferencias = () => {
                             placeholder="país de envío"
                             size={0}
                           >
-                            <option value="Venezuela">Venezuela</option>
                             <option value="Chile">Chile</option>
+                            <option value="Venezuela">Venezuela</option>
                             <option value="Colombia">Colombia</option>
                             <option value="Estados Unidos">
                               Estados Unidos
@@ -127,7 +127,7 @@ const Transferencias = () => {
                             pattern="\d{20}"
                             title="Three digits at back of your card"
                             required
-                            placeholder="Nº de operación bancaria"
+                            placeholder="Nº comprobante transferencia a Cuenta Chasky"
                           />
                         </div>
 
@@ -140,7 +140,7 @@ const Transferencias = () => {
                             pattern="\d{20}"
                             title="Three digits at back of your card"
                             required
-                            placeholder="Monto Enviado"
+                            placeholder="Monto Enviado para tu beneficiario"
                           />
                         </div>
                       </div>
