@@ -129,7 +129,7 @@ export const InicioSesion = (props) => {
             <div className="form-group d-flex justify-content-center">
               <button
                 className="btn btn-primary btn-lg"
-                to={`/user/profile/${store.profile.id}`}
+                to="/user/profile/"
                 type="submit"
               >
                 Ingresar
