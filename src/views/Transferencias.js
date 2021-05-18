@@ -213,6 +213,7 @@ const Transferencias = (props) => {
                             placeholder="país de envío"
                             size={0}
                           >
+                            <option value="pais"></option>
                             <option value="Chile">Chile</option>
                             <option value="Venezuela">Venezuela</option>
                             <option value="Colombia">Colombia</option>
@@ -239,7 +240,7 @@ const Transferencias = (props) => {
                           />
                         </div>
 
-                        <div className="col-md-4">
+                        <div className="col-md-4">                        
                           <input
                             type="text"
                             className="form-control"

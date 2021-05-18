@@ -92,17 +92,17 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       getUser: () => {
-        if (sessionStorage.getItem("currentUser")) {
-          let resultado = sessionStorage.getItem("currentUser");
+        if (localStorage.getItem("currentUser")) {
+          let resultado = localStorage.getItem("currentUser");
           setStore({ profile: JSON.parse(resultado) });
         }
       },
 
       /* USUARIO LOGEADO MOSTRANDO */
       isLogged: () => {
-        if (sessionStorage.getItem("currentUser")) {
-          let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
-          let isLogged = sessionStorage.getItem("isLogged");
+        if (localStorage.getItem("currentUser")) {
+          let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          let isLogged = localStorage.getItem("isLogged");
 
           setStore({
             currentUser: currentUser,
@@ -136,10 +136,9 @@ const getState = ({ getStore, getActions, setStore }) => {
             email: "",
             password: "",
 
-            /* aqui agregar el type y condicionar el history a profe o usuario */
           });
-          sessionStorage.setItem("currentUser", JSON.stringify(info));
-          sessionStorage.setItem("isLogged", true);
+          localStorage.setItem("currentUser", JSON.stringify(info));
+          localStorage.setItem("isLogged", true);
           if (store.currentUser) {
             history.push("/user/profile/");
           }
@@ -148,8 +147,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       /* LOGOUT DE USUARIO */
       logout: () => {
-        sessionStorage.removeItem("currentUser");
-        sessionStorage.removeItem("isLogged");
+        localStorage.removeItem("currentUser");
+        localStorage.removeItem("isLogged");
         setStore({
           currentUser: null,
           isLogged: false,
@@ -192,7 +191,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         };
 
-        return fetch("http://127.0.0.1:5000/user/card", requestOptions)
+        return fetch("", requestOptions)
           .then((response) => response.json())
           .catch((error) => {
             console.log("error", error);

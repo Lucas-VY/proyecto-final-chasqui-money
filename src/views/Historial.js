@@ -6,13 +6,14 @@ import { Context } from '../store/appContext';
 
 
 
+
 const Historial = () => {
 
   const { store } = useContext(Context);
 
   const url = "http://127.0.0.1:5000/user/card/";
   const [historial, setHistorial] = useState();
-  const fetchApi = async () => {
+  const fetchApi = async (url) => {
     const response = await fetch(url);
     console.log(response.status);
     const responseJSON = await response.json();
@@ -21,7 +22,7 @@ const Historial = () => {
   };
 
   useEffect(() => {
-    fetchApi();
+    fetchApi(url);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -49,13 +50,7 @@ const Historial = () => {
 
           <div className="col-12 col-md-9 mt-5 px-5" >
             <div className="row">
-              {!historial ? (
-                <h2 className="text-center text-white">"No Hay transferencias realizadas de momento..."</h2>
-              ) : (
-                historial.map((historial, index) => {
-                  return (
-                    <>
-                      <div className="col-12 mx-5 my-5" key={index}>
+                      <div className="col-12 mx-5 my-5" >
                         <div className="card carta-transferencia bg-transparent">
                           <div className="card-body">
                             {/* HEADER DE LA TABLA */}
@@ -67,14 +62,18 @@ const Historial = () => {
                                 <thead>
                                   <tr className="align-self-center">
                                     <th>Nombre de Benificiario</th>
-                                    <th>ID Comprobante</th>
+                                    <th>Nº Comprobante</th>
                                     <th>Día de pago</th>
                                     <th>Monto</th>
                                     <th>Status</th>
                                   </tr>
                                 </thead>
                               {/* TABLE BODY  */}
-                                <tbody >
+                        {!!historial ? (
+                          historial.map((historial, index) => {
+                              return (
+                              <>
+                                <tbody key={index}>
                                   <tr>
                                     <td>
                                       {/* FOTO AVATAR  */}
@@ -85,7 +84,7 @@ const Historial = () => {
                                       />
                                       {historial.full_name}
                                     </td>
-                                    <td>Nº {historial.number_transfer}</td>
+                                    <td>Nº{historial.number_transfer}</td>
                                     <td>{historial.date}</td>
                                     <td>${historial.money_send}</td>
                                     <td>
@@ -96,6 +95,23 @@ const Historial = () => {
                                   </tr>
                                   {/*  */}
                                 </tbody>
+                                </>
+                              );
+                            })
+                            ) : (
+                              <tbody>
+                                  <tr>
+                                    <td>
+                                      No Hay transferencias realizadas de momento...
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                          )};
+                          
                               </table>
                             </div>
                             {/*end table-responsive*/}
@@ -114,10 +130,6 @@ const Historial = () => {
                           </div>
                         </div>
                       </div>
-                    </>
-                  );
-                })
-              )}
             </div>
           </div>
         </div>

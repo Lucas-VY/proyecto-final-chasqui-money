@@ -18,7 +18,7 @@ function CurrencyRow(props) {
       <form>
         <div className="form-group">
           <input
-            className="input form-control "
+            className="input form-control"
             type="number"
             value={amount}
             onChange={onChangeAmount}
@@ -33,6 +33,7 @@ function CurrencyRow(props) {
               className="custom-select text-success"
               id="inputGroupSelect01"
               value={selectedCurrency}
+              maxLength={5}
               onChange={onChangeCurrency}
             >
               {currencyOptions.map((option) => (
@@ -47,6 +48,8 @@ function CurrencyRow(props) {
     </>
   );
 }
+
+/* original */
 /* <input
   type="number"
   className="input"
