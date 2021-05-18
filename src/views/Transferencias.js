@@ -3,20 +3,23 @@ import { validateInfo } from "../components/ValidateInfo";
 import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
 import "../css/Transferencias.css";
+import { data } from "jquery";
 
 const Transferencias = (props) => {
-  const { actions } = useContext(Context);
+  const { actions,store } = useContext(Context);
 
-  const [inputNameBeneficiario, setInputNameBeneficiario] = useState("");
+  /* const [inputNameBeneficiario, setInputNameBeneficiario] = useState("");
   const [inputBanco, setInputBanco] = useState("");
   const [inputNumeroCuenta, setInputNumeroCuenta] = useState("");
   const [inputRegistroComprobante, setInputRegistroComprobante] = useState("");
   const [inputMonto, setInputMonto] = useState("");
   //const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); */
+
+  const [state,setState]= useState({})
 
   /* VALIDACION */
-  const handleChangeTransfer = (e) => {
+  /* const handleChangeTransfer = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
     if (name === "name") {
@@ -30,8 +33,33 @@ const Transferencias = (props) => {
     } else if (name === "monto") {
       setInputMonto(value);
     }
-  };
+  }; */
 
+  const handleChangeTransfer =(e) =>{
+    setState({
+      ...state, 
+      [e.target.name]:e.target.value
+    })
+
+  }
+
+
+  const transferencia =(info) =>{
+    fetch(`http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id}`, {
+      method:'POST',
+      body:JSON.stringify(info),
+      headers:{
+        "Content-Type":"application/json"
+      }
+    }).then((response) => response.json())
+      .then((data) =>console.log(data.result))
+      .catch((error)=>{
+        console.log("error", error);
+      })
+      
+  }
+
+/* 
   
   const handleSubmitTransference = (e) => {
     e.preventDefault();
@@ -63,7 +91,7 @@ const Transferencias = (props) => {
 
       //setErrors(errores);
     }
-  };
+  }; */
 
   return (
     <>
@@ -120,7 +148,12 @@ const Transferencias = (props) => {
                     <form
                       className="form"
                       autoComplete="off"
-                      onSubmit={handleSubmitTransference}
+                      onSubmit={ e =>{
+                        e.preventDefault()
+                        //actions.transferencias(state)}
+                        transferencia(state)}
+                      } 
+                    
                     >
                       <div className="form-group">
                         <label htmlFor="cc_name">
@@ -174,8 +207,9 @@ const Transferencias = (props) => {
                         </label>
                         <div className="col-md-4">
                           <select
+                           onChange={handleChangeTransfer}
                             className="form-control"
-                            name="cc_exp_mo"
+                            name="country"
                             placeholder="país de envío"
                             size={0}
                           >
