@@ -187,7 +187,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         };
 
-        return fetch("", requestOptions)
+        return fetch("http://127.0.0.1:5000/user/card", requestOptions)
           .then((response) => response.json())
           .catch((error) => {
             console.log("error", error);
@@ -220,8 +220,4 @@ const getState = ({ getStore, getActions, setStore }) => {
   };
 };
 
-<<<<<<< HEAD
 export default getState;
-=======
-export default getState;
->>>>>>> 7101742a589989cc9a052c129180dc42b018cf7d

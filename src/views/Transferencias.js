@@ -12,11 +12,11 @@ const Transferencias = (props) => {
   const [inputNumeroCuenta, setInputNumeroCuenta] = useState("");
   const [inputRegistroComprobante, setInputRegistroComprobante] = useState("");
   const [inputMonto, setInputMonto] = useState("");
-  const [errors, setErrors] = useState({});
+  //const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   /* VALIDACION */
-  const handleChange = (e) => {
+  const handleChangeTransfer = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
     if (name === "name") {
@@ -61,7 +61,7 @@ const Transferencias = (props) => {
           });
       }
 
-      setErrors(errores);
+      //setErrors(errores);
     }
   };
 
@@ -135,7 +135,7 @@ const Transferencias = (props) => {
                           required="required"
                           placeholder="Nombre completo de tú Beneficiario o Titular"
                           name="name"
-                          onChange={handleChange}
+                          onChange={handleChangeTransfer}
                         />
                       </div>
                       <div className="form-group">
@@ -150,7 +150,7 @@ const Transferencias = (props) => {
                           required="required"
                           placeholder="Nombre de Banco de tu beneficiario"
                           name="banco"
-                          onChange={handleChange}
+                          onChange={handleChangeTransfer}
                         />
                       </div>
                       <div className="form-group">
@@ -165,7 +165,7 @@ const Transferencias = (props) => {
                           required="required"
                           placeholder="Nº de cuenta de tu beneficiario min 10 digitos"
                           name="numeroCuenta"
-                          onChange={handleChange}
+                          onChange={handleChangeTransfer}
                         />
                       </div>
                       <div className="form-group row">
@@ -201,7 +201,7 @@ const Transferencias = (props) => {
                             required="required"
                             placeholder="Nº comprobante transferencia a Cuenta Chasky"
                             name="registroComprobante"
-                            onChange={handleChange}
+                            onChange={handleChangeTransfer}
                           />
                         </div>
 
@@ -216,7 +216,7 @@ const Transferencias = (props) => {
                             required
                             placeholder="Monto Enviado para tu beneficiario"
                             name="monto"
-                            onChange={handleChange}
+                            onChange={handleChangeTransfer}
                           />
                         </div>
                       </div>
