@@ -32,7 +32,7 @@ const Noticias = () => {
         ) : (
           noticias.map((noticia, index) => {
             return (
-              <div className="container">
+              <div className="container" key={index}>
                 <div className="row">
                   <div className="col-md-6">
                     <a href="/">
