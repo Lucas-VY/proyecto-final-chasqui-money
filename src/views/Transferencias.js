@@ -44,7 +44,7 @@ const Transferencias = (props) => {
         registroComprobante: inputRegistroComprobante,
         monto: inputMonto,
       });
-      console.log("esta registrando");
+      console.log("Formulario enviado");
       if (Object.keys(errores).length === 0) {
         setIsSubmitting(true);
 
@@ -81,22 +81,22 @@ const Transferencias = (props) => {
                 Información de Pago Chaski Money
               </h3>
               <div className="card-body-transferencias text-white">
-                <h5 className="card-title ">Instrucciones</h5>
+                <h5 className="card-title ">Instrucciones:</h5>
                 <p className="card-text">
                   1.-Transfiere a nuestra cuenta, cuyos datos se reflejan a
-                  continuación
+                  continuación.
                 </p>
-                <p className="card-text">Banco Santander</p>
-                <p className="card-text">Nombre: ChaskiMoney Rut 139874874-J</p>
+                <p className="card-text">Cuenta Banco Santander</p>
+                <p className="card-text">Nombre: ChaskiMoney  /  Rut de empresa: 139.874.874-J</p>
                 <p className="card-text">
-                  Número de cuenta : 9497327974 Tipo de Cuenta: Corriente
+                  Número de cuenta: 949-732-7974 Tipo de Cuenta: Corriente
                 </p>
                 <p className="card-text">
-                  Correo electrónico : chaskimoney@gmail.com
+                  Correo electrónico: chaskimoney@gmail.com
                 </p>
                 <p className="card-text">
                   2.-Carga los datos de tu transacción en el siguiente
-                  formulario
+                  formulario.
                 </p>
                 <br></br>
                 <div classNameName="card card-outline-secondary bg-transparent">
@@ -124,7 +124,7 @@ const Transferencias = (props) => {
                     >
                       <div className="form-group">
                         <label htmlFor="cc_name">
-                          Nombre del Beneficiario o Titular
+                          Nombre del Beneficiario ó Titular
                         </label>
                         <input
                           type="text"
@@ -246,7 +246,7 @@ const Transferencias = (props) => {
               </div>
               <div className="card-footer-transferencias text-white">
                 Asegúrese de ingresar todos los datos correctamente, ya que de
-                lo contrario sera imposible validar su transacción
+                lo contrario sera imposible validar su transacción.
               </div>
             </div>
 

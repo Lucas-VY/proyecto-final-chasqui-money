@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { validateLogin } from "../components/ValidateInfo";
+//import { validateLogin } from "../components/ValidateInfo";
 //import useForm from "../components/UseForms";
 import { Link } from "react-router-dom";
 import "../css/InicioSesion.css";
@@ -10,11 +10,11 @@ import { Context } from "../store/appContext";
 export const InicioSesion = (props) => {
   const { store, actions } = useContext(Context);
 
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPassword2, setInputPassword2] = useState("");
-  const [errors, setErrors] = useState({});
-  const [inputRecordar, setInputRecordar] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  //const [inputEmail, /* setInputEmail */] = useState("");
+  //const [inputPassword2, /* setInputPassword2 */] = useState("");
+  const [errors, /* setErrors */] = useState({});
+  const [inputRecordar, /* setInputRecordar */] = useState(false);
+ // const [isSubmitting, setIsSubmitting] = useState(false);
 
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const InicioSesion = (props) => {
   };
  */
 
-  const handleSubmit = (e) => {
+  /* const handleSubmit = (e) => {
     e.preventDefault();
 
     if (isSubmitting === false) {
@@ -55,7 +55,7 @@ export const InicioSesion = (props) => {
 
       setErrors(errores);
     }
-  };
+  }; */
 
   useEffect(() => {
     if (store.isLogged) props.history.push("/user/profile");

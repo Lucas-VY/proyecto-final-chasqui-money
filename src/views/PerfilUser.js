@@ -13,7 +13,7 @@ import Sidebar from "../components/Sidebar";
 /* cambiar a funcion para usar los hooks */
 const PerfilUser = () => {
   const { store } = useContext(Context);
-  const [user, setUser] = useState(null);
+  const [/* user */, setUser] = useState(null);
 
    useEffect(() => {
     if (store.currentUser !== null) {
@@ -21,6 +21,7 @@ const PerfilUser = () => {
       setUser(usuario);
       console.log(usuario)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[] ) 
 
   useEffect(() => {
@@ -29,6 +30,7 @@ const PerfilUser = () => {
       setUser(usuario);
       console.log(usuario)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
 
