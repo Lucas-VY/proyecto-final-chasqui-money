@@ -144,7 +144,6 @@ const Transferencias = (props) => {
                           type="text"
                           className="form-control"
                           id="cc_name"
-                          pattern="\w+ \w+.*"
                           title=""
                           required="required"
                           placeholder="Nombre de Banco de tu beneficiario"
@@ -195,8 +194,8 @@ const Transferencias = (props) => {
                             className="form-control"
                             autoComplete="off"
                             maxLength={20}
-                            pattern="\d{20}"
-                            title="Three digits at back of your card"
+                            minLength={12}
+                            title="nº comprobante operacion"
                             required="required"
                             placeholder="Nº comprobante transferencia a Cuenta Chasky"
                             name="registroComprobante"
@@ -210,8 +209,8 @@ const Transferencias = (props) => {
                             className="form-control"
                             autoComplete="off"
                             maxLength={20}
-                            pattern="\d{20}"
-                            title="Three digits at back of your card"
+                            minLength={3}
+                            title="ingresa monto enviado al beneficiario"
                             required
                             placeholder="Monto Enviado para tu beneficiario"
                             name="monto"
