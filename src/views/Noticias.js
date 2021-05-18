@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const Noticias = () => {
   const apiKey = "4c12586d6b7041539e2c141a6084b33b";
 
-  const url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${apiKey}`;
+  const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${apiKey}`;
   const [noticias, setNoticias] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
