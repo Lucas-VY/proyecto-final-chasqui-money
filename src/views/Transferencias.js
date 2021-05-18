@@ -32,7 +32,7 @@ const Transferencias = (props) => {
     }
   };
 
-  /* ENTREGA  */
+  
   const handleSubmitTransference = (e) => {
     e.preventDefault();
 

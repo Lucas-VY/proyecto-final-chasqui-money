@@ -220,4 +220,8 @@ const getState = ({ getStore, getActions, setStore }) => {
   };
 };
 
+<<<<<<< HEAD
 export default getState;
+=======
+export default getState;
+>>>>>>> 7101742a589989cc9a052c129180dc42b018cf7d
