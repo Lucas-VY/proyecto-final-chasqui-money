@@ -144,8 +144,7 @@ const Transferencias = (props) => {
                           type="text"
                           className="form-control"
                           id="cc_name"
-                          pattern="\w+ \w+.*"
-                          title=""
+                          title="Ingresa el Nombre de tu Banco"
                           required="required"
                           placeholder="Nombre de Banco de tu beneficiario"
                           name="banco"
@@ -162,7 +161,7 @@ const Transferencias = (props) => {
                           minLength={10}
                           title=""
                           required="required"
-                          placeholder="Nº de cuenta de tu beneficiario"
+                          placeholder="Nº de cuenta de tu beneficiario min 10 digitos"
                           name="numeroCuenta"
                           onChange={handleChange}
                         />
@@ -194,9 +193,9 @@ const Transferencias = (props) => {
                             type="text"
                             className="form-control"
                             autoComplete="off"
-                            maxLength={20}
-                            pattern="\d{20}"
-                            title="Three digits at back of your card"
+                            maxLength={15}
+                            minLength={12}
+                            title="Inserta tus numero comprobante de transferencia min 12 digitos"
                             required="required"
                             placeholder="Nº comprobante transferencia a Cuenta Chasky"
                             name="registroComprobante"
@@ -210,8 +209,8 @@ const Transferencias = (props) => {
                             className="form-control"
                             autoComplete="off"
                             maxLength={20}
-                            pattern="\d{20}"
-                            title="Three digits at back of your card"
+                            minLength={3}
+                            title="Ingresa Monto enviado al beneficiario min 3 digitos"
                             required
                             placeholder="Monto Enviado para tu beneficiario"
                             name="monto"
