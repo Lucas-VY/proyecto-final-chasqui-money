@@ -15,6 +15,7 @@ const Transferencias = (props) => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  /* VALIDACION */
   const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
@@ -31,7 +32,8 @@ const Transferencias = (props) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  /* ENTREGA  */
+  const handleSubmitTransference = (e) => {
     e.preventDefault();
 
     if (isSubmitting === false) {
@@ -118,7 +120,7 @@ const Transferencias = (props) => {
                     <form
                       className="form"
                       autoComplete="off"
-                      onSubmit={handleSubmit}
+                      onSubmit={handleSubmitTransference}
                     >
                       <div className="form-group">
                         <label htmlFor="cc_name">
