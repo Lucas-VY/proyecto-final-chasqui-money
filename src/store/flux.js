@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       /* USER ES un OBJ  */
       profile: {},
       baseURL: "http://127.0.0.1:5000",
-      email: '',
-      password: '',
+      email: "",
+      password: "",
       currentUser: {},
       isLogged: false,
       errors: null,
@@ -195,7 +195,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
-      /* TRANFERENCIAS  */
+      /* TRANSFERENCIAS  */
       transferencias: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
