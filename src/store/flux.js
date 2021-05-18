@@ -8,7 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       password: '',
       currentUser: {},
       isLogged: false,
-      errors:null
+      errors: null,
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -22,8 +22,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({
               profile: data,
             });
-          })
-          /* .then((result) => {
+          });
+        /* .then((result) => {
             props.history.push("/user/profile/");
           }); */
       },
@@ -71,7 +71,6 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw error;
           });
       }, */
-      
 
       handleSubmitLogin: (e, history) => {
         e.preventDefault();
@@ -90,10 +89,10 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
       },
 
-      getUser:() =>{
-        if(sessionStorage.getItem("currentUser")){
-          let resultado=sessionStorage.getItem("currentUser")
-          setStore({profile:JSON.parse(resultado)})
+      getUser: () => {
+        if (sessionStorage.getItem("currentUser")) {
+          let resultado = sessionStorage.getItem("currentUser");
+          setStore({ profile: JSON.parse(resultado) });
         }
       },
 
@@ -109,7 +108,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      login :async (url, data, history) => {
+      login: async (url, data, history) => {
         const store = getStore();
         const { baseURL } = store;
         const resp = await fetch(baseURL + url, {
@@ -132,16 +131,14 @@ const getState = ({ getStore, getActions, setStore }) => {
             errors: null,
             email: "",
             password: "",
-            
+
             /* aqui agregar el type y condicionar el history a profe o usuario */
           });
           sessionStorage.setItem("currentUser", JSON.stringify(info));
           sessionStorage.setItem("isLogged", true);
-          if(store.currentUser){
+          if (store.currentUser) {
             history.push("/user/profile/");
           }
-            
-          
         }
       },
 
@@ -153,7 +150,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           isLogged: false,
         });
       },
-
 
       /* CONTACTANOS  */
       contactanos: (values) => {
@@ -179,6 +175,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       /* CONTACTANOS PERFIL  */
       contactanosPerfil: (values) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(values);
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        return fetch("", requestOptions)
+          .then((response) => response.json())
+          .catch((error) => {
+            console.log("error", error);
+            throw error;
+          });
+      },
+
+      /* TRANFERENCIAS  */
+      transferencias: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
