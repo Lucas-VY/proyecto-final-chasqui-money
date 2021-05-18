@@ -19,6 +19,7 @@ const injectContext = (PassedComponent) => {
 
     useEffect(() => {
       state.actions.getProfile();
+      state.actions.transferencias();
       
 
       

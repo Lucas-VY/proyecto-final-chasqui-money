@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       /* USER ES un OBJ  */
+      historial: null,
       profile: {},
       baseURL: "http://127.0.0.1:5000",
       email: "",
@@ -9,6 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       currentUser: {},
       isLogged: false,
       errors: null,
+
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -96,6 +98,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+      /* USUARIO LOGEADO MOSTRANDO */
       isLogged: () => {
         if (sessionStorage.getItem("currentUser")) {
           let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
@@ -108,6 +111,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+      /*  LOGIN DE USUARIO */
       login: async (url, data, history) => {
         const store = getStore();
         const { baseURL } = store;
@@ -142,6 +146,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+      /* LOGOUT DE USUARIO */
       logout: () => {
         sessionStorage.removeItem("currentUser");
         sessionStorage.removeItem("isLogged");
@@ -187,7 +192,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         };
 
-        return fetch("", requestOptions)
+        return fetch("http://127.0.0.1:5000/user/card", requestOptions)
           .then((response) => response.json())
           .catch((error) => {
             console.log("error", error);
@@ -209,7 +214,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           redirect: "follow",
         };
 
-        return fetch("http://127.0.0.1:5000//user/card", requestOptions)
+        return fetch("http://127.0.0.1:5000/user/card/", requestOptions)
           .then((response) => response.json())
           .catch((error) => {
             console.log("error", error);
