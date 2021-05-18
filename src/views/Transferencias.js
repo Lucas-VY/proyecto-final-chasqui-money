@@ -144,7 +144,11 @@ const Transferencias = (props) => {
                           type="text"
                           className="form-control"
                           id="cc_name"
+<<<<<<< HEAD
                           title=""
+=======
+                          title="Ingresa el Nombre de tu Banco"
+>>>>>>> 29a79c1f7d31cce486f6e9646692152e9065dcbc
                           required="required"
                           placeholder="Nombre de Banco de tu beneficiario"
                           name="banco"
@@ -161,7 +165,7 @@ const Transferencias = (props) => {
                           minLength={10}
                           title=""
                           required="required"
-                          placeholder="Nº de cuenta de tu beneficiario"
+                          placeholder="Nº de cuenta de tu beneficiario min 10 digitos"
                           name="numeroCuenta"
                           onChange={handleChange}
                         />
@@ -193,9 +197,15 @@ const Transferencias = (props) => {
                             type="text"
                             className="form-control"
                             autoComplete="off"
+<<<<<<< HEAD
                             maxLength={20}
                             minLength={12}
                             title="nº comprobante operacion"
+=======
+                            maxLength={15}
+                            minLength={12}
+                            title="Inserta tus numero comprobante de transferencia min 12 digitos"
+>>>>>>> 29a79c1f7d31cce486f6e9646692152e9065dcbc
                             required="required"
                             placeholder="Nº comprobante transferencia a Cuenta Chasky"
                             name="registroComprobante"
@@ -210,7 +220,11 @@ const Transferencias = (props) => {
                             autoComplete="off"
                             maxLength={20}
                             minLength={3}
+<<<<<<< HEAD
                             title="ingresa monto enviado al beneficiario"
+=======
+                            title="Ingresa Monto enviado al beneficiario min 3 digitos"
+>>>>>>> 29a79c1f7d31cce486f6e9646692152e9065dcbc
                             required
                             placeholder="Monto Enviado para tu beneficiario"
                             name="monto"
