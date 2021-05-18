@@ -1,7 +1,68 @@
+import React, { useState, useContext } from "react";
+import { validateInfo } from "../components/ValidateInfo";
 import Sidebar from "../components/Sidebar";
+import { Context } from "../store/appContext";
 import "../css/Transferencias.css";
 
-const Transferencias = () => {
+const Transferencias = (props) => {
+  const { actions } = useContext(Context);
+
+  const [inputNameBeneficiario, setInputNameBeneficiario] = useState("");
+  const [inputBanco, setInputBanco] = useState("");
+  const [inputNumeroCuenta, setInputNumeroCuenta] = useState("");
+  const [inputRegistroComprobante, setInputRegistroComprobante] = useState("");
+  const [inputMonto, setInputMonto] = useState("");
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+    if (name === "name") {
+      setInputNameBeneficiario(value);
+    } else if (name === "banco") {
+      setInputBanco(value);
+    } else if (name === "numeroCuenta") {
+      setInputNumeroCuenta(value);
+    } else if (name === "registroComprobante") {
+      setInputRegistroComprobante(value);
+    } else if (name === "monto") {
+      setInputMonto(value);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isSubmitting === false) {
+      const errores = validateInfo({
+        name: inputNameBeneficiario,
+        banco: inputBanco,
+        numeroCuenta: inputNumeroCuenta,
+        registroComprobante: inputRegistroComprobante,
+        monto: inputMonto,
+      });
+      console.log("esta registrando");
+      if (Object.keys(errores).length === 0) {
+        setIsSubmitting(true);
+
+        actions
+          .transferencias({
+            name: inputNameBeneficiario,
+            banco: inputBanco,
+            numeroCuenta: inputNumeroCuenta,
+            registroComprobante: inputRegistroComprobante,
+            monto: inputMonto,
+          })
+          .then((result) => {
+            props.history.push("/user/historial");
+          });
+      }
+
+      setErrors(errores);
+    }
+  };
+
   return (
     <>
       <div className="container-fluid">
@@ -54,7 +115,11 @@ const Transferencias = () => {
                     </div>
 
                     {/* Detalles de transaccion */}
-                    <form className="form" autoComplete="off">
+                    <form
+                      className="form"
+                      autoComplete="off"
+                      onSubmit={handleSubmit}
+                    >
                       <div className="form-group">
                         <label htmlFor="cc_name">
                           Nombre del Beneficiario o Titular
@@ -67,6 +132,8 @@ const Transferencias = () => {
                           title="First and last name"
                           required="required"
                           placeholder="Nombre completo de tú Beneficiario o Titular"
+                          name="name"
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="form-group">
@@ -81,6 +148,8 @@ const Transferencias = () => {
                           title=""
                           required="required"
                           placeholder="Nombre de Banco de tu beneficiario"
+                          name="banco"
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="form-group">
@@ -94,6 +163,8 @@ const Transferencias = () => {
                           title=""
                           required
                           placeholder="Nº de cuenta de tu beneficiario"
+                          name="numeroCuenta"
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="form-group row">
@@ -128,6 +199,8 @@ const Transferencias = () => {
                             title="Three digits at back of your card"
                             required
                             placeholder="Nº comprobante transferencia a Cuenta Chasky"
+                            name="registroComprobante"
+                            onChange={handleChange}
                           />
                         </div>
 
@@ -141,6 +214,8 @@ const Transferencias = () => {
                             title="Three digits at back of your card"
                             required
                             placeholder="Monto Enviado para tu beneficiario"
+                            name="monto"
+                            onChange={handleChange}
                           />
                         </div>
                       </div>
