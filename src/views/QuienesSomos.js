@@ -16,9 +16,8 @@ const QuienesSomos = () => {
               Creadores
             </h2>
             <p className="text-center" id="pquienes-somos">
-              Microempresa encargada que a través de la intermediación de
-              cambios de divisas, le hacemos llegar dinero al
-              destinatario/beneficiario.
+              Microempresa encargada de hacer intermediación de cambios de
+              divisas a diferentes países del mundo de forma rápida y segura
             </p>
           </div>
           <div className="row people d-flex justify-content-center">
