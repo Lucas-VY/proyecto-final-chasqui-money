@@ -51,9 +51,6 @@ export const InicioSesion = (props) => {
             email: inputEmail,
             password2: inputPassword2,
           })
-          /* .then((result) => {
-            props.history.push(`/user/profile/${}`);
-          }); */
       }
 
       setErrors(errores);

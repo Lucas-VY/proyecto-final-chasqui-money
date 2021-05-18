@@ -60,106 +60,49 @@ const PerfilUser = () => {
                   <div className="card-body perfil">
                     <div className="d-flex flex-column align-items-center text-center">
                       {/* poner FOTO ó AVATAR?  */}
+                      <h3 className="text-white">Bienvenido a tú Perfil</h3>
                       <img
                         src={IMG_1020}
                         alt="Admin"
                         className="rounded-circle"
                         width={150}
                       />
-                      <div className="mt-2 text-white">
-                        <h5>Nombre: {store.currentUser.resultado.name}</h5>
-                        <hr />
-                        <h5>Apellido: {store.currentUser.resultado.last_name}</h5>
-                        <hr/>
-                        <p className="text-white mb-1">
-                          Teléfono: {store.currentUser.resultado.phone}
-                        </p>
-                        <hr/>
-                        <p className="text-white mb-1">
-                          Email: {store.currentUser.resultado.email}
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* INPUTS DE ACTUALIZACION */}
+              {/* DATOS DE USUARIO */}
+
               <div className="col-12 my-2 col-lg-7 col-xl-8">
                 <div className="card bg-transparent">
                   <div className="card-body">
                     <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        {/* valores deben guardarse en un state */}
-                        <input
-                          /* onChange={e => setName(e.target.value)}
-                          value={name} */
-                          placeholder="Nombre"
-                          type="text"
-                          /* ATRIBUTOS TIENEN QUE IR CONECTADOS CON BACKEND  */
-                          name="firstname"
-                          className="form-control"
-                          required="required"
-                        />
-                        {/* modificar input disabled con use state */}
+                      <div className="inputbox col-12 mt-4 text-white">
+                      <h5>Nombre: {store.currentUser.resultado.name}</h5>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        <input
-                          /* onChange={e => setCountry(e.target.value)} */
-                          placeholder="Apellido"
-                          type="text"
-                          /* en name request.json.get // en backend */
-                          name="lastname"
-                          className="form-control"
-                          required="required"
-                        />
+                      <div className="inputbox col-12 mt-4 text-white">
+                      <h5>Apellido: {store.currentUser.resultado.last_name}</h5>
                       </div>
                     </div>
 
                     <div className="row">
                       <div className="inputbox col-12 mt-3">
-                        <input
-                          /* onChange={e => setMovil(e.target.value)} */
-                          placeholder="Teléfono Móvil"
-                          type="text"
-                          name=""
-                          className="form-control"
-                          required="required"
-                        />
+                      <p className="text-white mb-1">
+                          Teléfono: {store.currentUser.resultado.phone}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="inputbox col-12 mt-4">
+                      <p className="text-white mb-1">
+                          Email: {store.currentUser.resultado.email}
+                        </p>
                       </div>
                     </div>
 
-                    {/* CONTRASEÑA se modifica con el BACKEND */}
-                    <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        <input
-                          placeholder="Nueva Contraseña"
-                          type="password"
-                          name=""
-                          className="form-control"
-                          required="required"
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="inputbox col-12 mt-4">
-                        {/* <label className="text-dark">Repetir Contraseña:</label> */}
-                        <input
-                          placeholder="Confirma Contraseña"
-                          type="password"
-                          name=""
-                          className="form-control"
-                          required="required"
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <button className="btn btn-primary mx-3 mt-4">
-                        Actualizar
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -410,3 +353,11 @@ const PerfilUser = () => {
   };
 
 export default PerfilUser;
+
+
+
+
+
+
+
+    
