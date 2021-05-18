@@ -45,7 +45,7 @@ const Transferencias = (props) => {
 
 
   const transferencia =(info) =>{
-    fetch(`http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id}`, {
+    fetch(`http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id ? store.currentUser.resultado.id : ""}`, {
       method:'POST',
       body:JSON.stringify(info),
       headers:{
@@ -53,6 +53,7 @@ const Transferencias = (props) => {
       }
     }).then((response) => response.json())
       .then((data) =>console.log(data.result))
+      .then((result)=> {props.history.push("/user/profile")})
       .catch((error)=>{
         console.log("error", error);
       })
@@ -213,6 +214,7 @@ const Transferencias = (props) => {
                             placeholder="país de envío"
                             size={0}
                           >
+                            <option value="">Seleccione Pais</option>
                             <option value="Chile">Chile</option>
                             <option value="Venezuela">Venezuela</option>
                             <option value="Colombia">Colombia</option>

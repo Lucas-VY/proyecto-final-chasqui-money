@@ -10,18 +10,19 @@ const Historial = () => {
 
   const { store } = useContext(Context);
 
-  const url = "http://127.0.0.1:5000/user/card/";
+  const url = `http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id}`;
   const [historial, setHistorial] = useState();
-  const fetchApi = async () => {
+  const fetchApi = async (url) => {
     const response = await fetch(url);
-    console.log(response.status);
+    console.log(response);
     const responseJSON = await response.json();
-    setHistorial(responseJSON.card);
-    console.log(responseJSON.card);
+    setHistorial(responseJSON.resultado);
+    //console.log(responseJSON);
+    //console.table(responseJSON);
   };
 
   useEffect(() => {
-    fetchApi();
+    fetchApi(url);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -49,32 +50,30 @@ const Historial = () => {
 
           <div className="col-12 col-md-9 mt-5 px-5" >
             <div className="row">
-              {!historial ? (
-                <h2 className="text-center text-white">"No Hay transferencias realizadas de momento..."</h2>
-              ) : (
-                historial.map((historial, index) => {
-                  return (
-                    <>
-                      <div className="col-12 mx-5 my-5" key={index}>
-                        <div className="card carta-transferencia bg-transparent">
-                          <div className="card-body">
-                            {/* HEADER DE LA TABLA */}
-                            <h3 className="header-title pb-3 mt-0 text-white">
-                              Historial de Pago
-                            </h3>
-                            <div className="table-responsive">
-                              <table className="table table-hover mb-0">
-                                <thead>
-                                  <tr className="align-self-center">
-                                    <th>Nombre de Benificiario</th>
-                                    <th>ID Comprobante</th>
-                                    <th>Día de pago</th>
-                                    <th>Monto</th>
-                                    <th>Status</th>
-                                  </tr>
-                                </thead>
-                              {/* TABLE BODY  */}
-                                <tbody >
+              <div className="col-12 mx-5 my-5" >
+                <div className="card carta-transferencia bg-transparent">
+                  <div className="card-body">
+                    {/* HEADER DE LA TABLA */}
+                    <h3 className="header-title pb-3 mt-0 text-white">
+                      Historial de Pago
+                                          </h3>
+                    <div className="table-responsive">
+                      <table className="table table-hover mb-0">
+                        <thead>
+                          <tr className="align-self-center">
+                            <th>Nombre de Benificiario</th>
+                            <th>Nº Comprobante</th>
+                            <th>Día de pago</th>
+                            <th>Monto</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        {/* TABLE BODY  */}
+                        {!!historial ? (
+                          historial.map((historial, index) => {
+                            return (
+                              <>
+                                <tbody key={index}>
                                   <tr>
                                     <td>
                                       {/* FOTO AVATAR  */}
@@ -85,39 +84,52 @@ const Historial = () => {
                                       />
                                       {historial.full_name}
                                     </td>
-                                    <td>Nº {historial.number_transfer}</td>
+                                    <td>Nº{historial.number_transfer}</td>
                                     <td>{historial.date}</td>
                                     <td>${historial.money_send}</td>
                                     <td>
                                       <span className="badge badge-boxed badge-soft-primary">
                                         Aceptado
-                                      </span>
+                                                    </span>
                                     </td>
                                   </tr>
                                   {/*  */}
                                 </tbody>
-                              </table>
-                            </div>
-                            {/*end table-responsive*/}
-                            <div className="pt-3 border-top text-right">
-                              <p className="text-white">
-                                confirma con nosotros enviando tu ID de comprobante a
-                                través de Whatsapp
-                              </p>
-                              <a
-                                href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
-                                className="btn btn-success btn-sm"
-                              >
-                                <i className="fab fa-whatsapp fa-lg"> Confirma Aquí</i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  );
-                })
-              )}
+                              </>
+                            );
+                          })
+                        ) : (
+                          <tbody>
+                            <tr>
+                              <td>
+                                No Hay transferencias realizadas de momento...
+                                                  </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        )};
+
+                                            </table>
+                    </div>
+                    {/*end table-responsive*/}
+                    <div className="pt-3 border-top text-right">
+                      <p className="text-white">
+                        confirma con nosotros enviando tu ID de comprobante a
+                        través de Whatsapp
+                                            </p>
+                      <a
+                        href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
+                        className="btn btn-success btn-sm"
+                      >
+                        <i className="fab fa-whatsapp fa-lg"> Confirma Aquí</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -131,7 +143,7 @@ export default Historial;
 /* https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia */
 
 // eslint-disable-next-line no-lone-blocks
-  {/* {!!store.historial &&
+{/* {!!store.historial &&
                       store.historial.results.map((valor, i) => { */}
 // eslint-disable-next-line no-lone-blocks
 {/*                              <tr>
