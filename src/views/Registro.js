@@ -4,8 +4,14 @@ import "../css/Registro.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Context } from "../store/appContext";
+import swal from "sweetalert";
 
 export const Registro = (props) => {
+  const mostrarAlerta = () => {
+    swal({
+      text: "registro exitoso",
+    });
+  };
   const { actions } = useContext(Context);
 
   const [inputName, setInputName] = useState("");
@@ -141,7 +147,7 @@ export const Registro = (props) => {
                   type="email"
                   name="email"
                   placeholder="ingrese email"
-                 // value={inputEmail}
+                  // value={inputEmail}
                   onChange={handleChange}
                 />
               </div>
@@ -161,7 +167,7 @@ export const Registro = (props) => {
                   type="texto"
                   name="phone"
                   placeholder="Nº de teléfono codigo de área más 9 digitos"
-                 // value={inputPhone}
+                  // value={inputPhone}
                   onChange={handleChange}
                 />
               </div>
@@ -182,7 +188,7 @@ export const Registro = (props) => {
                   type="password"
                   name="password"
                   placeholder="ingresa contraseña"
-                 // value={inputPassword}
+                  // value={inputPassword}
                   onChange={handleChange}
                 />
               </div>
@@ -202,7 +208,7 @@ export const Registro = (props) => {
                   type="password"
                   name="password2"
                   placeholder="confirmar contraseña"
-                 // value={inputPassword2}
+                  // value={inputPassword2}
                   onChange={handleChange}
                 />
               </div>
@@ -223,7 +229,11 @@ export const Registro = (props) => {
               </label>
             </div>
             <div className="form-group d-flex justify-content-center">
-              <button type="submit" className="btn btn-primary btn-lg">
+              <button
+                onClick={() => mostrarAlerta()}
+                type="submit"
+                className="btn btn-primary btn-lg"
+              >
                 Registrar
               </button>
             </div>
