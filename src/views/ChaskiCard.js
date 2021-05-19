@@ -132,7 +132,7 @@ const ChaskiCard = () => {
               <h4>Good Thru</h4>
               <p id="fechas-tarjeta">02&#x2F;20</p>
             </div>
-            <div className="Name"><h3>Luis Rodriguez</h3></div>
+            <div className="Name"><h3>John Doe</h3></div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="Visa"

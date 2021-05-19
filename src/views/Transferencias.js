@@ -1,12 +1,11 @@
 import React, { useState, useContext } from "react";
-import { validateInfo } from "../components/ValidateInfo";
+//import { validateInfo } from "../components/ValidateInfo";
 import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
 import "../css/Transferencias.css";
-import { data } from "jquery";
 
 const Transferencias = (props) => {
-  const { actions,store } = useContext(Context);
+  const { store } = useContext(Context);
 
   /* const [inputNameBeneficiario, setInputNameBeneficiario] = useState("");
   const [inputBanco, setInputBanco] = useState("");
