@@ -10,6 +10,7 @@ export const Registro = (props) => {
   const mostrarAlerta = () => {
     swal({
       text: "registro exitoso",
+      button: ["Registro"],
     });
   };
   const { actions } = useContext(Context);
