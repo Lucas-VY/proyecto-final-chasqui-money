@@ -4,15 +4,8 @@ import "../css/Registro.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Context } from "../store/appContext";
-import swal from "sweetalert";
 
 export const Registro = (props) => {
-  const mostrarAlerta = () => {
-    swal({
-      text: "registro exitoso",
-      button: ["Registro"],
-    });
-  };
   const { actions } = useContext(Context);
 
   const [inputName, setInputName] = useState("");
@@ -230,11 +223,7 @@ export const Registro = (props) => {
               </label>
             </div>
             <div className="form-group d-flex justify-content-center">
-              <button
-                onClick={() => mostrarAlerta()}
-                type="submit"
-                className="btn btn-primary btn-lg"
-              >
+              <button type="submit" className="btn btn-primary btn-lg">
                 Registrar
               </button>
             </div>
