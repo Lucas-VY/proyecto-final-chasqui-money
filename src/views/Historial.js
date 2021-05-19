@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import "../css/Historial.css";
 import { useContext, useEffect, useState } from 'react';
 import { Context } from '../store/appContext';
+import profile_avatar2 from "../assets/profile_avatar2.png"
 
 
 
@@ -11,14 +12,15 @@ const Historial = () => {
 
   const { store } = useContext(Context);
 
-  const url = "http://127.0.0.1:5000/user/card/";
+  const url = `http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id}`;
   const [historial, setHistorial] = useState();
   const fetchApi = async (url) => {
     const response = await fetch(url);
-    console.log(response.status);
+    console.log(response);
     const responseJSON = await response.json();
-    setHistorial(responseJSON.card);
-    console.log(responseJSON.card);
+    setHistorial(responseJSON.resultado);
+    //console.log(responseJSON);
+    //console.table(responseJSON);
   };
 
   useEffect(() => {
@@ -50,28 +52,28 @@ const Historial = () => {
 
           <div className="col-12 col-md-9 mt-5 px-5" >
             <div className="row">
-                      <div className="col-12 mx-5 my-5" >
-                        <div className="card carta-transferencia bg-transparent">
-                          <div className="card-body">
-                            {/* HEADER DE LA TABLA */}
-                            <h3 className="header-title pb-3 mt-0 text-white">
-                              Historial de Pago
-                            </h3>
-                            <div className="table-responsive">
-                              <table className="table table-hover mb-0">
-                                <thead>
-                                  <tr className="align-self-center">
-                                    <th>Nombre de Benificiario</th>
-                                    <th>Nº Comprobante</th>
-                                    <th>Día de pago</th>
-                                    <th>Monto</th>
-                                    <th>Status</th>
-                                  </tr>
-                                </thead>
-                              {/* TABLE BODY  */}
+              <div className="col-12 mx-5 my-5" >
+                <div className="card carta-transferencia bg-transparent">
+                  <div className="card-body">
+                    {/* HEADER DE LA TABLA */}
+                    <h3 className="header-title pb-3 mt-0 text-white">
+                      Historial de Pago
+                                          </h3>
+                    <div className="table-responsive">
+                      <table className="table table-hover mb-0">
+                        <thead>
+                          <tr className="align-self-center">
+                            <th>Nombre de Beneficiario</th>
+                            <th>Nº Comprobante</th>
+                            <th>Día de pago</th>
+                            <th>Monto</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        {/* TABLE BODY  */}
                         {!!historial ? (
                           historial.map((historial, index) => {
-                              return (
+                            return (
                               <>
                                 <tbody key={index}>
                                   <tr>
@@ -79,7 +81,8 @@ const Historial = () => {
                                       {/* FOTO AVATAR  */}
                                       <img
                                         className="thumb-sm rounded-circle mr-2"
-                                        src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                        src={profile_avatar2}
+                                        /* src="https://bootdey.com/img/Content/avatar/avatar2.png" */
                                         alt=""
                                       />
                                       {historial.full_name}
@@ -90,46 +93,46 @@ const Historial = () => {
                                     <td>
                                       <span className="badge badge-boxed badge-soft-primary">
                                         Aceptado
-                                      </span>
+                                                    </span>
                                     </td>
                                   </tr>
                                   {/*  */}
                                 </tbody>
-                                </>
-                              );
-                            })
-                            ) : (
-                              <tbody>
-                                  <tr>
-                                    <td>
-                                      No Hay transferencias realizadas de momento...
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                  </tr>
-                                </tbody>
-                          )};
-                          
-                              </table>
-                            </div>
-                            {/*end table-responsive*/}
-                            <div className="pt-3 border-top text-right">
-                              <p className="text-white">
-                                confirma con nosotros enviando tu ID de comprobante a
-                                través de Whatsapp
-                              </p>
-                              <a
-                                href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
-                                className="btn btn-success btn-sm"
-                              >
-                                <i className="fab fa-whatsapp fa-lg"> Confirma Aquí</i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                              </>
+                            );
+                          })
+                        ) : (
+                          <tbody>
+                            <tr>
+                              <td>
+                                No Hay transferencias realizadas de momento...
+                                                  </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        )};
+
+                                            </table>
+                    </div>
+                    {/*end table-responsive*/}
+                    <div className="pt-3 border-top text-right">
+                      <p className="text-white">
+                        confirma con nosotros enviando tu ID de comprobante a
+                        través de Whatsapp
+                                            </p>
+                      <a
+                        href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
+                        className="btn btn-success btn-sm"
+                      >
+                        <i className="fab fa-whatsapp fa-lg"> Confirma Aquí</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -143,7 +146,7 @@ export default Historial;
 /* https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia */
 
 // eslint-disable-next-line no-lone-blocks
-  {/* {!!store.historial &&
+{/* {!!store.historial &&
                       store.historial.results.map((valor, i) => { */}
 // eslint-disable-next-line no-lone-blocks
 {/*                              <tr>
