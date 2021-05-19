@@ -6,7 +6,7 @@ import { Context } from '../store/appContext';
 import { Link } from "react-router-dom";
 
 import "../css/PerfilUser.css";
-import profile_avatar2 from "../assets/profile_avatar2.png";
+import avatar_mono from "../assets/avatar_mono.png";
 import Sidebar from "../components/Sidebar";
 
 
@@ -40,11 +40,7 @@ const PerfilUser = () => {
 
   
 
-  return (
-    !!user
-    ? 
-      
-    
+  return(
     <>
     <div className="container-fluid">
       <div className="row">
@@ -63,10 +59,11 @@ const PerfilUser = () => {
                     {/* poner FOTO ó AVATAR?  */}
                     <h3 className="text-white">Bienvenido a tú Perfil</h3>
                     <img
-                      src={profile_avatar2}
+                      src={avatar_mono}
                       alt="Admin"
                       className="rounded-circle bg-transparent"
                       width={150}
+                      height={135}
                     />
                   </div>
                 </div>
@@ -114,7 +111,7 @@ const PerfilUser = () => {
                 <div className="card h-100 bg-transparent">
                   <div className="card-body">
                     <h6 className="d-flex align-items-center mb-3">
-                      <i className="material-icons text-info mr-2">
+                      <i className="material-icons text-white mr-2">
                         Bancos de uso frecuente
                     </i>
                     </h6>
@@ -183,7 +180,7 @@ const PerfilUser = () => {
               <div className="card h-100 bg-transparent">
                 <div className="card-body">
                   <h6 className="d-flex align-items-center mb-3">
-                    <i className="material-icons text-info mr-2">
+                    <i className="material-icons text-white mr-2">
                       Actividades
                   </i>
                   </h6>
@@ -251,7 +248,7 @@ const PerfilUser = () => {
               <div className="card h-100 bg-transparent">
                 <div className="card-body">
                   <h6 className="d-flex align-items-center mb-3">
-                    <i className="material-icons text-info mr-2">
+                    <i className="material-icons text-white mr-2">
                       Países de Destino
                   </i>
                   </h6>
@@ -350,13 +347,8 @@ const PerfilUser = () => {
       </div>
     </div>
   </>
+  )
 
-    : 
-      <div>Hola</div>
-    
-  );
-
-  
 };
 
 export default PerfilUser;

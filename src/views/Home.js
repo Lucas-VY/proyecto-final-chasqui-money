@@ -19,7 +19,7 @@ const Home = () => {
                 Envía dinero Rápido y seguro con la comision mas baja del mercado
               </p>
               <p className="header__paragraph">
-                Comision del 1%
+                Comision del 0,5%
               </p>
               <Conversor />
               <hr className="my-2" />

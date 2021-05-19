@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import "../css/Historial.css";
 import { useContext, useEffect, useState } from 'react';
 import { Context } from '../store/appContext';
-import profile_avatar2 from "../assets/profile_avatar2.png"
+import astronaut from "../assets/astronaut.gif"
 
 
 
@@ -58,20 +58,22 @@ const Historial = () => {
                     {/* HEADER DE LA TABLA */}
                     <h3 className="header-title pb-3 mt-0 text-white">
                       Historial de Pago
-                                          </h3>
+                    </h3>
                     <div className="table-responsive">
                       <table className="table table-hover mb-0">
                         <thead>
                           <tr className="align-self-center">
-                            <th>Nombre de Beneficiario</th>
+                            <th>Beneficiario</th>
                             <th>Nº Comprobante</th>
-                            <th>Día de pago</th>
+                            <th>Fecha</th>
+                            <th>Divisa</th>
                             <th>Monto</th>
                             <th>Status</th>
                           </tr>
                         </thead>
                         {/* TABLE BODY  */}
-                        {!!historial ? (
+                        {!!historial 
+                        ? (
                           historial.map((historial, index) => {
                             return (
                               <>
@@ -81,14 +83,14 @@ const Historial = () => {
                                       {/* FOTO AVATAR  */}
                                       <img
                                         className="thumb-sm rounded-circle mr-2"
-                                        src={profile_avatar2}
-                                        /* src="https://bootdey.com/img/Content/avatar/avatar2.png" */
+                                        src={astronaut}
                                         alt=""
                                       />
                                       {historial.full_name}
                                     </td>
                                     <td>Nº{historial.number_transfer}</td>
                                     <td>{historial.date}</td>
+                                    <td>moneda</td>
                                     <td>${historial.money_send}</td>
                                     <td>
                                       <span className="badge badge-boxed badge-soft-primary">
@@ -99,23 +101,23 @@ const Historial = () => {
                                   {/*  */}
                                 </tbody>
                               </>
-                            );
+                            )
                           })
-                        ) : (
+                        ) 
+                        : 
+                        (
                           <tbody>
                             <tr>
                               <td>
                                 No Hay transferencias realizadas de momento...
-                                                  </td>
+                              </td>
                               <td></td>
                               <td></td>
                               <td></td>
                               <td></td>
                             </tr>
-                          </tbody>
-                        )};
-
-                                            </table>
+                          </tbody>)};
+                    </table>
                     </div>
                     {/*end table-responsive*/}
                     <div className="pt-3 border-top text-right">
