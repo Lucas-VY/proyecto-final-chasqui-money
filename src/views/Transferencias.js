@@ -3,9 +3,12 @@ import React, { useState, useContext } from "react";
 import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
 import "../css/Transferencias.css";
+import ConversorTransfer from "../components/ConversorTransfer";
 
 const Transferencias = (props) => {
   const { store } = useContext(Context);
+
+
 
   /* const [inputNameBeneficiario, setInputNameBeneficiario] = useState("");
   const [inputBanco, setInputBanco] = useState("");
@@ -15,7 +18,9 @@ const Transferencias = (props) => {
   //const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false); */
 
-  const [state,setState]= useState({})
+  const [state, setState] = useState({})
+
+
 
   /* VALIDACION */
   /* const handleChangeTransfer = (e) => {
@@ -34,64 +39,72 @@ const Transferencias = (props) => {
     }
   }; */
 
-  const handleChangeTransfer =(e) =>{
+  const handleChangeTransfer = (e) => {
     setState({
-      ...state, 
-      [e.target.name]:e.target.value
+      ...state,
+      [e.target.name]: e.target.value
+    })
+
+  }
+
+  const handleCurrencyChange = (currency) => {
+    setState({
+      ...state,
+      money:currency
     })
 
   }
 
 
-  const transferencia =(info) =>{
+  const transferencia = (info) => {
     fetch(`http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id ? store.currentUser.resultado.id : ""}`, {
-      method:'POST',
-      body:JSON.stringify(info),
-      headers:{
-        "Content-Type":"application/json"
+      method: 'POST',
+      body: JSON.stringify(info),
+      headers: {
+        "Content-Type": "application/json"
       }
     }).then((response) => response.json())
-      .then((data) =>console.log(data.result))
-      .then((result)=> {props.history.push("/user/profile")})
-      .catch((error)=>{
+      .then((data) => console.log(data.result))
+      .then((result) => { props.history.push("/user/profile") })
+      .catch((error) => {
         console.log("error", error);
       })
-      
+
   }
 
-/* 
+  /* 
+    
+    const handleSubmitTransference = (e) => {
+      e.preventDefault();
   
-  const handleSubmitTransference = (e) => {
-    e.preventDefault();
-
-    if (isSubmitting === false) {
-      const errores = validateInfo({
-        name: inputNameBeneficiario,
-        banco: inputBanco,
-        numeroCuenta: inputNumeroCuenta,
-        registroComprobante: inputRegistroComprobante,
-        monto: inputMonto,
-      });
-      console.log("Formulario enviado");
-      if (Object.keys(errores).length === 0) {
-        setIsSubmitting(true);
-
-        actions
-          .transferencias({
-            name: inputNameBeneficiario,
-            banco: inputBanco,
-            numeroCuenta: inputNumeroCuenta,
-            registroComprobante: inputRegistroComprobante,
-            monto: inputMonto,
-          })
-          .then((result) => {
-            props.history.push("/user/historial");
-          });
+      if (isSubmitting === false) {
+        const errores = validateInfo({
+          name: inputNameBeneficiario,
+          banco: inputBanco,
+          numeroCuenta: inputNumeroCuenta,
+          registroComprobante: inputRegistroComprobante,
+          monto: inputMonto,
+        });
+        console.log("Formulario enviado");
+        if (Object.keys(errores).length === 0) {
+          setIsSubmitting(true);
+  
+          actions
+            .transferencias({
+              name: inputNameBeneficiario,
+              banco: inputBanco,
+              numeroCuenta: inputNumeroCuenta,
+              registroComprobante: inputRegistroComprobante,
+              monto: inputMonto,
+            })
+            .then((result) => {
+              props.history.push("/user/historial");
+            });
+        }
+  
+        //setErrors(errores);
       }
-
-      //setErrors(errores);
-    }
-  }; */
+    }; */
 
   return (
     <>
@@ -148,12 +161,13 @@ const Transferencias = (props) => {
                     <form
                       className="form"
                       autoComplete="off"
-                      onSubmit={ e =>{
+                      onSubmit={e => {
                         e.preventDefault()
                         //actions.transferencias(state)}
-                        transferencia(state)}
-                      } 
-                    
+                        transferencia(state)
+                      }
+                      }
+
                     >
                       <div className="form-group">
                         <label htmlFor="cc_name">
@@ -207,7 +221,7 @@ const Transferencias = (props) => {
                         </label>
                         <div className="col-md-4">
                           <select
-                           onChange={handleChangeTransfer}
+                            onChange={handleChangeTransfer}
                             className="form-control"
                             name="country"
                             placeholder="país de envío"
@@ -225,6 +239,15 @@ const Transferencias = (props) => {
                           </select>
                         </div>
 
+
+
+
+
+
+
+
+
+
                         <div className="col-md-4">
                           <input
                             type="text"
@@ -240,20 +263,62 @@ const Transferencias = (props) => {
                           />
                         </div>
 
-                        <div className="col-md-4">                        
-                          <input
-                            type="text"
-                            className="form-control"
-                            autoComplete="off"
-                            maxLength={20}
-                            minLength={3}
-                            title="Ingresa Monto enviado al beneficiario min 3 digitos"
-                            required
-                            placeholder="Monto Enviado para tu beneficiario"
-                            name="monto"
-                            onChange={handleChangeTransfer}
-                          />
+                        <div className="col-md-4">
+
+                          <div className="row">
+
+
+
+
+                             <div className="col-md-4 ">
+                             
+                              <ConversorTransfer onSelectCurrency={handleCurrencyChange}  />
+                            </div> 
+
+                            
+
+
+
+
+                            <div className="col-md-8 ">
+                              
+                              <input
+                                type="text"
+                                className="form-control"
+                                autoComplete="off"
+                                maxLength={20}
+                                minLength={3}
+                                title="Ingresa Monto enviado al beneficiario min 3 digitos"
+                                required
+                                placeholder="Monto Enviado para tu beneficiario"
+                                name="monto"
+                                onChange={handleChangeTransfer}
+                              />
+                            </div>
+
+                          </div>
+
+
+
+
+
+
+
+
+
+
+
                         </div>
+
+
+
+
+
+
+
+
+
+
                       </div>
 
                       <hr />
