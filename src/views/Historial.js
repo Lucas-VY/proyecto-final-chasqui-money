@@ -90,7 +90,7 @@ const Historial = () => {
                                     </td>
                                     <td>Nº{historial.number_transfer}</td>
                                     <td>{historial.date}</td>
-                                    <td>moneda</td>
+                                    <td>{historial.money}</td>
                                     <td>${historial.money_send}</td>
                                     <td>
                                       <span className="badge badge-boxed badge-soft-primary">

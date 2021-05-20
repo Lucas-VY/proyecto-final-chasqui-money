@@ -17,18 +17,7 @@ function CurrencyRow(props) {
     <>
       <form>
         <div className="form-group">
-          <input
-            className="input form-control"
-            type="number"
-            value={amount}
-            onChange={onChangeAmount}
-          />
-          <div className="input-group mb-2">
-            <div className="input-group-prepend">
-              <label className="input-group-text" htmlFor="inputGroupSelect01">
-                Opciones
-              </label>
-            </div>
+          
             <select
               className="custom-select text-success"
               id="inputGroupSelect01"
@@ -42,6 +31,8 @@ function CurrencyRow(props) {
                 </option>
               ))}
             </select>
+          <div className="input-group mb-2">
+            
           </div>
         </div>
       </form>
@@ -64,7 +55,7 @@ function CurrencyRow(props) {
   ))}
 </select> */
 
-function Conversor() {
+function Conversor(props) {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [fromCurrency, setFromCurrency] = useState();
   const [toCurrency, setToCurrency] = useState();
@@ -104,30 +95,22 @@ function Conversor() {
     setAmount(e.target.value);
     setAmountInFromCurrency(true);
   }
-  function handleToAmountChange(e) {
-    setAmount(e.target.value);
-    setAmountInFromCurrency(false);
-  }
+
   /*  ARREGLAR QUE LAS SELECCIONES DE MONEDAS NO SEAN GIGANTES Y SE PUEDAN HACER SCROLL DE FORMA MAS ACOTADA */
   return (
     <>
       <form action="">
-        <legend>Tu envías</legend>
+        
         <CurrencyRow
           currencyOptions={currencyOptions}
           selectedCurrency={fromCurrency}
-          onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+          onChangeCurrency={(e) => {setFromCurrency(e.target.value);
+            props.onSelectCurrency(e.target.value);
+
+        }}
           onChangeAmount={handleFromAmountChange}
           amount={fromAmount}
-        />
-        <br></br>
-        <legend>Tu beneficiario recibe</legend>
-        <CurrencyRow
-          currencyOptions={currencyOptions}
-          selectedCurrency={toCurrency}
-          onChangeCurrency={(e) => setToCurrency(e.target.value)}
-          onChangeAmount={handleToAmountChange}
-          amount={toAmount}
+
         />
       </form>
     </>
