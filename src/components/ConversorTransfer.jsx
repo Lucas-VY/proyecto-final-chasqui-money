@@ -17,12 +17,7 @@ function CurrencyRow(props) {
     <>
       <form>
         <div className="form-group">
-          <input
-            className="input form-control"
-            type="number"
-            value={amount}
-            onChange={onChangeAmount}
-          />
+          
             <select
               className="custom-select text-success"
               id="inputGroupSelect01"
@@ -37,6 +32,7 @@ function CurrencyRow(props) {
               ))}
             </select>
           <div className="input-group mb-2">
+            
           </div>
         </div>
       </form>
@@ -59,7 +55,7 @@ function CurrencyRow(props) {
   ))}
 </select> */
 
-function Conversor() {
+function Conversor(props) {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [fromCurrency, setFromCurrency] = useState();
   const [toCurrency, setToCurrency] = useState();
@@ -104,12 +100,17 @@ function Conversor() {
   return (
     <>
       <form action="">
+        
         <CurrencyRow
           currencyOptions={currencyOptions}
           selectedCurrency={fromCurrency}
-          onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+          onChangeCurrency={(e) => {setFromCurrency(e.target.value);
+            props.onSelectCurrency(e.target.value);
+
+        }}
           onChangeAmount={handleFromAmountChange}
           amount={fromAmount}
+
         />
       </form>
     </>
