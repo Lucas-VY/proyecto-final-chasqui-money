@@ -1,11 +1,15 @@
 //import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import "../css/Historial.css";
-import { useContext, useEffect, useState } from "react";
-import { Context } from "../store/appContext";
-import astronaut from "../assets/astronaut.gif";
+import { useContext, useEffect, useState } from 'react';
+import { Context } from '../store/appContext';
+import astronaut from "../assets/astronaut.gif"
+
+
+
 
 const Historial = () => {
+
   const { store } = useContext(Context);
 
   const url = `http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id}`;
@@ -46,9 +50,9 @@ const Historial = () => {
             <Sidebar />
           </div>
 
-          <div className="col-12 col-md-9 mt-5 px-5">
+          <div className="col-12 col-md-9 mt-5 px-5" >
             <div className="row">
-              <div className="col-12 mx-5 my-5">
+              <div className="col-12 mx-5 my-5" >
                 <div className="card carta-transferencia bg-transparent">
                   <div className="card-body">
                     {/* HEADER DE LA TABLA */}
@@ -68,7 +72,8 @@ const Historial = () => {
                           </tr>
                         </thead>
                         {/* TABLE BODY  */}
-                        {!!historial ? (
+                        {!!historial 
+                        ? (
                           historial.map((historial, index) => {
                             return (
                               <>
@@ -90,15 +95,17 @@ const Historial = () => {
                                     <td>
                                       <span className="badge badge-boxed badge-soft-primary">
                                         Aceptado
-                                      </span>
+                                                    </span>
                                     </td>
                                   </tr>
                                   {/*  */}
                                 </tbody>
                               </>
-                            );
+                            )
                           })
-                        ) : (
+                        ) 
+                        : 
+                        (
                           <tbody>
                             <tr>
                               <td>
@@ -109,17 +116,15 @@ const Historial = () => {
                               <td></td>
                               <td></td>
                             </tr>
-                          </tbody>
-                        )}
-                        ;
-                      </table>
+                          </tbody>)};
+                    </table>
                     </div>
                     {/*end table-responsive*/}
                     <div className="pt-3 border-top text-right">
                       <p className="text-white">
                         confirma con nosotros enviando tu ID de comprobante a
                         través de Whatsapp
-                      </p>
+                                            </p>
                       <a
                         href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
                         className="btn btn-success btn-sm"
@@ -143,13 +148,10 @@ export default Historial;
 /* https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia */
 
 // eslint-disable-next-line no-lone-blocks
-{
-  /* {!!store.historial &&
-                      store.historial.results.map((valor, i) => { */
-}
+{/* {!!store.historial &&
+                      store.historial.results.map((valor, i) => { */}
 // eslint-disable-next-line no-lone-blocks
-{
-  /*                              <tr>
+{/*                              <tr>
                                     <td>
                                       <img
                                         src="https://bootdey.com/img/Content/avatar/avatar3.png"
@@ -220,5 +222,4 @@ export default Historial;
                                         Aceptado
                               </span>
                                     </td>
-                                  </tr> */
-}
+                                  </tr> */}

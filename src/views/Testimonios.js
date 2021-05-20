@@ -32,7 +32,7 @@ const Testimonios = () => {
                 </p>{" "}
                 <img
                   src="https://i.imgur.com/QptVdsp.jpg"
-                  className="img-fluid"
+                  //className="img-fluid"
                   alt=""
                 />
                 <div id="image-caption">Cromption Greves</div>
@@ -47,7 +47,7 @@ const Testimonios = () => {
                   I've ever seen.
                 </p>{" "}
                 <img
-                  className="img-fluid"
+                  //className="img-fluid"
                   src="https://i.imgur.com/jQWThIn.jpg"
                   alt=""
                 />

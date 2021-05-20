@@ -17,20 +17,23 @@ function CurrencyRow(props) {
     <>
       <form>
         <div className="form-group">
-          <select
-            className="custom-select text-success"
-            id="inputGroupSelect01"
-            value={selectedCurrency}
-            maxLength={5}
-            onChange={onChangeCurrency}
-          >
-            {currencyOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-          <div className="input-group mb-2"></div>
+          
+            <select
+              className="custom-select text-success"
+              id="inputGroupSelect01"
+              value={selectedCurrency}
+              maxLength={5}
+              onChange={onChangeCurrency}
+            >
+              {currencyOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          <div className="input-group mb-2">
+            
+          </div>
         </div>
       </form>
     </>
@@ -97,15 +100,17 @@ function Conversor(props) {
   return (
     <>
       <form action="">
+        
         <CurrencyRow
           currencyOptions={currencyOptions}
           selectedCurrency={fromCurrency}
-          onChangeCurrency={(e) => {
-            setFromCurrency(e.target.value);
+          onChangeCurrency={(e) => {setFromCurrency(e.target.value);
             props.onSelectCurrency(e.target.value);
-          }}
+
+        }}
           onChangeAmount={handleFromAmountChange}
           amount={fromAmount}
+
         />
       </form>
     </>

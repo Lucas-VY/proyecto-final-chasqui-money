@@ -3,8 +3,8 @@ import "../components/Conversor.css";
 
 const BASE_URL = "https://free.currconv.com/api/v7";
 /* https://free.currconv.com/api/v7 */
-const API_KEY = "2f01dcf43562e77ad5d4";
-
+const API_KEY = "dfc9992e0825057dddf8";
+//2f01dcf43562e77ad5d4
 function CurrencyRow(props) {
   const {
     currencyOptions,

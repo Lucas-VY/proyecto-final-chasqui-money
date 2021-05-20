@@ -7,11 +7,11 @@ import { Context } from "../store/appContext";
 import swal from "sweetalert";
 
 export const Registro = (props) => {
-  const mostrarAlerta = () => {
+  /* const mostrarAlerta = () => {
     swal({
       text: "registro exitoso",
     });
-  };
+  }; */
   const { actions } = useContext(Context);
 
   const [inputName, setInputName] = useState("");
@@ -230,7 +230,7 @@ export const Registro = (props) => {
             </div>
             <div className="form-group d-flex justify-content-center">
               <button
-                onClick={() => mostrarAlerta()}
+                //onClick={() => mostrarAlerta()}
                 type="submit"
                 className="btn btn-primary btn-lg"
               >

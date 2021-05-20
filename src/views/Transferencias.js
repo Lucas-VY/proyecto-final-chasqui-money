@@ -8,6 +8,8 @@ import ConversorTransfer from "../components/ConversorTransfer";
 const Transferencias = (props) => {
   const { store } = useContext(Context);
 
+
+
   /* const [inputNameBeneficiario, setInputNameBeneficiario] = useState("");
   const [inputBanco, setInputBanco] = useState("");
   const [inputNumeroCuenta, setInputNumeroCuenta] = useState("");
@@ -16,7 +18,9 @@ const Transferencias = (props) => {
   //const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false); */
 
-  const [state, setState] = useState({});
+  const [state, setState] = useState({})
+
+
 
   /* VALIDACION */
   /* const handleChangeTransfer = (e) => {
@@ -38,9 +42,10 @@ const Transferencias = (props) => {
   const handleChangeTransfer = (e) => {
     setState({
       ...state,
-      [e.target.name]: e.target.value,
-    });
-  };
+      [e.target.name]: e.target.value
+    })
+
+  }
 
   const handleCurrencyChange = (currency) => {
     setState({
@@ -49,28 +54,57 @@ const Transferencias = (props) => {
     })
 
   }
+
+
   const transferencia = (info) => {
-    fetch(
-      `http://127.0.0.1:5000/user/card/${
-        store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
-      }`,
-      {
-        method: "POST",
-        body: JSON.stringify(info),
-        headers: {
-          "Content-Type": "application/json",
-        },
+    fetch(`http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id ? store.currentUser.resultado.id : ""}`, {
+      method: 'POST',
+      body: JSON.stringify(info),
+      headers: {
+        "Content-Type": "application/json"
       }
-    )
-      .then((response) => response.json())
+    }).then((response) => response.json())
       .then((data) => console.log(data.result))
-      .then((result) => {
-        props.history.push("/user/profile");
-      })
+      .then((result) => { props.history.push("/user/profile") })
       .catch((error) => {
         console.log("error", error);
-      });
-  };
+      })
+
+  }
+
+  /* 
+    
+    const handleSubmitTransference = (e) => {
+      e.preventDefault();
+  
+      if (isSubmitting === false) {
+        const errores = validateInfo({
+          name: inputNameBeneficiario,
+          banco: inputBanco,
+          numeroCuenta: inputNumeroCuenta,
+          registroComprobante: inputRegistroComprobante,
+          monto: inputMonto,
+        });
+        console.log("Formulario enviado");
+        if (Object.keys(errores).length === 0) {
+          setIsSubmitting(true);
+  
+          actions
+            .transferencias({
+              name: inputNameBeneficiario,
+              banco: inputBanco,
+              numeroCuenta: inputNumeroCuenta,
+              registroComprobante: inputRegistroComprobante,
+              monto: inputMonto,
+            })
+            .then((result) => {
+              props.history.push("/user/historial");
+            });
+        }
+  
+        //setErrors(errores);
+      }
+    }; */
 
   return (
     <>
@@ -94,9 +128,7 @@ const Transferencias = (props) => {
                   continuación.
                 </p>
                 <p className="card-text">Cuenta Banco Santander</p>
-                <p className="card-text">
-                  Nombre: ChaskiMoney / Rut de empresa: 139.874.874-J
-                </p>
+                <p className="card-text">Nombre: ChaskiMoney  /  Rut de empresa: 139.874.874-J</p>
                 <p className="card-text">
                   Número de cuenta: 9497327974 Tipo de Cuenta: Corriente
                 </p>
@@ -129,12 +161,13 @@ const Transferencias = (props) => {
                     <form
                       className="form"
                       autoComplete="off"
-                      onSubmit={(e) => {
-                        e.preventDefault();
+                      onSubmit={e => {
+                        e.preventDefault()
                         //actions.transferencias(state)}
                         transferencia(state)
                       }
                       }
+
                     >
                       <div className="form-group">
                         <label htmlFor="cc_name">
@@ -205,6 +238,16 @@ const Transferencias = (props) => {
                             <option value="Perú">Perú</option>
                           </select>
                         </div>
+
+
+
+
+
+
+
+
+
+
                         <div className="col-md-4">
                           <input
                             type="text"
@@ -219,12 +262,26 @@ const Transferencias = (props) => {
                             onChange={handleChangeTransfer}
                           />
                         </div>
+
                         <div className="col-md-4">
+
                           <div className="row">
-                             <div className="col-md-4 ">                         
+
+
+
+
+                             <div className="col-md-4 ">
+                             
                               <ConversorTransfer onSelectCurrency={handleCurrencyChange}  />
                             </div> 
-                            <div className="col-md-8 ">                          
+
+                            
+
+
+
+
+                            <div className="col-md-8 ">
+                              
                               <input
                                 type="text"
                                 className="form-control"
@@ -238,9 +295,32 @@ const Transferencias = (props) => {
                                 onChange={handleChangeTransfer}
                               />
                             </div>
+
                           </div>
+
+
+
+
+
+
+
+
+
+
+
                         </div>
+
+
+
+
+
+
+
+
+
+
                       </div>
+
                       <hr />
                       <div className="form-group row">
                         <div className="col-md-6">
@@ -279,37 +359,3 @@ const Transferencias = (props) => {
 };
 
 export default Transferencias;
-
-  /* 
-    
-    const handleSubmitTransference = (e) => {
-      e.preventDefault();
-  
-      if (isSubmitting === false) {
-        const errores = validateInfo({
-          name: inputNameBeneficiario,
-          banco: inputBanco,
-          numeroCuenta: inputNumeroCuenta,
-          registroComprobante: inputRegistroComprobante,
-          monto: inputMonto,
-        });
-        console.log("Formulario enviado");
-        if (Object.keys(errores).length === 0) {
-          setIsSubmitting(true);
-  
-          actions
-            .transferencias({
-              name: inputNameBeneficiario,
-              banco: inputBanco,
-              numeroCuenta: inputNumeroCuenta,
-              registroComprobante: inputRegistroComprobante,
-              monto: inputMonto,
-            })
-            .then((result) => {
-              props.history.push("/user/historial");
-            });
-        }
-  
-        //setErrors(errores);
-      }
-    }; */
