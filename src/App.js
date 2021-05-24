@@ -13,6 +13,8 @@ import injectContext from "./store/appContext";
 // vistas de perfil
 import PerfilUser from "./views/PerfilUser";
 import Transferencias from "./views/Transferencias";
+import RegistroOperacion from "./views/RegistroOperacion";
+import DatosPago from "./views/DatosPago";
 import Historial from "./views/Historial";
 import ContactanosPerfil from "./views/ContactanosPerfil";
 import ChaskiCard from "./views/ChaskiCard";
@@ -20,7 +22,7 @@ import ChaskiCard from "./views/ChaskiCard";
 import "./components/navbar.css";
 
 import Particles from "react-particles-js";
-import particlesConfig from "./components/particlesConfig";
+import particlesConfig from "./components/ParticlesConfig";
 
 function App() {
   return (
@@ -58,6 +60,16 @@ function App() {
               exact
               path="/user/transferencias"
               component={Transferencias}
+            ></Route>
+            <Route
+              exact
+              path="/user/transferencias/registro-beneficiario"
+              component={RegistroOperacion}
+            ></Route>
+            <Route
+              exact
+              path="/user/transferencias/datos-pago"
+              component={DatosPago}
             ></Route>
             <Route exact path="/user/historial" component={Historial}></Route>
             <Route
