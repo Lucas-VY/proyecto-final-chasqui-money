@@ -16,11 +16,10 @@ const Home = () => {
             <div className="jumbotron text-center border-none bg-transparent jumbo">
               <h1 className="header__title">Consulta Tu Cambio</h1>
               <p className="header__paragraph">
-                Envía dinero Rápido y seguro con la comision mas baja del mercado
+                Envía dinero rápido y seguro con la comisión mas baja del
+                mercado
               </p>
-              <p className="header__paragraph">
-                Comision del 0,5%
-              </p>
+              <p className="header__paragraph">Comisión del 0,5%</p>
               <Conversor />
               <hr className="my-2" />
               <Link

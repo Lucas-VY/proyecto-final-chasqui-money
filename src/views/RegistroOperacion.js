@@ -191,9 +191,10 @@ const RegistroBeneficiario = (props) => {
                           onChange={handleChangeTransfer}
                         />
                       </div>
+
                       <div className="form-group row">
                         <label className="col-md-12">Datos de destino</label>
-                        <div className="col-md-4">
+                        <div className="col-md-2">
                           <select
                             onChange={handleChangeTransfer}
                             className="form-control"
@@ -221,7 +222,7 @@ const RegistroBeneficiario = (props) => {
                               />
                             </div>
 
-                            <div className="col-md-8 ">
+                            <div className="col-md-8">
                               <input
                                 type="text"
                                 className="form-control"
@@ -230,7 +231,7 @@ const RegistroBeneficiario = (props) => {
                                 minLength={3}
                                 title="Ingresa Monto enviado al beneficiario min 3 digitos"
                                 required
-                                placeholder="Monto Enviado para tu beneficiario"
+                                placeholder="Monto en pesos chilenos"
                                 name="monto"
                                 onChange={handleChangeTransfer}
                               />

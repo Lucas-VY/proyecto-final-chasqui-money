@@ -26,7 +26,7 @@ function CurrencyRow(props) {
           <div className="input-group mb-2">
             <div className="input-group-prepend">
               <label className="input-group-text" htmlFor="inputGroupSelect01">
-                Opciones
+                Moneda
               </label>
             </div>
             <select
@@ -86,8 +86,8 @@ function Conversor() {
       .then((data) => {
         console.log(data.results);
         setCurrencyOptions(Object.keys(data.results));
-        setFromCurrency("USD");
-        setToCurrency("CLP");
+        setFromCurrency("CLP");
+        setToCurrency("USD");
       });
   }, []);
 
