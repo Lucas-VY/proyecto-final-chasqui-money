@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
 import "../css/Transferencias.css";
+import ConversorTransfer from "../components/ConversorTransfer";
 
 const RegistroBeneficiario = (props) => {
   const { store } = useContext(Context);
@@ -191,9 +192,7 @@ const RegistroBeneficiario = (props) => {
                         />
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-12">
-                          Seleccione País de destino
-                        </label>
+                        <label className="col-md-12">Datos de destino</label>
                         <div className="col-md-4">
                           <select
                             onChange={handleChangeTransfer}
@@ -212,6 +211,31 @@ const RegistroBeneficiario = (props) => {
                             <option value="España">España</option>
                             <option value="Perú">Perú</option>
                           </select>
+                        </div>
+
+                        <div className="col-md-4">
+                          <div className="row">
+                            <div className="col-md-4 ">
+                              <ConversorTransfer
+                                onSelectCurrency={handleCurrencyChange}
+                              />
+                            </div>
+
+                            <div className="col-md-8 ">
+                              <input
+                                type="text"
+                                className="form-control"
+                                autoComplete="off"
+                                maxLength={20}
+                                minLength={3}
+                                title="Ingresa Monto enviado al beneficiario min 3 digitos"
+                                required
+                                placeholder="Monto Enviado para tu beneficiario"
+                                name="monto"
+                                onChange={handleChangeTransfer}
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
 
