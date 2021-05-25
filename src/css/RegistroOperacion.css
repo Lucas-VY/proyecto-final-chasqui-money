@@ -1,6 +1,9 @@
 .card-ro {
   background-color: white;
   width: 75%;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
   border-radius: 5px;
   border: 1px solid;
   padding: 10px;
