@@ -11,31 +11,37 @@ const DatosPago = (props) => {
             <Sidebar />
           </div>
 
-          <div className="card-pago bg-white">
-            <h5 className="card-pago-header">Datos Bancarios</h5>
-            <div className="card-pago-body">
-              <p className="card-pago-text">Cuenta: Banco Santander</p>
-              <p className="card-pago-text">
-                Nombre: ChaskiMoney / Rut de empresa: 139.874.874-J
-              </p>
-              <p className="card-pago-text">
-                Número de cuenta: 9497327974 Tipo de Cuenta: Corriente
-              </p>
-              <p className="card-pago-text">
-                Correo electrónico: chaskimoney@gmail.com
-              </p>
-              <p className="card-pago-text">
-                Una vez realizada la transferencia, envía tu capture y afina los
-                detalles de entrega
-              </p>
-              <a
-                href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
-                className="btn btn-success btn-sm"
-              >
-                <i className="fab fa-whatsapp fa-lg">Envía tu capture</i>
-              </a>
+          <section className="pricing-section">
+            <div className="container">
+              <div className="row justify-content-md-center">
+                <div className="col-xl-5 col-lg-6 col-md-8">
+                  <div className="section-title text-center title-ex1"></div>
+                </div>
+              </div>
+              {/* Pricing Table starts */}
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="price-card ">
+                    <h2>Business</h2>
+                    <p>For the whole team</p>
+                    <p className="price">
+                      <span>89</span>/ Month
+                    </p>
+                    <ul className="pricing-offers">
+                      <li>6 Domain Names</li>
+                      <li>8 E-Mail Address</li>
+                      <li>10GB Disk Space</li>
+                      <li>Monthly Bandwidth</li>
+                      <li>Powerful Admin Panel</li>
+                    </ul>
+                    <a href="/" className="btn btn-primary btn-mid">
+                      Buy Now
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
 
           <div className="col-12 col-md-9 mt-2 mb-3 px-5">
             {/* BODY AQUI */};{/* Etiquetas de cierre global */}

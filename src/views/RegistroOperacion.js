@@ -254,7 +254,7 @@ const RegistroBeneficiario = (props) => {
                         <div className="col-md-6">
                           <Link
                             to="/user/transferencias/datos-pago"
-                            className="btn btn-primary btn-lg btn-block"
+                            className="btn btn-counter btn-primary btn-lg"
                           >
                             Continua tu operación
                           </Link>
