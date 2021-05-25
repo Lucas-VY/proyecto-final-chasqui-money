@@ -12,3 +12,10 @@
   -webkit-border-radius: 35px 0px 35px 0px;
   border: 5px solid #021850;
 }
+
+#botonConfirma {
+  width: 50%;
+  height: 75px;
+  margin-left: 70px;
+  border-radius: 10px;
+}
