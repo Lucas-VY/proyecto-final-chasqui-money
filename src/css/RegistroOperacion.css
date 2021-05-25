@@ -1,10 +1,7 @@
-.card-calculo {
+.card-ro {
   background-color: white;
   width: 75%;
   border-radius: 5px;
-  margin-left: 550px;
-  margin-right: 200px;
-  margin-top: 200px;
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px;
@@ -13,14 +10,4 @@
   -moz-border-radius: 35px 0px 35px 0px;
   -webkit-border-radius: 35px 0px 35px 0px;
   border: 5px solid #021850;
-}
-
-.input-calculo {
-  width: 100%;
-  margin-left: 300px;
-}
-
-.input-group-calculo {
-  width: 100%;
-  margin-left: 300px;
 }

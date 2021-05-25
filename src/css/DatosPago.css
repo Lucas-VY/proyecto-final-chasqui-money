@@ -1,4 +1,4 @@
-.card-calculo {
+.card-pago {
   background-color: white;
   width: 75%;
   border-radius: 5px;
@@ -13,14 +13,4 @@
   -moz-border-radius: 35px 0px 35px 0px;
   -webkit-border-radius: 35px 0px 35px 0px;
   border: 5px solid #021850;
-}
-
-.input-calculo {
-  width: 100%;
-  margin-left: 300px;
-}
-
-.input-group-calculo {
-  width: 100%;
-  margin-left: 300px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
-import "../css/Transferencias.css";
+import "../css/DatosPago.css";
 
 const DatosPago = (props) => {
   return (
@@ -11,20 +11,20 @@ const DatosPago = (props) => {
             <Sidebar />
           </div>
 
-          <div className="card">
-            <h5 className="card-header">Datos Bancarios</h5>
-            <div className="card-body">
-              <p className="card-text">Cuenta: Banco Santander</p>
-              <p className="card-text">
+          <div className="card-pago bg-white">
+            <h5 className="card-pago-header">Datos Bancarios</h5>
+            <div className="card-pago-body">
+              <p className="card-pago-text">Cuenta: Banco Santander</p>
+              <p className="card-pago-text">
                 Nombre: ChaskiMoney / Rut de empresa: 139.874.874-J
               </p>
-              <p className="card-text">
+              <p className="card-pago-text">
                 Número de cuenta: 9497327974 Tipo de Cuenta: Corriente
               </p>
-              <p className="card-text">
+              <p className="card-pago-text">
                 Correo electrónico: chaskimoney@gmail.com
               </p>
-              <p className="card-text">
+              <p className="card-pago-text">
                 Una vez realizada la transferencia, envía tu capture y afina los
                 detalles de entrega
               </p>

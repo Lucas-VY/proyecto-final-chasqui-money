@@ -2,8 +2,9 @@ import React, { useState, useContext } from "react";
 //import { validateInfo } from "../components/ValidateInfo";
 import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
-import "../css/Transferencias.css";
+import "../css/RegistroOperacion.css";
 import ConversorTransfer from "../components/ConversorTransfer";
+import { Link } from "react-router-dom";
 
 const RegistroBeneficiario = (props) => {
   const { store } = useContext(Context);
@@ -116,15 +117,15 @@ const RegistroBeneficiario = (props) => {
 
           <div className="col-12 col-md-9 mt-2 mb-3 px-5">
             {/* BODY AQUI */}
-            <div className="card-transferencias text-center bg-transparent">
-              <h3 className="card-header text-white">
+            <div className="card-ro text-center bg-white">
+              <h3 className="card-ro-header text-dark pt-5">
                 Registra la información de tu Beneficiario
               </h3>
-              <div className="card-body-transferencias text-white">
+              <div className="card-ro-body-ro text-dark">
                 <br></br>
-                <div classNameName="card card-outline-secondary bg-transparent">
-                  <div className="card-body-transaccion pl-5 pr-5 ">
-                    <h3 className="text-center text-white">
+                <div classNameName="card-ro card-ro-outline-secondary">
+                  <div className="card-ro-body pl-5 pr-5 ">
+                    <h3 className="text-center text-dark">
                       Detalles del Beneficiario
                     </h3>
                     <hr />
@@ -251,21 +252,21 @@ const RegistroBeneficiario = (props) => {
                           </button>
                         </div>
                         <div className="col-md-6">
-                          <a
-                            href="/user/transferencias/datos-pago"
-                            class="btn btn-primary btn-lg btn-block"
+                          <Link
+                            to="/user/transferencias/datos-pago"
+                            className="btn btn-primary btn-lg btn-block"
                           >
-                            Guarda tu registro
-                          </a>
+                            Continua tu operación
+                          </Link>
                         </div>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
-              <div className="card-footer-transferencias text-white">
+              <div className="card-footer-transferencias text-dark">
                 Asegúrese de ingresar todos los datos correctamente, ya que de
-                lo contrario sera imposible validar su transacción.
+                lo contrario será imposible validar su transacción.
               </div>
             </div>
             ;{/* Etiquetas de cierre global */}
