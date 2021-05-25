@@ -52,8 +52,7 @@ const RegistroBeneficiario = (props) => {
 
   const transferencia = (info) => {
     fetch(
-      `http://127.0.0.1:5000/user/card/${
-        store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
+      `http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
       }`,
       {
         method: "POST",
@@ -66,7 +65,7 @@ const RegistroBeneficiario = (props) => {
       .then((response) => response.json())
       .then((data) => console.log(data.result))
       .then((result) => {
-        props.history.push("/user/profile");
+        props.history.push("/user/transferencias/datos-pago");
       })
       .catch((error) => {
         console.log("error", error);
@@ -188,7 +187,7 @@ const RegistroBeneficiario = (props) => {
                           title=""
                           required="required"
                           placeholder="Direccion referencial"
-                          name="dirección"
+                          name="direccion"
                           onChange={handleChangeTransfer}
                         />
                       </div>
@@ -252,12 +251,12 @@ const RegistroBeneficiario = (props) => {
                           </button>
                         </div>
                         <div className="col-md-6">
-                          <Link
-                            to="/user/transferencias/datos-pago"
-                            className="btn btn-counter btn-primary btn-lg"
+                          <button
+                            type="submit"
+                            className="btn btn-success btn-lg btn-block"
                           >
                             Continua tu operación
-                          </Link>
+                          </button>
                         </div>
                       </div>
                     </form>
