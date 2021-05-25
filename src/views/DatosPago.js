@@ -85,8 +85,8 @@ const DatosPago = (props) => {
                             className="d-flex justify-content-center btn btn-counter btn-primary btn-sm"
                             id="botonConfirma"
                           >
-                            <i className="fab fa-whatsapp fa-lg">
-                              <label>Confirma Aquí</label>
+                            <i className="fab fa-whatsapp fa-lg" id="whatsapp">
+                              <div>Confirma Aquí</div>
                             </i>
                           </a>
                         </div>
