@@ -246,7 +246,7 @@ const RegistroBeneficiario = (props) => {
                         <div className="col-md-6">
                           <button
                             type="reset"
-                            className="btn btn-danger btn-lg btn-block"
+                            className="btn btn-danger btn-primary btn-lg"
                           >
                             Cancelar registro
                           </button>
