@@ -56,6 +56,7 @@ const DatosPago = (props) => {
                       <img
                         className="irc_mi img-fluid mr-0"
                         src="https://cdn4.iconfinder.com/data/icons/logistics-delivery-2-5/64/137-512.png"
+                        alt=""
                         width={150}
                         height={150}
                       />
