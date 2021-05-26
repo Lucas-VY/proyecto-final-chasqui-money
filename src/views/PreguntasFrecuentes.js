@@ -45,9 +45,9 @@ const PreguntasFrecuentes = () => {
                   data-parent="#accordionExample"
                   className="collapse show"
                 >
-                  <div className="card-body p-5 bg-transparent">
+                  <div className="card-body p-5 bg-white">
                     <p
-                      className="font-weight-light m-0 text-white"
+                      className="font-weight-medium m-0 text-dark"
                       id="ppreguntas-frecuentes"
                     >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
@@ -84,9 +84,9 @@ const PreguntasFrecuentes = () => {
                   data-parent="#accordionExample"
                   className="collapse bg-transparent"
                 >
-                  <div className="card-body bg-transparent p-5">
+                  <div className="card-body bg-white p-5">
                     <p
-                      className="font-weight-light m-0 text-white"
+                      className="font-weight-medium m-0 text-dark"
                       id="ppreguntas-frecuentes"
                     >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
@@ -123,9 +123,9 @@ const PreguntasFrecuentes = () => {
                   data-parent="#accordionExample"
                   className="collapse"
                 >
-                  <div className="card-body bg-transparent p-5">
+                  <div className="card-body bg-white p-5">
                     <p
-                      className="font-weight-light text-white m-0"
+                      className="font-weight-medium text-dark m-0"
                       id="ppreguntas-frecuentes"
                     >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
