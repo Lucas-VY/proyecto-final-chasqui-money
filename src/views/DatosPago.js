@@ -82,6 +82,7 @@ const DatosPago = (props) => {
                           </p>
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             href="https://wa.me/56937410583?text=Hola,%20te%20hago%20envio%20de%20mi%20codigo%20de%20transferencia"
                             className="d-flex justify-content-center btn btn-counter btn-primary btn-sm"
                             id="botonConfirma"
