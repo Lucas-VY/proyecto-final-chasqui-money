@@ -52,19 +52,19 @@ export const ContactanosPerfil = (props) => {
       if (Object.keys(errores).length === 0) {
         setIsSubmitting(true);
 
-        emailjs.sendForm('service_95ngkfb', 'template_957bnbh', e.target, 'user_krKMr1WDCaacehqACU5km')
+        /* emailjs.sendForm('service_95ngkfb', 'template_957bnbh', e.target, 'user_krKMr1WDCaacehqACU5km')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
             console.log(error.text);
-        }); 
+        });  */
 
         mostrarAlerta()
         setInputName("")
         setInputLastName("")
         setInputTexto("")
         setInputEmail("")
-        props.history.push("/");
+        props.history.push("/user/profile");
 
         /* actions
           .contactanos({
