@@ -33,7 +33,7 @@ const Navbar = () => {
                 Preguntas
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
                 id="navbarDropdownMenuLink"
@@ -55,6 +55,11 @@ const Navbar = () => {
                   Testimonios
                 </Link>
               </div>
+            </li> */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/noticias-relevantes">
+                Noticias
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contactanos">

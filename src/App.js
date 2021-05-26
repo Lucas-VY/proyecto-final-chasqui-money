@@ -49,7 +49,7 @@ function App() {
               path="/noticias-relevantes"
               component={Noticias}
             ></Route>
-            <Route exact path="/testimonios" component={Testimonios}></Route>
+{/*             <Route exact path="/testimonios" component={Testimonios}></Route> */}
             <Route exact path="/contactanos" component={Contactanos}></Route>
             <Route exact path="/quienes-somos" component={QuienesSomos}></Route>
             <Route exact path="/inicio-sesion" component={InicioSesion}></Route>

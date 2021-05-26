@@ -110,4 +110,10 @@
   border-bottom: 1px solid #ccc;
 }
 
- 
+.navbar{
+  font-size: 25px;
+}
+
+.navbar-brand{
+  font-size: 30px;
+}
