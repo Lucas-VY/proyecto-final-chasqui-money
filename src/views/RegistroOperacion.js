@@ -52,7 +52,8 @@ const RegistroBeneficiario = (props) => {
 
   const transferencia = (info) => {
     fetch(
-      `http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
+      `http://127.0.0.1:5000/user/card/${
+        store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
       }`,
       {
         method: "POST",
