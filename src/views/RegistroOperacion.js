@@ -4,7 +4,6 @@ import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
 import "../css/RegistroOperacion.css";
 import ConversorTransfer from "../components/ConversorTransfer";
-import { Link } from "react-router-dom";
 
 const RegistroBeneficiario = (props) => {
   const { store } = useContext(Context);
