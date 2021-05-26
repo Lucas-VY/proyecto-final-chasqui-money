@@ -122,7 +122,7 @@ const Historial = () => {
                     {/*end table-responsive*/}
                     <div className="pt-3 border-top text-right">
                       <p className="text-white">
-                        confirma con nosotros enviando tu ID de comprobante a
+                        Confirma con nosotros enviando tu ID de comprobante a
                         través de Whatsapp
                                             </p>
                       <a

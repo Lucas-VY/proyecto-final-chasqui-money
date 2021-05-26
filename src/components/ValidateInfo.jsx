@@ -37,6 +37,45 @@ export function validateInfo(values) {
   return errors;
 }
 
+
+
+
+
+
+
+export function validateInfoContacto(values) {
+  let errors = {};
+
+  if (!values.name.trim()) {
+    errors.name = "Nombre es requerido";
+  } else if (!/^[a-zA-Z]+$/.test(values.name)) {
+    errors.name = "Ingresa nombre correcto";
+  }
+  if (!values.last_name) {
+    errors.last_name = "Apellido es requerido";
+  } else if (!/^[a-zA-Z]+$/.test(values.last_name)) {
+    errors.last_name = "ingresa un apellido correcto";
+  }
+  
+  if (!values.email) {
+    errors.email = "Email es requerido";
+  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+    errors.email = "Email no valido";
+  }
+  if (!values.texto) {
+    errors.texto = "Mensaje es requerido";
+  } else if (values.texto.length < 15) {
+    errors.texto = "Ingrese mas de 15 caracteres";
+  }
+  
+  return errors;
+}
+
+
+
+
+
+
 export function validateLogin(values) {
   let errors = {};
 

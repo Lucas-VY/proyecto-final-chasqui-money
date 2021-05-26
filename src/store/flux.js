@@ -156,7 +156,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       /* CONTACTANOS  */
-      contactanos: (values) => {
+      /* contactanos: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -175,10 +175,10 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log("error", error);
             throw error;
           });
-      },
+      }, */
 
       /* CONTACTANOS PERFIL  */
-      contactanosPerfil: (values) => {
+      /* contactanosPerfil: (values) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -197,7 +197,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log("error", error);
             throw error;
           });
-      },
+      }, */
 
       /* TRANSFERENCIAS  */
       transferencias: (values) => {
