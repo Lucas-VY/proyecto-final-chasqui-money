@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react";
-import { validateInfo } from "../components/ValidateInfo";
+import { validateInfoContacto } from "../components/ValidateInfo";
 import "../css/Contactanos.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Context } from "../store/appContext";
+import swal from "sweetalert";
+import emailjs from 'emailjs-com';
 
 export const Contactanos = (props) => {
   const { actions } = useContext(Context);
@@ -30,10 +32,18 @@ export const Contactanos = (props) => {
   };
 
   const handleSubmit = (e) => {
+
+     const mostrarAlerta = () => {
+    swal({
+      text: "Mensaje enviado correctamente",
+    });
+  }; 
     e.preventDefault();
 
+    
+
     if (isSubmitting === false) {
-      const errores = validateInfo({
+      const errores = validateInfoContacto({
         name: inputName,
         last_name: inputLastName,
         email: inputEmail,
@@ -43,7 +53,21 @@ export const Contactanos = (props) => {
       if (Object.keys(errores).length === 0) {
         setIsSubmitting(true);
 
-        actions
+        /*  emailjs.sendForm('service_95ngkfb', 'template_957bnbh', e.target, 'user_krKMr1WDCaacehqACU5km')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });  */
+
+        mostrarAlerta()
+        setInputName("")
+        setInputLastName("")
+        setInputTexto("")
+        setInputEmail("")
+        props.history.push("/");
+
+        /* actions
           .contactanos({
             name: inputName,
             last_name: inputLastName,
@@ -52,7 +76,7 @@ export const Contactanos = (props) => {
           })
           .then((result) => {
             props.history.push("/home");
-          });
+          }); */
       }
 
       setErrors(errores);
@@ -83,7 +107,7 @@ export const Contactanos = (props) => {
                   className="form-control "
                   type="text"
                   name="name"
-                  placeholder="ingrese nombre"
+                  placeholder="Ingrese Nombre"
                   value={inputName}
                   onChange={handleChange}
                 />
@@ -101,7 +125,7 @@ export const Contactanos = (props) => {
                   className="form-control "
                   type="text"
                   name="last_name"
-                  placeholder="ingrese apellido"
+                  placeholder="Ingrese Apellido"
                   value={inputLastName}
                   onChange={handleChange}
                 />
@@ -122,7 +146,7 @@ export const Contactanos = (props) => {
                   className="form-control"
                   type="email"
                   name="email"
-                  placeholder="ingrese email"
+                  placeholder="Ingrese Email"
                   value={inputEmail}
                   onChange={handleChange}
                 />
@@ -145,6 +169,7 @@ export const Contactanos = (props) => {
                   onChange={handleChange}
                 ></textarea>
               </div>
+              {errors.texto && <p className="parrafo">{errors.texto}</p>}
             </div>
             <div className="form-group d-flex justify-content-center">
               <button type="submit" className="btn btn-primary btn-lg">

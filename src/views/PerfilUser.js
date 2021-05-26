@@ -63,7 +63,7 @@ const PerfilUser = () => {
                       alt="Admin"
                       className="rounded-circle bg-transparent"
                       width={150}
-                      height={135}
+                      height={150}
                     />
                   </div>
                 </div>
@@ -76,28 +76,28 @@ const PerfilUser = () => {
               <div className="card bg-transparent">
                 <div className="card-body">
                   <div className="row">
-                    <div className="inputbox col-12 mt-4 text-white">
+                    <div className="inputbox col-12 mt-3 text-white">
                       <h5>Nombre: {user.name}</h5>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="inputbox col-12 mt-4 text-white">
+                    <div className="inputbox col-12 mt-3 text-white">
                       <h5>Apellido: {user.last_name}</h5>
                     </div>
                   </div>
 
                   <div className="row">
                     <div className="inputbox col-12 mt-3">
-                      <p className="text-white mb-1">
+                      <h5 className="text-white mb-1">
                         Teléfono: {user.phone}
-                      </p>
+                      </h5>
                     </div>
                   </div>
                   <div className="row">
                     <div className="inputbox col-12 mt-4">
-                      <p className="text-white mb-1">
+                      <h5 className="text-white mb-1">
                         Email: {user.email}
-                      </p>
+                      </h5>
                     </div>
                   </div>
 

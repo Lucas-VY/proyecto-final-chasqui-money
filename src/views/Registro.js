@@ -104,7 +104,7 @@ export const Registro = (props) => {
                   className="form-control "
                   type="text"
                   name="name"
-                  placeholder="Ingrese tú nombre"
+                  placeholder="Ingrese Nombre"
                   //value={inputName}
                   onChange={handleChange}
                 />
@@ -124,7 +124,7 @@ export const Registro = (props) => {
                   className="form-control "
                   type="text"
                   name="last_name"
-                  placeholder="Ingrese tú apellido"
+                  placeholder="Ingrese Apellido"
                   //value={inputLastName}
                   onChange={handleChange}
                 />
@@ -146,7 +146,7 @@ export const Registro = (props) => {
                   className="form-control"
                   type="email"
                   name="email"
-                  placeholder="ingrese email"
+                  placeholder="Ingrese Email"
                   // value={inputEmail}
                   onChange={handleChange}
                 />
@@ -187,7 +187,7 @@ export const Registro = (props) => {
                   className="form-control"
                   type="password"
                   name="password"
-                  placeholder="ingresa contraseña"
+                  placeholder="Ingrese Contraseña"
                   // value={inputPassword}
                   onChange={handleChange}
                 />
@@ -207,7 +207,7 @@ export const Registro = (props) => {
                   className="form-control"
                   type="password"
                   name="password2"
-                  placeholder="confirmar contraseña"
+                  placeholder="Confirmar Contraseña"
                   // value={inputPassword2}
                   onChange={handleChange}
                 />

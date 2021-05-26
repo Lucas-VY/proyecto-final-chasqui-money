@@ -90,7 +90,7 @@ export const InicioSesion = (props) => {
                   className="form-control"
                   type="email"
                   name="email"
-                  placeholder="ingrese email"
+                  placeholder="Ingrese email"
                   /* value={inputEmail} */
                   onChange={(e) => actions.handleChange(e)}
                 />
@@ -108,7 +108,7 @@ export const InicioSesion = (props) => {
                   className="form-control"
                   type="password"
                   name="password"
-                  placeholder="confirmar contraseña"
+                  placeholder="Ingrese contraseña"
                   /* value={inputPassword2} */
                   onChange={(e) => actions.handleChange(e)}
                 />
