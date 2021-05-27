@@ -4,7 +4,6 @@ import Sidebar from "../components/Sidebar";
 import { Context } from "../store/appContext";
 import "../css/RegistroOperacion.css";
 import ConversorTransfer from "../components/ConversorTransfer";
-import { Link } from "react-router-dom";
 
 const RegistroBeneficiario = (props) => {
   const { store } = useContext(Context);
@@ -52,7 +51,8 @@ const RegistroBeneficiario = (props) => {
 
   const transferencia = (info) => {
     fetch(
-      `http://127.0.0.1:5000/user/card/${store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
+      `http://127.0.0.1:5000/user/card/${
+        store.currentUser.resultado.id ? store.currentUser.resultado.id : ""
       }`,
       {
         method: "POST",
