@@ -65,14 +65,18 @@
     width: auto;
     max-height: 100%;
     height: auto;
+    object-fit: cover           ;
 
   }
 
   #vector-img{
-    position: relative;
+ 
     margin-top: auto;
   }
 
+  #card-vector{
+    width: 20rem;
+  }
 
 
 /* body {

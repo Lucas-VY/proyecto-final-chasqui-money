@@ -13,42 +13,46 @@ const Home = () => {
 
       {/* CONVERSOR */}
       <div className="container-fluid">
+
         <div className="row d-flex justify-content-center jumbo">
+
+         
           <div className="col-xs-12 col-md-8 col-lg-8 ">
             <div className="jumbotron text-center border-none bg-transparent jumbo">
               <div className="row">
                 <div className="col-xs-12 col-mg-8 col-lg-6">
-                  <img
-                    className="vector my-3 mt-5"
-                    src={vector_money}
-                    alt=""
-                    id="vector-img"
-                  />
+
+                    <img
+                      className="vector my-3 pt-5 mt-5 "
+                      src={vector_money}
+                      alt=""
+                      id="vector-img"
+                    />
+
                 </div>
 
                 <div className="col-xs-12 col-mg-8 col-lg-6">
-
-                  <h1 className="header__title">Consulta Tu Cambio</h1>
-                  <p className="header__paragraph">
-                    Envía dinero rápido y seguro con la comisión mas baja del
-                    mercado
-              </p>
-                  <p className="header__paragraph">Comisión del 0,5%</p>
-                  <Conversor />
-                  <hr className="my-2" />
+                    <h1 className="header__title">Consulta Tu Cambio</h1>
+                    <p className="header__paragraph">
+                      Envía dinero rápido y seguro con la comisión mas baja del
+                      mercado
+                    </p>
+                    <p className="header__paragraph">Comisión del 0,5%</p>
+                    <Conversor />
+                    <hr className="my-2" />
+                  </div>
                 </div>
-              </div>
 
-
-              <Link
-                className="btn btn-counter btn-primary btn-lg mt-4"
-                to="/Registrate"
-                role="button"
-              >
-                Regístrate Gratis
+                <Link
+                  className="btn btn-counter btn-primary btn-lg mt-4"
+                  to="/Registrate"
+                  role="button"
+                >
+                  Regístrate Gratis
               </Link>
+              </div>
             </div>
-          </div>
+
         </div>
 
 
