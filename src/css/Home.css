@@ -60,13 +60,17 @@
     font-size: 18px;
   }
  
+ /*  .jumbo{
+    position: relative;
+  } */
+
   .vector{
     max-width: 100%;
     width: auto;
     max-height: 100%;
     height: auto;
-    object-fit: cover           ;
-
+    /* object-fit: cover; */
+   
   }
 
   #vector-img{
@@ -78,18 +82,6 @@
     width: 20rem;
   }
 
-
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: "Lato", sans-serif;
-  letter-spacing: 5px;
-  padding: 0px 0 125px 90px;
-} */
 
 /* =============================================
 HEADER JUMBOTRON CONTADOR
