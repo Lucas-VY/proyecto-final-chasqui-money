@@ -8,7 +8,7 @@ const Navbar = () => {
       {/* NAVBAR TEST  */}
       <nav className="navbar navbar-expand-lg navbar-white bg-transparent">
         <Link className="navbar-brand" to="/">
-          Chasky Money
+          Chaski Money
         </Link>
         <button
           className="navbar-toggler"

@@ -16,7 +16,7 @@ const Sidebar = () => {
       <nav className="sidebar bg-dark barra d-none d-md-block col-md-3 col-xl-2 px-0">
         <ul className="nav flex-column">
           <li className="nav-item pt-3 pb-5">
-            <h1 className="titulo px-2">Chasky Money</h1>
+            <h1 className="titulo px-2">Chaski Money</h1>
           </li>
 
           <li className="nav-item">

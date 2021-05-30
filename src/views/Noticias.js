@@ -35,7 +35,7 @@ const Noticias = () => {
               <div className="container" key={index}>
                 <div className="row">
                   <div className="col-md-6">
-                    <a href="/">
+                    <a  href="/">
                       <img
                         className="img-fluid rounded mb-3 mb-md-0"
                         src={noticia.urlToImage}
@@ -48,7 +48,7 @@ const Noticias = () => {
                     <p className="text-justify" id="parrafo-noticias">
                       {noticia.description}
                     </p>
-                    <a className="btn btn-primary" href={noticia.url}>
+                    <a target="_blank" className="btn btn-primary" href={noticia.url}>
                       Ver Noticia
                     </a>
                   </div>
